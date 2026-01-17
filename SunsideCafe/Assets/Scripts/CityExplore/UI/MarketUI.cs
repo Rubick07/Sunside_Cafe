@@ -46,14 +46,14 @@ public class MarketUI : MonoBehaviour
 
         //buyButton.onClick.AddListener(CreateItemButtonBuy);
         //sellButton.onClick.AddListener(CreateItemButtonSell);
-        //exitButton.onClick.AddListener(() => Hide());
+        exitButton.onClick.AddListener(() => Hide());
     }
 
     private void Start()
     {
         EconomyManager.instance.OnMoneyChanged += EconomyManager_OnMoneyChanged;
         UpdateVisualMoneyText(EconomyManager.instance.GetMoney());
-        RemoveButtonList();
+        //RemoveButtonList();
         Hide();
 
     }
@@ -135,7 +135,7 @@ public class MarketUI : MonoBehaviour
 
     public void Show()
     {
-        EventSystem.current.SetSelectedGameObject(buyButton.gameObject);
+        //EventSystem.current.SetSelectedGameObject(buyButton.gameObject);
         gameObject.SetActive(true);
 
         OnShopUIOpen?.Invoke(this, EventArgs.Empty);
@@ -150,7 +150,7 @@ public class MarketUI : MonoBehaviour
     public void SetMarket(Market market)
     {
         currentMarket = market;
-        RemoveButtonList();
+        //RemoveButtonList();
         Show();
     }
 

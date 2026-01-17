@@ -1,11 +1,13 @@
 using UnityEngine;
 
-public class Market : MonoBehaviour
+public class Market : MonoBehaviour, IInteractable
 {
     [SerializeField] private MarketItemSO marketItemSO;
 
     public void Interact()
     {
+        Debug.Log("TESAT");
+        Debug.Log(MarketUI.instance);
         MarketUI.instance.SetMarket(this);
     }
 
