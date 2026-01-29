@@ -3,7 +3,9 @@ using UnityEngine.InputSystem;
 
 public class SideScrollPersonController : MonoBehaviour
 {
+    [SerializeField] private float currentSpeed = 6f;
     [SerializeField] private float speed = 6f;
+    [SerializeField] private float runningSpeed = 10f;
 
     private CharacterController characterController;
 
@@ -15,8 +17,9 @@ public class SideScrollPersonController : MonoBehaviour
     private void Start()
     {
         InputManager.Instance.GetInputActions().Player.Interact.performed += Interact_performed;
+        InputManager.Instance.GetInputActions().Player.Sprint.performed += Sprint_performed;
+        InputManager.Instance.GetInputActions().Player.Sprint.canceled += Sprint_canceled;
     }
-
 
     private void Update()
     {
@@ -33,7 +36,7 @@ public class SideScrollPersonController : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, -90f, 0f);
 
 
-            characterController.Move(direction * speed * Time.deltaTime);
+            characterController.Move(direction * currentSpeed * Time.deltaTime);
         }
 
 
@@ -44,6 +47,22 @@ public class SideScrollPersonController : MonoBehaviour
     private void Interact_performed(InputAction.CallbackContext obj)
     {
         InteractSystem.instance.SideScrollInteractCheck(transform);
+    }
+
+    private void Sprint_performed(InputAction.CallbackContext obj)
+    {
+        currentSpeed = runningSpeed;
+    }
+    private void Sprint_canceled(InputAction.CallbackContext obj)
+    {
+        currentSpeed = speed;
+    }
+
+    private void OnDisable()
+    {
+        InputManager.Instance.GetInputActions().Player.Interact.performed -= Interact_performed;
+        InputManager.Instance.GetInputActions().Player.Sprint.performed -= Sprint_performed;
+        InputManager.Instance.GetInputActions().Player.Sprint.canceled -= Sprint_canceled;
     }
 
 }
