@@ -6,8 +6,6 @@ public class Market : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("TESAT");
-        Debug.Log(MarketUI.instance);
         MarketUI.instance.SetMarket(this);
     }
 
@@ -21,7 +19,6 @@ public class Market : MonoBehaviour, IInteractable
         {
 
         }
-
     }
 
     public void SellItem(ItemBase itemBase)

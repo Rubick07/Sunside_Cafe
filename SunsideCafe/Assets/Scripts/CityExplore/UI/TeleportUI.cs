@@ -6,6 +6,10 @@ public class TeleportUI : MonoBehaviour
 {
     public static TeleportUI instance;
 
+    public static event EventHandler OnAnyTeleportStart;
+    public static event EventHandler OnAnyTeleportEnd;
+
+
     [SerializeField] private RectTransform blackScreenTransform;
 
     private void Awake()
@@ -18,6 +22,8 @@ public class TeleportUI : MonoBehaviour
 
     public void TriggerAnimation(Action action)
     {
+        OnAnyTeleportStart?.Invoke(this, EventArgs.Empty);
+
         blackScreenTransform.gameObject.SetActive(true);
         AnimationLeftToRight(action);
 
@@ -32,6 +38,8 @@ public class TeleportUI : MonoBehaviour
         {
 
             action();
+            OnAnyTeleportEnd?.Invoke(this, EventArgs.Empty);
+
             blackScreenTransform.DOAnchorPosX(1948, 1f).OnComplete(()=> {
                 blackScreenTransform.DOAnchorPosY(0, 0f);
                 blackScreenTransform.gameObject.SetActive(false);

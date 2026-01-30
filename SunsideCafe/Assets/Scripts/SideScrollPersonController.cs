@@ -14,13 +14,6 @@ public class SideScrollPersonController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    private void Start()
-    {
-        InputManager.Instance.GetInputActions().Player.Interact.performed += Interact_performed;
-        InputManager.Instance.GetInputActions().Player.Sprint.performed += Sprint_performed;
-        InputManager.Instance.GetInputActions().Player.Sprint.canceled += Sprint_canceled;
-    }
-
     private void Update()
     {
         float horizontal = InputManager.Instance.GetMoveInputValue().x;
@@ -44,6 +37,11 @@ public class SideScrollPersonController : MonoBehaviour
 
     }
 
+    public void SetControllerState(bool enable)
+    {
+        this.enabled = enable;
+    }
+
     private void Interact_performed(InputAction.CallbackContext obj)
     {
         InteractSystem.instance.SideScrollInteractCheck(transform);
@@ -57,12 +55,25 @@ public class SideScrollPersonController : MonoBehaviour
     {
         currentSpeed = speed;
     }
+    private void Pause_performed(InputAction.CallbackContext obj)
+    {
+        PauseSystem.instance.Pause();
+    }
+
+    private void OnEnable()
+    {
+        InputManager.Instance.GetInputActions().Player.Interact.performed += Interact_performed;
+        InputManager.Instance.GetInputActions().Player.Sprint.performed += Sprint_performed;
+        InputManager.Instance.GetInputActions().Player.Sprint.canceled += Sprint_canceled;
+        InputManager.Instance.GetInputActions().Player.Pause.performed += Pause_performed;
+    }
 
     private void OnDisable()
     {
         InputManager.Instance.GetInputActions().Player.Interact.performed -= Interact_performed;
         InputManager.Instance.GetInputActions().Player.Sprint.performed -= Sprint_performed;
         InputManager.Instance.GetInputActions().Player.Sprint.canceled -= Sprint_canceled;
+        InputManager.Instance.GetInputActions().Player.Pause.performed -= Pause_performed;
     }
 
 }

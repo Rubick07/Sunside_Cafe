@@ -42,7 +42,6 @@ public class SettingsMenu : MonoBehaviour
 
         backButton.onClick.AddListener(() =>
         {
-            MainMenu.instance.Show();
             Hide();
         });
 
