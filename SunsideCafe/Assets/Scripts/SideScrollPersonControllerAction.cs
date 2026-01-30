@@ -15,6 +15,14 @@ public class SideScrollPersonControllerAction : MonoBehaviour
         MarketUI.instance.OnShopUIClose += MarketUI_OnShopUIClose;
         TeleportUI.OnAnyTeleportStart += TeleportUI_OnAnyTeleportStart;
         TeleportUI.OnAnyTeleportEnd += TeleportUI_OnAnyTeleportEnd;
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueStart.AddListener(()=> 
+        {
+            personController.SetControllerState(false);
+        });
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(() =>
+        {
+            personController.SetControllerState(true);
+        });
     }
 
     private void TeleportUI_OnAnyTeleportEnd(object sender, System.EventArgs e)
