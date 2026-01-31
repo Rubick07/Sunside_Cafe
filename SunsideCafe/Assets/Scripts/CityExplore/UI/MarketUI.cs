@@ -28,32 +28,54 @@ public class MarketUI : MonoBehaviour
     [Header("SHOP BUTTON REFERENCE")]
     [SerializeField] private Button buyButton;
     [SerializeField] private Button sellButton;
+    [SerializeField] private Button chatButton;
     [SerializeField] private Button exitButton;
 
     [Header("Market Item REFERENCE")]
-    [SerializeField] private Transform itemButtonBuyPrefab;
-    [SerializeField] private Transform itemButtonSellPrefab;
+    [SerializeField] private ItemMarketBuyButtonUI itemButtonBuyPrefab;
+    [SerializeField] private ItemMarketSellButtonUI itemButtonSellPrefab;
     [SerializeField] private Transform itemButtonContainerTransform;
 
-    //private List<ItemMarketButtonBuyUI> itemButtonBuyList = new List<ItemMarketButtonBuyUI>();
-    //private List<ItemMarketButtonSellUI> itemButtonSellList = new List<ItemMarketButtonSellUI>();
+    private List<ItemMarketBuyButtonUI> itemButtonBuyList = new List<ItemMarketBuyButtonUI>();
+    private List<ItemMarketSellButtonUI> itemButtonSellList = new List<ItemMarketSellButtonUI>();
 
     private Market currentMarket;
+
+    private bool isOpenMarket;
 
     private void Awake()
     {
         instance = this;
 
-        //buyButton.onClick.AddListener(CreateItemButtonBuy);
-        //sellButton.onClick.AddListener(CreateItemButtonSell);
+        buyButton.onClick.AddListener(CreateItemButtonBuy);
+        sellButton.onClick.AddListener(CreateItemButtonSell);
+        chatButton.onClick.AddListener(()=> 
+        {
+            currentMarket.GetShopNPC().TriggerDialog();
+        });
+
         exitButton.onClick.AddListener(() => Hide());
     }
 
     private void Start()
     {
         EconomyManager.instance.OnMoneyChanged += EconomyManager_OnMoneyChanged;
+
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueStart.AddListener(()=> 
+        {
+            gameObject.SetActive(false);
+        });
+
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(() =>
+        {
+            if (isOpenMarket)
+                gameObject.SetActive(true);
+
+        });
+
         UpdateVisualMoneyText(EconomyManager.instance.GetMoney());
-        //RemoveButtonList();
+
+        RemoveButtonList();
         Hide();
 
     }
@@ -67,64 +89,42 @@ public class MarketUI : MonoBehaviour
     {
         moneyTextMeshPro.text = "RP" + e.ToString("N0");
     }
-/*
+
     private void CreateItemButtonBuy()
     {
         RemoveButtonList();
 
         foreach (ItemBase itembase in currentMarket.GetItemToSellInMarket())
         {
-            Transform itemMarketButtonTransform = Instantiate(itemButtonBuyPrefab, itemButtonContainerTransform);
-            ItemMarketButtonBuyUI itemMarketButtonUI =
-                itemMarketButtonTransform.GetComponent<ItemMarketButtonBuyUI>();
+            ItemMarketBuyButtonUI ui = Helpers.CreateUI<ItemMarketBuyButtonUI, ItemBase>(itemButtonBuyPrefab, itemButtonContainerTransform, itembase);
 
-            itemMarketButtonUI.SetItemBaseButton(itembase);
-
-            itemButtonBuyList.Add(itemMarketButtonUI);
-
-        }
-
-        if (itemButtonBuyList.Count != 0)
-        {
-            EventSystem.current.SetSelectedGameObject(itemButtonBuyList[0].GetButton().gameObject);
+            itemButtonBuyList.Add(ui);
         }
 
         SetMarketUIState(State.BuyMenu);
     }
-*/
-/*    private void CreateItemButtonSell()
+
+    private void CreateItemButtonSell()
     {
         RemoveButtonList();
 
         foreach (ItemBase itembase in InventoryManager.instance.GetInventoryDictionary().Keys)
         {
-            Transform itemMarketButtonTransform = Instantiate(itemButtonSellPrefab, itemButtonContainerTransform);
-            ItemMarketButtonSellUI itemMarketButtonUI =
-                itemMarketButtonTransform.GetComponent<ItemMarketButtonSellUI>();
+            ItemMarketSellButtonUI ui = Helpers.CreateUI<ItemMarketSellButtonUI, ItemBase>(itemButtonSellPrefab, itemButtonContainerTransform, itembase);
 
-            itemMarketButtonUI.SetItemBaseButton(itembase);
+            itemButtonSellList.Add(ui);
 
-            itemButtonSellList.Add(itemMarketButtonUI);
-
-        }
-
-        if (itemButtonBuyList.Count != 0)
-        {
-            EventSystem.current.SetSelectedGameObject(itemButtonBuyList[0].GetButton().gameObject);
         }
 
         SetMarketUIState(State.SellMenu);
     }
-*/
+
     private void RemoveButtonList()
     {
-        foreach (Transform buttonTransform in itemButtonContainerTransform)
-        {
-            Destroy(buttonTransform.gameObject);
-        }
+        itemButtonContainerTransform.RemoveAllChild();
 
-        //itemButtonBuyList.Clear();
-        //itemButtonSellList.Clear();
+        itemButtonBuyList.Clear();
+        itemButtonSellList.Clear();
     }
 
     public void SetMarketUIState(State state)
@@ -135,7 +135,8 @@ public class MarketUI : MonoBehaviour
 
     public void Show()
     {
-        //EventSystem.current.SetSelectedGameObject(buyButton.gameObject);
+        isOpenMarket = true;
+
         gameObject.SetActive(true);
 
         OnShopUIOpen?.Invoke(this, EventArgs.Empty);
@@ -143,6 +144,8 @@ public class MarketUI : MonoBehaviour
 
     public void Hide()
     {
+        isOpenMarket = false;
+
         OnShopUIClose?.Invoke(this, EventArgs.Empty);
         gameObject.SetActive(false);
     }
@@ -150,7 +153,7 @@ public class MarketUI : MonoBehaviour
     public void SetMarket(Market market)
     {
         currentMarket = market;
-        //RemoveButtonList();
+        RemoveButtonList();
         Show();
     }
 

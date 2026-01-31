@@ -23,4 +23,20 @@ public static class Helpers
         return playerObject;
     }
 
+    public static void RemoveAllChild(this Transform parent)
+    {
+        foreach (Transform child in parent)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+    }
+
+    public static TUI CreateUI<TUI, TData>(TUI prefab,Transform parent,TData data)
+    where TUI : MonoBehaviour, IBindData<TData>
+    {
+        TUI ui = GameObject.Instantiate(prefab, parent);
+        ui.Bind(data);
+        return ui;
+    }
+
 }

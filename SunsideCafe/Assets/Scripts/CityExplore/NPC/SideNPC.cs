@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class SideNPC : NPCBase
+{
+    [SerializeField] private string dialogName;
+
+    public string GetDialogName()
+    {
+        return dialogName;
+    }
+
+    public override void Interact()
+    {
+        DialogRunnerSingleton.instance.StartDialog(dialogName);
+    }
+
+    public override void TriggerDialog()
+    {
+        DialogRunnerSingleton.instance.StartDialog(dialogName);
+    }
+}

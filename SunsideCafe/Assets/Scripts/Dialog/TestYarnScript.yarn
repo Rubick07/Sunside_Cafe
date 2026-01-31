@@ -4,11 +4,31 @@ This is an example of a Yarn Spinner script. Write your dialogue here!
 ===
 title: NPCDialogTest
 ---
-NPC: Hai, Saya NPC
+<<once>>
+    NPC: Hai, Saya NPC
+<<else>> 
+    NPC: Perasaan tadi udh test
+<<endonce>>
+
+
 NPC: Test choice ini
 
+<<SetSpriteDisable>>
 -> Hai
+    <<jump TestPilihan1>>
 -> P ingfo
+    <<detour TestPilihan1>>
 -> gk tau
+-> kabur
+    <<stop>>
 
+NPC: hmmmmm
+<<wait 1>>
+<<SetSpriteActive>>
+NPC: ya gitu deh pokoknya
+===
+
+title: TestPilihan1
+---
+Ayam: berkokok cuy
 ===

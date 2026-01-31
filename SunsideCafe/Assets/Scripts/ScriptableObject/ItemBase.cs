@@ -5,8 +5,9 @@ public class ItemBase : ScriptableObject
 {
     public enum ItemType
     {
-        Consumable,
-        Equipment
+        KeyItems,
+        Ingredients,
+        Equipments
     }
 
     [SerializeField] protected int itemPrice;

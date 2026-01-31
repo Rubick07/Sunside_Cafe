@@ -3,6 +3,7 @@ using UnityEngine;
 public class Market : MonoBehaviour, IInteractable
 {
     [SerializeField] private MarketItemSO marketItemSO;
+    [SerializeField] private NPCBase shopNPC;
 
     public void Interact()
     {
@@ -37,5 +38,10 @@ public class Market : MonoBehaviour, IInteractable
     public ItemBase[] GetItemToSellInMarket()
     {
         return marketItemSO.ItemToSellInMarket;
+    }
+
+    public NPCBase GetShopNPC()
+    {
+        return shopNPC;
     }
 }

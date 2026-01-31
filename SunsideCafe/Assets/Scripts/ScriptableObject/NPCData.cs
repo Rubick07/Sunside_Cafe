@@ -3,6 +3,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NPCData", menuName = "Scriptable Objects/NPCData")]
 public class NPCData : ScriptableObject
 {
+    public enum NPC_Type
+    {
+        IMPORTANT,
+        SIDE
+    }
+
     public string npcName;
-    public string dialogTittleName;
+    public NPC_Type type;
+    public Sprite npcSprite;
+
 }
