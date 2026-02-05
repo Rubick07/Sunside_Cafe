@@ -9,12 +9,11 @@ public class SchedulePieceView : MonoBehaviour
 
     List<GameObject> blocks = new();
 
-
-    public void BuildShape(EmployeeData employeeData)
+    public void BuildShape(ScheduleShapeRuntime scheduleShapeRuntime)
     {
         Clear();
 
-        foreach (var cell in employeeData.scheduleShape.cells)
+        foreach (var cell in scheduleShapeRuntime.cells)
         {
             var block = Instantiate(blockPrefab, blockParent);
             var rt = block.GetComponent<RectTransform>();
@@ -28,7 +27,7 @@ public class SchedulePieceView : MonoBehaviour
         }
     }
 
-    void Clear()
+    public void Clear()
     {
         foreach (var b in blocks)
             Destroy(b);

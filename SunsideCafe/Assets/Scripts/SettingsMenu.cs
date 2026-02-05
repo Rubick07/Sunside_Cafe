@@ -42,6 +42,7 @@ public class SettingsMenu : MonoBehaviour
 
         backButton.onClick.AddListener(() =>
         {
+            AudioManager.Instance.ApplyVolumeSettings();
             Hide();
         });
 

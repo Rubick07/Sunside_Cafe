@@ -32,6 +32,11 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        Hide();
+    }
+
     private void ExitGame()
     {
         Debug.Log("Keluar");

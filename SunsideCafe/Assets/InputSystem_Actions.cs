@@ -210,9 +210,18 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""RotateSchedule"",
+                    ""name"": ""RotateScheduleLeft"",
                     ""type"": ""Button"",
                     ""id"": ""1f8c0abc-d652-4d33-9156-f1e2d135300f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RotateScheduleRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""c7a61b1b-6a84-488b-a591-bd2253fea886"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -661,11 +670,22 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""1781ff95-be39-443c-a329-934556f9cf28"",
-                    ""path"": ""<Keyboard>/shift"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""RotateSchedule"",
+                    ""action"": ""RotateScheduleLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5647b8b-1476-4481-b4f4-2ba809c75d7e"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""RotateScheduleRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1277,7 +1297,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Back = m_Player.FindAction("Back", throwIfNotFound: true);
         m_Player_Click = m_Player.FindAction("Click", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
-        m_Player_RotateSchedule = m_Player.FindAction("RotateSchedule", throwIfNotFound: true);
+        m_Player_RotateScheduleLeft = m_Player.FindAction("RotateScheduleLeft", throwIfNotFound: true);
+        m_Player_RotateScheduleRight = m_Player.FindAction("RotateScheduleRight", throwIfNotFound: true);
         m_Player_DeleteSchedule = m_Player.FindAction("DeleteSchedule", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
@@ -1385,7 +1406,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Back;
     private readonly InputAction m_Player_Click;
     private readonly InputAction m_Player_Pause;
-    private readonly InputAction m_Player_RotateSchedule;
+    private readonly InputAction m_Player_RotateScheduleLeft;
+    private readonly InputAction m_Player_RotateScheduleRight;
     private readonly InputAction m_Player_DeleteSchedule;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
@@ -1451,9 +1473,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         /// <summary>
-        /// Provides access to the underlying input action "Player/RotateSchedule".
+        /// Provides access to the underlying input action "Player/RotateScheduleLeft".
         /// </summary>
-        public InputAction @RotateSchedule => m_Wrapper.m_Player_RotateSchedule;
+        public InputAction @RotateScheduleLeft => m_Wrapper.m_Player_RotateScheduleLeft;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/RotateScheduleRight".
+        /// </summary>
+        public InputAction @RotateScheduleRight => m_Wrapper.m_Player_RotateScheduleRight;
         /// <summary>
         /// Provides access to the underlying input action "Player/DeleteSchedule".
         /// </summary>
@@ -1523,9 +1549,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
-            @RotateSchedule.started += instance.OnRotateSchedule;
-            @RotateSchedule.performed += instance.OnRotateSchedule;
-            @RotateSchedule.canceled += instance.OnRotateSchedule;
+            @RotateScheduleLeft.started += instance.OnRotateScheduleLeft;
+            @RotateScheduleLeft.performed += instance.OnRotateScheduleLeft;
+            @RotateScheduleLeft.canceled += instance.OnRotateScheduleLeft;
+            @RotateScheduleRight.started += instance.OnRotateScheduleRight;
+            @RotateScheduleRight.performed += instance.OnRotateScheduleRight;
+            @RotateScheduleRight.canceled += instance.OnRotateScheduleRight;
             @DeleteSchedule.started += instance.OnDeleteSchedule;
             @DeleteSchedule.performed += instance.OnDeleteSchedule;
             @DeleteSchedule.canceled += instance.OnDeleteSchedule;
@@ -1579,9 +1608,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
-            @RotateSchedule.started -= instance.OnRotateSchedule;
-            @RotateSchedule.performed -= instance.OnRotateSchedule;
-            @RotateSchedule.canceled -= instance.OnRotateSchedule;
+            @RotateScheduleLeft.started -= instance.OnRotateScheduleLeft;
+            @RotateScheduleLeft.performed -= instance.OnRotateScheduleLeft;
+            @RotateScheduleLeft.canceled -= instance.OnRotateScheduleLeft;
+            @RotateScheduleRight.started -= instance.OnRotateScheduleRight;
+            @RotateScheduleRight.performed -= instance.OnRotateScheduleRight;
+            @RotateScheduleRight.canceled -= instance.OnRotateScheduleRight;
             @DeleteSchedule.started -= instance.OnDeleteSchedule;
             @DeleteSchedule.performed -= instance.OnDeleteSchedule;
             @DeleteSchedule.canceled -= instance.OnDeleteSchedule;
@@ -1977,12 +2009,19 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPause(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "RotateSchedule" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "RotateScheduleLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnRotateSchedule(InputAction.CallbackContext context);
+        void OnRotateScheduleLeft(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RotateScheduleRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRotateScheduleRight(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "DeleteSchedule" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

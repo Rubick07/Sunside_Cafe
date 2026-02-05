@@ -2,8 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler
+public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    public static ShiftSlotUI currentHoverShiftSlotUI;
+
     [SerializeField] private int day;
     [SerializeField] private int shift;
 
@@ -25,10 +27,11 @@ public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler
     void Refresh()
     {
         var data = ScheduleManager.instance.scheduleGrid.Get(shift, day);
+
         employeeIcon.sprite = data.assignedEmployee ? data.assignedEmployee.portrait : null;
         employeeIcon.enabled = data.assignedEmployee != null;
 
-        assignedHighlighter.enabled = data != null;
+        assignedHighlighter.enabled = data.assignedEmployee != null;
     }
 
     public void Setup(int day, int shift)
@@ -37,6 +40,8 @@ public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler
         this.shift = shift;
 
     }
+
+    public Vector2Int GetPos() => new Vector2Int(shift,day);
 
     public void SetPreview()
     {
@@ -63,13 +68,26 @@ public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
+        currentHoverShiftSlotUI = this;
+
         if (EmployeeCardUI.currentEmployeeData == null)
             return;
 
+        RefreshPreview();
+    }
+
+    public void RefreshPreview()
+    {
         TimetableUI.instance.ShowPreview(new Vector2Int(shift, day));
     }
 
-    private void ScheduleManager_OnAssignedEmployeeChanged(object sender, System.EventArgs e)
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        currentHoverShiftSlotUI = null;
+        TimetableUI.instance.ClearPreview();
+    }
+
+    private void ScheduleManager_OnAssignedEmployeeChanged(object sender, EmployeeData e)
     {
         Clear();
         Refresh();
@@ -79,4 +97,5 @@ public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler
     {
         ScheduleManager.instance.OnAssignedEmployeeChanged -= ScheduleManager_OnAssignedEmployeeChanged;
     }
+
 }

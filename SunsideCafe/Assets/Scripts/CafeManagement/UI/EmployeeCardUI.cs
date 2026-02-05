@@ -5,10 +5,13 @@ using UnityEngine.UI;
 public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public static EmployeeData currentEmployeeData;
+    public static EmployeeCardUI currentEmployeeCard;
+    
 
     [SerializeField] private Image icon;
     [SerializeField] private Image highlight;
-
+    [SerializeField] private SchedulePieceView pieceViewSmall;
+    [SerializeField] private SchedulePieceView pieceViewBig;
     private EmployeeData employeeData;
 
     Canvas canvas;
@@ -18,7 +21,7 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     Vector2 startPosition;
     Transform startParent;
 
-    private SchedulePieceView pieceView;
+    private ScheduleShapeRuntime shapeRuntime;
 
 
     void Awake()
@@ -26,27 +29,51 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
-        pieceView = GetComponent<SchedulePieceView>();
-
     }
     public void Setup(EmployeeData data)
     {
         employeeData = data;
         icon.sprite = data.portrait;
-        pieceView.BuildShape(employeeData);
+        shapeRuntime = new ScheduleShapeRuntime(data.scheduleShape.cells);
+
+        pieceViewSmall.BuildShape(shapeRuntime);
+
     }
+
+    public void RotateLeft()
+    {
+        pieceViewBig.Clear();
+
+        shapeRuntime.RotateLeftShape();
+        pieceViewBig.BuildShape(shapeRuntime);
+    }
+
+    public void RotateRight()
+    {
+        pieceViewBig.Clear();
+
+        shapeRuntime.RotateRightShape();
+        pieceViewBig.BuildShape(shapeRuntime);
+    }
+
 
     public EmployeeData GetEmployeeData()
     {
         return employeeData;
     }
 
+    public ScheduleShapeRuntime GetScheduleShapeRuntime() => shapeRuntime;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
+
         currentEmployeeData = this.employeeData;
+        currentEmployeeCard = this;
 
         startPosition = rectTransform.anchoredPosition;
         startParent = transform.parent;
+
+        pieceViewBig.BuildShape(shapeRuntime);
 
         transform.SetParent(canvas.transform); // supaya di atas UI lain
         canvasGroup.blocksRaycasts = false;
@@ -65,7 +92,12 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnEndDrag(PointerEventData eventData)
     {
+
         currentEmployeeData = null;
+        currentEmployeeCard = null;
+
+        pieceViewBig.Clear();
+
 
         transform.SetParent(startParent);
         rectTransform.anchoredPosition = startPosition;
@@ -74,6 +106,10 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         canvasGroup.alpha = 1f;
 
         transform.localScale = Vector3.one;
+
+        if(ShiftSlotUI.currentHoverShiftSlotUI != null)
+            this.enabled = false;
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)

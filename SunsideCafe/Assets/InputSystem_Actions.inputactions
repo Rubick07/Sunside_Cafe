@@ -124,9 +124,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "RotateSchedule",
+                    "name": "RotateScheduleLeft",
                     "type": "Button",
                     "id": "1f8c0abc-d652-4d33-9156-f1e2d135300f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RotateScheduleRight",
+                    "type": "Button",
+                    "id": "c7a61b1b-6a84-488b-a591-bd2253fea886",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -575,11 +584,22 @@
                 {
                     "name": "",
                     "id": "1781ff95-be39-443c-a329-934556f9cf28",
-                    "path": "<Keyboard>/shift",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "RotateSchedule",
+                    "action": "RotateScheduleLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5647b8b-1476-4481-b4f4-2ba809c75d7e",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "RotateScheduleRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

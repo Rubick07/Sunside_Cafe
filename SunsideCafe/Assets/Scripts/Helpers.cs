@@ -7,6 +7,9 @@ public static class Helpers
 
     public static Vector3 GetMousePosition(this Vector3 pos) => Camera.main.WorldToScreenPoint(pos);
 
+    public static Vector2Int RotateLeft(this Vector2Int pos) => new Vector2Int(-pos.y, pos.x);
+    public static Vector2Int RotateRight(this Vector2Int pos) => new Vector2Int(pos.y, -pos.x);
+
     public static float TimeConverterToMinutes(float time)
     {
         return time / 60;

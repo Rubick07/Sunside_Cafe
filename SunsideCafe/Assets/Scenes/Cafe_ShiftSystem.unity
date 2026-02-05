@@ -730,6 +730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187863246}
+  - component: {fileID: 1187863247}
   m_Layer: 0
   m_Name: ScheduleController
   m_TagString: Untagged
@@ -752,6 +753,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1187863247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187863245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae5cea8443e41640b3a05bd9a58642c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1233701734
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,9 +918,9 @@ MonoBehaviour:
   cardPrefab: {fileID: 1034453403252886223, guid: 0c0a44597c755904ba3d6bf555c27de0, type: 3}
   containerTransform: {fileID: 1764722399}
   employees:
-  - {fileID: 11400000, guid: d8c58bc51cc3b6e469cae835af8d4d49, type: 2}
-  - {fileID: 11400000, guid: d137734edfde9d64e81e88eaf04b202c, type: 2}
   - {fileID: 11400000, guid: d9b6c325775c20f4b9fd2a50555281f4, type: 2}
+  - {fileID: 11400000, guid: d137734edfde9d64e81e88eaf04b202c, type: 2}
+  - {fileID: 11400000, guid: d8c58bc51cc3b6e469cae835af8d4d49, type: 2}
 --- !u!1001 &1406386315
 PrefabInstance:
   m_ObjectHideFlags: 0

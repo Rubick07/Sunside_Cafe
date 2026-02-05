@@ -44,7 +44,9 @@ public class TimetableUI : MonoBehaviour
 
         if (ScheduleManager.instance.IsEmployeeCanPlace(EmployeeCardUI.currentEmployeeData, origin.x, origin.y))
         {
-            foreach (var cell in EmployeeCardUI.currentEmployeeData.scheduleShape.cells)
+            EmployeeCardUI employeeCardUI = EmployeeListUI.instance.GetEmployeeCardUI(EmployeeCardUI.currentEmployeeData);
+
+            foreach (var cell in employeeCardUI.GetScheduleShapeRuntime().cells)
             {
                 Vector2Int target = origin + cell;
                 slots[target.x, target.y].SetPreview();

@@ -29,13 +29,18 @@ public class ScheduleGrid
     {
         for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++)
-                if (grid[x, y].assignedEmployee == emp)
-                    grid[x, y] = null;
+                if (grid[x, y].assignedEmployee == emp) 
+                {
+                    grid[x, y].assignedEmployee = null;
+                }
+
     }
 
     public bool CanPlace(EmployeeData emp, Vector2Int origin)
     {
-        foreach (var cell in emp.scheduleShape.cells)
+        EmployeeCardUI employeeCardUI = EmployeeListUI.instance.GetEmployeeCardUI(emp);
+
+        foreach (var cell in employeeCardUI.GetScheduleShapeRuntime().cells)
         {
             Vector2Int target = origin + cell;
 
