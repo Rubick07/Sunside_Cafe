@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
@@ -7,6 +8,7 @@ public class DialogRunnerSingleton : MonoBehaviour
     public static DialogRunnerSingleton instance;
 
     [SerializeField] private Image spriteImage;
+    [SerializeField] private List<NPCData> NPCDatabase;
     private DialogueRunner dialogueRunner;
 
     private void Awake()
@@ -20,6 +22,7 @@ public class DialogRunnerSingleton : MonoBehaviour
 
         dialogueRunner.AddCommandHandler("SetSpriteDisable",SetSpriteImageDisable);
         dialogueRunner.AddCommandHandler("SetSpriteActive",SetSpriteImageActive);
+        dialogueRunner.AddCommandHandler<string, string>("SetSprite", SetSprite);
 
         dialogueRunner.onDialogueComplete.AddListener(() =>
         {
@@ -37,7 +40,7 @@ public class DialogRunnerSingleton : MonoBehaviour
 
     public void StartDialog(string title, Sprite spriteImage = null)
     {
-        this.spriteImage.sprite = spriteImage;
+/*        this.spriteImage.sprite = spriteImage;
 
         if (spriteImage != null)
         { 
@@ -47,8 +50,34 @@ public class DialogRunnerSingleton : MonoBehaviour
         {
             this.spriteImage.enabled = false;
         }
-
+*/
         dialogueRunner.StartDialogue(title);
+    }
+
+
+    public Sprite GetPortrait(string character, string emotion)
+    {
+        foreach (var c in NPCDatabase)
+        {
+            if (c.npcName == character)
+                return c.GetEmotion(emotion);
+        }
+
+        Debug.LogWarning($"Character '{character}' not found");
+        return null;
+    }
+
+    public void SetSprite(string character, string emotion)
+    {
+        if(GetPortrait(character, emotion))
+        {
+            this.spriteImage.sprite = GetPortrait(character, emotion);
+            SetSpriteImageActive();
+        }
+        else
+        {
+            SetSpriteImageDisable();
+        }
     }
 
     public void SetSpriteImageActive()

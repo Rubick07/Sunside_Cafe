@@ -208,6 +208,24 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RotateSchedule"",
+                    ""type"": ""Button"",
+                    ""id"": ""1f8c0abc-d652-4d33-9156-f1e2d135300f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DeleteSchedule"",
+                    ""type"": ""Button"",
+                    ""id"": ""ba440491-ad03-48f1-ae22-1a76c6cf770d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -637,6 +655,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1781ff95-be39-443c-a329-934556f9cf28"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""RotateSchedule"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2dc3787-4c3d-4fda-8fb8-e5186dde8154"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DeleteSchedule"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1237,6 +1277,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Back = m_Player.FindAction("Back", throwIfNotFound: true);
         m_Player_Click = m_Player.FindAction("Click", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_RotateSchedule = m_Player.FindAction("RotateSchedule", throwIfNotFound: true);
+        m_Player_DeleteSchedule = m_Player.FindAction("DeleteSchedule", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1343,6 +1385,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Back;
     private readonly InputAction m_Player_Click;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_RotateSchedule;
+    private readonly InputAction m_Player_DeleteSchedule;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1406,6 +1450,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Pause".
         /// </summary>
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/RotateSchedule".
+        /// </summary>
+        public InputAction @RotateSchedule => m_Wrapper.m_Player_RotateSchedule;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/DeleteSchedule".
+        /// </summary>
+        public InputAction @DeleteSchedule => m_Wrapper.m_Player_DeleteSchedule;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1471,6 +1523,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @RotateSchedule.started += instance.OnRotateSchedule;
+            @RotateSchedule.performed += instance.OnRotateSchedule;
+            @RotateSchedule.canceled += instance.OnRotateSchedule;
+            @DeleteSchedule.started += instance.OnDeleteSchedule;
+            @DeleteSchedule.performed += instance.OnDeleteSchedule;
+            @DeleteSchedule.canceled += instance.OnDeleteSchedule;
         }
 
         /// <summary>
@@ -1521,6 +1579,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @RotateSchedule.started -= instance.OnRotateSchedule;
+            @RotateSchedule.performed -= instance.OnRotateSchedule;
+            @RotateSchedule.canceled -= instance.OnRotateSchedule;
+            @DeleteSchedule.started -= instance.OnDeleteSchedule;
+            @DeleteSchedule.performed -= instance.OnDeleteSchedule;
+            @DeleteSchedule.canceled -= instance.OnDeleteSchedule;
         }
 
         /// <summary>
@@ -1912,6 +1976,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPause(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RotateSchedule" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRotateSchedule(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "DeleteSchedule" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDeleteSchedule(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

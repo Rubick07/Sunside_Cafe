@@ -7,7 +7,6 @@ public class TimeManager : MonoBehaviour
 
     [Header("Time Config")]
     [SerializeField] private float shiftDuration = 120f; // 2 menit per shift
-    [SerializeField] private int shiftsPerDay = 5;
 
     [Header("Current Time")]
     [SerializeField] private int currentDay = 0;
@@ -38,7 +37,7 @@ public class TimeManager : MonoBehaviour
         shiftTimer = 0;
         currentShift++;
 
-        if (currentShift >= shiftsPerDay)
+        if (currentShift >= ScheduleManager.instance.GetShiftsPerDay())
         {
             currentShift = 0;
             currentDay++;

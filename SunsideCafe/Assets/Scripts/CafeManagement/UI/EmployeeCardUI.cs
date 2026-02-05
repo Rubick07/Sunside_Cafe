@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    public static EmployeeData currentEmployeeData;
+
     [SerializeField] private Image icon;
     [SerializeField] private Image highlight;
 
@@ -16,17 +18,22 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     Vector2 startPosition;
     Transform startParent;
 
+    private SchedulePieceView pieceView;
+
+
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
-    }
+        pieceView = GetComponent<SchedulePieceView>();
 
+    }
     public void Setup(EmployeeData data)
     {
         employeeData = data;
         icon.sprite = data.portrait;
+        pieceView.BuildShape(employeeData);
     }
 
     public EmployeeData GetEmployeeData()
@@ -36,6 +43,8 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        currentEmployeeData = this.employeeData;
+
         startPosition = rectTransform.anchoredPosition;
         startParent = transform.parent;
 
@@ -56,6 +65,8 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        currentEmployeeData = null;
+
         transform.SetParent(startParent);
         rectTransform.anchoredPosition = startPosition;
         canvasGroup.blocksRaycasts = true;

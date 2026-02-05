@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d96d65b7423361a479641841c58afd4e, type: 3}
-  m_Name: ImporantNPCTest
+  m_Script: {fileID: 11500000, guid: c08c01bf8ca3ec0489b3e4b311caa113, type: 3}
+  m_Name: New Objective Data
   m_EditorClassIdentifier: 
-  npcName: Hai
-  type: 0
-  npcSprite: {fileID: 21300000, guid: 335cb5ddc92f69740a71fb7a885d15a2, type: 3}
+  objectiveID: 123
+  title: Ngomong sama tembok
+  description: 
+  conditions:
+  - type: 3
+    targetValue: 1
+  onCompletedEventID: 

@@ -11,11 +11,11 @@ public class ImportantNPC : NPCBase
 
     public override void Interact()
     {
-        DialogRunnerSingleton.instance.StartDialog(dialogName, data.npcSprite);
+        DialogRunnerSingleton.instance.StartDialog(dialogName);
     }
 
     public override void TriggerDialog()
     {
-        DialogRunnerSingleton.instance.StartDialog(dialogName, data.npcSprite);
+        DialogRunnerSingleton.instance.StartDialog(dialogName);
     }
 }

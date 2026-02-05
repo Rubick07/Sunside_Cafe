@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   employeeName: Evan
   portrait: {fileID: 21300000, guid: 6b8c5463d13622141b9c7177eddb0c79, type: 3}
-  traits: []
+  scheduleShape: {fileID: 11400000, guid: 438804b11da614d4d90810933e927c1f, type: 2}
+  traits:
+  - {fileID: 11400000, guid: 4c68c5f328b27f04eb12045319d9532d, type: 2}
+  - {fileID: 0}

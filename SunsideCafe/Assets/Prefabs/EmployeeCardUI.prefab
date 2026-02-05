@@ -75,6 +75,41 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1801219484373404898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3151524196257972574}
+  m_Layer: 5
+  m_Name: TestParnt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3151524196257972574
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801219484373404898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 158299212745564517}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 53.25, y: 0}
+  m_SizeDelta: {x: 206.5, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4189943259508730927
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158299212745564517}
   - component: {fileID: 1034453403252886223}
+  - component: {fileID: 421304481518810905}
   - component: {fileID: 2599755707897584292}
   m_Layer: 5
   m_Name: EmployeeCardUI
@@ -183,6 +219,7 @@ RectTransform:
   - {fileID: 2173680813673290997}
   - {fileID: 6268866944990572920}
   - {fileID: 4883987932624015444}
+  - {fileID: 3151524196257972574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -204,6 +241,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 7831896951864056570}
   highlight: {fileID: 8494806733371633730}
+--- !u!114 &421304481518810905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713888627777426196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d569deb74a3e31240a47d94938c46f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  employeeData: {fileID: 11400000, guid: d137734edfde9d64e81e88eaf04b202c, type: 2}
+  blockParent: {fileID: 3151524196257972574}
+  blockPrefab: {fileID: 2556041388659323363, guid: 991b6f4908ea4a44887a1b65cd224685, type: 3}
+  cellSize: 16
 --- !u!225 &2599755707897584292
 CanvasGroup:
   m_ObjectHideFlags: 0

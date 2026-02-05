@@ -19,10 +19,7 @@ public class EmployeeListUI : MonoBehaviour
 
     public void Remove()
     {
-        foreach(Transform t in containerTransform)
-        {
-            Destroy(t.gameObject);
-        }
+        containerTransform.RemoveAllChild();
     }
 
 }

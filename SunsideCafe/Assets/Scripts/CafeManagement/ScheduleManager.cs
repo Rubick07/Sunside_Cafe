@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ScheduleManager : MonoBehaviour
 {
     public static ScheduleManager instance;
+
+    public event EventHandler OnAssignedEmployeeChanged;
 
     [SerializeField] private int totalDays = 5;
     [SerializeField] private int shiftsPerDay = 5;
@@ -12,7 +15,7 @@ public class ScheduleManager : MonoBehaviour
 
     void Awake()
     {
-        scheduleGrid = new ScheduleGrid(totalDays, shiftsPerDay);
+        scheduleGrid = new ScheduleGrid(shiftsPerDay, totalDays);
 
         instance = this;
     }
@@ -24,24 +27,35 @@ public class ScheduleManager : MonoBehaviour
 
     void HandleShiftChanged(int day, int shift)
     {
-        var active = scheduleGrid.Get(day, shift);
+        var active = scheduleGrid.Get(shift, day);
         Debug.Log($"Shift Aktif: Day {day}, Shift {shift} - " +
             (active.assignedEmployee ? active.assignedEmployee.employeeName : "Kosong"));
     }
 
-    public void AssignEmployee(int day, int shift, EmployeeData employee)
+    public void AssignEmployee(int shifts, int days, EmployeeData employee)
     {
-        scheduleGrid.grid[day, shift].assignedEmployee = employee;
+        Vector2Int origin = new Vector2Int(shifts,days);
+
+        foreach (var cell in employee.scheduleShape.cells)
+        {
+            Vector2Int target = origin + cell;
+            scheduleGrid.grid[target.x, target.y].assignedEmployee = employee;
+        }
+
+        OnAssignedEmployeeChanged?.Invoke(this, EventArgs.Empty);
+    }
+    public void Remove(EmployeeData emp)
+    {
+        scheduleGrid.Remove(emp);
     }
 
-    public bool IsEmployeeWorking(EmployeeData employee, int day, int shift)
+    public bool IsEmployeeCanPlace(EmployeeData employee, int day, int shift)
     {
-        for (int s = 0; s < shiftsPerDay; s++)
-        {
-            if (scheduleGrid.grid[day, s].assignedEmployee == employee)
-                return true;
-        }
-        return false;
+        return scheduleGrid.CanPlace(employee, new Vector2Int(day, shift));
     }
+
+    public int GetTotalDay() => totalDays;
+    public int GetShiftsPerDay() => shiftsPerDay;
+
 
 }
