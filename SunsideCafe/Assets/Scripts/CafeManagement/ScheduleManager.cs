@@ -15,6 +15,8 @@ public class ScheduleManager : MonoBehaviour
 
     public ScheduleGrid scheduleGrid;
 
+    private List<EmployeeData> assignedEmployee = new List<EmployeeData>();
+
     void Awake()
     {
         scheduleGrid = new ScheduleGrid(shiftsPerDay, totalDays);
@@ -56,11 +58,15 @@ public class ScheduleManager : MonoBehaviour
             scheduleGrid.grid[target.x, target.y].assignedEmployee = employee;
         }
 
+        assignedEmployee.Add(employee); ;
+
         OnAssignedEmployeeChanged?.Invoke(this, employee);
     }
     public void Remove(EmployeeData emp)
     {
         scheduleGrid.Remove(emp);
+
+        assignedEmployee.Remove(emp);
 
         OnAssignedEmployeeChanged?.Invoke(this, emp);
     }
@@ -73,5 +79,8 @@ public class ScheduleManager : MonoBehaviour
     public int GetTotalDay() => totalDays;
     public int GetShiftsPerDay() => shiftsPerDay;
 
+    public List<EmployeeData> GetAssignedEmployeeDataList() => assignedEmployee;
+
+    public bool IsAllEmployeeAssigned() => assignedEmployee.Count == EmployeeListUI.instance.GetEmployeeDataLength();
 
 }

@@ -10,7 +10,6 @@ public class EmployeeListUI : MonoBehaviour
     [SerializeField] private EmployeeData[] employees;
 
     private List<EmployeeCardUI> employeeCardUIList = new List<EmployeeCardUI>();
-
     private void Awake()
     {
         instance = this;
@@ -29,7 +28,6 @@ public class EmployeeListUI : MonoBehaviour
         }
 
     }
-
 
     public EmployeeCardUI GetEmployeeCardUI(EmployeeData employeeData)
     {
@@ -50,4 +48,5 @@ public class EmployeeListUI : MonoBehaviour
         employeeCardUIList.Clear();
     }
 
+    public int GetEmployeeDataLength() => employeeCardUIList.Count;
 }
