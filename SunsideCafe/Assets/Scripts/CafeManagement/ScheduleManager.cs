@@ -11,11 +11,18 @@ public class ScheduleManager : MonoBehaviour
     [SerializeField] private int totalDays = 5;
     [SerializeField] private int shiftsPerDay = 5;
 
+    [SerializeField] private Vector2Int[] blockerArray;
+
     public ScheduleGrid scheduleGrid;
 
     void Awake()
     {
         scheduleGrid = new ScheduleGrid(shiftsPerDay, totalDays);
+
+        foreach(Vector2Int i in blockerArray)
+        {
+            scheduleGrid.Get(i.x, i.y).state = ShiftInstance.State.Blocked;
+        }
 
         instance = this;
     }

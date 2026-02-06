@@ -12,6 +12,7 @@ public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IP
     [SerializeField] private Image employeeIcon;
     [SerializeField] private Image highlighter;
     [SerializeField] private Image assignedHighlighter;
+    [SerializeField] private Image blockedHighlighter;
 
     void Start()
     {
@@ -28,10 +29,13 @@ public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IP
     {
         var data = ScheduleManager.instance.scheduleGrid.Get(shift, day);
 
+
         employeeIcon.sprite = data.assignedEmployee ? data.assignedEmployee.portrait : null;
         employeeIcon.enabled = data.assignedEmployee != null;
 
         assignedHighlighter.enabled = data.assignedEmployee != null;
+
+        blockedHighlighter.enabled = data.state == ShiftInstance.State.Blocked;
     }
 
     public void Setup(int day, int shift)

@@ -17,6 +17,8 @@ public class ScheduleGrid
         for (int s = 0; s < shifts; s++)
             for (int d = 0; d < days; d++)
                 grid[s, d] = new ShiftInstance { day = d, shift = s };
+
+
     }
 
     public ShiftInstance Get(int shifts, int days)
@@ -49,6 +51,10 @@ public class ScheduleGrid
 
             if (!IsEmpty(target))
                 return false;
+
+            if (IsBlocked(target))
+                return false;
+
         }
         return true;
     }
@@ -64,4 +70,10 @@ public class ScheduleGrid
     {
         return grid[pos.x, pos.y].assignedEmployee == null;
     }
+
+    public bool IsBlocked(Vector2Int pos)
+    {
+        return grid[pos.x, pos.y].state == ShiftInstance.State.Blocked;
+    }
+
 }

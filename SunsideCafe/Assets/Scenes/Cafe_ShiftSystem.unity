@@ -1224,7 +1224,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalDays: 5
-  shiftsPerDay: 4
+  shiftsPerDay: 5
+  blockerArray:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 4, y: 0}
+  - {x: 0, y: 3}
 --- !u!4 &1751855105
 Transform:
   m_ObjectHideFlags: 0
