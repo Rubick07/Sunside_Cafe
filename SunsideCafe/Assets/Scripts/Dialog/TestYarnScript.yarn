@@ -12,7 +12,7 @@ title: NPCDialogTest
 <<endonce>>
 
 
-NPC: Test choice ini
+NPC: [test]Test choice [/test]ini
 <<SetSpriteDisable>>
 -> Hai
     <<jump TestPilihan1>>
