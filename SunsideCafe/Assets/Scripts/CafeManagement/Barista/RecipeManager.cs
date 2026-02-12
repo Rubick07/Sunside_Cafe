@@ -21,11 +21,9 @@ public class RecipeManager : MonoBehaviour
             {
                 int totalLevel = ingredients.Sum(i => i.level);
                 int finalLevel = totalLevel + recipe.bonusLevel;
-
-                return new FoodItem(recipe.output, finalLevel);
+                return new FoodItem(recipe.output);
             }
         }
-
         return null; // Tidak ada resep cocok
     }
 
@@ -34,7 +32,12 @@ public class RecipeManager : MonoBehaviour
         if (ingredients.Count != recipe.requiredIngredients.Length)
             return false;
 
-        return recipe.requiredIngredients
-            .All(req => ingredients.Any(i => i.data == req));
+        var sortedRequired = recipe.requiredIngredients.OrderBy(x => x.name);
+
+        var sortedInput = ingredients.Select(i => i.data).OrderBy(x => x.name);
+
+        return sortedRequired.SequenceEqual(sortedInput);
+
+
     }
 }
