@@ -61,21 +61,24 @@ public class CustomerView : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         var foodUI = eventData.pointerDrag
-            ?.GetComponent<FoodItemUI>();
+            ?.GetComponent<IServe>();
 
         if (foodUI == null) return;
 
-        bool success = controller.TryServe(foodUI.GetFoodData());
-
+        bool success = controller.TryServe(foodUI.GetFoodItem());
         if (success)
         {
             foodUI.Consume();
+            isActive = false;
+            CustomerSlotUI customerSlotUI = GetComponentInParent<CustomerSlotUI>();
+
+            customerSlotUI.Clear();
 
             OnCustomerGetCorrectFood?.Invoke(this, EventArgs.Empty);
         }
         else
         {
-            foodUI.ReturnToOrigin();
+            //foodUI.ReturnToOrigin();
         }
     }
 

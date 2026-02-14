@@ -1,23 +1,21 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 using System;
 
-public class KettleController : MonoBehaviour
+public class Plate : MonoBehaviour
 {
     public event EventHandler<FoodItem> OnIngredientListChanged;
     public event EventHandler OnIngredientMix;
-    public event EventHandler OnIngredientFailMix;
-    public event EventHandler<KettleState> OnKettleStateChanged;
+    public event EventHandler<PlateState> OnKettleStateChanged;
 
-    public enum KettleState
+    public enum PlateState
     {
         putIngredients,
-        Mix,
         Ready,
         Ondrag
     }
 
-    private KettleState kettleState;
+    private PlateState kettleState;
 
     [SerializeField] private float timeToMix;
 
@@ -40,6 +38,8 @@ public class KettleController : MonoBehaviour
 
         OnIngredientListChanged?.Invoke(this, newFoodItem);
 
+        MixIngredient();
+
         return true;
     }
 
@@ -49,8 +49,6 @@ public class KettleController : MonoBehaviour
 
         if (fd == null)
         {
-            ingredients.Clear();
-            OnIngredientFailMix?.Invoke(this, EventArgs.Empty);
             return;
         }
 
@@ -58,10 +56,10 @@ public class KettleController : MonoBehaviour
         ingredients.Clear();
         OnIngredientMix?.Invoke(this, EventArgs.Empty);
 
-        SetState(KettleState.Ready);
+        SetState(PlateState.Ready);
     }
 
-    public void SetState(KettleState state)
+    public void SetState(PlateState state)
     {
         kettleState = state;
 
@@ -79,17 +77,15 @@ public class KettleController : MonoBehaviour
         foodItem = null;
 
         RemoveIngredients();
-        SetState(KettleState.putIngredients);
+        SetState(PlateState.putIngredients);
     }
 
     public int GetIngredientListCount() => ingredients.Count;
 
     public bool IsFull() => ingredients.Count == maxIngredient;
 
-    public bool CanMix() => ingredients.Count > 1;
-
     public FoodItem GetFoodItem() => foodItem;
 
-    public KettleState GetKettleState() => kettleState;
+    public PlateState GetKettleState() => kettleState;
 
 }

@@ -13,14 +13,17 @@ public class CustomerController
 
     public CustomerData GetCustomerData() => data;
 
-    public void AddOrder(FoodData foodDatas) => order.Add(foodDatas);
+    public void AddOrder(FoodData foodDatas)
+    {
+        order.Add(foodDatas);
+    } 
     public List<FoodData> GetOrder() => order;
 
-    public bool TryServe(FoodData food)
+    public bool TryServe(FoodItem food)
     {
-        if (order.Contains(food))
+        if (order.Contains(food.data))
         {
-            order.Remove(food);
+            order.Remove(food.data);
 
             if (order.Count == 0)
                 CompleteOrder();

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kopi
   m_EditorClassIdentifier: 
   foodName: KopiHitam
+  foodType: 1
   price: 0
   icon: {fileID: 21300000, guid: b41f7116457aa304db7442a3acb39cd3, type: 3}
   prefab: {fileID: 0}

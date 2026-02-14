@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66c5481baafb78f4cbd9518dcc481b93, type: 3}
-  m_Name: CustomerData_Dapa
+  m_Name: CustomerData_MrNori
   m_EditorClassIdentifier: 
-  customerName: Dapa
-  portrait: {fileID: 21300000, guid: eff5e1faa589e3c4d9d529c9b928a67d, type: 3}
+  customerName: Nori
+  portrait: {fileID: 21300000, guid: 64daaff7e1adcf74ab8a05981e004435, type: 3}
   patienceTime: 30
   coinReward: 5
   possibleOrders:
-  - {fileID: 11400000, guid: 1326199e3a28f2846811a5217af7b541, type: 2}
-  - {fileID: 11400000, guid: 1326199e3a28f2846811a5217af7b541, type: 2}
+  - {fileID: 11400000, guid: 0e3214c4ae55eff48b7906ce9c1e4944, type: 2}

@@ -4,9 +4,16 @@ using DG.Tweening;
 
 public class CustomerSlotUI : MonoBehaviour
 {
+    public static Transform exitPosition;
+
     private CustomerView currentCustomer;
 
     public bool IsEmpty => currentCustomer == null;
+
+    private void Start()
+    {
+        exitPosition = GameObject.Find("ExitPosition").transform;
+    }
 
     public void Assign(CustomerView view)
     {
@@ -23,8 +30,15 @@ public class CustomerSlotUI : MonoBehaviour
 
     public void Clear()
     {
-        Destroy(currentCustomer.gameObject);
-        currentCustomer = null;
+        RectTransform rectTransform = currentCustomer.GetComponent<RectTransform>();
+
+        rectTransform.DOMoveX(exitPosition.position.x, 1f).OnComplete(() =>
+        {
+            Destroy(currentCustomer.gameObject);
+            currentCustomer = null;
+            CustomerSpawner.instance.SpawnCustomer();
+        });
+
     }
 
 }

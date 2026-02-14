@@ -1,31 +1,34 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class FoodItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHandler, IRemoveable, IServe
 {
-    [SerializeField] private FoodData foodData;
+    [SerializeField] private Image foodImage;
+    private FoodItem foodItem;
 
     RectTransform rect;
     Canvas canvas;
+    CanvasGroup canvasGroup;
     Vector2 startPos;
-    Transform startParent;
 
-    void Awake()
+    private void Start()
     {
         rect = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
-    }
+        canvasGroup = GetComponent<CanvasGroup>();
 
-    public void OnBeginDrag(PointerEventData e)
-    {
-        startPos = rect.anchoredPosition;
-        startParent = transform.parent;
-        transform.SetParent(canvas.transform, true);
+
+        startPos = rect.transform.position;
     }
 
     public void OnDrag(PointerEventData e)
     {
-        rect.anchoredPosition += e.delta / canvas.scaleFactor;
+        if (foodItem == null)
+            return;
+
+        rect.position += (Vector3)(e.delta / canvas.scaleFactor);
+        canvasGroup.blocksRaycasts = false;
     }
 
     public void OnEndDrag(PointerEventData e)
@@ -35,14 +38,45 @@ public class FoodItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void ReturnToOrigin()
     {
-        transform.SetParent(startParent, false);
-        rect.anchoredPosition = startPos;
+        rect.transform.position = startPos;
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+
+        var drag = eventData.pointerDrag?.GetComponent<KettleUI>();
+        if (drag == null) return;
+
+        FoodItem foodItem = drag.GetFoodItem();
+        this.foodItem = foodItem;
+
+        foodImage.sprite = foodItem.data.icon;
+
+        drag.Place();
     }
 
     public void Consume()
     {
-        Destroy(gameObject);
+        RemoveFood();
+        //Destroy(gameObject);
     }
 
-    public FoodData GetFoodData() => foodData;
+    public void RemoveFood()
+    {
+        foodItem = null;
+        foodImage.sprite = null;
+    }
+
+
+    public void Remove()
+    {
+        RemoveFood();
+    }
+
+    public FoodItem GetFoodItem()
+    {
+        return foodItem;
+    }
+
 }

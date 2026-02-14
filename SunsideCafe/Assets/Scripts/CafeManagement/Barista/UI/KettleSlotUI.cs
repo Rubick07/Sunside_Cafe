@@ -32,6 +32,12 @@ public class KettleSlotUI : MonoBehaviour
 
         var target = com.GetComponent<KettleController>();
 
+        if(e == null)
+        {
+            ingredientImage.sprite = null;
+            return;
+        }
+
         if (target.GetIngredientListCount()-1 == transform.GetSiblingIndex())
             ingredientImage.sprite = e.data.icon;
 

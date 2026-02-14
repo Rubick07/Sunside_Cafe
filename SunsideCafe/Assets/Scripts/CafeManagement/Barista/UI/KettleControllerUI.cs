@@ -27,7 +27,7 @@ public class KettleControllerUI : MonoBehaviour
 
     private void KettleController_OnIngredientListChanged(object sender, FoodItem e)
     {
-        if (kettleController.IsFull())
+        if (kettleController.CanMix())
             mixButton.gameObject.SetActive(true);
 
         else mixButton.gameObject.SetActive(false);

@@ -3,17 +3,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandler, IRemoveable
+
+public class PlateUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandler, IRemoveable, IServe
 {
-    [SerializeField] private KettleController kettleController;
+    [SerializeField] private Plate plate;
     [SerializeField] private Image foodDoneImage;
 
     RectTransform rect;
     Canvas canvas;
     CanvasGroup canvasGroup;
     Vector2 startPos;
-
-
 
     private void Awake()
     {
@@ -26,19 +25,19 @@ public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandl
 
     private void Start()
     {
-        kettleController.OnIngredientMix += KettleController_OnIngredientMix;
+        plate.OnIngredientMix += KettleController_OnIngredientMix;
     }
 
     private void KettleController_OnIngredientMix(object sender, System.EventArgs e)
     {
-        if (kettleController.GetFoodItem() == null)
+        if (plate.GetFoodItem() == null)
         {
             foodDoneImage.enabled = false;
         }
         else
         {
             foodDoneImage.enabled = true;
-            foodDoneImage.sprite = kettleController.GetFoodItem().data.icon;
+            foodDoneImage.sprite = plate.GetFoodItem().data.icon;
         }
     }
 
@@ -47,15 +46,15 @@ public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandl
         var drag = eventData.pointerDrag?.GetComponent<IngredientDragUI>();
 
         if (drag == null) return;
-        if (drag.GetFoodData().foodType != FoodData.foodDataType.MINUMAN) return;
+        if (drag.GetFoodData().foodType != FoodData.foodDataType.MAKANAN) return;
 
-        kettleController.AddIngredient(drag.GetFoodData());
+        plate.AddIngredient(drag.GetFoodData());
     }
     public void OnDrag(PointerEventData eventData)
     {
 
-        if (kettleController.GetKettleState() != KettleController.KettleState.Ready)
-            return;
+/*        if (plate.GetKettleState() != KettleController.KettleState.Ready)
+            return;*/
 
         rect.position += (Vector3)(eventData.delta / canvas.scaleFactor);
         canvasGroup.blocksRaycasts = false;
@@ -70,18 +69,17 @@ public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandl
 
     public void Remove()
     {
-        kettleController.RemoveFood();
+        plate.RemoveFood();
         foodDoneImage.enabled = false;
     }
 
     public FoodItem GetFoodItem()
     {
-        return kettleController.GetFoodItem();
+        return plate.GetFoodItem();
     }
 
-    public void Place()
+    public void Consume()
     {
-        kettleController.RemoveFood();
-        foodDoneImage.enabled = false;
+        Remove();
     }
 }

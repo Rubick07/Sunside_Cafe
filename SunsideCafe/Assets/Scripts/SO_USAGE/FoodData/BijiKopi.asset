@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BijiKopi
   m_EditorClassIdentifier: 
   foodName: BijiKopi
+  foodType: 1
   price: 0
   icon: {fileID: 21300000, guid: 148ca90c8fb9ccc4181f890e773dfe7f, type: 3}
   prefab: {fileID: 0}
