@@ -23,24 +23,6 @@ public class PlateUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandle
         startPos = rect.transform.position;
     }
 
-    private void Start()
-    {
-        plate.OnIngredientMix += KettleController_OnIngredientMix;
-    }
-
-    private void KettleController_OnIngredientMix(object sender, System.EventArgs e)
-    {
-        if (plate.GetFoodItem() == null)
-        {
-            foodDoneImage.enabled = false;
-        }
-        else
-        {
-            foodDoneImage.enabled = true;
-            foodDoneImage.sprite = plate.GetFoodItem().data.icon;
-        }
-    }
-
     public void OnDrop(PointerEventData eventData)
     {
         var drag = eventData.pointerDrag?.GetComponent<IngredientDragUI>();
@@ -49,6 +31,9 @@ public class PlateUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandle
         if (drag.GetFoodData().foodType != FoodData.foodDataType.MAKANAN) return;
 
         plate.AddIngredient(drag.GetFoodData());
+
+        foodDoneImage.enabled = true;
+        foodDoneImage.sprite = drag.GetFoodData().icon;
     }
     public void OnDrag(PointerEventData eventData)
     {

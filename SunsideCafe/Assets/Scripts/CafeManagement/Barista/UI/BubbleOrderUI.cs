@@ -6,12 +6,13 @@ public class BubbleOrderUI : MonoBehaviour, IBindData<FoodData>
     [SerializeField] private Image foodImage;
     private FoodData foodData;
 
+    CustomerView customerView;
     public void Bind(FoodData data)
     {
         this.foodData = data;
         foodImage.sprite = data.icon;
 
-        CustomerView customerView = GetComponentInParent<CustomerView>();
+        customerView = GetComponentInParent<CustomerView>();
         customerView.OnCustomerGetCorrectFood += CustomerView_OnCustomerGetCorrectFood;
     }
 
@@ -29,7 +30,6 @@ public class BubbleOrderUI : MonoBehaviour, IBindData<FoodData>
 
     private void OnDestroy()
     {
-        CustomerView customerView = GetComponentInParent<CustomerView>();
         customerView.OnCustomerGetCorrectFood -= CustomerView_OnCustomerGetCorrectFood;
     }
 }
