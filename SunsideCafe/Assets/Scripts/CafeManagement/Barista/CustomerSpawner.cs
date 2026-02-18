@@ -6,10 +6,12 @@ public class CustomerSpawner : MonoBehaviour
 
     [SerializeField] private CustomerSlotUI[] slots;
     [SerializeField] private GameObject customerPrefab;
+    [SerializeField] private GameObject specialCustomerPrefab;
     [SerializeField] private float timeToSpawnCustomer;
     [SerializeField] private RectTransform spawnPositionRectTransform;
 
     private CustomerData currentCustomerData;
+    private bool alreadySpawnSpecialCustomer;
 
     private void Awake()
     {
@@ -18,11 +20,57 @@ public class CustomerSpawner : MonoBehaviour
 
     private void Start()
     {
-        SpawnCustomer();
-        //Spawn(CustomerManager.instance.GetCustomerDataList()[0]);
+        BaristaManager.instance.OnGameStateChanged += BaristaManager_OnGameStateChanged;
+    }
+
+    private void BaristaManager_OnGameStateChanged(object sender, BaristaManager.baristaGameState e)
+    {
+        if(e == BaristaManager.baristaGameState.Open)
+        {
+            SpawnCustomer();
+        }
+    }
+
+    public void SpawnSpecialCustomer()
+    {
+        if (alreadySpawnSpecialCustomer)
+            return;
+
+        CustomerData customerData = CustomerManager.instance.GetSpecialCustomerDataList()[0];
+
+        foreach (var slot in slots)
+        {
+            if (slot.IsEmpty)
+            {
+                GameObject viewGameobject = Instantiate(specialCustomerPrefab, spawnPositionRectTransform);
+
+                viewGameobject.transform.SetParent(null);
+
+                CustomerView view = viewGameobject.GetComponent<CustomerView>();
+
+                view.Bind(customerData, slot);
+                slot.Assign(view);
+
+                alreadySpawnSpecialCustomer = true;
+                return;
+            }
+        }
     }
 
     public void SpawnCustomer()
+    {
+        if(BaristaManager.instance.GetBaristaGameState() == BaristaManager.baristaGameState.Open)
+        {
+            SpawnRandomCustomer();
+        }
+        else if(BaristaManager.instance.GetBaristaGameState() == BaristaManager.baristaGameState.FriendSession)
+        {
+            SpawnSpecialCustomer();
+        }
+        
+    }
+
+    private void SpawnRandomCustomer()
     {
         int random = 0;
         do
@@ -48,10 +96,15 @@ public class CustomerSpawner : MonoBehaviour
 
                 CustomerView view = viewGameobject.GetComponent<CustomerView>();
 
-                view.Bind(data);
+                view.Bind(data, slot);
                 slot.Assign(view);
                 return;
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        BaristaManager.instance.OnGameStateChanged -= BaristaManager_OnGameStateChanged;
     }
 }

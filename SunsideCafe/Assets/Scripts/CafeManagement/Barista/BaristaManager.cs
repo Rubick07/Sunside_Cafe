@@ -1,16 +1,62 @@
 using UnityEngine;
+using System;
 
 public class BaristaManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static BaristaManager instance;
+
+    public event EventHandler<baristaGameState> OnGameStateChanged;
+
+
+    public enum baristaGameState
     {
-        
+        NotStart,
+        Open,
+        FriendSession
     }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private baristaGameState gameState;
+    [SerializeField] private float timer;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
+
+    private void Update()
+    {
+        switch (gameState)
+        {
+            case baristaGameState.NotStart:
+                break;
+
+            case baristaGameState.Open:
+                timer -= Time.deltaTime;
+
+                if (timer <= 0)
+                    ChangeBaristaManagerState(baristaGameState.FriendSession);
+
+
+                break;
+
+            case baristaGameState.FriendSession:
+
+                break;
+
+
+        }
+    }
+
+    public void ChangeBaristaManagerState(baristaGameState b)
+    {
+        if (b == gameState)
+            return;
+
+        gameState = b;
+
+        OnGameStateChanged?.Invoke(this, b);
+    }
+
+    public float GetTimer() => timer;
+    public baristaGameState GetBaristaGameState() => gameState;
 }

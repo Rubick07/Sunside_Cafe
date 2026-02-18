@@ -6,6 +6,7 @@ public class CustomerManager : MonoBehaviour
     public static CustomerManager instance;
 
     [SerializeField] private List<CustomerData> customerDataList;
+    [SerializeField] private List<SpecialCustomerData> SpecialCustomerDataList;
 
     private void Awake()
     {
@@ -13,5 +14,6 @@ public class CustomerManager : MonoBehaviour
     }
 
     public List<CustomerData> GetCustomerDataList() => customerDataList;
+    public List<SpecialCustomerData> GetSpecialCustomerDataList() => SpecialCustomerDataList;
 
 }

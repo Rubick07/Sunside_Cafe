@@ -30,6 +30,22 @@ public class CustomerSlotUI : MonoBehaviour
 
     public void Clear()
     {
+        if (currentCustomer is SpecialCustomerView)
+        {
+            SpecialCustomerData a = currentCustomer.GetCustomerController().GetCustomerData() as SpecialCustomerData;
+
+            DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(CustomerComplete);
+            DialogRunnerSingleton.instance.StartDialog(a.clearDialogTitle);
+
+            return;
+        }
+
+        CustomerComplete();
+
+    }
+
+    private void CustomerComplete()
+    {
         RectTransform rectTransform = currentCustomer.GetComponent<RectTransform>();
 
         rectTransform.DOMoveX(exitPosition.position.x, 1f).OnComplete(() =>
@@ -39,6 +55,7 @@ public class CustomerSlotUI : MonoBehaviour
             CustomerSpawner.instance.SpawnCustomer();
         });
 
-    }
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.RemoveListener(CustomerComplete);
 
+    }
 }

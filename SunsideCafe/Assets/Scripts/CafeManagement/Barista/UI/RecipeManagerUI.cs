@@ -26,11 +26,8 @@ public class RecipeManagerUI : MonoBehaviour
 
     public void CreateRecipeUI()
     {
-        Debug.Log("Hai");
         foreach(RecipeData recipeData in RecipeManager.instance.GetRecipeDataList())
         {
-            Debug.Log("Hai sad");
-
             RecipeUI recipeUI = Helpers.CreateUI<RecipeUI, RecipeData>(recipeUIPrefab, recipeUIContainer, recipeData);
 
             recipeUIList.Add(recipeUI);

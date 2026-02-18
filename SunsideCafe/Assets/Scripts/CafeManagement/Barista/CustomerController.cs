@@ -6,9 +6,11 @@ public class CustomerController
     CustomerData data;
     List<FoodData> order = new List<FoodData>();
 
-    public CustomerController(CustomerData data)
+    private CustomerView customerView;
+    public CustomerController(CustomerData data, CustomerView customerView)
     {
         this.data = data;
+        this.customerView = customerView;
     }
 
     public CustomerData GetCustomerData() => data;
@@ -26,8 +28,9 @@ public class CustomerController
             order.Remove(food.data);
 
             if (order.Count == 0)
+            {
                 CompleteOrder();
-
+            }
             return true;
         }
         return false;
@@ -36,5 +39,7 @@ public class CustomerController
     void CompleteOrder()
     {
         // reward, score, remove customer
+        customerView.GetCustomerSlotUI().Clear();
+
     }
 }

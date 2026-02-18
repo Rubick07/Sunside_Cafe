@@ -6,21 +6,22 @@ using System.Collections.Generic;
 
 public class CustomerView : MonoBehaviour, IDropHandler
 {
-    public event EventHandler OnCustomerGetCorrectFood;
+    public event EventHandler<FoodData> OnCustomerGetCorrectFood;
 
-    [SerializeField] private Image customerImage;
-    [SerializeField] private Image timeBarImage;
-    [SerializeField] private Transform allGroupTransform;
+    [SerializeField] protected Image customerImage;
+    [SerializeField] protected Image timeBarImage;
+    [SerializeField] protected Transform allGroupTransform;
     [Header("BUBBLE ORDER REFERENCE")]
-    [SerializeField] private BubbleOrderUI bubbleOrderPrefabBubbleOrderUI;
-    [SerializeField] private Transform bubbleOrderContainerTransform;
+    [SerializeField] protected BubbleOrderUI bubbleOrderPrefabBubbleOrderUI;
+    [SerializeField] protected Transform bubbleOrderContainerTransform;
 
-    private CustomerController controller;
-    private bool isActive = false;
-    private float patienceTimer;
+    protected CustomerController controller;
+    protected CustomerSlotUI slot;
+    protected bool isActive = false;
+    protected float patienceTimer;
 
 
-    private List<BubbleOrderUI> bubbleOrderUIList = new List<BubbleOrderUI>();
+    protected List<BubbleOrderUI> bubbleOrderUIList = new List<BubbleOrderUI>();
 
     private void Update()
     {
@@ -32,11 +33,12 @@ public class CustomerView : MonoBehaviour, IDropHandler
         timeBarImage.fillAmount = (float)patienceTimer / controller.GetCustomerData().patienceTime;
     }
 
-    public void Bind(CustomerData data)
+    public virtual void Bind(CustomerData data, CustomerSlotUI slotUI)
     {
-        controller = new CustomerController(data);
+        controller = new CustomerController(data, this);
         customerImage.sprite = data.portrait;
         patienceTimer = data.patienceTime;
+        slot = slotUI;
 
         int randomOrder = UnityEngine.Random.Range(1, data.possibleOrders.Count);
 
@@ -72,9 +74,7 @@ public class CustomerView : MonoBehaviour, IDropHandler
             isActive = false;
             CustomerSlotUI customerSlotUI = GetComponentInParent<CustomerSlotUI>();
 
-            customerSlotUI.Clear();
-
-            OnCustomerGetCorrectFood?.Invoke(this, EventArgs.Empty);
+            OnCustomerGetCorrectFood?.Invoke(this, foodUI.GetFoodItem().data);
         }
         else
         {
@@ -82,11 +82,15 @@ public class CustomerView : MonoBehaviour, IDropHandler
         }
     }
 
-    public void SetActive()
+    public virtual void SetActive()
     {
         isActive = true;
 
         bubbleOrderContainerTransform.gameObject.SetActive(true);
         timeBarImage.gameObject.SetActive(true);
     }
+
+    public CustomerSlotUI GetCustomerSlotUI() => slot;
+
+    public CustomerController GetCustomerController() => controller;
 }

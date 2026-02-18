@@ -49,6 +49,9 @@ public class Plate : MonoBehaviour
 
         if (fd == null)
         {
+            if (maxIngredient == ingredients.Count - 1)
+                RemoveIngredients();
+
             return;
         }
 

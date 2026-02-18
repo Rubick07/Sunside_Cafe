@@ -39,3 +39,23 @@ title: TestPilihan1
 ---
 Ayam: berkokok cuy kata {$name}
 ===
+
+title: PamanSawit
+---
+<<SetSprite MrP biasa>>
+Mister P:  sawit saya kebakar
+Mister P: saya ingin [test]minuman yang manis[/test] le
+===
+
+title: PriaSolo
+---
+Nori: saya ditendang dari grup nyanyi saya
+Nori: akhirnya saya menjadi penyanyi solo
+Nori: buatkan saya 1 [test]minuman yang pahit dan sehitamnya[/test]
+Nori: sama saya ingin [test]yang manis 1[/test] juga
+===
+
+title: PriaSoloSelesaiPesan
+---
+Nori: Terima kasih untuk kopi hidengnya
+===
