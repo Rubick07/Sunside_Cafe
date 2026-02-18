@@ -4,6 +4,8 @@ This is an example of a Yarn Spinner script. Write your dialogue here!
 ===
 title: NPCDialogTest
 ---
+
+
 <<SetSprite Vincent biasa>>
 <<once>>
     NPC: Hai, Saya NPC
@@ -15,8 +17,10 @@ title: NPCDialogTest
 NPC: [test]Test choice [/test]ini
 <<SetSpriteDisable>>
 -> Hai
+    <<set $name to "pilips">>
     <<jump TestPilihan1>>
 -> P ingfo
+    <<set $name to "Epan">>
     <<detour TestPilihan1>>
 -> gk tau
 -> kabur
@@ -33,5 +37,5 @@ NPC: ya gitu deh pokoknya
 
 title: TestPilihan1
 ---
-Ayam: berkokok cuy
+Ayam: berkokok cuy kata {$name}
 ===

@@ -9,6 +9,8 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] private float timeToSpawnCustomer;
     [SerializeField] private RectTransform spawnPositionRectTransform;
 
+    private CustomerData currentCustomerData;
+
     private void Awake()
     {
         instance = this;
@@ -16,14 +18,22 @@ public class CustomerSpawner : MonoBehaviour
 
     private void Start()
     {
-        Spawn(CustomerManager.instance.GetCustomerDataList()[0]);
+        SpawnCustomer();
+        //Spawn(CustomerManager.instance.GetCustomerDataList()[0]);
     }
 
     public void SpawnCustomer()
     {
-        int random = Random.Range(0, CustomerManager.instance.GetCustomerDataList().Count);
+        int random = 0;
+        do
+        {
+            random = Random.Range(0, CustomerManager.instance.GetCustomerDataList().Count);
+
+        } while (currentCustomerData == CustomerManager.instance.GetCustomerDataList()[random]);
 
         Spawn(CustomerManager.instance.GetCustomerDataList()[random]);
+
+        currentCustomerData = CustomerManager.instance.GetCustomerDataList()[random];
     }
 
     private void Spawn(CustomerData data)

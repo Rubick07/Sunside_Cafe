@@ -11,11 +11,11 @@ public class RecipeManager : MonoBehaviour
         instance = this;
     }
 
-    [SerializeField] private List<RecipeData> recipes;
+    [SerializeField] private List<RecipeData> recipeDataList;
 
     public FoodItem TryCombine(List<FoodItem> ingredients)
     {
-        foreach (var recipe in recipes)
+        foreach (var recipe in recipeDataList)
         {
             if (MatchRecipe(recipe, ingredients))
             {
@@ -40,4 +40,7 @@ public class RecipeManager : MonoBehaviour
 
 
     }
+
+    public List<RecipeData> GetRecipeDataList() => recipeDataList;
+
 }
