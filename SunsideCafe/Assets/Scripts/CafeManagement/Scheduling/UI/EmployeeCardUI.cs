@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public static EmployeeData currentEmployeeData;
     public static EmployeeCardUI currentEmployeeCard;
-    
 
+    [SerializeField] private TextMeshProUGUI employeeNameText;
     [SerializeField] private Image icon;
     [SerializeField] private Image highlight;
     [SerializeField] private SchedulePieceView pieceViewSmall;
@@ -33,6 +34,8 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void Setup(EmployeeData data)
     {
         employeeData = data;
+
+        employeeNameText.text = data.employeeName;
         icon.sprite = data.portrait;
         shapeRuntime = new ScheduleShapeRuntime(data.scheduleShape.cells);
 
