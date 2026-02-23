@@ -19,24 +19,35 @@ public class MarketUI : MonoBehaviour
     public event EventHandler OnShopUIOpen;
     public event EventHandler OnShopUIClose;
     public event EventHandler<State> OnStateChanged;
+
     public static MarketUI instance;
 
     [SerializeField] private State state;
+    [Header("SHOP IMAGE REFERENCE")]
+    [SerializeField] private Image shopNPCImage;
     [Header("SHOP TEXT REFERENCE")]
     [SerializeField] private TextMeshProUGUI shopNameTextMeshPro;
+    [SerializeField] private TextMeshProUGUI shopNPCNameTextMeshPro;
     [SerializeField] private TextMeshProUGUI moneyTextMeshPro;
+    [SerializeField] private TextMeshProUGUI shopNPCText;
     [Header("SHOP BUTTON REFERENCE")]
-    [SerializeField] private Button buyButton;
-    [SerializeField] private Button sellButton;
+    [SerializeField] private Button buyUIButton;
+    //[SerializeField] private Button sellButton;
     [SerializeField] private Button chatButton;
     [SerializeField] private Button exitButton;
 
-    [Header("Market Item REFERENCE")]
-    [SerializeField] private ItemMarketBuyButtonUI itemButtonBuyPrefab;
+    [Header("MARKET ITEM REFERENCE")]
+    [SerializeField] private ItemMarketSelectButtonUI itemButtonBuyPrefab;
     [SerializeField] private ItemMarketSellButtonUI itemButtonSellPrefab;
     [SerializeField] private Transform itemButtonContainerTransform;
 
-    private List<ItemMarketBuyButtonUI> itemButtonBuyList = new List<ItemMarketBuyButtonUI>();
+    [Header("BUY UI REFERENCE")]
+    [SerializeField] private TextMeshProUGUI selectedItemNametext;
+    [SerializeField] private TextMeshProUGUI selectedItemDesctext;
+    [SerializeField] private TextMeshProUGUI selectedItemCostText;
+    [SerializeField] private Button buySelectedItemButton;
+
+    private List<ItemMarketSelectButtonUI> itemButtonBuyList = new List<ItemMarketSelectButtonUI>();
     private List<ItemMarketSellButtonUI> itemButtonSellList = new List<ItemMarketSellButtonUI>();
 
     private Market currentMarket;
@@ -47,12 +58,18 @@ public class MarketUI : MonoBehaviour
     {
         instance = this;
 
-        buyButton.onClick.AddListener(CreateItemButtonBuy);
-        sellButton.onClick.AddListener(CreateItemButtonSell);
+        buyUIButton.onClick.AddListener(CreateItemButtonBuy);
+        //sellButton.onClick.AddListener(CreateItemButtonSell);
         chatButton.onClick.AddListener(()=> 
         {
             currentMarket.GetShopNPC().TriggerDialog();
         });
+
+        buySelectedItemButton.onClick.AddListener(()=> 
+        {
+            currentMarket.BuySelectedItem();
+        });
+
 
         exitButton.onClick.AddListener(() => Hide());
     }
@@ -60,6 +77,7 @@ public class MarketUI : MonoBehaviour
     private void Start()
     {
         EconomyManager.instance.OnMoneyChanged += EconomyManager_OnMoneyChanged;
+        Market.OnAnySelectedItemBaseChanged += Market_OnAnySelectedItemBaseChanged;
 
         DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueStart.AddListener(()=> 
         {
@@ -80,6 +98,13 @@ public class MarketUI : MonoBehaviour
 
     }
 
+    private void Market_OnAnySelectedItemBaseChanged(object sender, ItemBase e)
+    {
+        selectedItemNametext.text = e.name;
+        selectedItemDesctext.text = e.GetItemDesc();
+        selectedItemCostText.text = e.GetItemPrice().ToString();
+    }
+
     private void EconomyManager_OnMoneyChanged(object sender, int e)
     {
         UpdateVisualMoneyText(e);
@@ -96,7 +121,7 @@ public class MarketUI : MonoBehaviour
 
         foreach (ItemBase itembase in currentMarket.GetItemToSellInMarket())
         {
-            ItemMarketBuyButtonUI ui = Helpers.CreateUI<ItemMarketBuyButtonUI, ItemBase>(itemButtonBuyPrefab, itemButtonContainerTransform, itembase);
+            ItemMarketSelectButtonUI ui = Helpers.CreateUI<ItemMarketSelectButtonUI, ItemBase>(itemButtonBuyPrefab, itemButtonContainerTransform, itembase);
 
             itemButtonBuyList.Add(ui);
         }
@@ -146,6 +171,10 @@ public class MarketUI : MonoBehaviour
     {
         isOpenMarket = false;
 
+        selectedItemNametext.text = "";
+        selectedItemDesctext.text = "";
+        selectedItemCostText.text = "---";
+
         OnShopUIClose?.Invoke(this, EventArgs.Empty);
         gameObject.SetActive(false);
     }
@@ -153,6 +182,12 @@ public class MarketUI : MonoBehaviour
     public void SetMarket(Market market)
     {
         currentMarket = market;
+
+
+        shopNPCImage.sprite = market.GetShopNPC().GetNPCData().emotions[0].sprite;
+        shopNPCText.text = market.GetNPCShopText();
+        shopNPCNameTextMeshPro.text = market.GetShopNPC().GetNPCData().npcName;
+
         RemoveButtonList();
         Show();
     }

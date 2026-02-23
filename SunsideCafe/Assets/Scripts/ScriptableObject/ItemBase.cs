@@ -17,18 +17,14 @@ public class ItemBase : ScriptableObject
     [SerializeField] protected Sprite itemSprite;
 
 
-    public int GetItemPrice()
-    {
-        return itemPrice;
-    }
+    public int GetItemPrice() => itemPrice;
 
-    public ItemType GetItemType()
-    {
-        return itemType;
-    }
 
-    public Sprite GetItemSprite()
-    {
-        return itemSprite;
-    }
+    public string GetItemDesc() => itemDescription;
+
+    public ItemType GetItemType() => itemType;
+    
+
+    public Sprite GetItemSprite() => itemSprite;
+    
 }

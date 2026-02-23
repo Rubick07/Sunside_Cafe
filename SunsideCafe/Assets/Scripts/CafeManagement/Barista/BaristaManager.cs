@@ -12,7 +12,8 @@ public class BaristaManager : MonoBehaviour
     {
         NotStart,
         Open,
-        FriendSession
+        FriendSession,
+        Close
     }
 
     [SerializeField] private baristaGameState gameState;
@@ -43,6 +44,9 @@ public class BaristaManager : MonoBehaviour
 
                 break;
 
+            case baristaGameState.Close:
+
+                break;
 
         }
     }

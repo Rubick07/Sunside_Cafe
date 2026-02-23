@@ -35,6 +35,7 @@ public class CustomerSlotUI : MonoBehaviour
             SpecialCustomerData a = currentCustomer.GetCustomerController().GetCustomerData() as SpecialCustomerData;
 
             DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(CustomerComplete);
+            DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(Test);
             DialogRunnerSingleton.instance.StartDialog(a.clearDialogTitle);
 
             return;
@@ -42,6 +43,12 @@ public class CustomerSlotUI : MonoBehaviour
 
         CustomerComplete();
 
+    }
+
+    private void Test()
+    {
+        BaristaManager.instance.ChangeBaristaManagerState(BaristaManager.baristaGameState.Close);
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.RemoveListener(Test);
     }
 
     private void CustomerComplete()

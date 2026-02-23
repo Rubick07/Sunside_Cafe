@@ -17,4 +17,4 @@ MonoBehaviour:
   patienceTime: 30
   coinReward: 5
   possibleOrders:
-  - {fileID: 11400000, guid: 1326199e3a28f2846811a5217af7b541, type: 2}
+  - {fileID: 11400000, guid: fc26bf6d22068804790229833e1a2ab2, type: 2}

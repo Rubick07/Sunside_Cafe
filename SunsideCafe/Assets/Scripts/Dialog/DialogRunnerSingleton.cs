@@ -93,4 +93,14 @@ public class DialogRunnerSingleton : MonoBehaviour
         spriteImage.enabled = false;
     }
 
+    public void SetSpriteImageLarge()
+    {
+        RectTransform rectTransform = spriteImage.GetComponent<RectTransform>();
+    }
+    public void SetSpriteImageNormal()
+    {
+
+    }
+
+
 }

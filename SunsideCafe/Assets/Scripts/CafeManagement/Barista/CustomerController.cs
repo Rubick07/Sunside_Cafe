@@ -40,6 +40,5 @@ public class CustomerController
     {
         // reward, score, remove customer
         customerView.GetCustomerSlotUI().Clear();
-
     }
 }

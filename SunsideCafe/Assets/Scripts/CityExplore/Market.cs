@@ -1,20 +1,25 @@
 using UnityEngine;
+using System;
 
 public class Market : MonoBehaviour, IInteractable
 {
+    public static event EventHandler<ItemBase> OnAnySelectedItemBaseChanged;
+
     [SerializeField] private MarketItemSO marketItemSO;
-    [SerializeField] private NPCBase shopNPC;
+    [SerializeField] private ShopNPC shopNPC;
+
+    private ItemBase selectedItembase;
 
     public void Interact()
     {
         MarketUI.instance.SetMarket(this);
     }
 
-    public void BuyItem(ItemBase itemBase)
+    public void BuySelectedItem()
     {
-        if (EconomyManager.instance.UseMoney(itemBase.GetItemPrice()))
+        if (EconomyManager.instance.UseMoney(selectedItembase.GetItemPrice()))
         {
-            InventoryManager.instance.AddItem(itemBase);
+            InventoryManager.instance.AddItem(selectedItembase);
         }
         else
         {
@@ -35,6 +40,13 @@ public class Market : MonoBehaviour, IInteractable
         }
     }
 
+    public void SelectItem(ItemBase itemBase)
+    {
+        selectedItembase = itemBase;
+
+        OnAnySelectedItemBaseChanged?.Invoke(this, itemBase);
+    }
+
     public ItemBase[] GetItemToSellInMarket()
     {
         return marketItemSO.ItemToSellInMarket;
@@ -44,4 +56,7 @@ public class Market : MonoBehaviour, IInteractable
     {
         return shopNPC;
     }
+
+    public string GetNPCShopText() => shopNPC.GetShopText();
+
 }

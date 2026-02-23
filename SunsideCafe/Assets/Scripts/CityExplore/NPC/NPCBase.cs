@@ -8,4 +8,6 @@ public abstract class NPCBase : MonoBehaviour
 
     public abstract void TriggerDialog();
 
+    public NPCData GetNPCData() => data; 
+
 }
