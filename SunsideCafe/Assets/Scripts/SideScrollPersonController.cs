@@ -3,9 +3,19 @@ using UnityEngine.InputSystem;
 
 public class SideScrollPersonController : MonoBehaviour
 {
+    public enum playerState
+    {
+        NORMAL,
+        DIALOG,
+        OPENSHOP,
+        JOURNAL
+    }
+
     [SerializeField] private float currentSpeed = 6f;
     [SerializeField] private float speed = 6f;
     [SerializeField] private float runningSpeed = 10f;
+
+    private playerState state;
 
     private CharacterController characterController;
 
@@ -37,9 +47,27 @@ public class SideScrollPersonController : MonoBehaviour
 
     }
 
-    public void SetControllerState(bool enable)
+    public void SetControllerActive(bool enable)
     {
+
         this.enabled = enable;
+    }
+
+    public void SetControllerState(playerState playerstate)
+    {
+        state = playerstate;
+    }
+    private void Move_canceled(InputAction.CallbackContext obj)
+    {
+        if (state == playerState.NORMAL)
+            ExploreUI.instance.Show();
+
+    }
+
+    private void Move_performed(InputAction.CallbackContext obj)
+    {
+        if (state == playerState.NORMAL)
+            ExploreUI.instance.Hide();
     }
 
     private void Interact_performed(InputAction.CallbackContext obj)
@@ -59,21 +87,36 @@ public class SideScrollPersonController : MonoBehaviour
     {
         PauseSystem.instance.Pause();
     }
+    private void Journal_performed(InputAction.CallbackContext obj)
+    {
+        if (state == playerState.NORMAL || state == playerState.JOURNAL)
+            JournalUI.instance.ToggleJournal();
 
+
+    }
     private void OnEnable()
     {
+        InputManager.Instance.GetInputActions().Player.Move.performed += Move_performed;
+        InputManager.Instance.GetInputActions().Player.Move.canceled += Move_canceled;
         InputManager.Instance.GetInputActions().Player.Interact.performed += Interact_performed;
         InputManager.Instance.GetInputActions().Player.Sprint.performed += Sprint_performed;
         InputManager.Instance.GetInputActions().Player.Sprint.canceled += Sprint_canceled;
         InputManager.Instance.GetInputActions().Player.Pause.performed += Pause_performed;
+        InputManager.Instance.GetInputActions().Player.Journal.performed += Journal_performed;
+
     }
 
     private void OnDisable()
     {
+        InputManager.Instance.GetInputActions().Player.Move.performed -= Move_performed;
+        InputManager.Instance.GetInputActions().Player.Move.canceled -= Move_canceled;
         InputManager.Instance.GetInputActions().Player.Interact.performed -= Interact_performed;
         InputManager.Instance.GetInputActions().Player.Sprint.performed -= Sprint_performed;
         InputManager.Instance.GetInputActions().Player.Sprint.canceled -= Sprint_canceled;
         InputManager.Instance.GetInputActions().Player.Pause.performed -= Pause_performed;
+        InputManager.Instance.GetInputActions().Player.Journal.performed -= Journal_performed;
+
+
     }
 
 }

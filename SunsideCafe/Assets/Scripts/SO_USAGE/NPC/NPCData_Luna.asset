@@ -16,4 +16,4 @@ MonoBehaviour:
   type: 1
   emotions:
   - emotionName: biasa
-    sprite: {fileID: 21300000, guid: af8b45bf044d0e04ea9109b0d9a10bef, type: 3}
+    sprite: {fileID: 21300000, guid: 40e7ef464eb834245add78f1a1ce634b, type: 3}
