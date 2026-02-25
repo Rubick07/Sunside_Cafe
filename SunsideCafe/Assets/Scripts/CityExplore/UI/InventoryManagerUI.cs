@@ -18,6 +18,10 @@ public class InventoryManagerUI : MonoBehaviour
 
     private List<ItemSelectInventoryButton> itemSelectInventoryButtonList = new List<ItemSelectInventoryButton>();
 
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         JournalUI.instance.OnJournalUIOpen += JournalUI_OnJournalUIOpen;
@@ -54,7 +58,8 @@ public class InventoryManagerUI : MonoBehaviour
         int index = 0;
         foreach(ItemBase itembase in InventoryManager.instance.GetInventoryDictionary().Keys)
         {
-            itemSelectInventoryButtonList[0].Bind(itembase);
+            Debug.Log(itembase.name);  
+            itemSelectInventoryButtonList[index].Bind(itembase);
             index++;
         }
     }

@@ -38,6 +38,8 @@ public class ItemSelectInventoryButton : MonoBehaviour,IBindData<ItemBase> , IPo
 
     public void Bind(ItemBase data)
     {
+        item = data;
+
         itemAmountText.text = InventoryManager.instance.GetInventoryDictionary()[data].ToString();
         itemImage.sprite = data.GetItemSprite();
     }
