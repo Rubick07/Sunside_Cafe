@@ -8,7 +8,8 @@ public class SideScrollPersonController : MonoBehaviour
         NORMAL,
         DIALOG,
         OPENSHOP,
-        JOURNAL
+        JOURNAL,
+        TUTORIAL
     }
 
     [SerializeField] private float currentSpeed = 6f;

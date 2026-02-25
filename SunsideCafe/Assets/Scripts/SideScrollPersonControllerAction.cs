@@ -13,11 +13,15 @@ public class SideScrollPersonControllerAction : MonoBehaviour
     {
         MarketUI.instance.OnShopUIOpen  += MarketUI_OnShopUIOpen;
         MarketUI.instance.OnShopUIClose += MarketUI_OnShopUIClose;
+
         TeleportUI.OnAnyTeleportStart += TeleportUI_OnAnyTeleportStart;
         TeleportUI.OnAnyTeleportEnd += TeleportUI_OnAnyTeleportEnd;
 
         JournalUI.instance.OnJournalUIOpen += JournalUI_OnJournalUIOpen;
         JournalUI.instance.OnJournalUIClose += JournalUI_OnJournalUIClose;
+
+        TutorialManager.instance.OnTutorialTrigger += TutorialManager_OnTutorialTrigger;
+        TutorialManager.instance.OnTutorialComplete += TutorialManager_OnTutorialComplete;
 
         DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueStart.AddListener(()=> 
         {
@@ -27,6 +31,18 @@ public class SideScrollPersonControllerAction : MonoBehaviour
         {
             personController.SetControllerActive(true);
         });
+    }
+
+    private void TutorialManager_OnTutorialComplete(object sender, System.EventArgs e)
+    {
+        personController.SetControllerState(SideScrollPersonController.playerState.NORMAL);
+        personController.SetControllerActive(true);
+    }
+
+    private void TutorialManager_OnTutorialTrigger(object sender, TutorialTriggerType e)
+    {
+        personController.SetControllerState(SideScrollPersonController.playerState.TUTORIAL);
+        personController.SetControllerActive(false);
     }
 
     private void JournalUI_OnJournalUIClose(object sender, System.EventArgs e)
@@ -62,4 +78,6 @@ public class SideScrollPersonControllerAction : MonoBehaviour
 
         personController.SetControllerActive(false);
     }
+
+
 }
