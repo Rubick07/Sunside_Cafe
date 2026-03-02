@@ -14,8 +14,7 @@ public class Plate : MonoBehaviour
         FoodItem newFoodItem = new FoodItem(data);
         foodItem = newFoodItem;
 
-        Debug.Log("Masuk: " + data.foodName);
-        // cek resep, update UI, dll
+        //Debug.Log("Masuk: " + data.foodName);
         return true;
     }
 

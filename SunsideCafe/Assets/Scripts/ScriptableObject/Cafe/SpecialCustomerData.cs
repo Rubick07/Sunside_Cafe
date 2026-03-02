@@ -6,4 +6,5 @@ public class SpecialCustomerData : CustomerData
     [Header("DIALOG NAME")]
     public string startDialogTitle;
     public string clearDialogTitle;
+    public string wrongFoodDialogTitle;
 }

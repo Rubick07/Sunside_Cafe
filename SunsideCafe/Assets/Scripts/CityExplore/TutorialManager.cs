@@ -29,5 +29,6 @@ public class TutorialManager : MonoBehaviour
 public enum TutorialTriggerType
 {
     PressMoveKey,
-    Interact
+    Interact,
+    AreaChange
 }

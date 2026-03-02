@@ -43,14 +43,11 @@ public class SideScrollPersonController : MonoBehaviour
             characterController.Move(direction * currentSpeed * Time.deltaTime);
         }
 
-
         Debug.DrawRay(transform.position, Vector3.forward,Color.red);
-
     }
 
     public void SetControllerActive(bool enable)
     {
-
         this.enabled = enable;
     }
 
@@ -95,6 +92,7 @@ public class SideScrollPersonController : MonoBehaviour
 
 
     }
+
     private void OnEnable()
     {
         InputManager.Instance.GetInputActions().Player.Move.performed += Move_performed;

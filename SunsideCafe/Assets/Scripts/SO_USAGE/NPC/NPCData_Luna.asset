@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: NPCData_Luna
   m_EditorClassIdentifier: 
   npcName: Luna
-  type: 1
+  type: 0
   emotions:
-  - emotionName: biasa
-    sprite: {fileID: 21300000, guid: 40e7ef464eb834245add78f1a1ce634b, type: 3}
+  - emotionName: Idle
+    sprite: {fileID: 21300000, guid: 8def6a44802b9fe4b86bb3bd0bd925f5, type: 3}
+  - emotionName: Sad
+    sprite: {fileID: 21300000, guid: a4db4f98cf30d01409de0a52419b43d2, type: 3}
+  - emotionName: Smile
+    sprite: {fileID: 21300000, guid: 9990bbc3f55c42f47ae32bdc0e2a0c39, type: 3}

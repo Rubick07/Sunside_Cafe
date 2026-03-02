@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public static class Loader
 {
-
     public enum Scene
     {
         MainMenuScene,
         LoadingScene,
-        CityScene,
-        CombatSystemScene,
+        CityScene, 
+        Part1_Daydream,
         ExploreScene
     }
 
@@ -22,7 +21,9 @@ public static class Loader
     public static void Load(Scene targetScene)
     {
         Loader.targetScene = targetScene;
-        SceneManager.LoadScene(Scene.LoadingScene.ToString());
+        SceneManager.LoadScene(targetScene.ToString());
+
+        //SceneManager.LoadScene(Scene.LoadingScene.ToString());
     }
 
     public static void LoaderCallback()

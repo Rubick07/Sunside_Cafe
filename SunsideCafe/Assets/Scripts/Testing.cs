@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Testing : MonoBehaviour
 {
@@ -10,9 +12,38 @@ public class Testing : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
+            DialogRunnerSingleton.instance.StartDialog("Placeholder");
             TutorialManager.instance.TriggerTutorial(triggerType);
-            Debug.Log("Test");
             GameEvents.OnStatChanged?.Invoke(statID, amount);
         }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Debug.Log(DialogRunnerSingleton.instance);
+        }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            StartCoroutine(LoadMiniGame());
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SceneManager.UnloadSceneAsync("Cafe_Barista");
+            SceneManager.SetActiveScene(
+                SceneManager.GetSceneByName("City_Area")
+            );
+        }
+
+    }
+    IEnumerator LoadMiniGame()
+    {
+        yield return SceneManager.LoadSceneAsync(
+            "Cafe_Barista",
+            LoadSceneMode.Additive
+        );
+
+        SceneManager.SetActiveScene(
+            SceneManager.GetSceneByName("Cafe_Barista")
+        );
+
+        // optionally disable explore camera
     }
 }

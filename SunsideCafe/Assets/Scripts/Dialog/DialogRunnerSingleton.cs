@@ -9,7 +9,7 @@ public class DialogRunnerSingleton : MonoBehaviour
 
     [SerializeField] private Image spriteImage;
     [SerializeField] private List<NPCData> NPCDatabase;
-    private DialogueRunner dialogueRunner;
+    [SerializeField] private DialogueRunner dialogueRunner;
 
     private void Awake()
     {
@@ -18,7 +18,6 @@ public class DialogRunnerSingleton : MonoBehaviour
 
     private void Start()
     {
-        dialogueRunner = FindFirstObjectByType<Yarn.Unity.DialogueRunner>();
 
         dialogueRunner.AddCommandHandler("SetSpriteDisable",SetSpriteImageDisable);
         dialogueRunner.AddCommandHandler("SetSpriteActive",SetSpriteImageActive);
@@ -54,7 +53,21 @@ public class DialogRunnerSingleton : MonoBehaviour
         dialogueRunner.StartDialogue(title);
     }
 
+    public void StartDialogCutscene(string title)
+    {
+        /*        this.spriteImage.sprite = spriteImage;
 
+                if (spriteImage != null)
+                { 
+                    this.spriteImage.enabled= true;
+                }
+                else
+                {
+                    this.spriteImage.enabled = false;
+                }
+        */
+        dialogueRunner.StartDialogue(title);
+    }
     public Sprite GetPortrait(string character, string emotion)
     {
         foreach (var c in NPCDatabase)
@@ -101,6 +114,7 @@ public class DialogRunnerSingleton : MonoBehaviour
     {
 
     }
+
 
 
 }

@@ -11,12 +11,12 @@ public class ZoneTeleportTargetName : MonoBehaviour
     {
         zoneAreaNameText = GetComponentInChildren<TextMeshProUGUI>();
 
-        Hide();
+        zoneAreaNameText.text = zoneData.GetZoneName();
     }
 
     private void Start()
     {
-        zoneAreaNameText.text = zoneData.GetZoneName();
+
     }
 
     public void Show()

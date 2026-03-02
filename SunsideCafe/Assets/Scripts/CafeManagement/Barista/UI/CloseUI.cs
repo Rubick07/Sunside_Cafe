@@ -5,6 +5,8 @@ public class CloseUI : MonoBehaviour
 {
     private RectTransform rectTransform;
 
+    private bool clear = false;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -17,11 +19,22 @@ public class CloseUI : MonoBehaviour
         BaristaManager.instance.OnGameStateChanged += BaristaManager_OnGameStateChanged;
     }
 
+    private void Update()
+    {
+        if (Input.anyKeyDown && clear == true)
+        {
+            GameManager.instance.RemoveScene();
+        }
+    }
+
     private void BaristaManager_OnGameStateChanged(object sender, BaristaManager.baristaGameState e)
     {
         if(e == BaristaManager.baristaGameState.Close)
         {
-            rectTransform.DOLocalMoveY(0, 1f);
+            rectTransform.DOLocalMoveY(0, 1f).OnComplete(()=> 
+            {
+                clear = true;
+            });
         }
     }
 }

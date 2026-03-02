@@ -19,6 +19,13 @@ public class SpecialCustomerView : CustomerView
         timeBarImage.gameObject.SetActive(false);
     }
 
+    public override void WrongFood()
+    {
+        SpecialCustomerData a = controller.GetCustomerData() as SpecialCustomerData;
+
+        DialogRunnerSingleton.instance.StartDialog(a.wrongFoodDialogTitle);
+    }
+
     public override void SetActive()
     {
         SpecialCustomerData a = controller.GetCustomerData() as SpecialCustomerData;

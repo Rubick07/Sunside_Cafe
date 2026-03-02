@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1326199e3a28f2846811a5217af7b541, type: 2}
   startDialogTitle: PriaSolo
   clearDialogTitle: PriaSoloSelesaiPesan
+  wrongFoodDialogTitle: PriaSoloSalahPesan

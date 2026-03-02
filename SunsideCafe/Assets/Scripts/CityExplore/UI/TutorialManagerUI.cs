@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class TutorialManagerUI : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class TutorialManagerUI : MonoBehaviour
             {
                 TutorialManager.instance.TutorialComplete();
             });
+
+            tutorialData.canvasGroup = tutorialData.tutorialGroupUIGameobject.GetComponent<CanvasGroup>();
+            tutorialData.canvasGroup.alpha = 0;
         }
         HideAllChild();
         Hide();
@@ -35,10 +39,21 @@ public class TutorialManagerUI : MonoBehaviour
             if(data.triggerType == e)
             {
                 data.tutorialGroupUIGameobject.SetActive(true);
+                data.canvasGroup.DOFade(1f, 1f);
                 return;
             }
 
         }
+    }
+
+    public void ShowAnimation()
+    {
+
+    }
+
+    public void HideAnimation()
+    {
+
     }
 
     public void Show()
@@ -66,6 +81,8 @@ public class TutorialData
 {
     public TutorialTriggerType triggerType;
     public GameObject tutorialGroupUIGameobject;
+    [HideInInspector] 
+    public CanvasGroup canvasGroup;
     public Button exitButton;
-
+    
 }

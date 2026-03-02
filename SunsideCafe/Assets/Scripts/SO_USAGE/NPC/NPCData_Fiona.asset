@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96d65b7423361a479641841c58afd4e, type: 3}
+  m_Name: NPCData_Fiona
+  m_EditorClassIdentifier: 
+  npcName: Fiona
+  type: 0
+  emotions:
+  - emotionName: Idle
+    sprite: {fileID: 21300000, guid: 321e1f2ff5b1fea48bdba1fcdc6cffb2, type: 3}
+  - emotionName: Sad
+    sprite: {fileID: 21300000, guid: 6c5891d0306bd8e4d9a98383905d622c, type: 3}
+  - emotionName: Smile
+    sprite: {fileID: 21300000, guid: ff9c4d8dfb23e6749aa00cf77873ce56, type: 3}

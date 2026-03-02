@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96d65b7423361a479641841c58afd4e, type: 3}
+  m_Name: NPCData_Lucas
+  m_EditorClassIdentifier: 
+  npcName: Lucas
+  type: 0
+  emotions:
+  - emotionName: Idle
+    sprite: {fileID: 21300000, guid: e8c6cf8039da8ae49971dce876937283, type: 3}
+  - emotionName: Sad
+    sprite: {fileID: 21300000, guid: 5847d802c03dcdc4a88aaae71f3dd822, type: 3}
+  - emotionName: Smile
+    sprite: {fileID: 21300000, guid: 260682e2b0193f74795bd521d3b78072, type: 3}

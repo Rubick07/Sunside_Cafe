@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class SideScrollPersonControllerAction : MonoBehaviour
 {
     private SideScrollPersonController personController;
@@ -23,14 +23,33 @@ public class SideScrollPersonControllerAction : MonoBehaviour
         TutorialManager.instance.OnTutorialTrigger += TutorialManager_OnTutorialTrigger;
         TutorialManager.instance.OnTutorialComplete += TutorialManager_OnTutorialComplete;
 
+        GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
+
         DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueStart.AddListener(()=> 
         {
             personController.SetControllerActive(false);
         });
         DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(() =>
         {
+            Scene cafeScene = SceneManager.GetActiveScene();
+            
+            if (cafeScene.name != "City_Area")
+                return;
+
             personController.SetControllerActive(true);
         });
+    }
+
+    private void GameManager_OnGameStateChanged(object sender, GameManager.GameState e)
+    {
+        if(e == GameManager.GameState.EXPLORE)
+        {
+            personController.SetControllerActive(true);
+        }
+        else
+        {
+            personController.SetControllerActive(false);
+        }
     }
 
     private void TutorialManager_OnTutorialComplete(object sender, System.EventArgs e)

@@ -37,7 +37,15 @@ NPC: ya gitu deh pokoknya
 
 title: TestPilihan1
 ---
-Ayam: berkokok cuy kata {$name}
+TEST Reflection
+
+-> Hai
+    <<set $name to "pilips">>
+    <<jump TestPilihan1>>
+-> P ingfo
+    <<set $name to "Epan">>
+-> gk tau
+
 ===
 
 title: PamanSawit
@@ -54,7 +62,10 @@ Nori: akhirnya saya menjadi penyanyi solo
 Nori: buatkan saya 1 [test]minuman yang pahit dan sehitamnya[/test]
 Nori: sama saya ingin [test]yang manis 1[/test] juga
 ===
-
+title: PriaSoloSalahPesan
+---
+Nori: Saya tidak memesan ini mohon itikad baiknya
+===
 title: PriaSoloSelesaiPesan
 ---
 Nori: Terima kasih untuk kopi hidengnya
@@ -63,4 +74,53 @@ Nori: Terima kasih untuk kopi hidengnya
 title: shopNPC
 ---
 Epan: Japan is turning footsteps into electricity! Using piezoelectric tiles, every step you take generates a small amount of energy.
+===
+
+title: DayDream1
+---
+Laptop:betul ini adalah laptop membesar
+<<PlayCutscene Part1Sky>>
+===
+title: DayDream2
+---
+Laptop:jir langit
+<<PlayCutscene Part1CameraDown>>
+===
+title: DayDream3
+---
+Laptop: yak betul cameranya turun
+<<PlayCutscene Part1ArthurAppear>>
+===
+title: DayDream4
+---
+Laptop: Bpaka Cafe muncul
+Laptop: Bapak Cafe ngajak ke cafe
+<<PlayCutscene Part1ArthurFadeOut>>
+===
+title: DayDream5
+---
+Laptop: Bapak Cafe kabur
+Laptop: Kelarin dialog disini
+===
+
+title: Placeholder
+---
+PlaceHolder
+<<ShowZoneUI ZoneUI>>
+===
+
+title: PlaceholderCafeFirstTime
+---
+Yey Reuni
+<<AddScene GameManager Cafe_BaristaTutorial>>
+===
+
+title: PlaceholderCafeKelar
+---
+Yey Kelar saatnya refection
+===
+
+title: PlaceholderReflection
+---
+
 ===

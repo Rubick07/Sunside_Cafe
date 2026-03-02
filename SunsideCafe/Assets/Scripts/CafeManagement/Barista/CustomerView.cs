@@ -78,6 +78,7 @@ public class CustomerView : MonoBehaviour, IDropHandler
         }
         else
         {
+            WrongFood();
             //foodUI.ReturnToOrigin();
         }
     }
@@ -89,6 +90,12 @@ public class CustomerView : MonoBehaviour, IDropHandler
         bubbleOrderContainerTransform.gameObject.SetActive(true);
         timeBarImage.gameObject.SetActive(true);
     }
+
+    public virtual void WrongFood()
+    {
+
+    }
+
 
     public CustomerSlotUI GetCustomerSlotUI() => slot;
 

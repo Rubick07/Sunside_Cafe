@@ -38,9 +38,9 @@ public class TeleportUI : MonoBehaviour
         {
 
             action();
-            OnAnyTeleportEnd?.Invoke(this, EventArgs.Empty);
 
-            blackScreenTransform.DOAnchorPosX(1948, 1f).OnComplete(()=> {
+            blackScreenTransform.DOAnchorPosX(1948, .5f).OnComplete(()=> {
+                OnAnyTeleportEnd?.Invoke(this, EventArgs.Empty);
                 blackScreenTransform.DOAnchorPosY(0, 0f);
                 blackScreenTransform.gameObject.SetActive(false);
             });

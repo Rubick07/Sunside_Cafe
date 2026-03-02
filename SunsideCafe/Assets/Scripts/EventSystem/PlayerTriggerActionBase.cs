@@ -6,7 +6,7 @@ public abstract class PlayerTriggerActionBase : MonoBehaviour
     [SerializeField] protected bool AddOnTriggerEnter;
     [SerializeField] protected bool AddOnTriggerExit;
 
-    protected bool hasTriggered;
+    protected bool hasTriggered = false;
 
     public bool GetisRepeatable()
     {

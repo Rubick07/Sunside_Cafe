@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
         playButton.onClick.AddListener(()=>
         {
-        
+            Loader.Load(Loader.Scene.Part1_Daydream);
         });
 
         settingButton.onClick.AddListener(() =>
