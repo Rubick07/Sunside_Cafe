@@ -11,6 +11,7 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     [SerializeField] private TextMeshProUGUI employeeNameText;
     [SerializeField] private Image icon;
     [SerializeField] private Image highlight;
+    [SerializeField] private Image blocker;
     [SerializeField] private SchedulePieceView pieceViewSmall;
     [SerializeField] private SchedulePieceView pieceViewBig;
     private EmployeeData employeeData;
@@ -41,6 +42,12 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
         pieceViewSmall.BuildShape(shapeRuntime);
 
+        blocker.enabled = false;
+    }
+
+    public void SetBlockerDisable()
+    {
+        blocker.enabled = false;
     }
 
     public void RotateLeft()
@@ -110,8 +117,12 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
         transform.localScale = Vector3.one;
 
-        if(ShiftSlotUI.currentHoverShiftSlotUI != null)
+        if (ShiftSlotUI.currentHoverShiftSlotUI != null)
+        {
             this.enabled = false;
+            blocker.enabled = true;
+        }
+
 
     }
 

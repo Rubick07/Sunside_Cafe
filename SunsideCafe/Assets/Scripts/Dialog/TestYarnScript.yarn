@@ -6,7 +6,17 @@ title: NPCDialogTest
 ---
 
 
-<<SetSprite Vincent biasa>>
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Vincent biasa>>
+<<SetLeftTalk>>
+
+Lucas: Sekarang lucas yang ngomong
+
+<<SetRightTalk>>
+Vincent: Yak betul sekrang vincent yang lagi ngomong
+
+<<SetLeftTalk>>
+
 <<once>>
     NPC: Hai, Saya NPC
 <<else>> 
@@ -15,29 +25,39 @@ title: NPCDialogTest
 
 
 NPC: [test]Test choice [/test]ini
-<<SetSpriteDisable>>
+<<SetSpriteLeftLarge>>
+<<SetBackgroundActive>>
 -> Hai
+    <<SetBackgroundDisable>>
     <<set $name to "pilips">>
     <<jump TestPilihan1>>
 -> P ingfo
+    <<SetBackgroundDisable>>
     <<set $name to "Epan">>
     <<detour TestPilihan1>>
 -> gk tau
+    <<SetBackgroundDisable>>
 -> kabur
+    <<SetBackgroundDisable>>
     <<stop>>
 
-<<SetSprite Vincent Um>>
+<<SetSpriteLeftNormal>>
+<<SetLeftSprite Vincent Um>>
 NPC: hmmmmm
 <<SetSpriteDisable>>
 <<wait 1>>
 
-<<SetSprite Vincent biasa>>
+<<SetLeftSprite Vincent biasa>>
 NPC: ya gitu deh pokoknya
 ===
 
 title: TestPilihan1
 ---
-TEST Reflection
+<<once>>
+    NPC: Hai, Tolong pilih yang benar
+<<else>> 
+    NPC: Yang tadi salah
+<<endonce>>
 
 -> Hai
     <<set $name to "pilips">>
@@ -50,7 +70,7 @@ TEST Reflection
 
 title: PamanSawit
 ---
-<<SetSprite MrP biasa>>
+<<SetLeftSprite MrP biasa>>
 Mister P:  sawit saya kebakar
 Mister P: saya ingin [test]minuman yang manis[/test] le
 ===
@@ -118,9 +138,26 @@ Yey Reuni
 title: PlaceholderCafeKelar
 ---
 Yey Kelar saatnya refection
+<<AddScene GameManager Reflection>>
 ===
 
-title: PlaceholderReflection
+title: PlaceholderReflection1
 ---
-
+Hai
+<<NextDay DaySystem>>
+<<RemoveScene GameManager>>
+===
+title: PlaceholderReflection2
+---
+Hai Hai
+<<NextDay DaySystem>>
+<<RemoveScene GameManager>>
+===
+title: PlaceholderReflection3
+---
+Hai Hai Hai
+<<NextDay DaySystem>>
+<<BlackscreenFadeIn BlackscreenUI>>
+<<wait  1>>
+<<jump Day2Start>>
 ===

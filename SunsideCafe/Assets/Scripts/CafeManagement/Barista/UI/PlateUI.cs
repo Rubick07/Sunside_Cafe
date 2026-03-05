@@ -21,6 +21,8 @@ public class PlateUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandle
         canvasGroup = GetComponent<CanvasGroup>();
 
         startPos = rect.transform.position;
+
+        foodDoneImage.enabled = false;
     }
 
     public void OnDrop(PointerEventData eventData)

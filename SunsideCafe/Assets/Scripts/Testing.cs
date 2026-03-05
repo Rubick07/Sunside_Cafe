@@ -7,7 +7,7 @@ public class Testing : MonoBehaviour
     [SerializeField] private string statID;
     [SerializeField] private int amount = 1;
     [SerializeField] private TutorialTriggerType triggerType;
-
+    [SerializeField] private DaySystemUI test;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -18,11 +18,11 @@ public class Testing : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            Debug.Log(DialogRunnerSingleton.instance);
+            test.Hide();
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
-            StartCoroutine(LoadMiniGame());
+            test.Show();
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -33,17 +33,12 @@ public class Testing : MonoBehaviour
         }
 
     }
-    IEnumerator LoadMiniGame()
+
+    public GameObject notePrefab;
+    public Transform spawnPoint;
+
+    public void SpawnNote()
     {
-        yield return SceneManager.LoadSceneAsync(
-            "Cafe_Barista",
-            LoadSceneMode.Additive
-        );
-
-        SceneManager.SetActiveScene(
-            SceneManager.GetSceneByName("Cafe_Barista")
-        );
-
-        // optionally disable explore camera
+        Instantiate(notePrefab, spawnPoint.position, Quaternion.identity, spawnPoint);
     }
 }

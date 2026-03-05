@@ -1,0 +1,21 @@
+﻿title: Day2
+---
+Test
+===
+
+title: Day2Start
+---
+Arthur: blablabalbalalb SAHURRRRRRRRRRRRRRRRRRRRR
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait  0.5>>
+
+<<DayUIFadeIn DaySystemUI>>
+<<wait  2>>
+
+<<DayUIFadeOut DaySystemUI>>
+
+Arthur: Udh bangun kan nah turun cuy
+<<CafeBackgroundFadeIn CafeBackgroundUI 1.25>>
+Lucas: ya ini ngobrol
+<<AddScene GameManager Cafe_BaristaTutorial>>
+===

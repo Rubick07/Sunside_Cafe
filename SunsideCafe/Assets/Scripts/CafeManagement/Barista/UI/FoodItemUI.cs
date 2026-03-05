@@ -20,6 +20,7 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
 
 
         startPos = rect.transform.position;
+        foodImage.enabled = false;
     }
 
     public void OnDrag(PointerEventData e)
@@ -51,6 +52,7 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         FoodItem foodItem = drag.GetFoodItem();
         this.foodItem = foodItem;
 
+        foodImage.enabled = true;
         foodImage.sprite = foodItem.data.icon;
 
         drag.Place();
@@ -65,6 +67,7 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
     public void RemoveFood()
     {
         foodItem = null;
+        foodImage.enabled = false;
         foodImage.sprite = null;
     }
 

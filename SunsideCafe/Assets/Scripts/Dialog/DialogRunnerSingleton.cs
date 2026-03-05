@@ -7,7 +7,9 @@ public class DialogRunnerSingleton : MonoBehaviour
 {
     public static DialogRunnerSingleton instance;
 
-    [SerializeField] private Image spriteImage;
+    [SerializeField] private Image leftSpriteImage;
+    [SerializeField] private Image rightSpriteImage;
+    [SerializeField] private Image backgroundImage;
     [SerializeField] private List<NPCData> NPCDatabase;
     [SerializeField] private DialogueRunner dialogueRunner;
 
@@ -18,18 +20,41 @@ public class DialogRunnerSingleton : MonoBehaviour
 
     private void Start()
     {
+        dialogueRunner.AddCommandHandler("SetSpriteLeftLarge",SetSpriteImageLarge);
+        dialogueRunner.AddCommandHandler("SetSpriteLeftNormal",SetSpriteImageNormal);
 
-        dialogueRunner.AddCommandHandler("SetSpriteDisable",SetSpriteImageDisable);
-        dialogueRunner.AddCommandHandler("SetSpriteActive",SetSpriteImageActive);
-        dialogueRunner.AddCommandHandler<string, string>("SetSprite", SetSprite);
+        dialogueRunner.AddCommandHandler("SetBackgroundActive", SetBackgroundImageActive);
+        dialogueRunner.AddCommandHandler("SetBackgroundDisable", SetBackgroundImageDisable);
+
+        dialogueRunner.AddCommandHandler<string, string>("SetLeftSprite", SetLeftSprite);
+        dialogueRunner.AddCommandHandler<string, string>("SetRightSprite", SetRightSprite);
+
+        dialogueRunner.AddCommandHandler("SetLeftTalk", SetLeftImageisTalking);
+        dialogueRunner.AddCommandHandler("SetRightTalk", SetRightImageIsTalking);
+
+        dialogueRunner.onDialogueStart.AddListener(() =>
+        {
+            RectTransform rectTransform = leftSpriteImage.GetComponent<RectTransform>();
+            rectTransform.localScale = new Vector3(1, 1, 1);
+
+            SetBackgroundImageDisable();
+
+            leftSpriteImage.enabled = false;
+            rightSpriteImage.enabled = false;
+
+            leftSpriteImage.color = Color.white;
+            rightSpriteImage.color = Color.white;
+        });
 
         dialogueRunner.onDialogueComplete.AddListener(() =>
         {
-            spriteImage.enabled = false;
+            leftSpriteImage.enabled = false;
+            rightSpriteImage.enabled = false;
         });
 
-        spriteImage.enabled = false;
-
+        leftSpriteImage.enabled = false;
+        rightSpriteImage.enabled = false;
+        backgroundImage.enabled = false;
     }
 
     public DialogueRunner GetDialogueRunner()
@@ -80,41 +105,80 @@ public class DialogRunnerSingleton : MonoBehaviour
         return null;
     }
 
-    public void SetSprite(string character, string emotion)
+    public void SetLeftSprite(string character, string emotion)
     {
         if(GetPortrait(character, emotion))
         {
-            this.spriteImage.sprite = GetPortrait(character, emotion);
-            SetSpriteImageActive();
+            this.leftSpriteImage.sprite = GetPortrait(character, emotion);
+            SetLeftSpriteImageActive();
         }
         else
         {
-            SetSpriteImageDisable();
+            leftSpriteImage.enabled = false;
         }
     }
 
-    public void SetSpriteImageActive()
+    public void SetRightSprite(string character, string emotion)
     {
-        if (spriteImage.sprite == null)
+        if (GetPortrait(character, emotion))
+        {
+            this.rightSpriteImage.sprite = GetPortrait(character, emotion);
+            SetRightSpriteImageActive();
+        }
+        else
+        {
+            SetRightSpriteImageActive();
+        }
+    }
+
+    public void SetLeftSpriteImageActive()
+    {
+        if (leftSpriteImage.sprite == null)
             return;
 
-        spriteImage.enabled = true;
+        leftSpriteImage.enabled = true;
     }
 
-    public void SetSpriteImageDisable()
+    public void SetRightSpriteImageActive()
     {
-        spriteImage.enabled = false;
+        if (rightSpriteImage.sprite == null)
+            return;
+
+        rightSpriteImage.enabled = true;
     }
+
+    public void SetBackgroundImageActive()
+    {
+        backgroundImage.enabled = true;
+    }
+
+    public void SetBackgroundImageDisable()
+    {
+        backgroundImage.enabled = false;
+    }
+
 
     public void SetSpriteImageLarge()
     {
-        RectTransform rectTransform = spriteImage.GetComponent<RectTransform>();
+        RectTransform rectTransform = leftSpriteImage.GetComponent<RectTransform>();
+        rectTransform.localScale = new Vector3(1.5f, 1.5f, 1.5f); 
     }
     public void SetSpriteImageNormal()
     {
-
+        RectTransform rectTransform = leftSpriteImage.GetComponent<RectTransform>();
+        rectTransform.localScale = new Vector3(1, 1, 1);
     }
 
+    public void SetLeftImageisTalking()
+    {
+        leftSpriteImage.color = Color.white;
+        rightSpriteImage.color = Color.grey;
+    }
+    public void SetRightImageIsTalking()
+    {
+        leftSpriteImage.color = Color.grey;
+        rightSpriteImage.color = Color.white;
+    }
 
 
 }

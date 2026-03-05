@@ -20,6 +20,9 @@ public class ExploreUI : MonoBehaviour
     }
     private void Start()
     {
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueStart.AddListener(Hide);
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(Show);
+
         JournalUI.instance.OnJournalUIOpen += JournalUI_OnJournalUIOpen;
         JournalUI.instance.OnJournalUIClose += JournalClose_OnJournalUIClose;
 
@@ -58,6 +61,18 @@ public class ExploreUI : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueStart.RemoveListener(Hide);
+        DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.RemoveListener(Show);
+
+        JournalUI.instance.OnJournalUIOpen -= JournalUI_OnJournalUIOpen;
+        JournalUI.instance.OnJournalUIClose -= JournalClose_OnJournalUIClose;
+
+        MarketUI.instance.OnShopUIOpen -= MarketUI_OnShopUIOpen;
+        MarketUI.instance.OnShopUIClose -= Market_OnShopUIClose;
     }
 
 }

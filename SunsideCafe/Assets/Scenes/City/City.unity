@@ -6192,9 +6192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 898fa77a19528ea46b6e9bb8f2f577b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteImage: {fileID: 2065409089}
+  leftSpriteImage: {fileID: 2065409089}
+  rightSpriteImage: {fileID: 1292230011}
+  backgroundImage: {fileID: 1295668297}
   NPCDatabase:
   - {fileID: 11400000, guid: 752043c4335af214ca4dbd1af06eb878, type: 2}
+  - {fileID: 11400000, guid: 0f699fed8d07ceb46bf00df308a73481, type: 2}
   dialogueRunner: {fileID: 715294810}
 --- !u!4 &701373761
 Transform:
@@ -10946,6 +10949,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224375210}
   m_CullTransparentMesh: 1
+--- !u!114 &1292230011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 628702604507540072, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
+  m_PrefabInstance: {fileID: 1143846940107477797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1292877562
 GameObject:
   m_ObjectHideFlags: 0
@@ -11191,6 +11205,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295454293}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1295668297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3923620685864004484, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
+  m_PrefabInstance: {fileID: 1143846940107477797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1300581746
 GameObject:
   m_ObjectHideFlags: 0
@@ -12902,6 +12927,8 @@ MonoBehaviour:
   statID: TalkToNPC
   amount: 1
   triggerType: 0
+  notePrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!4 &1464542465
 Transform:
   m_ObjectHideFlags: 0
@@ -15049,9 +15076,11 @@ MonoBehaviour:
   tutorialDataArray:
   - triggerType: 0
     tutorialGroupUIGameobject: {fileID: 1822846635}
+    canvasGroup: {fileID: 0}
     exitButton: {fileID: 1080451609}
   - triggerType: 1
     tutorialGroupUIGameobject: {fileID: 809233274}
+    canvasGroup: {fileID: 0}
     exitButton: {fileID: 643980741}
 --- !u!1 &1691414878
 GameObject:

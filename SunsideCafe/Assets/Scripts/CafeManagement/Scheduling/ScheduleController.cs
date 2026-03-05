@@ -26,6 +26,8 @@ public class ScheduleController : MonoBehaviour
 
         EmployeeCardUI employeeCardUI = EmployeeListUI.instance.GetEmployeeCardUI(employee);
         employeeCardUI.enabled = true;
+        employeeCardUI.SetBlockerDisable();
+
         ScheduleManager.instance.Remove(employee);
 
     }
