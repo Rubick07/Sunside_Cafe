@@ -70,11 +70,11 @@ public class CustomerView : MonoBehaviour, IDropHandler
         bool success = controller.TryServe(foodUI.GetFoodItem());
         if (success)
         {
+            OnCustomerGetCorrectFood?.Invoke(this, foodUI.GetFoodItem().data);
+
             foodUI.Consume();
             isActive = false;
             CustomerSlotUI customerSlotUI = GetComponentInParent<CustomerSlotUI>();
-
-            OnCustomerGetCorrectFood?.Invoke(this, foodUI.GetFoodItem().data);
         }
         else
         {

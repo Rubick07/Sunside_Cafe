@@ -8,7 +8,7 @@ public class TimetableUI : MonoBehaviour
     [SerializeField] private Button completeButton;
     [SerializeField] private ShiftSlotUI slotPrefab;
     [SerializeField] private Transform containerTransform;
-
+    [SerializeField] private CanvasGroup canvasGroup;
     private ShiftSlotUI[,] slots;
 
     private void Awake()
@@ -33,6 +33,12 @@ public class TimetableUI : MonoBehaviour
 
                 slot.Setup(d,s);
             }
+
+        completeButton.onClick.AddListener(()=> 
+        {
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+        });
 
         ScheduleManager.instance.OnAssignedEmployeeChanged += ScheduleManager_OnAssignedEmployeeChanged;
         Debug.Log(ScheduleManager.instance.IsAllEmployeeAssigned());

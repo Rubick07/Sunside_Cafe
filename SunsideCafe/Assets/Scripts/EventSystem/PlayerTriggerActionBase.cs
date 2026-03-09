@@ -23,5 +23,12 @@ public abstract class PlayerTriggerActionBase : MonoBehaviour
         return AddOnTriggerExit;
     }
 
+    public void HasTriggered()
+    {
+        Debug.Log("Test");
+
+        hasTriggered = true;
+    }
+
     public abstract void ActionEvent();
 }

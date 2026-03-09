@@ -1,10 +1,10 @@
 using UnityEngine;
-
-public class ObjectiveRewardListener : MonoBehaviour
+using UnityEngine.Events;
+public class ObjectiveEventListener : MonoBehaviour
 {
     [SerializeField] private string objectiveID;
-
-    void OnEnable()
+    [SerializeField] private UnityEvent OnObjectiveClear;
+    private void Start()
     {
         GameEvents.OnObjectiveCompleted += Handle;
     }
@@ -16,12 +16,10 @@ public class ObjectiveRewardListener : MonoBehaviour
 
     void Handle(string id)
     {
-        Debug.Log(id +" Complete");
+        Debug.Log(id + " Complete");
         if (id == objectiveID)
         {
-            Debug.Log("Reward given!");
+            OnObjectiveClear?.Invoke();
         }
     }
-
-
 }

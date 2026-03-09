@@ -2,6 +2,16 @@
 ---
 Test
 ===
+title:DilarangMasukCafe
+---
+<<cameraShake ScreenShake 5>>
+Arthur: Katanya Mau pergi ngapain kesini
+===
+title:Day2Placeholder
+---
+haiadf
+
+===
 
 title: Day2Start
 ---
@@ -17,5 +27,40 @@ Arthur: blablabalbalalb SAHURRRRRRRRRRRRRRRRRRRRR
 Arthur: Udh bangun kan nah turun cuy
 <<CafeBackgroundFadeIn CafeBackgroundUI 1.25>>
 Lucas: ya ini ngobrol
-<<AddScene GameManager Cafe_BaristaTutorial>>
+<<AddScene GameManager Cafe_Barista_Day2>>
+===
+
+title: Day2BaristaClear
+---
+Arthur: Terima kasih sudah bantu barista
+Arthur: Sekarang bantu saya scheduling
+<<AddScene GameManager Cafe_ShiftSystemTutorial>>
+===
+
+title: Day2SchedulingComplete
+---
+Arthur: Mantap sekarang udh ngerti scheduling
+<<RemoveScene GameManager>>
+
+Luna: Yak saatnya keliling kota
+
+<<SetTeleportDisable ZoneMainDistrict_PintuCafe>>
+
+<<CafeBackgroundFadeOut CafeBackgroundUI>>
+<<Teleport ZoneCafe_TriggerKiri>>
+
+<<BlackscreenFadeOut BlackscreenUI>>
+<<ShowObjectiveUI ObjectiveUI>>
+
+
+===
+
+title:Day2Pohon
+---
+when yah adalah cara saya mengekpesikan saya juga mau
+
+<<SetPlayerTriggerActive TriggerDialog_2.4_AfterBeach>>
+<<SetTeleportActive ZoneMainDistrict_PintuCafe>>
+
+
 ===

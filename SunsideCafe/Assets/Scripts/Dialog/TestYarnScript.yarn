@@ -70,9 +70,17 @@ title: TestPilihan1
 
 title: PamanSawit
 ---
-<<SetLeftSprite MrP biasa>>
 Mister P:  sawit saya kebakar
 Mister P: saya ingin [test]minuman yang manis[/test] le
+===
+title: PamanSawitSalahPesan
+---
+Mister P: Hey Antek Antek asing saya maunya yang manis
+===
+title: PamanSawitSelesaiPesan
+---
+Mister P:  Terima kasih untuk kopinya okegas okegas
+
 ===
 
 title: PriaSolo
@@ -138,20 +146,25 @@ Yey Reuni
 title: PlaceholderCafeKelar
 ---
 Yey Kelar saatnya refection
-<<AddScene GameManager Reflection>>
+<<ReflectionStart ReflectionSystem>>
 ===
 
 title: PlaceholderReflection1
 ---
 Hai
 <<NextDay DaySystem>>
-<<RemoveScene GameManager>>
+<<BlackscreenFadeIn BlackscreenUI>>
+<<wait  1>>
+<<jump Day2Start>>
 ===
 title: PlaceholderReflection2
 ---
-Hai Hai
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+malasssss
+
+
 <<NextDay DaySystem>>
-<<RemoveScene GameManager>>
+
 ===
 title: PlaceholderReflection3
 ---

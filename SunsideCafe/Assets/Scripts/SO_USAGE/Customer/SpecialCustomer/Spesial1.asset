@@ -18,4 +18,6 @@ MonoBehaviour:
   coinReward: 0
   possibleOrders:
   - {fileID: 11400000, guid: 1326199e3a28f2846811a5217af7b541, type: 2}
-  dialogTitle: PamanSawit
+  startDialogTitle: PamanSawit
+  clearDialogTitle: PriaSoloSelesaiPesan
+  wrongFoodDialogTitle: PamanSawitSalahPesan

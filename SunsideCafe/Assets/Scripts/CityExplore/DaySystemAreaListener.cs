@@ -17,6 +17,9 @@ public class DaySystemAreaListener : MonoBehaviour
             a.SetActive(false);
         }
 
+        if (e > areaEventList.Count)
+            return;
+
         areaEventList[e].SetActive(true);
     }
 }

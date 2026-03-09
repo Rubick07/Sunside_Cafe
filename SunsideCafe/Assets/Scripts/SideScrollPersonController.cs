@@ -43,7 +43,7 @@ public class SideScrollPersonController : MonoBehaviour
             characterController.Move(direction * currentSpeed * Time.deltaTime);
         }
 
-        Debug.DrawRay(transform.position, Vector3.forward,Color.red);
+        //Debug.DrawRay(transform.position, Vector3.forward,Color.red);
     }
 
     public void SetControllerActive(bool enable)
@@ -58,14 +58,21 @@ public class SideScrollPersonController : MonoBehaviour
     private void Move_canceled(InputAction.CallbackContext obj)
     {
         if (state == playerState.NORMAL)
+        {
             ExploreUI.instance.Show();
+            ObjectiveManagerUI.instance.ShowAnimation();
+        }
 
     }
 
     private void Move_performed(InputAction.CallbackContext obj)
     {
         if (state == playerState.NORMAL)
+        {
             ExploreUI.instance.Hide();
+            ObjectiveManagerUI.instance.Hide();
+        }
+            
     }
 
     private void Interact_performed(InputAction.CallbackContext obj)

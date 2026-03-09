@@ -3,20 +3,19 @@ using TMPro;
 
 public class ZoneTeleportTargetName : MonoBehaviour
 {
-    [SerializeField] ZoneData zoneData;
-
+    private Teleport teleport;
     private TextMeshProUGUI zoneAreaNameText;
 
     private void Awake()
     {
         zoneAreaNameText = GetComponentInChildren<TextMeshProUGUI>();
-
-        zoneAreaNameText.text = zoneData.GetZoneName();
     }
 
     private void Start()
     {
-
+        teleport = transform.parent.parent.GetComponentInChildren<Teleport>();
+        zoneAreaNameText.text = teleport.GetZoneDataTarget().GetZoneName();
+        Hide();
     }
 
     public void Show()

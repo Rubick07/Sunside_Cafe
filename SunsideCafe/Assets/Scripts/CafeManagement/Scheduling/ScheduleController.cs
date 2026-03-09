@@ -16,7 +16,8 @@ public class ScheduleController : MonoBehaviour
     {
         InputManager.Instance.GetInputActions().Player.RotateScheduleLeft.performed -= RotateScheduleLeft_performed;
         InputManager.Instance.GetInputActions().Player.RotateScheduleRight.performed -= RotateScheduleRight_performed;
-
+     
+        InputManager.Instance.GetInputActions().Player.DeleteSchedule.performed -= DeleteSchedule_performed;
     }
 
     private void DeleteSchedule_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)

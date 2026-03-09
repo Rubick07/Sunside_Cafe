@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c08c01bf8ca3ec0489b3e4b311caa113, type: 3}
-  m_Name: New Objective Data
+  m_Name: ObjectiveData_02.3
   m_EditorClassIdentifier: 
-  objectiveID: 123
-  title: Ngomong sama tembok
+  objectiveID: 02.3
+  title: Head back to Sunside Cafe
   description: 
   conditions:
-  - type: 3
+  - type: 2
     targetValue: 1
   onCompletedEventID: 

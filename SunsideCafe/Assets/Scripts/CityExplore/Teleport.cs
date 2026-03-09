@@ -18,4 +18,16 @@ public class Teleport : MonoBehaviour
     
     }
 
+    [Yarn.Unity.YarnCommand("Teleport")]
+    public void TeleportPlayer()
+    {
+        GameObject player = Helpers.GetPlayerGameObject();
+
+        player.transform.position = targetTransform.position;
+
+        OnAnyTeleportTrigger?.Invoke(this, targetTransform.GetComponentInParent<ZoneData>());
+    }
+
+    public ZoneData GetZoneDataTarget() => targetTransform.GetComponentInParent<ZoneData>();
+
 }

@@ -55,7 +55,7 @@ public class ZoneUI : MonoBehaviour
     public void ShowAnimation()
     {
         Show();
-        rectTransform.DOMoveX(325, .5f).OnComplete(()=>
+        rectTransform.DOMoveX(253.46f, .5f).OnComplete(()=>
         {
             isActive = true;
         });
@@ -63,7 +63,7 @@ public class ZoneUI : MonoBehaviour
 
     public void HideAnimation()
     {
-        rectTransform.DOMoveX(-295f, .5f);
+        rectTransform.DOMoveX(-256f, .5f);
     }
 
     public void Show()
@@ -73,8 +73,7 @@ public class ZoneUI : MonoBehaviour
 
     public void Hide()
     {
-        rectTransform.DOMoveX(-295f, 0f);
-        gameObject.SetActive(false);
+        rectTransform.DOMoveX(-256f, 0f);
     }
 
     [YarnCommand("ShowZoneUI")]

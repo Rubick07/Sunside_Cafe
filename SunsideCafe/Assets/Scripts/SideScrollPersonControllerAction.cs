@@ -27,10 +27,15 @@ public class SideScrollPersonControllerAction : MonoBehaviour
 
         DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueStart.AddListener(()=> 
         {
+            personController.SetControllerState(SideScrollPersonController.playerState.DIALOG);
             personController.SetControllerActive(false);
         });
+
         DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(() =>
         {
+            personController.SetControllerState(SideScrollPersonController.playerState.NORMAL);
+
+
             Scene cafeScene = SceneManager.GetActiveScene();
             
             if (cafeScene.name != "City_Area")

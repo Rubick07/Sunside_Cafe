@@ -8,8 +8,12 @@ public class PlayerTrigger : MonoBehaviour
 
     private PlayerTriggerActionBase[] playerTriggerActionBaseArray;
 
+    private Collider collider;
+
     private void Awake()
     {
+        collider = GetComponent<Collider>();
+
         playerTriggerActionBaseArray = GetComponents<PlayerTriggerActionBase>();
 
 
@@ -20,6 +24,9 @@ public class PlayerTrigger : MonoBehaviour
 
             if (playerTriggerActionBase.GetAddOnTriggerExit())
                 OnPlayerTriggerExit.AddListener(playerTriggerActionBase.ActionEvent);
+
+            if (!playerTriggerActionBase.GetisRepeatable())
+                OnPlayerTriggerEnter.AddListener(playerTriggerActionBase.HasTriggered);
         }
     }
 
@@ -38,5 +45,19 @@ public class PlayerTrigger : MonoBehaviour
             OnPlayerTriggerExit?.Invoke();
         }
     }
+
+    [Yarn.Unity.YarnCommand("SetPlayerTriggerActive")]
+    public void SetEnable()
+    {
+        collider.enabled = true;
+    }
+
+    [Yarn.Unity.YarnCommand("SetPlayerTriggerDisable")]
+    public void SetDisable()
+    {
+        collider.enabled = false;
+    }
+
+
 
 }
