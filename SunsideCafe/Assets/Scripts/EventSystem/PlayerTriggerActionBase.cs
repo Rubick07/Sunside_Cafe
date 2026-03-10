@@ -25,8 +25,6 @@ public abstract class PlayerTriggerActionBase : MonoBehaviour
 
     public void HasTriggered()
     {
-        Debug.Log("Test");
-
         hasTriggered = true;
     }
 

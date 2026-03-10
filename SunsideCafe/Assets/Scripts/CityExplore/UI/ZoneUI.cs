@@ -20,7 +20,7 @@ public class ZoneUI : MonoBehaviour
     private void Start()
     {
         Teleport.OnAnyTeleportTrigger += Teleport_OnAnyTeleportTrigger;
-        //TeleportUI.OnAnyTeleportEnd += TeleportUI_OnAnyTeleportEnd;
+        TeleportUI.OnAnyTeleportEnd += TeleportUI_OnAnyTeleportEnd;
 
 
         Hide();

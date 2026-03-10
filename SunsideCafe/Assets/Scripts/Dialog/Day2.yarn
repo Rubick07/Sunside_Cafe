@@ -60,6 +60,7 @@ title:Day2Pohon
 when yah adalah cara saya mengekpesikan saya juga mau
 
 <<SetPlayerTriggerActive TriggerDialog_2.4_AfterBeach>>
+<<SetPlayerTriggerActive TriggerDialog_2.4_CafeAfter>>
 <<SetTeleportActive ZoneMainDistrict_PintuCafe>>
 
 
