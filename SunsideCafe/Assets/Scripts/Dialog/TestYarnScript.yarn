@@ -162,9 +162,10 @@ title: PlaceholderReflection2
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 malasssss
 
-
+<<NextDay DaySystem>>
 <<NextDay DaySystem>>
 
+<<jump Day4>>
 ===
 title: PlaceholderReflection3
 ---

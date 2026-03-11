@@ -5,5 +5,9 @@ public enum ObjectiveConditionType
     FollowArthur,
     PassTheTownSquare,
     GoToBeach,
-    GoToCafe
+    GoToCafe,
+    MeetLuna,
+    BuyBread,
+    BuyFish
+
 }

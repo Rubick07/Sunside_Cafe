@@ -1,4 +1,70 @@
 ﻿title: Day4
 ---
-adfasdf
+
+<<PlayCutscene Day3_Part1>>
+<<wait  1>>
+
+<<CafeBackgroundFadeOut CafeBackgroundUI>>
+
+
+bjir tugas numpuk cuy
+<<wait  .5>>
+<<BlackscreenFadeIn BlackscreenUI>>
+
+kertas berjatuhan
+
+lucas: HARAHETA
+
+<<RemoveCutscene Day3_Part1>>
+
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+
+<<DayUIFadeIn DaySystemUI>>
+<<wait  2>>
+
+<<DayUIFadeOut DaySystemUI>>
+
+balajsdfnasjnv
+
+ring ring bunyi telephone
+
+saatnya kabur
+
+<<CafeBackgroundFadeOut CafeBackgroundUI>>
+<<Teleport ZoneCafe_TriggerKiri>>
+
+<<BlackscreenFadeOut BlackscreenUI>>
+<<ShowObjectiveUI ObjectiveUI>>
+===
+
+title:LunaTownSquareDay4
+---
+yak saatnya ke market
+
+<<ShowObjectiveUI ObjectiveUI>>
+
+===
+
+title:FionaAppearFirstTime
+---
+???: ngapain cuy di market
+
+<<PlayCutscene Day3_Part2>>
+
+saatnya berpisah
+
+<<ShowObjectiveUI ObjectiveUI>>
+
+bye bye
+
+<<SetPlayerTriggerActive TriggerDialog_Accompany>>
+<<SetPlayerTriggerActive TriggerDialog_ReflectionDay4>>
+===
+
+title:AccompanyLuna
+---
+saatnya berpisah
+
+
+
 ===

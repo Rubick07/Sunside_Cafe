@@ -40,7 +40,6 @@ public class InteractSystem : MonoBehaviour
 
             foreach (IInteractable i in interactable)
             {
-                Debug.Log(i);
                 i.Interact();
             }
         }

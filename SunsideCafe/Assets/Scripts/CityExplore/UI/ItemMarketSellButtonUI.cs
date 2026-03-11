@@ -37,7 +37,7 @@ public class ItemMarketSellButtonUI : MonoBehaviour, IBindData<ItemBase>
     {
         return button;
     }
-    private void InventoryManager_OnInventoryChanged(object sender, System.EventArgs e)
+    private void InventoryManager_OnInventoryChanged(object sender, ItemBase e)
     {
         itemAmountsTextMeshPro.text = InventoryManager.instance.GetItemAmounts(itemBase).ToString();
     }

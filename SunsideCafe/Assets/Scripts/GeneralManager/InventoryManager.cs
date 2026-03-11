@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    public event EventHandler OnInventoryChanged;
+    public event EventHandler<ItemBase> OnInventoryChanged;
 
     private Dictionary<ItemBase, int> inventoryDictionary = new Dictionary<ItemBase, int>();
 
@@ -37,7 +37,7 @@ public class InventoryManager : MonoBehaviour
             inventoryDictionary.Add(itemBase, 1);
         }
 
-        OnInventoryChanged?.Invoke(this, EventArgs.Empty);
+        OnInventoryChanged?.Invoke(this, itemBase);
     }
 
     public bool UseItem(ItemBase itemBase)
@@ -67,7 +67,7 @@ public class InventoryManager : MonoBehaviour
     {
         inventoryDictionary[itemBase] -= AmountToRemove;
 
-        OnInventoryChanged?.Invoke(this, EventArgs.Empty);
+        OnInventoryChanged?.Invoke(this, itemBase);
     }
 
 

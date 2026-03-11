@@ -11,12 +11,21 @@ public class TimelineDayDreamController : MonoBehaviour
     private void Start()
     {
         DialogRunnerSingleton.instance.GetDialogueRunner().AddCommandHandler<string>("PlayCutscene", PlayCutscene);
+        DialogRunnerSingleton.instance.GetDialogueRunner().AddCommandHandler<string>("RemoveCutscene", RemoveCutscene);
     }
 
     public void PlayCutscene(string timelineName)
     {
         PlayableDirector playableDirector = GetDirectorByTimelineName(timelineName);
         playableDirector.Play();
+    }
+
+    public void RemoveCutscene(string timelineName)
+    {
+        PlayableDirector playableDirector = GetDirectorByTimelineName(timelineName);
+
+        playableDirector.gameObject.SetActive(false);
+
     }
 
     public PlayableDirector GetDirectorByTimelineName(string timelineName)
@@ -27,5 +36,10 @@ public class TimelineDayDreamController : MonoBehaviour
         );
     }
 
+    private void OnDestroy()
+    {
+        DialogRunnerSingleton.instance.GetDialogueRunner().RemoveCommandHandler("PlayCutscene");
+        DialogRunnerSingleton.instance.GetDialogueRunner().RemoveCommandHandler("RemoveCutscene");
 
+    }
 }

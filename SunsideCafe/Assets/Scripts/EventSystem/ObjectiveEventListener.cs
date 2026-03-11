@@ -4,7 +4,7 @@ public class ObjectiveEventListener : MonoBehaviour
 {
     [SerializeField] private string objectiveID;
     [SerializeField] private UnityEvent OnObjectiveClear;
-    private void Start()
+    private void OnEnable()
     {
         GameEvents.OnObjectiveCompleted += Handle;
     }
