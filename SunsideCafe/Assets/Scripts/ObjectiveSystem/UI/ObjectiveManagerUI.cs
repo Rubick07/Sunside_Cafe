@@ -12,7 +12,6 @@ public class ObjectiveManagerUI : MonoBehaviour
 
     private RectTransform rectTransform;
 
-    private float timeToHide = 3f;
     private bool isActive;
 
     private void Awake()

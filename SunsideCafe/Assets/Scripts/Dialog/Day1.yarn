@@ -170,7 +170,7 @@ Arthur: HAHAHA, baguslah kalau begitu mari masuk!
 
 ===
 
-title: PlaceholderCafeFirstTime
+title: CafeFirstTime
 ---
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
@@ -307,87 +307,125 @@ Lucas: Malah bagian itu yang kamu ingat haha
 
 title: LunaTutorialDone
 ---
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Luna Idle>>
+<<SetLeftTalk>>
+
 Lucas: Tapi ga kerasa ya udah 5 tahun sejak waktu itu, gimana kabarmu sekarang?
 
+<<SetRightTalk>>
 Luna: Baik, aku sekarang kuliah manajemen di sini dan sejauh ini semuanya lancar
-
 Luna: Kamu sendiri gimana?
+
+<<SetLeftTalk>>
 
 Lucas: Ah, aku juga seharusnya baik…
 
+<<SetRightTalk>>
+
 Luna: Seharusnya?
 
+<<SetLeftTalk>>
 Lucas: Sekarang aku kuliah teknik informatika di universitas dekat pusat ibukota.
 
+<<SetRightTalk>>
 Luna: Wah itu bukannya hebat.
 
+<<SetLeftTalk>>
 Lucas: Ya seharusnya…, tapi sekarang aku sedikit bingung dan tidak tahu harus bagaimana
 
 Lucas: Sepertinya aku terkena sindrom burnout.
 
+<<SetRightTalk>>
 Luna: !
 
 Luna: Ah begitukah, ternyata tidak cuma aku…
 
+<<SetLeftTalk>>
 Lucas: Kamu juga?
 
+<<SetRightTalk>>
 Luna: Kurang lebih… dan ternyata burnout cukup rawan dialami oleh orang seusia kita.
 
+<<SetLeftTalk>>
 Lucas: Hahh… Semoga saja kita bisa cepat sembuh.
 
+<<SetRightTalk>>
 Luna: Setuju.
 
 Narrator: Lucas dan Luna bercakap-cakap hingga matahari pun sudah tenggelam
 
+<<SetRightTalk>>
 Luna: Ah, sudah jam segini!
 
 Luna: Aku ada kerja kelompok dengan teman kuliahku
 
+<<SetLeftTalk>>
 Lucas: Ah, kalau gitu hati-hati di jalan.
 
+<<SetRightTalk>>
 Luna: Makasih, oh ya gimana kalau besok kita lanjut obrolan ini lagi?
 
+<<SetLeftTalk>>
 Lucas: Boleh, aku harusnya kosong setelah shiftku selesai besok siang
 
+<<SetRightTalk>>
 Luna: Oke, kalau begitu sampai jumpa besok
 
+<<SetLeftTalk>>
 Lucas: Ya, sampai jumpa besok.
+
+//<<SetRightSprite Arthur Idle>>
 
 //Luna FadeOut
 Arthur: Jadi gimana setelah sekian lama tidak bertemu Luna?
 
+<<SetLeftTalk>>
 Lucas: Ya begitulah…
 
+<<SetRightTalk>>
 Arthur: HAHAHA, jawabanmu benar-benar terprediksi
 
 Arthur: Sedikit tips dari paman, lain kali antar dia sampai ke tempat yang aman
 
+<<SetLeftTalk>>
 Lucas: Pengalaman hidup?
 
+<<SetRightTalk>>
 Arthur: Bisa dibilang begitu
 
+<<SetLeftTalk>>
 Lucas: Tapi dilihat-lihat tempat ini ga berubah sama sekali.
 
+<<SetRightTalk>>
 Arthur: Ya, bahkan kalo aku mau merubahnya pun juga ga bisa
 
 Arthur: Sejujurnya mungkin di akhir musim panas ini kafe ini bakal ditutup
 
+<<SetLeftTalk>>
 Lucas: Kenapa?!
 
+<<SetRightTalk>>
 Arthur: Hmm, gampangnya 
 
 Arthur: Tidak usah khawatir, aku sudah siap akan hal ini dan menyiapkan rencana lain untuk tetap bertahan hidup.
 
+<<SetLeftTalk>>
 Lucas: Tapi-
 
+<<SetRightTalk>>
 Arthur: Kamu fokus aja ke istirahat dan berusaha sembuh dari penyakitmu
 
+<<SetLeftTalk>>
 Lucas: Oke…
 
+<<SetRightTalk>>
 Arthur: Sepertinya sudah cukup larut, jadi mari kita tidur, besok akan jadi hari pertamamu jadi siap-siap
 
-Lucas: Aman, pama juga tadi udah lihat aku bisa buat minuman untuk Luna
+<<SetLeftTalk>>
+Lucas: Aman, paman juga tadi udah lihat aku bisa buat minuman untuk Luna
 
+<<SetRightTalk>>
 Arthur: HAHAHA, kalau begitu aku minta tolong bantuannya besok
 
 Arthur: Oh iya sebelum itu, ambillah ini
@@ -396,8 +434,10 @@ Arthur: Ini adalah jurnal kosong, isilah jurnal ini setiap malam dengan pengalam
 
 Arthur: Mungkin ini bisa membantumu mengidentifikasi apa yang kamu alami dan melihat perkembanganmu tiap harinya.
 
+<<SetLeftTalk>>
 Lucas: Terima kasih banyak paman.
 
+<<SetRightTalk>>
 Arthur: sama-sama, selamat istirahat
 
 //<<SetRightSprite Arthur Idle>>
@@ -409,5 +449,61 @@ Arthur: Selamat datang di Sunside Cafe.
 <<SetLeftSprite Lucas Happy>>
 Lucas: Selamat istirahat paman.
 
-<<ReflectionStart ReflectionSystem>>
+<<jump ReflectionDay1>>
+
+//<<ReflectionStart ReflectionSystem>>
+===
+
+title: ReflectionDay1
+---
+<<once>>
+    Lucas: (Aku cape…)
+    Lucas: (Hari pertama yang baik)
+    Lucas: (Sebaiknya aku mengisi jurnal itu dulu sebelum tidur)
+    Lucas: (Apa ini?)
+<<else>> 
+    Lucas: (Sepertinya ada yang salah coba ku ulang baca)
+<<endonce>>
+
+Tulisan di buku: Sejauh ini burnout diklasifikasikan jadi 3 tipe, yaitu
+
+Tulisan di buku: Frentic, keterlibatan kerja tinggi dan fokus pada pencapaian sering mengatasi masalah dengan bekerja lebih lama atau melakukan banyak hal sekaligus, yang dapat meningkatkan risiko burnout serta mengabaikan kehidupan pribadi dan kesehatan.
+
+Tulisan di buku: Worn Out, perasaan tidak berdaya dan kurangnya pengakuan atas usaha dapat membuat seseorang merespons kesulitan dengan sikap pasif, sehingga menimbulkan rasa tidak kompeten dan bersalah.
+
+Tulisan di buku: Underchallenged, Pekerjaan yang monoton dan berulang dapat menyebabkan kebosanan, kurangnya perkembangan diri, dan keinginan untuk pindah kerja. Hal ini juga dapat menimbulkan sinisme serta kecenderungan menghindari masalah.
+
+
+
+
+<<once>>
+Tulisan di buku: Silahkan mencari dirimu dan semangat -Arthur
+Lucas: (Paman…)
+Lucas: (Baiklah, mari kita mulai)
+<<endonce>>
+
+-> Correct
+    Lucas: Seharusnya ini bener
+    Lucas: (Akhirnya selesai!)
+    Lucas: (Waktunya tidur.)
+    <<NextDay DaySystem>>
+    <<BlackscreenFadeIn BlackscreenUI>>
+    <<wait  1>>
+    <<jump Day2Start>>
+-> InCorrect
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump ReflectionDay1>>
+
+===
+
+title: MateriReflectionDay1
+---
+Tulisan di buku: Sejauh ini burnout diklasifikasikan jadi 3 tipe, yaitu
+
+Tulisan di buku: Frentic, keterlibatan kerja tinggi dan fokus pada pencapaian sering mengatasi masalah dengan bekerja lebih lama atau melakukan banyak hal sekaligus, yang dapat meningkatkan risiko burnout serta mengabaikan kehidupan pribadi dan kesehatan.
+
+Tulisan di buku: Worn Out, perasaan tidak berdaya dan kurangnya pengakuan atas usaha dapat membuat seseorang merespons kesulitan dengan sikap pasif, sehingga menimbulkan rasa tidak kompeten dan bersalah.
+
+Tulisan di buku: Underchallenged, Pekerjaan yang monoton dan berulang dapat menyebabkan kebosanan, kurangnya perkembangan diri, dan keinginan untuk pindah kerja. Hal ini juga dapat menimbulkan sinisme serta kecenderungan menghindari masalah.
+
 ===

@@ -7,6 +7,7 @@ public class ReflectionSystem : MonoBehaviour
     private void StartReflection()
     {
         int currentDay = DaySystem.instance.GetCurrentDay();
+        Debug.Log(dialogueTitleList[currentDay]);
 
         DialogRunnerSingleton.instance.StartDialog(dialogueTitleList[currentDay]);
     }

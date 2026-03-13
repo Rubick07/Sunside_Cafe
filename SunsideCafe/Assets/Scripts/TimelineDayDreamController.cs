@@ -10,7 +10,6 @@ public class TimelineDayDreamController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(DialogRunnerSingleton.instance);
         DialogRunnerSingleton.instance.GetDialogueRunner().AddCommandHandler<string>("PlayCutscene", PlayCutscene);
         DialogRunnerSingleton.instance.GetDialogueRunner().AddCommandHandler<string>("RemoveCutscene", RemoveCutscene);
     }

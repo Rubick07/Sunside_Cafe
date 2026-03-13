@@ -9,7 +9,7 @@ public class BaristaTutorialAction : MonoBehaviour
 
     private void GameManager_OnGameSceneUnloadChanged(object sender, System.EventArgs e)
     {
-        DialogRunnerSingleton.instance.StartDialog("PlaceholderCafeKelar");
+        DialogRunnerSingleton.instance.StartDialog("LunaTutorialDone");
     }
 
     private void OnDestroy()

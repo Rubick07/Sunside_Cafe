@@ -2942,7 +2942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTitleList:
-  - PlaceholderReflection1
+  - ReflectionDay1
   - PlaceholderReflection2
   - PlaceholderReflection3
 --- !u!4 &232965019
@@ -16487,7 +16487,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: bfbc9677fb74b7b4e8eb7ebdc4729716, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -21639,7 +21639,7 @@ MonoBehaviour:
   isRepeatable: 0
   AddOnTriggerEnter: 1
   AddOnTriggerExit: 0
-  dialogTitle: PlaceholderCafeFirstTime
+  dialogTitle: CafeFirstTime
 --- !u!114 &1935972202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24481,15 +24481,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1527936949422410518, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_fontSize
-      value: 32
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1527936949422410518, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_margin.z
       value: 679.3557
       objectReference: {fileID: 0}
     - target: {fileID: 1527936949422410518, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527936949422410518, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5558254816180617456, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_SortingOrder
@@ -24497,11 +24501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5722731960843703548, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: autoStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5722731960843703548, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: startNode
-      value: PlaceholderReflection2
+      value: PlaceholderCafeKelar
       objectReference: {fileID: 0}
     - target: {fileID: 5975031290259730175, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_LocalPosition.x
