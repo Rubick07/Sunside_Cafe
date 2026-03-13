@@ -1,0 +1,413 @@
+﻿title: Day1
+---
+This is an example of a Yarn Spinner script. Write your dialogue here!
+===
+
+title: DayDream1
+---
+Pembawa Acara: Dan pemenang kompetisi startup inovasi teknologi kampus adalah…
+
+Pembawa Acara: Lucas Hansel!
+
+Pembawa Acara: Nah silahkan terima hadiah ini atas kemenanganmu
+
+Lucas: Mengapa aku tidak bisa membukanya.
+
+Lucas: Tolonglah, ada banyak hal yang perlu kulakukan…
+
+Lucas: Apa yang harus kulakukan!
+
+Lucas: Aku…
+
+Lucas: Tidak bisa menggunakannya lagi.
+
+<<PlayCutscene Part1Sky>>
+===
+title: DayDream2
+---
+Lucas: (Mimpi itu lagi…)
+
+Lucas: Aku mempunyai sebuah mimpi.
+
+Lucas: Sebuah hari dimana aku bisa mencapai sesuatu dan membantu orang atas inovasi baru melalui teknologi yang kuciptakan. 
+
+Lucas: Namun aku mempunyai sebuah masalah
+
+Lucas: Aku, terkena burnout syndrome
+
+<<PlayCutscene Part1CameraDown>>
+===
+title: DayDream3
+---
+<<wait  1.5>>
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+
+Lucas: Akhirnya setelah sekian lama aku kembali ke sini…
+
+Lucas: Pulau ini sedikit berubah sejak 5 tahun lalu.
+
+Lucas: Kira-kira apa saja yang terjadi di pulau tropica selama aku pergi…
+
+Lucas: Tapi tetap saja panas di sini
+
+<<SetRightTalk>>
+???: Oh
+
+???: Itukah kamu Lucas?
+
+<<PlayCutscene Part1ArthurAppear>>
+===
+title: DayDream4
+---
+//<<SetRightSprite Arthur Idle>>
+???: Sedang apa kamu melamun di sana
+
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+Lucas: Ah lama tak jumpa, paman Arthur
+
+<<SetRightTalk>>
+Arthur: Ya, terakhir kali tahun lalu ketika aku mampir ke rumahmu.
+
+//<<SetRightSprite Arthur Happy>>
+Arthur: Tapi kali ini giliranmu yang akan menetap di sini.
+
+<<SetLeftSprite Lucas Happy>>
+<<SetLeftTalk>>
+Lucas: Terima kasih sudah membiarkanku menginap libur musim panas ini paman.
+
+<<SetRightTalk>>
+Arthur: Ah, santai saja. Ayahmu juga bilang bahwa kamu ingin membantu menjaga Cafe jadi aku pun juga sangat terbantu.
+
+Arthur: Lagipula ini kesempatan yang bagus untuk mengganti pemandangan dari hiruk pikuknya kota.
+
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+Lucas: (Ya…, mungkin itu yang aku butuhkan.)
+
+<<SetRightTalk>>
+Arthur: Aku akan jalan duluan ke kafe, ada urusan yang perlu kulakukan, apakah kamu masih hafal jalan ke kafe?
+
+<<SetLeftTalk>>
+Lucas: Tenang saja, seharusnya aku masih ingat.
+
+<<SetRightTalk>>
+Arthur: Bagus, kalau begitu aku akan jalan duluan karena sebentar lagi matahari akan tenggelam…
+
+<<SetLeftTalk>>
+Lucas: Oke paman
+
+<<SetRightTalk>>
+Arthur: Oh iya, apa kamu tahu kenapa matahari akan tenggelam di pulau ini?
+
+<<SetLeftTalk>>
+Lucas: Tidak?
+
+<<SetRightTalk>>
+Arthur: Karena matahari tidak bisa berenang.
+
+Arthur: HAHAHAHA
+
+<<SetLeftTalk>>
+Lucas: …
+
+Lucas: (Belum ada 1 jam aku sampai di pulau…)
+
+Lucas: (Memang umur tidak berbohong)
+
+<<SetRightTalk>>
+Arthur: Kalau begitu aku akan menunggumu di kafe, hati-hati di jalan 
+
+<<PlayCutscene Part1ArthurFadeOut>>
+===
+title: DayDream5
+---
+<<RemoveCutscene Part1Sky>>
+<<RemoveCutscene Part1CameraDown>>
+<<RemoveCutscene Part1ArthurAppear>>
+<<RemoveCutscene Part1ArthurFadeOut>>
+
+
+<<SetPlayerTriggerActive TriggerTutorialWASD>>
+===
+
+title:Day1TutorialTownSquare
+---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+Lucas:  Oh, pusat kota masih saja ramai.
+
+Lucas: Seharusnya kafe terletak di distrik utama di kanan pusat kota.
+
+===
+
+title:Day1TutorialMainDistrict
+---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+Lucas: Akhirnya sampai di distrik utama.
+
+Lucas: Seharusnya paman Arthur sedang menunggu di depan kafe.
+
+===
+
+title:Day1Arthur
+---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+Lucas: Aku sudah tiba!
+
+//<<SetRightSprite Arthur Idle>>
+//<<SetRightTalk>>
+Arthur: Oh bagus, aku kira kamu tersesat tadi
+
+<<SetLeftTalk>>
+Lucas: Tenang saja, aku pernah tinggal di sini walaupun tidak lama
+
+<<SetRightTalk>>
+Arthur: HAHAHA, baguslah kalau begitu mari masuk!
+
+===
+
+title: PlaceholderCafeFirstTime
+---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+
+
+Lucas: Permisi…
+
+//<<SetRightSprite Arthur Idle>>
+//<<SetRightTalk>>
+
+Arthur: Anggap saja rumah sendiri dan santai aja kalau mengobrol denganku
+
+<<SetLeftTalk>>
+Lucas: oke paman, akan ku coba
+
+//<<SetRightTalk>>
+Arthur: Hari ini kafe udah tutup jadi jangan khawatir ada pelanggan masuk.
+
+Arthur: Duduk dulu aja sebentar, kamu pasti capek setelah perjalanan seharian ini
+
+<<SetLeftTalk>>
+Lucas: Jujur aku tidak terlalu capek, aku penasaran dengan cara membuat kopi disini
+
+<<SetRightTalk>>
+Arthur: HAHAHA, ternyata hobimu masih ga berubah ya
+
+<<SetLeftTalk>>
+Lucas: Mungkin aku kena efek dari orang yang dulu ngajarin aku cara bikin minuman yang enak
+
+<<SetRightTalk>>
+Arthur: Aku pun juga tak menyangka kamu bakal suka ngelakuin itu
+
+???: Permisi…
+
+<<SetRightTalk>>
+Arthur: Ah, waktu yang tepat.
+
+<<SetLeftTalk>>
+Lucas: (Bukannya hari ini cafe tutup?)
+
+<<SetRightTalk>>
+???: Halo paman, aku sudah datang
+
+???: Ah… LUCAS?!
+
+<<SetLeftTalk>>
+Lucas: (Bukannya dia…)
+
+Lucas: LUNA?!
+
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
+Luna: H-Halo, lama tidak bertemu
+
+<<SetLeftTalk>>
+Lucas: Y-ya, sudah lama.
+
+<<SetRightTalk>>
+Luna: Kamu kelihatan berbeda jauh dari pertemuan kita yang terakhir…
+
+<<SetLeftTalk>>
+Lucas: Kamu juga, aku nyaris ga ngenalin kamu sejenak
+
+<<SetRightTalk>>
+Luna: Ah a-apakah iya? Mungkin hanya perasaanmu saja.
+
+//<<SetRightSprite Arthur Idle>>
+Arthur: Lucas, kamu tadi penasaran kan cara membuat minuman di sini?
+
+Arthur: Kalo gitu langsung aja kamu lakuin sekarang, tolong buatin minuman untuk Luna
+
+<<SetRightSprite Luna Idle>>
+Luna: A-Ah, gausah repot-repot paman
+
+//<<SetRightSprite Arthur Idle>>
+Arthur: Tenang, hari ini ga usah bayar, pesen sepuasnya dari barista magang yang satu ini.
+
+Arthur: Udah siap Lucas?
+
+<<SetLeftTalk>>
+<<SetSpriteLeftLarge>>
+<<SetBackgroundActive>>
+
+-> Siap
+    <<SetBackgroundDisable>>
+    Arthur: Bagus, mari kita mulai
+-> Kayaknya aku belum siap…
+    <<SetBackgroundDisable>>
+    Arthur: Ah aman saja, kamu pasti siap
+
+<<AddScene GameManager Cafe_BaristaTutorial>>
+===
+
+title: BaristaTutorialDone
+---
+Arthur: Oke harusnya segitu aja untuk dasarnya, selamat mencoba!
+
+Arthur: Panggil aja kalau butuh bantuan, aku bakal tunggu di dapur.
+
+Arthur: Silahkan ngobrol sepuasnya.
+
+<<StartBarista BaristaManagerUI>>
+===
+
+title: LunaFirstTimeBarista
+---
+Lucas: Jadi, kamu mau pesen apa hari ini?
+
+Luna: Hmm, k-kalau gitu aku mau memesan minuman yang dulu selalu kita cari, minuman yang sedikit pahit, dengan rasa manis, dan kalau bisa dingin.
+
+Lucas: (Kayaknya aku tahu, coba aku cek di menu dulu bagaimana cara membuatnya)
+
+===
+
+title: LunaFirstTimeBaristaFail
+---
+Luna: Kurang tepat, coba kamu tebak lagi
+===
+
+title: LunaFirstTimeBaristaCorrect
+---
+Luna: Hehe, ternyata kamu masih mengingatnya
+Lucas: Kopi susu ya… Udah lama banget ya sejak saat itu.
+
+Luna: Ya, dulu kita sering mau cepat-cepat jadi dewasa jadi kita sering memesan kopi
+
+Lucas: Tapi ternyata kita ga suka sama rasanya dan akhirnya minta gula dan susu ke paman Arthur
+
+Luna: Hahaha, aku masih ingat ekspresimu waktu mencoba kopi itu
+
+Lucas: Malah bagian itu yang kamu ingat haha
+
+===
+
+title: LunaTutorialDone
+---
+Lucas: Tapi ga kerasa ya udah 5 tahun sejak waktu itu, gimana kabarmu sekarang?
+
+Luna: Baik, aku sekarang kuliah manajemen di sini dan sejauh ini semuanya lancar
+
+Luna: Kamu sendiri gimana?
+
+Lucas: Ah, aku juga seharusnya baik…
+
+Luna: Seharusnya?
+
+Lucas: Sekarang aku kuliah teknik informatika di universitas dekat pusat ibukota.
+
+Luna: Wah itu bukannya hebat.
+
+Lucas: Ya seharusnya…, tapi sekarang aku sedikit bingung dan tidak tahu harus bagaimana
+
+Lucas: Sepertinya aku terkena sindrom burnout.
+
+Luna: !
+
+Luna: Ah begitukah, ternyata tidak cuma aku…
+
+Lucas: Kamu juga?
+
+Luna: Kurang lebih… dan ternyata burnout cukup rawan dialami oleh orang seusia kita.
+
+Lucas: Hahh… Semoga saja kita bisa cepat sembuh.
+
+Luna: Setuju.
+
+Narrator: Lucas dan Luna bercakap-cakap hingga matahari pun sudah tenggelam
+
+Luna: Ah, sudah jam segini!
+
+Luna: Aku ada kerja kelompok dengan teman kuliahku
+
+Lucas: Ah, kalau gitu hati-hati di jalan.
+
+Luna: Makasih, oh ya gimana kalau besok kita lanjut obrolan ini lagi?
+
+Lucas: Boleh, aku harusnya kosong setelah shiftku selesai besok siang
+
+Luna: Oke, kalau begitu sampai jumpa besok
+
+Lucas: Ya, sampai jumpa besok.
+
+//Luna FadeOut
+Arthur: Jadi gimana setelah sekian lama tidak bertemu Luna?
+
+Lucas: Ya begitulah…
+
+Arthur: HAHAHA, jawabanmu benar-benar terprediksi
+
+Arthur: Sedikit tips dari paman, lain kali antar dia sampai ke tempat yang aman
+
+Lucas: Pengalaman hidup?
+
+Arthur: Bisa dibilang begitu
+
+Lucas: Tapi dilihat-lihat tempat ini ga berubah sama sekali.
+
+Arthur: Ya, bahkan kalo aku mau merubahnya pun juga ga bisa
+
+Arthur: Sejujurnya mungkin di akhir musim panas ini kafe ini bakal ditutup
+
+Lucas: Kenapa?!
+
+Arthur: Hmm, gampangnya 
+
+Arthur: Tidak usah khawatir, aku sudah siap akan hal ini dan menyiapkan rencana lain untuk tetap bertahan hidup.
+
+Lucas: Tapi-
+
+Arthur: Kamu fokus aja ke istirahat dan berusaha sembuh dari penyakitmu
+
+Lucas: Oke…
+
+Arthur: Sepertinya sudah cukup larut, jadi mari kita tidur, besok akan jadi hari pertamamu jadi siap-siap
+
+Lucas: Aman, pama juga tadi udah lihat aku bisa buat minuman untuk Luna
+
+Arthur: HAHAHA, kalau begitu aku minta tolong bantuannya besok
+
+Arthur: Oh iya sebelum itu, ambillah ini
+
+Arthur: Ini adalah jurnal kosong, isilah jurnal ini setiap malam dengan pengalamanmu tiap hari dan refleksi perasaanmu pada hari itu.
+
+Arthur: Mungkin ini bisa membantumu mengidentifikasi apa yang kamu alami dan melihat perkembanganmu tiap harinya.
+
+Lucas: Terima kasih banyak paman.
+
+Arthur: sama-sama, selamat istirahat
+
+//<<SetRightSprite Arthur Idle>>
+Arthur: Dan…
+
+//<<SetRightSprite Arthur Happy>>
+Arthur: Selamat datang di Sunside Cafe.
+
+<<SetLeftSprite Lucas Happy>>
+Lucas: Selamat istirahat paman.
+
+<<ReflectionStart ReflectionSystem>>
+===

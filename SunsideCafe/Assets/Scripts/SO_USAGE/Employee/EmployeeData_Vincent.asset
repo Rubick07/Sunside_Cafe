@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ce089f24d1cb254c9dc4cfd55298edd, type: 3}
-  m_Name: Vincent
+  m_Name: EmployeeData_Vincent
   m_EditorClassIdentifier: 
   employeeName: Vincent
   portrait: {fileID: 21300000, guid: 335cb5ddc92f69740a71fb7a885d15a2, type: 3}

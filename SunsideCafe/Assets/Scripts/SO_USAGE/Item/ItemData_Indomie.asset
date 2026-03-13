@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f892ecb93adb554591d3ed377747a14, type: 3}
-  m_Name: Cocoa
+  m_Script: {fileID: 11500000, guid: bac266ac09bd47a40a428c0801835d86, type: 3}
+  m_Name: ItemData_Indomie
   m_EditorClassIdentifier: 
-  foodName: Cocoa
-  foodType: 1
-  price: 0
-  icon: {fileID: 21300000, guid: e45e27dc203762540a93376f8f364907, type: 3}
-  prefab: {fileID: 0}
+  itemPrice: 5
+  itemType: 0
+  itemDescription: Indomie mantap
+  itemSprite: {fileID: 21300000, guid: cf297650c5d56b9488586312af1582f7, type: 3}

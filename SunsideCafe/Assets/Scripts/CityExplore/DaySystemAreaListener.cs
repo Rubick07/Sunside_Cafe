@@ -8,11 +8,17 @@ public class DaySystemAreaListener : MonoBehaviour
     private void Start()
     {
         DaySystem.instance.OnDayChanged += DaySystem_OnDayChanged;
+        SetAreaEvent(0);
     }
 
     private void DaySystem_OnDayChanged(object sender, int e)
     {
-        foreach(GameObject a in areaEventList)
+        SetAreaEvent(e);
+    }
+
+    private void SetAreaEvent(int e)
+    {
+        foreach (GameObject a in areaEventList)
         {
             a.SetActive(false);
         }

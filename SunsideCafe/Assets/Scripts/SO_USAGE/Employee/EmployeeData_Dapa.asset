@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ce089f24d1cb254c9dc4cfd55298edd, type: 3}
-  m_Name: Evan
+  m_Name: EmployeeData_Dapa
   m_EditorClassIdentifier: 
-  employeeName: Evan
-  portrait: {fileID: 21300000, guid: 6b8c5463d13622141b9c7177eddb0c79, type: 3}
-  scheduleShape: {fileID: 11400000, guid: 731011bd6878aae44b43e60decdfb22a, type: 2}
-  traits:
-  - {fileID: 11400000, guid: 4c68c5f328b27f04eb12045319d9532d, type: 2}
+  employeeName: Dapa
+  portrait: {fileID: 21300000, guid: eff5e1faa589e3c4d9d529c9b928a67d, type: 3}
+  scheduleShape: {fileID: 11400000, guid: 438804b11da614d4d90810933e927c1f, type: 2}
+  traits: []

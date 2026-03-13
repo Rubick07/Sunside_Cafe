@@ -14,8 +14,7 @@ public class BaristaManagerUITutorial : MonoBehaviour
     {
         startButton.onClick.AddListener(() =>
         {
-            BaristaManager.instance.ChangeBaristaManagerState(BaristaManager.baristaGameState.FriendSession);
-            spawner.SpawnSpecialCustomer();
+            DialogRunnerSingleton.instance.StartDialog("BaristaTutorialDone");
             startButton.gameObject.SetActive(false);
         });
 
@@ -23,6 +22,7 @@ public class BaristaManagerUITutorial : MonoBehaviour
 
         timerText.text = "Not Open Yet";
     }
+
 
     private void BaristaManager_OnGameStateChanged(object sender, BaristaManager.baristaGameState e)
     {
@@ -40,5 +40,11 @@ public class BaristaManagerUITutorial : MonoBehaviour
         float seconds = Helpers.TimeConverterSecond(BaristaManager.instance.GetTimer());
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    [Yarn.Unity.YarnCommand("StartBarista")]
+    public void StartBarista()
+    {
+        BaristaManager.instance.ChangeBaristaManagerState(BaristaManager.baristaGameState.FriendSession);
+        spawner.SpawnSpecialCustomer();
     }
 }

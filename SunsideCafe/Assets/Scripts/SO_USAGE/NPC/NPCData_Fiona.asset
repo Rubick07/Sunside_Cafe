@@ -19,5 +19,5 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 321e1f2ff5b1fea48bdba1fcdc6cffb2, type: 3}
   - emotionName: Sad
     sprite: {fileID: 21300000, guid: 6c5891d0306bd8e4d9a98383905d622c, type: 3}
-  - emotionName: Smile
+  - emotionName: Happy
     sprite: {fileID: 21300000, guid: ff9c4d8dfb23e6749aa00cf77873ce56, type: 3}

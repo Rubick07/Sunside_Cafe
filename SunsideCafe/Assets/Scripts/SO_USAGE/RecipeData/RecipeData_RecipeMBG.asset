@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 094eef0ef3d056b4693278dc930f2795, type: 3}
-  m_Name: KopiPutih
+  m_Name: RecipeData_RecipeMBG
   m_EditorClassIdentifier: 
-  recipeName: KopiPutih
-  output: {fileID: 11400000, guid: 1326199e3a28f2846811a5217af7b541, type: 2}
+  recipeName: MBG
+  output: {fileID: 11400000, guid: 33535503c4d9be341afa3b4be0ec1158, type: 2}
   requiredIngredients:
-  - {fileID: 11400000, guid: d6dd8a5f5c9d59540a4def1d7ccb6f5d, type: 2}
-  - {fileID: 11400000, guid: adb3c61bae5954b4b8647ead531ba549, type: 2}
-  - {fileID: 11400000, guid: adb3c61bae5954b4b8647ead531ba549, type: 2}
+  - {fileID: 11400000, guid: 85fbab1530bb40943a4af8d1f817ec0e, type: 2}
+  - {fileID: 11400000, guid: fc26bf6d22068804790229833e1a2ab2, type: 2}
   bonusLevel: 1

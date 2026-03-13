@@ -55,6 +55,8 @@ public class KettleController : MonoBehaviour
         }
 
         foodItem = fd;
+
+
         ingredients.Clear();
         OnIngredientMix?.Invoke(this, EventArgs.Empty);
 

@@ -18,13 +18,13 @@ EditorBuildSettings:
     path: Assets/Scenes/City/City_Area.unity
     guid: 7dd9d70bc7d658045a9b7121bd264d14
   - enabled: 1
-    path: Assets/Scenes/Cafe/Cafe_Barista.unity
+    path: Assets/Scenes/Cafe/Barista/Cafe_Barista.unity
     guid: 226941be457a8f34ebd5b7caef35546e
   - enabled: 1
-    path: Assets/Scenes/Cafe/Cafe_BaristaTutorial.unity
+    path: Assets/Scenes/Cafe/Barista/Cafe_BaristaTutorial.unity
     guid: 1428f6610ac52c9439fd5f7ec6e12714
   - enabled: 1
-    path: Assets/Scenes/Cafe/Cafe_Barista_Day2.unity
+    path: Assets/Scenes/Cafe/Barista/Cafe_Barista_Day2.unity
     guid: 44c022e8421036a4e964027c4a36f304
   - enabled: 1
     path: Assets/Scenes/Reflection/Reflection.unity

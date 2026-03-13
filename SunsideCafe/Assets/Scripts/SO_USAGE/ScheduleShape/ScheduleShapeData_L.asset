@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ce089f24d1cb254c9dc4cfd55298edd, type: 3}
-  m_Name: Dapa
+  m_Script: {fileID: 11500000, guid: 5228458b850a399438916fba2458d28a, type: 3}
+  m_Name: ScheduleShapeData_L
   m_EditorClassIdentifier: 
-  employeeName: Dapa
-  portrait: {fileID: 21300000, guid: eff5e1faa589e3c4d9d529c9b928a67d, type: 3}
-  scheduleShape: {fileID: 11400000, guid: 438804b11da614d4d90810933e927c1f, type: 2}
-  traits: []
+  cells:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 2, y: 0}
+  - {x: 0, y: 1}

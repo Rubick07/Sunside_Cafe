@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f892ecb93adb554591d3ed377747a14, type: 3}
-  m_Name: Tea
+  m_Script: {fileID: 11500000, guid: d4ad62d67b0781e42a8e29a8a7d5aba6, type: 3}
+  m_Name: MarketData_Roti
   m_EditorClassIdentifier: 
-  foodName: Tea
-  foodType: 1
-  price: 0
-  icon: {fileID: 21300000, guid: f34fe2a3075d1af42842b17d940b7102, type: 3}
-  prefab: {fileID: 0}
+  ItemToSellInMarket:
+  - {fileID: 11400000, guid: b80031bb3e1012b4e977a5d68ae6b4bb, type: 2}

@@ -35,7 +35,7 @@ public class InteractSystem : MonoBehaviour
         Physics.Raycast(pos.position, Vector3.forward, out hit, 10f, interactLayerMask);
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.gameObject);
+            //Debug.Log(hit.collider.gameObject);
             IInteractable[] interactable = hit.collider.gameObject.GetComponents<IInteractable>();
 
             foreach (IInteractable i in interactable)
