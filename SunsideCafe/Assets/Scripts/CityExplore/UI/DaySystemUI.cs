@@ -47,7 +47,10 @@ public class DaySystemUI : MonoBehaviour
 
     private void DaySystem_OnDayChanged(object sender, int e)
     {
-        dayText.text = "Day "+ e.ToString();
+        //a disini + 1 biar day pertama bukan day 0
+        int a = e + 1;
+
+        dayText.text = "Day "+ a.ToString();
     }
 
     public void Show()

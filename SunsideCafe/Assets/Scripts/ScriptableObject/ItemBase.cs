@@ -17,6 +17,11 @@ public class ItemBase : ScriptableObject
     [SerializeField] protected Sprite itemSprite;
 
 
+    public string GetItemName()
+    {
+        return name.Split("_")[1];
+    }
+
     public int GetItemPrice() => itemPrice;
 
 

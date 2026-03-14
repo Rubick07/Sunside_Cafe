@@ -353,7 +353,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e94cf5605a350f34b90e321da665fcd2, type: 2}
   - {fileID: 11400000, guid: 2a5750c412061a14dac917c3e312009f, type: 2}
   SpecialCustomerDataList:
-  - {fileID: 11400000, guid: c2b0907ca6493cc4c9407cb50dc9397d, type: 2}
+  - {fileID: 11400000, guid: 77b0b36a6fedb234fab12d67f0e56e34, type: 2}
 --- !u!224 &1336626709 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7804847348159164057, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}

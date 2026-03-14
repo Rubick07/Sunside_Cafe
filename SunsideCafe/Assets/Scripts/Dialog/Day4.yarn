@@ -6,14 +6,30 @@
 
 <<CafeBackgroundFadeOut CafeBackgroundUI>>
 
+Lucas: Waktunya mulai.
 
-bjir tugas numpuk cuy
+//[Keyboard SFX]
+
+Lucas: Aku udah mengetik terus menerus…
+
+Lucas: Kenapa ga ada yang muncul di layar.
+
+Lucas: Masih ada banyak yang perlu kulakukan
+
+
+
 <<wait  .5>>
 <<BlackscreenFadeIn BlackscreenUI>>
 
-kertas berjatuhan
+//kertas jatuh
+Lucas: Ayolah!
 
-lucas: HARAHETA
+Lucas: Kalau begini terus aku ga bakal bisa ngejar tujuanku
+
+Lucas: Kalau begini terus aku bakal gagal…
+
+Lucas: Tolong aku.
+
 
 <<RemoveCutscene Day3_Part1>>
 
@@ -21,14 +37,88 @@ lucas: HARAHETA
 
 <<DayUIFadeIn DaySystemUI>>
 <<wait  2>>
-
 <<DayUIFadeOut DaySystemUI>>
 
-balajsdfnasjnv
+Lucas: !
 
-ring ring bunyi telephone
+Lucas: (Uh, aku ketiduran…)
 
-saatnya kabur
+Narrator: Lucas menatap layar laptopnya
+
+Lucas: (Hahh, buntu lagi…)
+
+Lucas: (Sekarang jam 4 sore)
+
+Lucas: (Hmm, kira-kira gimana situasi di sisi Luna ya?)
+
+//[Phone ringing SFX plays & Lucas picks up phone]
+ring ring ring bunyi hp
+
+Luna: Lucas?
+Lucas: Halo, ada apa Luna?
+
+Luna: A-Ah aku cuma mau nanya gimana keadaan di tempat.
+
+Lucas: Jujur aku agak buntu dari kemarin…
+
+Luna: Kamu juga?
+
+Lucas: Oh, ternyata kamu juga buntu?
+
+Luna: Ya, jujur aku ga bisa ketemu ide dari kemarin dan sekarang aku malah bingung sendiri
+
+Lucas: Sama, aku juga entah kenapa ga bisa mulai membuat aplikasinya.
+
+Lucas: Padahal seharusnya kita mengejar deadline
+
+Luna: Hmm… kamu mau keluar sebentar buat ganti suasana ngga?
+
+Lucas: Boleh, ga ada gunanya juga aku diam disini tanpa arah
+
+Lucas: Mungkin juga itu yang kita butuhkan sekarang.
+
+Luna: Oke, kamu mau ke mana kalau gitu?
+
+Lucas: Hmm, aku kurang tahu, mungkin kita keliling pusat kota?
+
+Luna: Boleh, kalau misal kamu ada ide lain di perjalanan nanti tolong kasih tahu aja gapapa
+
+Lucas: Oke, sampai ketemu Luna, aku berangkat sebentar lagi.
+
+Luna: Hati-hati di jalan Lucas.
+
+//[Phone close SFX plays]
+
+Lucas: (Sebaiknya aku berangkat sebentar lagi)
+
+//[Cafe background fades in]
+
+Lucas: Paman, aku mau pergi keluar dulu
+
+Arthur: Oh, waktu yang pas.
+
+Arthur: Bisakah kamu sekalian mampir ke pasar nanti?
+
+Arthur: Aku butuh bantuan untuk membeli bahan untuk makan malam nanti dan isi ulang stok di kafe
+
+Lucas: Oke, butuh apa aja paman?
+
+Lucas: (Instingku merasa bakal ada yang aneh!)
+
+Arthur: Aku butuh sebungkus kopi, 2 karung gula, dan untuk makan malam aku butuh hewan yang namanya hanya ada 1 huruf.
+
+Lucas: ?
+
+Lucas: Ga ada hewan yang namanya cuma 1 huruf paman…
+
+Arthur: Ada, cari aja, kalau ga tahu coba tanya aja ke penjualnya.
+
+Lucas: Hahh, baiklah paman…
+
+Lucas: Kalau begitu aku pergi dulu.
+
+Arthur: Ya, hati-hati di jalan.
+
 
 <<CafeBackgroundFadeOut CafeBackgroundUI>>
 <<Teleport ZoneCafe_TriggerKiri>>
@@ -39,9 +129,66 @@ saatnya kabur
 
 title:LunaTownSquareDay4
 ---
-yak saatnya ke market
+Lucas: Halo, kamu udah nunggu lama?
+
+Luna: Ngga kok, aku baru sampai juga 5 menit yang lalu
+
+Lucas: Baguslah kalau begitu.
+
+Luna: Jadi, ada tempat yang mau kamu kelilingi?
+
+Lucas: Ah, sebenarnya paman Arthur minta tolong aku mampir ke pasar untuk membeli bahan untuk cafe & makan malam.
+
+Luna: Oh, kalau begitu langsung aja kita ke sana.
+
+Lucas: Thank you udah mau nemenin, Luna.
+
 
 <<ShowObjectiveUI ObjectiveUI>>
+
+===
+
+title:MarketFirstTime
+---
+Lucas: Ooo, disini ramai banget
+
+Luna: Disini banyak barang diskon juga jadi memang jadi tempat pusat belanja orang-orang di kota ini.
+
+Lucas: Oh iya, kamu tau ada hewan yang namanya cuma 1 huruf ngga?
+
+Luna: Hmm…
+
+Luna: Aku ngga tau, adakah hewan kaya gitu di pulau ini?
+
+Lucas: Aku juga ngga tau, paman Arthur emang ada-ada aja.
+
+Lucas: Kalau begitu ayo kita cari bahan-bahannya.
+
+===
+
+title: WrongShopKeeper
+---
+Penjaga toko: Maaf, aku tidak tahu hewan yang seperti itu
+
+===
+
+title:CorrectShopKeeper
+---
+Lucas: Permisi, apakah kakak tau hewan yang hanya punya 1 huruf di namanya
+Penjaga toko: Ah, kamu pasti korban dari si “Joker”
+Lucas: “Joker”?
+Penjaga toko: Ah itu panggilan untuk si Arthur, pemilik sunside Cafe.
+Penjaga toko: Biasa orang yang mendapat pertanyaan itu akan pergi ke sini karena ia bilang jawabannya ada di sini
+Lucas: (Ah, ternyata dia sudah menjadi legenda lokal…)
+Penjaga toko: Oh iya, jadi jawabannya adalah…
+Penjaga toko: Ikan
+Penjaga toko: Karena hanya ada 'I' kan?
+Lucas: …
+Luna: ….
+Penjaga toko: …
+Penjaga toko: Tolong jangan lihat aku seperti itu.
+Lucas: Semoga kakak sehat dan diberikan ketabahan selalu.
+Penjaga toko: Terima kasih banyak.
 
 ===
 
@@ -63,8 +210,58 @@ bye bye
 
 title:AccompanyLuna
 ---
-saatnya berpisah
+Luna: Kalau gitu sampai di sini aja
 
+Luna: Terima kasih banyak Lucas
 
+Lucas: Ya, terima kasih sudah mengajakku keluar juga
+
+Luna: Oh iya, aku baru saja kepikiran sesuatu.
+
+Lucas: ?
+
+Luna: Ada 1 lagi hewan yang namanya cuma 1 huruf
+
+Luna: Gajah, G “Ajah”
+
+Lucas: (Bener juga, kenapa aku gak kepikiran)
+
+Lucas: (Lebih tepatnya kenapa dia masih mikir candaan itu!)
+
+Luna: Uh-Uhm…
+
+Luna: I-Itu aja, hati-hati Lucas!
+
+Lucas: Ya, hati-hati juga.
+
+===
+
+title: Day3Reflection
+---
+Lucas: (Akhirnya sampai…)
+
+Lucas: (Hmm, Fiona bilang untuk jangan khawatir tentang itu dan melakukan hal yang lain)
+
+Lucas: (Mungkin aku akan merapikan kamar dan melakukan sedikit peregangan)
+
+//[Background fade In]
+
+Lucas: (Fiuh… selesai)
+
+Lucas: (Dipikir-pikir aku belum pernah merapikan kamarku sejak aku tiba di pulau…)
+
+Lucas: (Baiklah, karena sudah larut)
+
+Lucas: (Waktunya mengisi jurnal hari ini)
+
+//[Reflection Session Start & End]
+
+Lucas: (Selesai)
+
+Lucas: (Waktunya tidur)
+
+Lucas: (Semoga saran dari Fiona berhasil)
+
+//[Screen fade to black]
 
 ===

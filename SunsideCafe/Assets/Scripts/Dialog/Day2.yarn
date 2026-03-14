@@ -15,7 +15,20 @@ haiadf
 
 title: Day2Start
 ---
-Arthur: blablabalbalalb SAHURRRRRRRRRRRRRRRRRRRRR
+Teman Lucas: Kemarin aku memenangkan penghargaan terbaik dari kompetisi programming internasional
+
+Teman Lucas2:Kemarin aku diterima di perusahaan ternama dan akan mulai magang di sana 2 bulan lagi
+
+Lucas: Tidak cukup…
+
+Lucas: Masih ada banyak hal yang bisa kukerjakan!
+
+Lucas: Tapi apa yang harus kulakukan…
+
+Kedua teman Lucas: Jadi Lucas
+
+Kedua teman Lucas: Apa yang sudah kamu capai?
+
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait  0.5>>
 
@@ -24,25 +37,170 @@ Arthur: blablabalbalalb SAHURRRRRRRRRRRRRRRRRRRRR
 
 <<DayUIFadeOut DaySystemUI>>
 
-Arthur: Udh bangun kan nah turun cuy
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+Lucas: (Ugh, akhir-akhir ini mimpiku ga ada yang bener)
+
+Lucas: (Sekarang masih jam 7 pagi… tapi aku harus mulai siap-siap membantu paman Arthur)
+
+Lucas: (Waktunya turun)
+
 <<CafeBackgroundFadeIn CafeBackgroundUI 1.25>>
-Lucas: ya ini ngobrol
+
+//<<SetRightSprite Arthur Idle>>
+//<<SetRightTalk>>
+Arthur: Oh, ada yang baru bangun, pagi!
+
+<<SetLeftTalk>>
+Lucas: Pagi…
+
+<<SetRightTalk>>
+Arthur: Sarapan sudah ada di meja ya, aku menyusul bentar lagi
+
+<<SetLeftTalk>>
+Lucas: Oke…
+
+<<SetRightTalk>>
+Arthur: Bagaimana tidurmu?
+
+<<SetLeftTalk>>
+Lucas: Lumayan, ga baik tapi ga buruk
+
+<<SetRightTalk>>
+Arthur: Masuk akal, kamu masih baru penyesuaian dengan jadwal di sini jadi santai aja
+
+<<SetLeftTalk>>
+Lucas: Aman, jadi hari ini aku bakal bantu di mana paman?
+
+<<SetRightTalk>>
+Arthur: Hari ini kamu bakal jaga shift pagi sampai siang terus nanti paman minta tolong untuk atur jadwal dikit setelah shiftmu selesai.
+
+<<SetLeftTalk>>
+Lucas: Oke, siap paman.
+
+<<SetRightTalk>>
+Arthur: Bagus, kalau begitu ayo kita siap-siap untuk buka kafe hari ini.
+
+<<SetLeftTalk>>
+Lucas: Oke.
+
 <<AddScene GameManager Cafe_Barista_Day2>>
 ===
 
 title: Day2BaristaClear
 ---
-Arthur: Terima kasih sudah bantu barista
-Arthur: Sekarang bantu saya scheduling
+Narrator: Mereka mengobrol hingga shift Lucas sudah nyaris selesai
+
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Fiona Idle>>
+
+<<SetLeftTalk>>
+Lucas: Siapa sangka ternyata kak Fiona adalah seorang content creator, hebat banget kak!
+
+<<SetRightTalk>>
+Fiona: Ah aku masih pemula, lagipula pekerjaan utamaku lebih sebagai digital marketing jadi masih banyak yang perlu kupelajari.
+
+Fiona: dibandingkan kamu yang bisa bertahan di jurusan susah itu
+
+<<SetLeftTalk>>
+Lucas: Tidak juga haha, aku pun masih berusaha untuk bertahan hidup di sana sambil mencari tujuanku
+
+<<SetRightTalk>>
+Fiona: Baiklah, sepertinya sudah waktunya aku pergi ke mengelilingi pusat kota.
+
+Fiona: Senang bisa mengobrol denganmu Lucas!
+
+<<SetLeftTalk>>
+Lucas: Dengan senang hati kak Fiona.
+
+<<SetRightTalk>>
+Fiona: Oh iya umur kita juga tidak beda begitu jauh, jadi lain kali panggil aja aku Fiona
+
+Fiona: Kalau begitu sampai jumpa Lucas!
+
+<<SetLeftTalk>>
+Lucas: Sampai jumpa Fiona! 
+
+Lucas: Akhirnya selesai
+
+//<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
+Arthur: Selamat menyelesaikan pekerjaan pertamamu.
+
+<<SetLeftTalk>>
+Lucas: Terima kasih paman
+
+<<SetRightTalk>>
+Arthur: Jadi bagaimana pengalaman pertamamu?
+
+<<SetLeftTalk>>
+Lucas: Cukup baik, semuanya berjalan dengan lancar.
+
+<<SetRightTalk>>
+Arthur: Oh tentu baik, apalagi jika semua pelanggannya seperti yang terakhir tadi ya
+
+<<SetLeftTalk>>
+Lucas: (Sepertinya dia mencoba membaca pikiranku…) 
+
+<<SetRightTalk>>
+Arthur: Ngomong-ngomong, kamu masih ingat permintaan tolongku tadi pagi?
+
+<<SetLeftTalk>>
+Lucas: Ya, jadi apa yang perlu aku lakukan?
+
+<<SetRightTalk>>
+Arthur: Tenang, kali ini tidak serumit itu jadi langsung saja kita mulai
+
 <<AddScene GameManager Cafe_ShiftSystemTutorial>>
 ===
 
 title: Day2SchedulingComplete
 ---
-Arthur: Mantap sekarang udh ngerti scheduling
+//<<SetRightSprite Arthur Idle>>
+<<SetLeftSprite Lucas Idle>>
+<<SetRightTalk>>
+Arthur: Kerja bagus, sekarang semuanya sudah tertata rapi.
+
+<<SetLeftTalk>>
+Lucas: Terima kasih atas bantuannya paman
+
+<<SetRightTalk>>
+Arthur: Santai saja, semoga dengan ini kamu bisa mengerti pentingnya pembagian waktu dan bagaimana cara melakukannya.
+
+Arthur: Kalau gitu, shift mu sudah selesai kan? Sebentar lagi orang selanjutnya akan datang, kamu udah bebas kalau mau pergi.
+
+<<SetLeftTalk>>
+Lucas: Oke paman aku pamit dulu kalau begitu, sebentar lagi Luna akan mampir dan mungkin kita akan pergi.
+
+<<SetRightTalk>>
+Arthur: Bersenang-senanglah.
+
 <<RemoveScene GameManager>>
 
-Luna: Yak saatnya keliling kota
+
+<<SetRightSprite Luna Idle>>
+<<SetLeftSprite Lucas Idle>>
+<<SetRightTalk>>
+Luna: Permisi
+
+<<SetLeftTalk>>
+Lucas: Hi Luna
+
+<<SetRightTalk>>
+Luna: Ah Lucas, m-maaf apakah kamu udah nunggu lama?
+
+<<SetLeftTalk>>
+Lucas: Santai aja, aku baru selesai juga kok
+
+<<SetRightTalk>>
+Luna: Ah syukurlah
+
+<<SetLeftTalk>>
+Lucas: Kalau gitu, kita berangkat sekarang?
+
+<<SetRightTalk>>
+Luna: Ya, ayo kita berangkat!
+
 
 <<SetTeleportDisable ZoneMainDistrict_PintuCafe>>
 
@@ -50,18 +208,307 @@ Luna: Yak saatnya keliling kota
 <<Teleport ZoneCafe_TriggerKiri>>
 
 <<BlackscreenFadeOut BlackscreenUI>>
+
+<<SetLeftTalk>>
+Lucas: Jadi enaknya kita ke mana?
+
+<<SetRightTalk>>
+Luna: Hmm, karena kamu udah lama ga di sini gimana kalau kita sekalian mampir ke pusat kota dulu habis itu ke pantai?
+
+<<SetLeftTalk>>
+Lucas: Boleh, aku ikut denganmu aja
+
+<<SetRightTalk>>
+Luna: B-baiklah kalau gitu ayo kita jalan
+
 <<ShowObjectiveUI ObjectiveUI>>
 
 
 ===
 
+title: Day2TownSquare
+---
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Luna Idle>>
+
+<<SetLeftTalk>>
+Lucas: Wah, kemarin aku sempat mampir tapi dilihat-lihat tempat ini cukup berubah ya
+
+<<SetRightTalk>>
+Luna: Ya, sejak 7 tahun lalu pembangunan di sini terus terjadi.
+
+Luna: Karena peningkatan jumlah turis, banyak toko baru yang buka dan bahkan beberapa diantaranya berasal dari ibukota.
+
+<<SetLeftTalk>>
+Lucas: Ooo, ternyata disini lumayan juga,
+
+<<SetRightTalk>>
+Luna: A-Ah tapi kamu tinggal di ibukota kan, ini pasti udah biasa buatmu
+
+<<SetLeftTalk>>
+Lucas: Tapi jujur aku tidak terlalu sering juga membeli dari toko toko itu
+
+<<SetRightTalk>>
+Luna: Oh, menarik aku kira orang di kota besar semuanya akan sering ke sana
+
+
+<<SetLeftTalk>>
+Lucas: Oh iya, kalau aku ga salah ingat rumahmu juga di dekat sini kan?
+
+<<SetRightTalk>>
+Luna: Iya, kamu masih ingat?
+
+<<SetLeftTalk>>
+Lucas: Pasti dong, dulu aku sering mampir ke rumahmu
+
+Lucas: Kalau gitu apakah waktunya kita lanjut ke pantai?
+
+<<SetRightTalk>>
+Luna: Oke, ikuti aku
+
+===
+
+title: Day2Beach
+---
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Luna Idle>>
+
+<<SetRightTalk>>
+Luna: Kita sudah sampai!
+
+<<SetLeftTalk>>
+Lucas: Suasana ini…
+
+<<SetRightTalk>>
+Luna: Laut yang membentang biru, angin sejuk di bawah cerahnya matahari, dan langit yang tiada batas.
+
+Luna: Bahkan aku yang tinggal di sini pun ga pernah bosan melihatnya.
+
+<<SetLeftTalk>>
+Lucas: Udah lama banget aku ga lihat pemandangan ini…
+
+<<SetRightTalk>>
+Luna: !
+
+<<SetLeftTalk>>
+Lucas: Ada apa?
+
+<<SetRightTalk>>
+Luna: Inikah yang mereka sebut anak teknik informatika ga pernah nyentuh rumput?
+
+<<SetLeftTalk>>
+Lucas: (Tolong berikan keadilan bagi kami anak teknik informatika)
+
+<<SetRightTalk>>
+Luna: Kita cari tempat buat duduk dulu gimana?
+
+Luna: Seharusnya di sana enak.
+
+===
+
 title:Day2Pohon
 ---
-when yah adalah cara saya mengekpesikan saya juga mau
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Luna Idle>>
+
+<<SetRightTalk>>
+Luna: Omong-omong, gimana rasanya balik ke sini setelah 7 tahun?
+
+<<SetLeftTalk>>
+Lucas: Mungkin nostalgia? Mengingat semua kenangan yang pernah kubuat di sini sama orang-orang di sini termasuk kamu.
+
+Lucas: Tapi mungkin perasaan ini bercampur antara senang dan sedih.
+
+<<SetRightTalk>>
+Luna: Sedih?
+
+<<SetLeftTalk>>
+Lucas: Ya, banyak tempat yang dulu jadi tempat main kita sudah digantikan dengan yang baru
+
+<<SetRightTalk>>
+Luna: Aku paham…
+
+<<SetLeftTalk>>
+Lucas: Kamu udah dengar juga kah berita kalo Sunside Cafe akan ditutup?
+
+<<SetRightTalk>>
+Luna: !?
+
+Luna: Jadi itu bukan cuma rumor…
+
+<<SetLeftTalk>>
+Lucas: Ya, kemarin paman udah cerita dan begitulah situasinya.
+
+<<SetRightTalk>>
+Luna: Paman Arthur…
+
+<<SetLeftTalk>>
+Lucas: Aku…
+
+Lucas: Aku ada ide.
+
+Lucas: Gimana kalau kita bantu paman Arthur.
+
+<<SetRightTalk>>
+Luna: Gimana caranya?
+
+<<SetLeftTalk>>
+Lucas: Paman bilang cafenya kalah saing dengan cafe yang lebih modern
+
+Lucas: Jadi kalau gitu kita coba modernisasi cafenya
+
+<<SetRightTalk>>
+Luna: Hmm, tapi gimana cara kita modernisasi itu
+
+<<SetLeftTalk>>
+Lucas: Aku bakal coba buat bikin aplikasi buat memudahkan pelanggan pas memesan dan juga digitalisasi agar orang bisa lebih gampang ketemu sunside cafe.
+
+<<SetRightTalk>>
+Luna: Oh, itu ide yang menarik!
+Luna: Tapi kelihatannya agak sulit.
+
+<<SetLeftTalk>>
+Lucas: Ya, karena itu aku juga butuh bantuanmu.
+Lucas: Apakah kamu mau?
+
+<<SetRightTalk>>
+Luna: Dengan senang hati!
+Luna: Kafe itu juga tempat yang berharga buatku, kalau ada kesempatan kafe ini bisa hidup aku bakal bantu sebisa mungkin.
+Luna: Lagipula, aku ga ada rencana di liburan kali ini dan kelihatannya ini akan seru seperti di film-film.
+
+<<SetLeftTalk>>
+Lucas: Haha bisa jadi
+Lucas: Terima kasih banyak Luna.
+Lucas:  Kalau aku ga salah ingat, kamu dulu bisa design kan?
+Lucas: Paling aku minta tolong kamu buat bikin design yang baru untuk cafenya dan aplikasinya
+
+<<SetRightTalk>>
+Luna: A-aku…
+
+Luna: Oke, akan ku coba!
+
+<<SetLeftTalk>>
+Lucas: Baiklah, kalau gitu ayo kita hidupin kembali Sunside Cafe!
+
+<<SetRightTalk>>
+Luna: Ya!
+
+<<SetNoTalk>>
+Narrator: Lucas dan Luna lanjut berbicara hingga matahari pun terbenam
+
+<<SetLeftTalk>>
+Lucas: Ah, sudah jam segini, cepat banget waktu berlalu…
+
+<<SetRightTalk>>
+Luna: Ya, aku pun juga ga sadar
+
+Luna: Mari kita kembali?
+
+<<SetLeftTalk>>
+Lucas: Ya, ayo kita pulang,
 
 <<SetPlayerTriggerActive TriggerDialog_2.4_AfterBeach>>
 <<SetPlayerTriggerActive TriggerDialog_2.4_CafeAfter>>
 <<SetTeleportActive ZoneMainDistrict_PintuCafe>>
+===
 
+title:Day2AfterBeachTownSquare
+---
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Luna Idle>>
+
+<<SetRightTalk>>
+Luna: Rumahku udah dekat jadi sampai di sini aja gapapa
+
+<<SetLeftTalk>>
+Lucas: Oke, kalau gitu sampai kita ketemu lagi.
+
+<<SetRightTalk>>
+Luna: Ya, terima kasih sudah mengantarkan, dan
+
+Luna: Sampai jumpa Lucas.
+
+===
+
+title:Day2FionaAppearCafe
+---
+???: Halloo, apakah ini tempat untuk memesan?
+
+Lucas: Iya benar, ada yang bisa saya bantu?
+
+Lucas: (Whoa rambutnya pirang dan matanya biru, sepertinya dia turis)
+
+???: Bisakah saya memesan minuman rekomendasi di kafe ini?
+
+Lucas: Tentu, apakah ada rasa tertentu yang ingin kakak cari?
+
+???: Hmm, mungkin aku ingin sesuatu yang segar, trendy, manis tapi juga unik. Karena cuacanya sedang panas aku ingin es yang banyak dan aku juga minta 1 buah roti.
+
+===
+
+title:Day2FionaCorrectCafe
+---
+???: INI… Ini dia yang selama ini kucari-cari 
+
+???: Ahh, minuman ini enak sekali!
+
+Lucas: Baguslah kalau kakak suka!
+
+???: Sepertinya aku akan kembali lagi kesini kapan-kapan
+
+???: Jadi perkenalkan
+
+Fiona: Namaku Fiona, aku datang dari Inggris untuk berlibur dan belajar budaya di sini, salam kenal.
+
+Lucas: Salam kenal, aku Lucas, kebetulan aku juga datang dari luar negeri untuk berlibur di sini.
+
+Fiona: WAHH! Ternyata kita sama.
+
+Lucas: (Kakak ini enerjetik sekali…)
+
+Lucas: (Tentunya aku tidak keberatan sama sekali)
+
+===
+
+title: Day2FionaIncorrectCafe
+---
+Fiona: Ada yang lain kah? Yang ini belum terlalu cocok untukku
+===
+
+title: Day2BeforeReflection
+---
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+
+Lucas: (Udah lama aku ga ngobrol sepuas ini…)
+
+Lucas: (Mungkin udah waktunya aku coba lagi)
+
+Narrator: Lucas menyalakan laptopnya dan mencoba untuk mulai membuat aplikasinya,
+
+Narrator: 30 menit kemudian…
+
+Lucas: (Ah, ga ada gunanya!)
+
+Lucas: (Aku cuma menatap layar kosong dari tadi!)
+
+Lucas: (Udah jam segini, bentar lagi waktunya tidur.)
+
+Lucas: (Oh iya nyaris lupa, waktunya mengisi jurnal hari ini.)
+
+<<jump Day2Reflection>>
+===
+
+title: Day2Reflection
+---
+Lucas: (Apakah aku bisa ngelakuin semua ini)
+
+Lucas: (Aku butuh sembuh secepatnya!)
+
+Lucas: (Waktunya tidur, kita coba lagi besok)
+
+<<NextDay DaySystem>>
+<<NextDay DaySystem>>
+
+<<jump Day4>>
 
 ===

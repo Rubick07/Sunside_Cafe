@@ -38,7 +38,7 @@ public class InventoryManagerUI : MonoBehaviour
 
     public void ChangeSelectedItembase(ItemBase itemBase)
     {
-        itemNameText.text = itemBase.name;
+        itemNameText.text = itemBase.GetItemName();
         itemImage.sprite = itemBase.GetItemSprite();
         itemDescText.text = itemBase.GetItemDesc();
 

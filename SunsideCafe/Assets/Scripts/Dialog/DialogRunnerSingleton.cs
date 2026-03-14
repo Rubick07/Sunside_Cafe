@@ -31,6 +31,7 @@ public class DialogRunnerSingleton : MonoBehaviour
 
         dialogueRunner.AddCommandHandler("SetLeftTalk", SetLeftImageisTalking);
         dialogueRunner.AddCommandHandler("SetRightTalk", SetRightImageIsTalking);
+        dialogueRunner.AddCommandHandler("SetNoTalk", SetNoOneTalking);
 
         dialogueRunner.onDialogueStart.AddListener(() =>
         {
@@ -178,6 +179,13 @@ public class DialogRunnerSingleton : MonoBehaviour
     {
         leftSpriteImage.color = Color.grey;
         rightSpriteImage.color = Color.white;
+    }
+
+    public void SetNoOneTalking()
+    {
+        rightSpriteImage.color = Color.grey;
+        leftSpriteImage.color = Color.grey;
+
     }
 
 

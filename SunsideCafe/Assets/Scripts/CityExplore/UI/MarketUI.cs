@@ -100,7 +100,7 @@ public class MarketUI : MonoBehaviour
 
     private void Market_OnAnySelectedItemBaseChanged(object sender, ItemBase e)
     {
-        selectedItemNametext.text = e.name;
+        selectedItemNametext.text = e.GetItemName();
         selectedItemDesctext.text = e.GetItemDesc();
         selectedItemCostText.text = e.GetItemPrice().ToString();
     }
