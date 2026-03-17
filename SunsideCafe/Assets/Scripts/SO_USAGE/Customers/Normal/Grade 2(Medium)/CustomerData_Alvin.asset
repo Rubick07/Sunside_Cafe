@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c5481baafb78f4cbd9518dcc481b93, type: 3}
+  m_Name: CustomerData_Alvin
+  m_EditorClassIdentifier: 
+  customerName: Alvin
+  portrait: {fileID: 21300000, guid: 6ff49f15264f2b145a90b18495e91c95, type: 3}
+  patienceTime: 25
+  coinReward: 5
+  possibleOrders:
+  - {fileID: 11400000, guid: 14baec5edf892cc4dbc06b237dfa6b95, type: 2}
+  - {fileID: 11400000, guid: fc26bf6d22068804790229833e1a2ab2, type: 2}

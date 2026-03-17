@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094eef0ef3d056b4693278dc930f2795, type: 3}
+  m_Name: Recipe_ChocoTea
+  m_EditorClassIdentifier: 
+  recipeName: Choco Tea
+  output: {fileID: 11400000, guid: 33535503c4d9be341afa3b4be0ec1158, type: 2}
+  requiredIngredients:
+  - {fileID: 11400000, guid: bad4ba2bd9e358542af864b085ab8d25, type: 2}
+  - {fileID: 11400000, guid: 66e229120aeb64a4e92d58ce32e71866, type: 2}
+  bonusLevel: 1
