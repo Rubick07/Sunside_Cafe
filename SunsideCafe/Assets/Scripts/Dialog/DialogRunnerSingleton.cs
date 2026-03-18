@@ -33,6 +33,9 @@ public class DialogRunnerSingleton : MonoBehaviour
         dialogueRunner.AddCommandHandler("SetRightTalk", SetRightImageIsTalking);
         dialogueRunner.AddCommandHandler("SetNoTalk", SetNoOneTalking);
 
+        dialogueRunner.AddCommandHandler("RemoveLeft", RemoveLeft);
+        dialogueRunner.AddCommandHandler("RemoveRight", RemoveRight);
+
         dialogueRunner.onDialogueStart.AddListener(() =>
         {
             RectTransform rectTransform = leftSpriteImage.GetComponent<RectTransform>();
@@ -187,6 +190,14 @@ public class DialogRunnerSingleton : MonoBehaviour
         leftSpriteImage.color = Color.grey;
 
     }
+    public void RemoveLeft()
+    {
+        leftSpriteImage.enabled = false;
+    }
 
+    public void RemoveRight()
+    {
+        rightSpriteImage.enabled = false;
+    }
 
 }

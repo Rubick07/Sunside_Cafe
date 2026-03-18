@@ -129,6 +129,135 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &834135696356314330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5159022352697950930}
+  - component: {fileID: 1175465615469311283}
+  m_Layer: 0
+  m_Name: AmbienceSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5159022352697950930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834135696356314330}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 705820508346204649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1175465615469311283
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834135696356314330}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3783803794913362590
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +290,7 @@ Transform:
   m_Children:
   - {fileID: 4808398450125891123}
   - {fileID: 3741201542138221251}
+  - {fileID: 5159022352697950930}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7000048201383298696
@@ -177,9 +307,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: cc8238681924e4c4699bfe56299e0ab3, type: 2}
   musicSound: []
-  sfxSound: []
+  sfxSound:
+  - soundName: AttachSFX
+    clip: {fileID: 8300000, guid: 51c23d771f3678345b7ad8a92860a250, type: 3}
+  - soundName: BackSFX
+    clip: {fileID: 8300000, guid: 64580073bba30cb4f9a66b4ca0c4e5f1, type: 3}
+  - soundName: CustomerHappySFX
+    clip: {fileID: 8300000, guid: 72599371916ca7249bcd71e712a7c844, type: 3}
+  - soundName: CustomerSadSFX
+    clip: {fileID: 8300000, guid: fe950265fbbf6ef439a4df2fe2af4ec9, type: 3}
+  - soundName: CustomerSatisfiedSFX
+    clip: {fileID: 8300000, guid: 15ac08d26804b9140aaf1be97717e85e, type: 3}
+  - soundName: DayChangeJingle
+    clip: {fileID: 8300000, guid: 940bb6cbce57b254492c4a6f0a9b1fa1, type: 3}
+  - soundName: DetachSFX
+    clip: {fileID: 8300000, guid: e20bd968e0ab54d4f9726b7d9d163387, type: 3}
+  - soundName: DialogueSFX
+    clip: {fileID: 8300000, guid: 79bd149f24364144397fc8cdbce44a35, type: 3}
+  - soundName: DoorOpenSFX
+    clip: {fileID: 8300000, guid: e21c8a5ee8983ef44a87231c714e6d5a, type: 3}
+  - soundName: HoverSFX
+    clip: {fileID: 8300000, guid: 13f5f4559c0fe0b4b925c33199f8a442, type: 3}
+  - soundName: IceSFX
+    clip: {fileID: 8300000, guid: 4a80158385a5e054f9b9212344f71413, type: 3}
+  - soundName: InteractSFX
+    clip: {fileID: 8300000, guid: 26309113e1bd39045a70302c04d2160c, type: 3}
+  - soundName: ItemObtainedSFX
+    clip: {fileID: 8300000, guid: a4fa43bfee413c244a707fc02a460148, type: 3}
+  - soundName: MissHitSFX
+    clip: {fileID: 8300000, guid: a4720283d9c96ac4f876d7af49bbabcf, type: 3}
+  - soundName: MixCompleteSFX
+    clip: {fileID: 8300000, guid: a06d0efa967530c4f8181d44e1eea763, type: 3}
+  - soundName: PageFlipSFX
+    clip: {fileID: 8300000, guid: 311a950e260433847b3f9bf23802480c, type: 3}
+  - soundName: PhoneRingingSFX
+    clip: {fileID: 8300000, guid: 9328cfbad9f2e2447b2fdc3a6f495d12, type: 3}
+  - soundName: PlateServingSFX
+    clip: {fileID: 8300000, guid: 4899719757d28084aac6f2276479a385, type: 3}
+  - soundName: PopUpSFX
+    clip: {fileID: 8300000, guid: 8cb80a0aba3e2f64fac43368d0ba4673, type: 3}
+  - soundName: PowderSFX
+    clip: {fileID: 8300000, guid: d91d83e2661915d4584144d706ed636b, type: 3}
+  - soundName: PurchaseSFX
+    clip: {fileID: 8300000, guid: fad2b1733262e934698302091b800178, type: 3}
+  - soundName: SelectSFX
+    clip: {fileID: 8300000, guid: 5f9432a06c6938d43a8ce764812c47b7, type: 3}
+  - soundName: SlideSFX
+    clip: {fileID: 8300000, guid: 3b01edc686da04347a4c0d63dbf1da78, type: 3}
+  - soundName: SugarSFX
+    clip: {fileID: 8300000, guid: 1d30815ec4ab4ab41ab8b7cc21154208, type: 3}
+  - soundName: TransitionSFX
+    clip: {fileID: 8300000, guid: f383b94a23afdfc4fb13eb3db80c2b26, type: 3}
+  - soundName: TrashSFX
+    clip: {fileID: 8300000, guid: 042fde5e86caae94581514fb571dcda7, type: 3}
+  - soundName: TypingSFX
+    clip: {fileID: 8300000, guid: f65c14b043e5cc94c947115078bfb463, type: 3}
+  - soundName: WaterPouringSFX
+    clip: {fileID: 8300000, guid: d457615923d2b74418d38df44c112e50, type: 3}
+  - soundName: PerfectHitSFX
+    clip: {fileID: 8300000, guid: 7369dc447ec92bb4dad260eba150c13b, type: 3}
+  ambienceSound:
+  - soundName: BeachAmbience
+    clip: {fileID: 8300000, guid: 2c5368fed6f1e884d976fca9deadac29, type: 3}
+  - soundName: CrowdAmbience
+    clip: {fileID: 8300000, guid: 7d7864e572a17844881062588a63e89e, type: 3}
+  - soundName: NatureAmbienceDay
+    clip: {fileID: 8300000, guid: b585a2efcd329c9428491134403a5ba1, type: 3}
+  - soundName: NatureAmbienceNight
+    clip: {fileID: 8300000, guid: 0bffe628a956b374e93e43b437e40cd3, type: 3}
   musicSource: {fileID: 6938947223810587761}
   sfxSource: {fileID: 7572044804200725922}
+  ambienceSource: {fileID: 1175465615469311283}
 --- !u!1 &8223680509366659795
 GameObject:
   m_ObjectHideFlags: 0

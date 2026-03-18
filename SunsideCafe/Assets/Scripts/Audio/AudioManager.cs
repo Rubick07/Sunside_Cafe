@@ -8,8 +8,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private Settings settings;
     [SerializeField] private Sound[] musicSound;
     [SerializeField] private Sound[] sfxSound;
+    [SerializeField] private Sound[] ambienceSound;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource ambienceSource;
 
     private void Awake()
     {
@@ -28,6 +30,7 @@ public class AudioManager : MonoBehaviour
     {
         settings.LoadSettings();
         musicSource.volume = settings.musicVolume;
+        ambienceSource.volume = settings.musicVolume;
         sfxSource.volume = settings.sfxVolume;
     }
     public void PlayMusic(string name)
@@ -64,6 +67,22 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public void PlayAmbience(string name)
+    {
+
+        Sound s = Array.Find(ambienceSound, x => x.soundName == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+        else
+        {
+            ambienceSource.PlayOneShot(s.clip);
+        }
+
+    }
+
     public void ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;
@@ -78,6 +97,8 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.volume = volume;
         settings.musicVolume = volume;
+
+        ambienceSource.volume = volume;
     }
 
     public void SetSFXVolume(float volume)

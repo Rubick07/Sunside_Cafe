@@ -1,0 +1,381 @@
+﻿title: Day6
+---
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+
+<<DayUIFadeIn DaySystemUI>>
+<<wait  2>>
+<<DayUIFadeOut DaySystemUI>>
+<<wait 1>>    
+
+
+Lucas: (Hari ini cuacanya cerah ya)
+
+Lucas: (Semoga cuacanya bisa tetap cerah sampai nanti malam)
+
+Lucas: (Kayanya tadi malam aku tidur nyenyak, kepalaku rasanya jernih)
+
+Lucas: (Tapi perutku udah teriak, jadi waktunya sarapan dulu)
+
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+Lucas: Pagi paman
+
+Arthur: Oh Lucas, selamat pagi.
+
+Arthur: …
+
+Arthur: *Sepertinya kamu udah berhasil*
+
+Lucas: ?
+
+Lucas: Ada apa?
+
+Arthur: Tidak ada apa-apa
+
+Arthur: Duduk dulu aja, kita sambil sarapan.
+
+Lucas: Oke
+
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+Arthur: Ga kerasa ya, udah mau seminggu kamu datang ke pulau ini
+
+Lucas: Ya, 
+
+Arthur: Kamu ingat hari pertama kamu datang ke pulau ini?
+
+Lucas: Ya, aku inget baru nyampe pulau langsung dikasih tahu kenapa matahari tenggelam.
+
+Arthur: HAHAHA, lucu dan original kan?
+
+Lucas: Ya begitulah
+
+Arthur: Omong-omong, sejak kamu datang ke pulau ini kamu udah berubah jauh.
+
+Arthur: Aku gatau kamu sadar atau ngga, tapi ekspresi mu sekarang udah beda.
+
+Lucas: Aku ga sadar sama sekali…
+
+Arthur: Harusnya kalau gini kamu udah sembuh atau setidaknya berkembang selangkah lebih maju.
+
+Arthur: Semua kerja kerasmu akhirnya terbayarkan.
+
+Arthur: Dan aku yakin sekarang kamu udah siap buat mengatasi masalahmu.
+
+Arthur: Dan bebas dari burnout.
+
+Lucas: Paman…
+
+Arthur: Ya itu aja yang mau kusampaikan sebenarnya.
+
+Arthur: Semangat di shiftmu hari ini.
+
+Arthur: Dan satu lagi,
+
+Arthur: Kamu udah jadi barista yang baik.
+
+Lucas: Terima kasih banyak paman!
+
+<<AddScene GameManager Cafe_Barista_Day6>>
+===
+
+title:Day6AfterBarista
+---
+Lucas: (Akhirnya shiftku selesai…)
+
+Lucas: (Waktunya berberes.)
+
+???: Kalau barista membuat minum untuk orang lain, siapa yang membuat minum untuk seorang barista?
+
+Lucas: Paman?
+
+Arthur: Jawabannya adalah barista lainnya.
+
+Arthur: Minumlah, kerja bagus hari ini.
+
+Lucas: Ini kan…
+
+Arthur: Hm, kenapa? Kamu udah ngga suka lagi?
+
+Lucas: Ngga, justru aku kaget paman masih ingat.
+
+Lucas: Ga ada yang lebih enak dari segelas coklat panas sehabis bekerja keras.
+
+//[Hot Chocolate overlay appears]
+
+Lucas: Enak.
+
+Arthur: HAHAHA ternyata seleramu masih aja sama.
+
+Arthur: Tapi sekarang kamu udah berubah jadi orang yang lebih baik.
+
+Lucas: Untungnya haha.
+
+Arthur: …
+
+Arthur: Sebenarnya aku udah tau kalau kamu berencana buat ngehidupin kafe ini lagi.
+
+Arthur: Selama ini aku juga udah berusaha cari cara supaya kafe ini bisa bertahan.
+
+Arthur: Tapi pas aku tinggal sendiri, ternyata ga begitu bakat dalam mengelola bisnis, aku cuma bisa jadi barista aja.
+
+Lucas: Tinggal sendiri?
+
+Arthur: Ah, sebenarnya dulu tempat ini diurus aku dan temanku berdua.
+
+Arthur: Tapi sekarang dia ada urusan dan dia punya pekerjaan tetap di luar negeri.
+
+Arthur: Akhirnya dia tinggal di sana bersama keluarganya dan kafe ini ditinggalin ke aku.
+
+Arthur: Ujung-ujungnya tetap aku ngga bisa ngelakuin apa- apa…
+
+Lucas: Keberatan!
+
+Arthur: …?
+
+Lucas: Uh, aku cuma niru game yang aku sering mainin
+
+Lucas: Tapi selama ini paman udah ngelakuin kerja yang bagus juga.
+
+Lucas: Gara-gara paman, kafe ini masih bisa bertahan sejauh ini.
+
+Arthur: Lucas…
+
+Lucas: Dan 1 lagi,
+
+Lucas: Berkat paman aku masih bisa tinggal di sini dan menemukan hal-hal yang baru di pulau itu.
+
+Lucas: Aku juga tau kalau paman yang nyuruh Luna buat datang ke sini pas aku baru sampai.
+
+Lucas: Aku juga tau kalau selama ini paman yang paling tau dan paham kalau aku lagi bingung atau sedih.
+
+Lucas: Diantara semua situasi itu, paman yang nyaranin aku buat keluar atau ngajarin aku hal-hal yang baru.
+
+Lucas: Tenang aja, kali ini giliranku buat ngebantu paman.
+
+Lucas: Dan aku ngga sendiri
+
+Lucas: Dibantu Luna dan Fiona.
+
+Lucas: Sunside cafe bakal bersinar lagi.
+
+Arthur: Lucas…
+
+Lucas: Ada apa paman?
+Arthur: Ah, ngga kayaknya ada air hujan yang kena ke mukaku.
+
+Lucas: Ini kan di dalam kafe, mana mungkin ada air hujan masuk.
+
+Arthur: Hahaha…
+
+Arthur: Oke, kalau begitu kita sama-sama hidupin lagi Sunside cafe
+
+Lucas: Ya!
+
+Arthur: Kalau begitu aku masih harus jaga kafe di depan.
+
+Arthur: Jangan lupa siap-siap untuk acaramu malam ini dan bersenang-senanglah.
+
+Lucas: Terima kasih paman!
+
+Narrator: Hari pun mulai sore dan Lucas bersiap-siap untuk pergi ke pantai.
+
+//[Background change to black screen]
+Lucas: Aku pergi dulu!
+
+<<CafeBackgroundFadeOut CafeBackgroundUI>>
+<<Teleport ZoneCafe_TriggerKiri>>
+
+<<BlackscreenFadeOut BlackscreenUI>>
+
+===
+
+title: Day6MainDistrict
+---
+Lucas: (Barang bawaanku seharusnya udah semua)
+
+Lucas: (Kalau gitu…)
+
+Lucas: (Langsung ke pantai!)
+
+
+===
+
+title:Day6InteractLuna
+---
+Lucas: Hai semua
+
+Luna: Ah Lucas!
+
+Fiona: Waktu yang pas, bantu aku pasang alat barbekyunya dong
+
+Lucas: O-oke
+
+Lucas: Kalian semangat banget…
+
+Luna: Iya kah?
+
+Lucas: (Mukamu jelas kelihatan bersinar sekarang)
+
+Luna: Ah, aku lupa dagingnya belum dibumbui.
+
+Narrator: Setengah jam kemudian…
+
+Fiona: SELESAI!
+
+Fiona: Akhirnya kita bisa mulai memanggang
+
+Fiona: Tolong ambil plastik isi daging itu Lucas.
+
+Lucas: Oke, tunggu sebentar.
+
+Lucas: (Sebanyak ini?!)
+
+Fiona: Waktunya siap-siap asisten kokiku
+
+Luna: Siap chef!
+
+Lucas: (Sejak kapan mereka berdua sedekat itu?)
+
+Lucas: (Tapi baguslah)
+
+Lucas: Ini dagingnya.
+
+Fiona: Kalau gitu mari kita masak!
+
+Narrator: Mereka pun masak dan makan seluruh daging di plastik itu.
+
+Fiona: Kalau begitu…
+
+Fiona: Untuk masa depan sunside cafe
+
+Semuanya: Bersulang!
+
+Narrator: Fiona menghabiskan ½ isi kantong itu sendirian…
+
+Fiona: Ah, kenyangnya…
+
+[Fade In Transition]
+Lucas: (Uh, kayaknya aku ga perlu makan lagi besok)
+Luna: Kamu udah kenyang?
+
+Lucas: Ah, aku udah gabisa
+
+Luna: Haha, baguslah
+
+Luna: Jadi gimana rasanya hampir seminggu disini?
+
+Lucas: Jujur aku merasa nostalgia sejak datang ke sini
+
+Lucas: Banyak hal yang
+
+Luna: Kalau gitu gimana kalau kamu coba rasakan lagi satu per satu secara perlahan
+
+Luna: Ingat cara yang kemarin diajari Fiona?
+
+Luna: Aku tadi ngelakuin itu di sini dan…
+
+Luna: Aku bisa ketemu perasaan yang selama ini hilang dariku.
+
+//Add Mindfulgames
+===
+
+title: Day6AfterMindfulness
+---
+Lucas: (Ah…)
+
+Lucas: (Inilah perasaan yang selama ini hilang)
+
+Lucas: (Ketenangan ini…)
+
+Lucas: (Perasaan yang kuat ini…)
+
+Lucas: Terima kasih Luna. 
+
+Luna: U-untuk apa?
+
+Lucas: Sejak datang ke pulau, kamu selalu nemenin aku kemana-mana
+
+Lucas: Kamu juga mau ngebantu dan ngedengerin semua masalahku
+
+Luna: A-ah, aku juga kebantu sama kamu selama ini
+
+Luna: Kalo kamu ga ngajak aku, aku juga kayaknya gabakal ngelakuin apa-apa liburan ini.
+
+Luna: Karena kamu juga, aku bisa melangkah buat ngadepin ketakutanku.
+
+Lucas: Ketakutanmu?
+
+Luna: Sebenarnya, udah lama aku ngga gambar lagi.
+
+Luna: Dulu aku sempat kehilangan kesenangan dalam menggambar
+
+Luna: Aku akhirnya berhenti dan memutuskan untuk tidak mengejar itu lagi
+
+Lucas: Luna.. aku…
+
+Luna: Tapi akhir-akhir ini aku baru sadar kembali alasan kenapa aku menggambar
+
+Luna: Dan aku pun menemukan kembali kesenangan yang dulu hilang. 
+
+Luna: Dan itu semua berkatmu.
+
+Luna: Jadi terima kasih banyak juga.
+
+Lucas: Haha, sepertinya kita berdua ada diposisi yang sama ya.
+
+Luna: Hehe, mungkin itu juga alasannya kenapa kita juga bisa saling mengerti.
+
+Fiona: Heii, kalian berdua
+
+Fiona: Kayaknya ini udah cukup malam.
+
+Lucas: Ah iya, apakah kita mau bubar sekarang?
+
+Luna: Ya, besok juga kita harus mulai persiapannya dari pagi.
+
+Lucas: Kalau gitu mau kuantar pulang?
+
+Luna: Ah gapapa.
+
+Luna: Aku bakal pulang bareng Fiona, jadi ga usah khawatir.
+
+Lucas: Ah okelah kalau begitu
+
+Fiona & Luna: Selamat malam!
+
+Lucas: Ya, malam.
+
+//[Fiona & Luna fades out]
+
+Lucas: Waktunya pulang.
+
+===
+
+title:Day6BeforeReflection
+---
+Lucas: (Ga kerasa udah mau 1 minggu aku ada di pulau ini.)
+
+Lucas: (Banyak hal yang terjadi minggu ini…)
+
+Lucas: (Tapi aku sangat senang aku datang ke pulau ini)
+
+Lucas: (Ah, sepertinya mataku udah mulai menutup dikit)
+
+Lucas: (Waktunya refleksi sebelum tidur)
+
+===
+
+title: Day6Reflection
+---
+Lucas: (Selesai!)
+
+Lucas: (Semoga hari esok bisa berjalan dengan lancar)
+
+<<BlackscreenFadeIn BlackscreenUI>>
+
+===

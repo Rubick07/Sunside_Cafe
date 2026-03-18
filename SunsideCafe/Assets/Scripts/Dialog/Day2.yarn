@@ -47,8 +47,8 @@ Lucas: (Waktunya turun)
 
 <<CafeBackgroundFadeIn CafeBackgroundUI 1.25>>
 
-//<<SetRightSprite Arthur Idle>>
-//<<SetRightTalk>>
+<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
 Arthur: Oh, ada yang baru bangun, pagi!
 
 <<SetLeftTalk>>
@@ -123,7 +123,7 @@ Lucas: Sampai jumpa Fiona!
 
 Lucas: Akhirnya selesai
 
-//<<SetRightSprite Arthur Idle>>
+<<SetRightSprite Arthur Idle>>
 <<SetRightTalk>>
 Arthur: Selamat menyelesaikan pekerjaan pertamamu.
 
@@ -156,7 +156,7 @@ Arthur: Tenang, kali ini tidak serumit itu jadi langsung saja kita mulai
 
 title: Day2SchedulingComplete
 ---
-//<<SetRightSprite Arthur Idle>>
+<<SetRightSprite Arthur Idle>>
 <<SetLeftSprite Lucas Idle>>
 <<SetRightTalk>>
 Arthur: Kerja bagus, sekarang semuanya sudah tertata rapi.
