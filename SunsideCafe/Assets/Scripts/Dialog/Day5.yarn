@@ -1,0 +1,362 @@
+﻿title: Day5
+---
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+<<DayUIFadeIn DaySystemUI>>
+<<wait  2>>
+<<DayUIFadeOut DaySystemUI>>
+<<wait 1>>    
+
+Lucas: (Sudah pagi ya…)
+
+Lucas: (Tumben mimpi itu ga muncul lagi)
+
+Lucas: (Apa ini efek dari tips yang dari Fiona?)
+
+Lucas: (Apapun itu, aku merasa baik hari ini)
+
+Lucas: (Waktunya turun dan bersiap untuk shift hari ini)
+
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+Lucas: Pagi, paman
+
+Arthur: Pagi
+
+Arthur: Oho, sepertinya suasana hatimu lagi baik.
+
+Lucas: Ya, semalam aku bisa tidur dengan nyenyak
+
+Arthur: Hoo, baguslah kalau begitu.
+
+Arthur: Duduklah dulu, sarapannya sudah mau siap
+
+Lucas: Oke paman
+
+Arthur: Oh iya, sebelum shiftmu hari ini aku minta tolong untuk bantu penjadwalan kafe lagi apakah bisa?
+
+Lucas: Bisa paman, aman aja.
+
+Arthur: Oke, kalau begitu hari ini aku ada urusan, jadi aku akan di luar sampai malam
+
+Arthur: Kalau misal kamu masih bingung, jangan lupa lihat catatan yang kemarin ku kasih.
+
+Lucas: Aman, terima kasih paman
+
+Narrator: Lucas dan Arthur menikmati sarapan mereka
+
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+Arthur: Kalau begitu aku pergi dulu, semangat Lucas!
+
+Lucas: Hati-hati di jalan.
+
+<<RemoveRight>>
+
+Lucas: (Hmm, sepertinya jadwal kali ini lebih rumit dari sebelumnya)
+
+Lucas: (Baiklah, kalau gitu kita mulai susun jadwalnya satu per satu)
+
+<<AddScene GameManager Cafe_ShiftSystemDay5>>
+===
+
+title: Day5SchedulingClear
+---
+Lucas: (Selesai!)
+
+Lucas: (Ternyata kerjaan apapun itu seru kalau kita bisa bikin itu jadi seru)
+
+Lucas: (Mungkin ini bisa membantuku buat sembuh dari burnout)
+
+<<RemoveScene GameManager>>
+
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+Lucas: (Ah, udah jam segini)
+
+Lucas: (Waktunya siap-siap jaga kafe)
+
+<<AddScene GameManager Cafe_Barista_Day5>>
+===
+
+title:Day5FionaAppearCafe
+---
+Fiona: Hiii Lucas
+
+Lucas: Halo, cepat juga kamu datangnya
+
+Fiona: Aku butuh asupan minuman dulu tiap sarapan
+
+Lucas: Haha oke, duduk dulu aja
+
+Fiona: Thank you!
+Lucas: Jadi, kamu mau pesan apa hari ini?
+
+Fiona: Aku lagi mau minuman yang bisa ngebangunin dari rasa ngantuk ini, tapi aku gabisa kalau terlalu berat dan karena masih pagi, minumannya panas aja gapapa. Aku juga nambah 1 roti yang bisa bikin kenyang.
+
+===
+
+title:Day5FionaCorrectCafe
+---
+Fiona: OOO, minuman apa ini!?
+Fiona: Rasanya pas bangett, emang boleh sepas ini?
+
+Fiona: Ah, ini dia asupan yang aku butuh di pagi hari.
+
+Fiona: Sekarang aku siap menghadapi apapun hari ini!
+
+Lucas: Haha, baguslah kalau gitu
+
+Fiona: Thank you udah menuhin requestku Lucas
+
+Lucas: Sama-sama, kasih tau aja kalau mau nambah.
+
+Fiona: HAHAHA, hati-hati nanti stoknya aku habisin semua lho.
+
+Lucas: (Entah kenapa ekspresinya kelihatan seperti dia beneran bisa ngelakuin itu)
+
+
+===
+
+title:Day5FionaIncorrectCafe
+---
+Fiona: Hmm, kayaknya masih kurang deh
+Fiona: Boleh aku coba yang lain ngga?
+
+===
+
+title:Day5AfterCafe
+---
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+Lucas: Fiuh, akhirnya shift hari ini selesai
+
+Fiona: Kerja bagus master!
+
+Lucas: Master?
+
+Fiona: Ya, biasanya barista kadang dipanggil master sama pelanggan, terutama yang udah kenal.
+
+Lucas: Ooo, menarik.
+
+//[Cafe door open SFX plays]
+
+Luna: P-Permisi
+
+Lucas: Ah waktu yang tepat.
+
+Fiona: Hi Lunaa
+
+Luna: Ah h-halo kak Fiona
+
+Fiona: Gausah malu-malu, panggil aja aku Fiona
+
+Luna: Ah o-oke Fiona
+
+Fiona: Hehe, itu lebih baik.
+
+Lucas: Karena kita semua udah kumpul aku mau bersihin meja sebentar terus kita mulai.
+
+Fiona: Oke, aman aja.
+
+Luna: Mau kubantu, Lucas?
+
+Lucas: Ga usah gapapa, harusnya cuma bentar doang.
+
+Luna: Oh oke, kalau gitu semangat.
+
+Lucas: Ya, terima kasih Luna.
+
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+Lucas: Aku udah selesai.
+
+Fiona: Ayo kita mulai pembahasannya.
+
+Luna: Oke.
+
+Narrator: Lucas, Luna, dan Fiona mulai membahas terkait rencana mereka untuk menghidupkan kembali Sunside cafe dengan mendengarkan rencana awal Lucas dan Luna.
+
+Fiona: Hmm, aku paham sekarang.
+
+Fiona: Simpelnya, ada 2 lubang di rencana kalian yang membuat kalian jadi susah jalaninnya.
+
+Fiona: Santai aja, kita coba pecahin ini pelan-pelan.
+
+Fiona: Pertama, rencana kalian terlalu luas, kalian tau goal akhir kalian tapi kalian
+
+Fiona: Solusinya? Kalian buat goal yang lebih kecil dari goal akhir itu sampai kalian rasa kalian bisa ngelakuin itu.
+
+Fiona: Ini juga bisa ngebantu kalau kalian ga susah buat mulai. Karena dari melakukan hal yang bener-bener simpel, kalian akan merasakan momentum untuk lanjut dengan fokus.
+
+Fiona: Kedua, rencana ini sebenarnya bisa untuk mencapai deadline kalian, tapi perlu diingat kalian juga butuh istirahat yang cukup.
+
+Fiona: Dengan istirahat yang cukup, kalian bakal merasa lebih siap dan pikiran kalian lebih jernih. Lagipula, akan lebih seru juga kalau kalian punya waktu untuk bersantai bersama-sama.
+
+Fiona: Satu hal yang perlu kalian catat juga adalah pembagian tugas. Di sini pembagian tugas kalian udah sesuai dengan keahlian kalian masing-masing.
+
+Fiona: Jadi itu hal yang bagus, karena semakin cocok keahlian dan minat orang ketika ngerjain tugasnya, maka semakin bagus juga hasil dan effortnya.
+
+Luna: (Hebat, dia bisa tahu semua kelemahan rencana kita dengan baik)
+
+Lucas: (Sepertinya ini bisa berhubungan dengan burnoutku)
+
+Luna: (Dia seperti orang yang berbeda.)
+
+Lucas: (Perasaan 5 menit yang lalu dia ga kaya begini…)
+
+Fiona: Jadi kurang lebih itulah yang akan kita perbaiki dulu, terus baru kita mulai.
+Lucas & Luna: Oke
+
+Narrator: Mereka bertiga menyelesaikan rencana mereka dan mulai mengerjakan tugas mereka masing-masing.
+
+Narrator: 1 jam kemudian…
+
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+Lucas: Hahh…
+
+Luna: Hmm…
+
+Fiona: Ada apa?
+
+Lucas: Aku gabisa fokus sama sekali, aku cuma bisa selesai sedikit aja…
+
+Luna: Sama…, aku belum mendapat inspirasi yang cocok dari tadi…
+
+Fiona: Ooo, hmm coba aku pikir bentar.
+
+Fiona: Ah, coba kalian stop apa yang kalian lakuin sebentar.
+
+Fiona: Kalian udah pernah coba latihan pernapasan belum?
+
+Lucas & Luna: Apa itu?
+
+Fiona: Simpelnya, kalian coba bernafas pelan-pelan dengan ritme yang teratur sambil mencoba merasakan sensasi yang ada di sekeliling kalian sekarang atau melihat segala barang di sekitar kalian.
+
+Fiona: Biasanya kegiatan itu disebut mindfulness practice atau kesadaran penuh.
+
+Fiona: Kalian bisa mengurangi stres dan menambah fokus dengan melakukan meditasi, pernapasan teratur, melakukan kegiatan dengan sadar, dan merasa.
+
+Fiona: Daripada bingung, gimana kalau kalian langsung coba aja?
+
+Fiona: Coba dari Lucas dulu
+
+
+<<AddScene GameManager Mindfulness_Practice>>
+===
+
+title: Day5AfterMindfulness
+---
+Lucas: (Perasaan ini…)
+
+
+Lucas: (Sangat tenang, aku merasa lebih fokus dari biasanya)
+
+Fiona: Jadi gimana?
+
+Lucas: Sepertinya aku akan mencoba lagi, tiba-tiba aku merasa bisa melakukan ini.
+
+Fiona: Baguslah, coba bagi dulu pekerjaanmu jadi lebih kecil lalu coba lagi kalau kamu belum lelah.
+
+Fiona: Kalau begitu, sekarang giliranmu Luna.
+
+Luna: O-Oke
+
+Narrator: Luna pun merasa lebih
+
+Narrator: Tak lama kemudian, tak terasa sore hari akan segera tiba
+
+Fiona: Oh, sudah jam segini.
+
+Fiona: Aku harus pergi sebentar lagi.
+
+Lucas: Kalau gitu kita sudahi hari ini?
+
+Luna: Aku setuju.
+
+Luna: A-anu Fiona apakah kamu mau jalan pulang sama-sama?
+
+Fiona: Boleh bangett!
+
+Fiona: Oh iya, karena di rencana kita besok hari libur, gimana kalau kita pergi bertiga?
+
+Lucas: Aku ga masalah
+
+Luna: Kalau gitu gimana kalau kita ke pantai dan mengadakan barbekyu di sana?
+
+Fiona: Itu…
+
+Fiona: Ide yang…
+
+Fiona: SPEKTAKULER!
+
+Lucas: Aku juga setuju, kayaknya asik.
+
+Luna: Kalau gitu besok aku bakal bawa alatnya
+
+Fiona: Aku bakal belanja daging dan teman-temannya!
+
+Lucas: Kalau gitu aku yang bakal bawa minuman.
+
+Fiona: Oke, kalau gitu udah pasti yaa.
+
+Fiona: Aku pergi dulu.
+
+Luna: Sampai ketemu besok Lucas
+
+Lucas: Ya, hati-hati kalian berdua.
+
+//[Fiona & Luna fades out]
+Lucas: (Sebaiknya aku beres-beres dulu sebelum bersantai)
+
+//[Cafe background fades in]
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+Lucas: (Fiuh, akhirnya selesai)
+
+Lucas: (Kayaknya habis ini aku mau main dulu setelah sekian lama)
+
+Narrator: Lucas pun bermain setelah makan malam selesai hingga bulan pun sudah menyinarinya cukup lama.
+
+Lucas: (Oh, udah jam segini)
+
+Lucas: (Mungkin aku isi dulu jurnalnya, takut ketiduran)
+
+<<jump Day5Reflection>>
+===
+
+title: Day5Reflection
+---
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+Lucas: (Dan selesailah refleksi di hari ke-5)
+
+Lucas: (Hari ini aku belajar banyak juga ya.)
+
+<<BlackscreenFadeIn BlackscreenUI>>
+
+Lucas: (Rasanya aku udah mulai bisa menghadapi masalahku.)
+
+Lucas: (Apa mungkin bentar lagi aku bisa sembuh…)
+
+
+Lucas: !
+
+Lucas: (Aku baru sadar hari ini ga ada candaan dari paman Arthur sama sekali)
+
+Lucas: ...
+
+Lucas: (Ya udahlah, mending tidur aja)
+
+<<CafeBackgroundFadeOut CafeBackgroundUI>>
+
+<<jump Day6>>
+===

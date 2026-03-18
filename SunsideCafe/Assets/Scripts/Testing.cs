@@ -7,7 +7,6 @@ public class Testing : MonoBehaviour
     [SerializeField] private string statID;
     [SerializeField] private int amount = 1;
     [SerializeField] private TutorialTriggerType triggerType;
-    [SerializeField] private DaySystemUI test;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -16,13 +15,9 @@ public class Testing : MonoBehaviour
             TutorialManager.instance.TriggerTutorial(triggerType);
             GameEvents.OnStatChanged?.Invoke(statID, amount);
         }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            test.Hide();
-        }
         if (Input.GetKeyDown(KeyCode.H))
         {
-            test.Show();
+            SpawnNote();    
         }
         if (Input.GetKeyDown(KeyCode.L))
         {

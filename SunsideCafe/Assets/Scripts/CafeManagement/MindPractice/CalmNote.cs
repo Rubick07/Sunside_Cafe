@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class CalmNote : MonoBehaviour
 {
-    public RectTransform approachCircle;
-    public float duration = 2f; // waktu mengecil
-    public float perfectWindow = 0.1f;
-    public float goodWindow = 0.25f;
+    [SerializeField] private RectTransform approachCircle;
+    [SerializeField] private float duration = 2f; // waktu mengecil
+    private float perfectWindow = 0.1f;
+    private float goodWindow = 0.25f;
 
     float timer;
     bool isActive = true;
@@ -18,7 +18,7 @@ public class CalmNote : MonoBehaviour
 
         float progress = timer / duration;
 
-        // Shrink dari 2x size ke 1x size
+        // Shrink dari x size ke 1x size
         float scale = Mathf.Lerp(10f, 1f, progress);
         approachCircle.localScale = Vector3.one * scale;
 
@@ -39,15 +39,15 @@ public class CalmNote : MonoBehaviour
 
         if (difference <= perfectWindow)
         {
-            Debug.Log("PERFECT");
+            MindfulnessManager.instance.CalmSuccess();
         }
         else if (difference <= goodWindow)
         {
-            Debug.Log("GOOD");
+            MindfulnessManager.instance.CalmSuccess();
         }
         else
         {
-            Debug.Log("BAD");
+            MindfulnessManager.instance.CalmFail();
         }
 
         EndNote();
@@ -55,7 +55,7 @@ public class CalmNote : MonoBehaviour
 
     void Miss()
     {
-        Debug.Log("MISS");
+        MindfulnessManager.instance.CalmFail();
         EndNote();
     }
 
@@ -63,5 +63,10 @@ public class CalmNote : MonoBehaviour
     {
         isActive = false;
         Destroy(gameObject);
+    }
+
+    public void SetDuration(float duration)
+    {
+        this.duration = duration;
     }
 }

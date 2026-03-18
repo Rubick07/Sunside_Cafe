@@ -33,6 +33,11 @@ public class CustomerSpawner : MonoBehaviour
 
     public void SpawnSpecialCustomer()
     {
+        if(CustomerManager.instance.GetSpecialCustomerDataList().Count == 0)
+        {
+            BaristaManager.instance.ChangeBaristaManagerState(BaristaManager.baristaGameState.Close);
+        }
+
         if (alreadySpawnSpecialCustomer)
             return;
 

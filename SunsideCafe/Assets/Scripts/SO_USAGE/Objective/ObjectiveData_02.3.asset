@@ -16,6 +16,6 @@ MonoBehaviour:
   title: Head back to Sunside Cafe
   description: 
   conditions:
-  - type: 2
+  - type: 3
     targetValue: 1
   onCompletedEventID: 

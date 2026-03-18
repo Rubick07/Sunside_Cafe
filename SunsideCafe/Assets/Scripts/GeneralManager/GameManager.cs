@@ -77,5 +77,4 @@ public class GameManager : MonoBehaviour
         OnGameSceneUnloadChanged?.Invoke(this, EventArgs.Empty);
     }
 
-
 }

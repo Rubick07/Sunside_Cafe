@@ -60,7 +60,7 @@ Lucas: Tapi tetap saja panas di sini
 ===
 title: DayDream4
 ---
-//<<SetRightSprite Arthur Idle>>
+<<SetRightSprite Arthur Idle>>
 ???: Sedang apa kamu melamun di sana
 
 <<SetLeftSprite Lucas Idle>>
@@ -70,7 +70,7 @@ Lucas: Ah lama tak jumpa, paman Arthur
 <<SetRightTalk>>
 Arthur: Ya, terakhir kali tahun lalu ketika aku mampir ke rumahmu.
 
-//<<SetRightSprite Arthur Happy>>
+<<SetRightSprite Arthur Happy>>
 Arthur: Tapi kali ini giliranmu yang akan menetap di sini.
 
 <<SetLeftSprite Lucas Happy>>
@@ -158,8 +158,8 @@ title:Day1Arthur
 <<SetLeftTalk>>
 Lucas: Aku sudah tiba!
 
-//<<SetRightSprite Arthur Idle>>
-//<<SetRightTalk>>
+<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
 Arthur: Oh bagus, aku kira kamu tersesat tadi
 
 <<SetLeftTalk>>
@@ -178,15 +178,15 @@ title: CafeFirstTime
 
 Lucas: Permisi…
 
-//<<SetRightSprite Arthur Idle>>
-//<<SetRightTalk>>
+<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
 
 Arthur: Anggap saja rumah sendiri dan santai aja kalau mengobrol denganku
 
 <<SetLeftTalk>>
 Lucas: oke paman, akan ku coba
 
-//<<SetRightTalk>>
+<<SetRightTalk>>
 Arthur: Hari ini kafe udah tutup jadi jangan khawatir ada pelanggan masuk.
 
 Arthur: Duduk dulu aja sebentar, kamu pasti capek setelah perjalanan seharian ini
@@ -237,7 +237,7 @@ Lucas: Kamu juga, aku nyaris ga ngenalin kamu sejenak
 <<SetRightTalk>>
 Luna: Ah a-apakah iya? Mungkin hanya perasaanmu saja.
 
-//<<SetRightSprite Arthur Idle>>
+<<SetRightSprite Arthur Idle>>
 Arthur: Lucas, kamu tadi penasaran kan cara membuat minuman di sini?
 
 Arthur: Kalo gitu langsung aja kamu lakuin sekarang, tolong buatin minuman untuk Luna
@@ -245,7 +245,7 @@ Arthur: Kalo gitu langsung aja kamu lakuin sekarang, tolong buatin minuman untuk
 <<SetRightSprite Luna Idle>>
 Luna: A-Ah, gausah repot-repot paman
 
-//<<SetRightSprite Arthur Idle>>
+<<SetRightSprite Arthur Idle>>
 Arthur: Tenang, hari ini ga usah bayar, pesen sepuasnya dari barista magang yang satu ini.
 
 Arthur: Udah siap Lucas?
@@ -375,7 +375,7 @@ Luna: Oke, kalau begitu sampai jumpa besok
 <<SetLeftTalk>>
 Lucas: Ya, sampai jumpa besok.
 
-//<<SetRightSprite Arthur Idle>>
+<<SetRightSprite Arthur Idle>>
 
 //Luna FadeOut
 Arthur: Jadi gimana setelah sekian lama tidak bertemu Luna?
@@ -440,10 +440,10 @@ Lucas: Terima kasih banyak paman.
 <<SetRightTalk>>
 Arthur: sama-sama, selamat istirahat
 
-//<<SetRightSprite Arthur Idle>>
+<<SetRightSprite Arthur Idle>>
 Arthur: Dan…
 
-//<<SetRightSprite Arthur Happy>>
+<<SetRightSprite Arthur Happy>>
 Arthur: Selamat datang di Sunside Cafe.
 
 <<SetLeftSprite Lucas Happy>>
