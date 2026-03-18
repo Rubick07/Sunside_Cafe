@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ce089f24d1cb254c9dc4cfd55298edd, type: 3}
-  m_Name: EmployeeData_Taiki
+  m_Name: EmployeeData_Lili
   m_EditorClassIdentifier: 
-  employeeName: Ling
-  portrait: {fileID: 21300000, guid: 64daaff7e1adcf74ab8a05981e004435, type: 3}
-  scheduleShape: {fileID: 11400000, guid: e6fa51a1628fdfe4fb9943adb824f4d3, type: 2}
+  employeeName: Lili
+  portrait: {fileID: 21300000, guid: 6b8c5463d13622141b9c7177eddb0c79, type: 3}
+  scheduleShape: {fileID: 11400000, guid: a6588281820e6d74089a8818aff0c06d, type: 2}
   traits:
-  - {fileID: 11400000, guid: b5dfe716f57992744b87ccdbc9cb0124, type: 2}
+  - {fileID: 11400000, guid: 4c68c5f328b27f04eb12045319d9532d, type: 2}
