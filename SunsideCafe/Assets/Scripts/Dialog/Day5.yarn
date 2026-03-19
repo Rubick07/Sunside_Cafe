@@ -8,6 +8,9 @@
 <<DayUIFadeOut DaySystemUI>>
 <<wait 1>>    
 
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+
 Lucas: (Sudah pagi ya…)
 
 Lucas: (Tumben mimpi itu ga muncul lagi)
@@ -23,47 +26,67 @@ Lucas: (Waktunya turun dan bersiap untuk shift hari ini)
 
 Lucas: Pagi, paman
 
+<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
+
 Arthur: Pagi
 
 Arthur: Oho, sepertinya suasana hatimu lagi baik.
 
+<<SetLeftTalk>>
+
 Lucas: Ya, semalam aku bisa tidur dengan nyenyak
+
+<<SetRightTalk>>
 
 Arthur: Hoo, baguslah kalau begitu.
 
 Arthur: Duduklah dulu, sarapannya sudah mau siap
 
+<<SetLeftTalk>>
 Lucas: Oke paman
 
+<<SetRightTalk>>
 Arthur: Oh iya, sebelum shiftmu hari ini aku minta tolong untuk bantu penjadwalan kafe lagi apakah bisa?
 
+<<SetLeftTalk>>
 Lucas: Bisa paman, aman aja.
 
+<<SetRightTalk>>
 Arthur: Oke, kalau begitu hari ini aku ada urusan, jadi aku akan di luar sampai malam
 
 Arthur: Kalau misal kamu masih bingung, jangan lupa lihat catatan yang kemarin ku kasih.
 
+<<SetLeftTalk>>
 Lucas: Aman, terima kasih paman
 
+<<SetNoTalk>>
 Narrator: Lucas dan Arthur menikmati sarapan mereka
 
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
+
+<<SetRightTalk>>
 Arthur: Kalau begitu aku pergi dulu, semangat Lucas!
 
+<<SetLeftTalk>>
 Lucas: Hati-hati di jalan.
 
 <<RemoveRight>>
 
+<<SetLeftTalk>>
 Lucas: (Hmm, sepertinya jadwal kali ini lebih rumit dari sebelumnya)
 
 Lucas: (Baiklah, kalau gitu kita mulai susun jadwalnya satu per satu)
+
 
 <<AddScene GameManager Cafe_ShiftSystemDay5>>
 ===
 
 title: Day5SchedulingClear
 ---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
 Lucas: (Selesai!)
 
 Lucas: (Ternyata kerjaan apapun itu seru kalau kita bisa bikin itu jadi seru)
@@ -133,54 +156,84 @@ title:Day5AfterCafe
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
 
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+
 Lucas: Fiuh, akhirnya shift hari ini selesai
 
+
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
 Fiona: Kerja bagus master!
 
+<<SetLeftTalk>>
 Lucas: Master?
 
+<<SetRightTalk>>
 Fiona: Ya, biasanya barista kadang dipanggil master sama pelanggan, terutama yang udah kenal.
 
+<<SetLeftTalk>>
 Lucas: Ooo, menarik.
 
 //[Cafe door open SFX plays]
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: P-Permisi
 
+<<SetLeftTalk>>
 Lucas: Ah waktu yang tepat.
 
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
 Fiona: Hi Lunaa
 
+<<SetRightSprite Luna Idle>>
 Luna: Ah h-halo kak Fiona
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Gausah malu-malu, panggil aja aku Fiona
 
+<<SetRightSprite Luna Idle>>
 Luna: Ah o-oke Fiona
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Hehe, itu lebih baik.
 
+<<SetLeftTalk>>
 Lucas: Karena kita semua udah kumpul aku mau bersihin meja sebentar terus kita mulai.
 
+<<SetRightTalk>>
 Fiona: Oke, aman aja.
 
+<<SetRightSprite Luna Idle>>
 Luna: Mau kubantu, Lucas?
 
+<<SetLeftTalk>>
 Lucas: Ga usah gapapa, harusnya cuma bentar doang.
 
+<<SetRightTalk>>
 Luna: Oh oke, kalau gitu semangat.
 
+<<SetLeftTalk>>
 Lucas: Ya, terima kasih Luna.
 
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
+
 Lucas: Aku udah selesai.
 
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
 Fiona: Ayo kita mulai pembahasannya.
 
+<<SetRightSprite Luna Idle>>
 Luna: Oke.
 
+<<SetNoTalk>>
 Narrator: Lucas, Luna, dan Fiona mulai membahas terkait rencana mereka untuk menghidupkan kembali Sunside cafe dengan mendengarkan rencana awal Lucas dan Luna.
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Hmm, aku paham sekarang.
 
 Fiona: Simpelnya, ada 2 lubang di rencana kalian yang membuat kalian jadi susah jalaninnya.
@@ -201,15 +254,21 @@ Fiona: Satu hal yang perlu kalian catat juga adalah pembagian tugas. Di sini pem
 
 Fiona: Jadi itu hal yang bagus, karena semakin cocok keahlian dan minat orang ketika ngerjain tugasnya, maka semakin bagus juga hasil dan effortnya.
 
+<<SetRightSprite Luna Idle>>
 Luna: (Hebat, dia bisa tahu semua kelemahan rencana kita dengan baik)
 
+<<SetLeftTalk>>
 Lucas: (Sepertinya ini bisa berhubungan dengan burnoutku)
 
+<<SetRightTalk>>
 Luna: (Dia seperti orang yang berbeda.)
 
+<<SetLeftTalk>>
 Lucas: (Perasaan 5 menit yang lalu dia ga kaya begini…)
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Jadi kurang lebih itulah yang akan kita perbaiki dulu, terus baru kita mulai.
+<<SetNoTalk>>
 Lucas & Luna: Oke
 
 Narrator: Mereka bertiga menyelesaikan rencana mereka dan mulai mengerjakan tugas mereka masing-masing.
@@ -219,24 +278,34 @@ Narrator: 1 jam kemudian…
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
 
+<<SetLeftTalk>>
 Lucas: Hahh…
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Hmm…
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Ada apa?
 
+<<SetLeftTalk>>
 Lucas: Aku gabisa fokus sama sekali, aku cuma bisa selesai sedikit aja…
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Sama…, aku belum mendapat inspirasi yang cocok dari tadi…
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Ooo, hmm coba aku pikir bentar.
 
 Fiona: Ah, coba kalian stop apa yang kalian lakuin sebentar.
 
 Fiona: Kalian udah pernah coba latihan pernapasan belum?
 
+<<SetNoTalk>>
 Lucas & Luna: Apa itu?
 
+<<SetRightTalk>>
 Fiona: Simpelnya, kalian coba bernafas pelan-pelan dengan ritme yang teratur sambil mencoba merasakan sensasi yang ada di sekeliling kalian sekarang atau melihat segala barang di sekitar kalian.
 
 Fiona: Biasanya kegiatan itu disebut mindfulness practice atau kesadaran penuh.
@@ -253,66 +322,92 @@ Fiona: Coba dari Lucas dulu
 
 title: Day5AfterMindfulness
 ---
-Lucas: (Perasaan ini…)
 
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+Lucas: (Perasaan ini…)
 
 Lucas: (Sangat tenang, aku merasa lebih fokus dari biasanya)
 
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
+
 Fiona: Jadi gimana?
 
+<<SetLeftTalk>>
 Lucas: Sepertinya aku akan mencoba lagi, tiba-tiba aku merasa bisa melakukan ini.
 
+<<SetRightTalk>>
 Fiona: Baguslah, coba bagi dulu pekerjaanmu jadi lebih kecil lalu coba lagi kalau kamu belum lelah.
 
 Fiona: Kalau begitu, sekarang giliranmu Luna.
 
+<<SetRightSprite Luna Idle>>
 Luna: O-Oke
 
+<<SetNoTalk>>
 Narrator: Luna pun merasa lebih
 
 Narrator: Tak lama kemudian, tak terasa sore hari akan segera tiba
 
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
 Fiona: Oh, sudah jam segini.
 
 Fiona: Aku harus pergi sebentar lagi.
 
+<<SetLeftTalk>>
 Lucas: Kalau gitu kita sudahi hari ini?
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Aku setuju.
-
 Luna: A-anu Fiona apakah kamu mau jalan pulang sama-sama?
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Boleh bangett!
 
 Fiona: Oh iya, karena di rencana kita besok hari libur, gimana kalau kita pergi bertiga?
 
+<<SetLeftTalk>>
 Lucas: Aku ga masalah
 
 Luna: Kalau gitu gimana kalau kita ke pantai dan mengadakan barbekyu di sana?
 
+<<SetRightTalk>>
 Fiona: Itu…
 
 Fiona: Ide yang…
 
 Fiona: SPEKTAKULER!
 
+<<SetLeftTalk>>
 Lucas: Aku juga setuju, kayaknya asik.
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Kalau gitu besok aku bakal bawa alatnya
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Aku bakal belanja daging dan teman-temannya!
 
+<<SetLeftTalk>>
 Lucas: Kalau gitu aku yang bakal bawa minuman.
 
+<<SetRightTalk>>
 Fiona: Oke, kalau gitu udah pasti yaa.
 
 Fiona: Aku pergi dulu.
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Sampai ketemu besok Lucas
 
+<<SetLeftTalk>>
 Lucas: Ya, hati-hati kalian berdua.
 
 //[Fiona & Luna fades out]
+<<RemoveRight>>
 Lucas: (Sebaiknya aku beres-beres dulu sebelum bersantai)
 
 //[Cafe background fades in]
@@ -323,12 +418,15 @@ Lucas: (Fiuh, akhirnya selesai)
 
 Lucas: (Kayaknya habis ini aku mau main dulu setelah sekian lama)
 
+<<SetNoTalk>>
 Narrator: Lucas pun bermain setelah makan malam selesai hingga bulan pun sudah menyinarinya cukup lama.
 
+<<SetLeftTalk>>
 Lucas: (Oh, udah jam segini)
 
 Lucas: (Mungkin aku isi dulu jurnalnya, takut ketiduran)
 
+<<RemoveLeft>>
 <<jump Day5Reflection>>
 ===
 
@@ -337,6 +435,8 @@ title: Day5Reflection
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
 
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
 Lucas: (Dan selesailah refleksi di hari ke-5)
 
 Lucas: (Hari ini aku belajar banyak juga ya.)
@@ -357,6 +457,8 @@ Lucas: ...
 Lucas: (Ya udahlah, mending tidur aja)
 
 <<CafeBackgroundFadeOut CafeBackgroundUI>>
+<<RemoveLeft>>
 
+<<NextDay DaySystem>>
 <<jump Day6>>
 ===

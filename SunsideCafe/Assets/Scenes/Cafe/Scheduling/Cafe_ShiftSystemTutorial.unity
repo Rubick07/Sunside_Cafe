@@ -334,8 +334,17 @@ MonoBehaviour:
   blockerArray:
   - {x: 0, y: 0}
   - {x: 1, y: 0}
+  - {x: 2, y: 0}
+  - {x: 3, y: 0}
   - {x: 4, y: 0}
-  - {x: 0, y: 3}
+  - {x: 0, y: 1}
+  - {x: 0, y: 2}
+  - {x: 3, y: 1}
+  - {x: 4, y: 1}
+  - {x: 3, y: 2}
+  - {x: 4, y: 2}
+  - {x: 4, y: 3}
+  - {x: 4, y: 4}
 --- !u!4 &1751855105
 Transform:
   m_ObjectHideFlags: 0
@@ -720,6 +729,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SchedulingCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: employees.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: 'employees.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 76d883e2f66667f40a2041ace33f8318, type: 2}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: 'employees.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d137734edfde9d64e81e88eaf04b202c, type: 2}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: 'employees.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9cb04d507f0ca9d4983dbbf171f7eae2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

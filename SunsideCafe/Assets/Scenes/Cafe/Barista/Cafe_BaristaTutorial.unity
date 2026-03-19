@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerDataList:
-  - {fileID: 11400000, guid: e94cf5605a350f34b90e321da665fcd2, type: 2}
-  - {fileID: 11400000, guid: 2a5750c412061a14dac917c3e312009f, type: 2}
+  - {fileID: 11400000, guid: 74f8862874139944f8c24b1a05a0fb4b, type: 2}
+  - {fileID: 11400000, guid: f7a3ff2006f466644aad95bcfecae99a, type: 2}
   SpecialCustomerDataList:
   - {fileID: 11400000, guid: 64a27b136bd3fc346ac8daa4a33c9036, type: 2}
 --- !u!224 &1336626709 stripped
@@ -458,9 +458,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeDataList:
-  - {fileID: 11400000, guid: 7f5125814df6cf443b948b8e165e679c, type: 2}
+  - {fileID: 11400000, guid: 03b8aeb619a720149ad7fc826ce99e31, type: 2}
   - {fileID: 11400000, guid: 152ebab6ce2c9ba409a3e8e3acb00d8c, type: 2}
-  - {fileID: 11400000, guid: d9cda08677527024dac07684c32ee29a, type: 2}
+  - {fileID: 11400000, guid: 3b58e29b913d5e04a962a419a7beba27, type: 2}
 --- !u!1 &1400928858
 GameObject:
   m_ObjectHideFlags: 0

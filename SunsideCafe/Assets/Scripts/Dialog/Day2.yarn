@@ -7,11 +7,6 @@ title:DilarangMasukCafe
 <<cameraShake ScreenShake 5>>
 Arthur: Katanya Mau pergi ngapain kesini
 ===
-title:Day2Placeholder
----
-haiadf
-
-===
 
 title: Day2Start
 ---
@@ -36,6 +31,7 @@ Kedua teman Lucas: Apa yang sudah kamu capai?
 <<wait  2>>
 
 <<DayUIFadeOut DaySystemUI>>
+<<wait  1>>
 
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>

@@ -333,10 +333,12 @@ MonoBehaviour:
   totalDays: 5
   shiftsPerDay: 5
   blockerArray:
-  - {x: 0, y: 0}
-  - {x: 1, y: 0}
-  - {x: 4, y: 0}
-  - {x: 0, y: 3}
+  - {x: 1, y: 1}
+  - {x: 3, y: 1}
+  - {x: 1, y: 3}
+  - {x: 3, y: 3}
+  - {x: 3, y: 4}
+  - {x: 4, y: 4}
 --- !u!4 &1751855105
 Transform:
   m_ObjectHideFlags: 0
@@ -865,6 +867,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: employees.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: 'employees.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 76d883e2f66667f40a2041ace33f8318, type: 2}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: 'employees.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d9b6c325775c20f4b9fd2a50555281f4, type: 2}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: 'employees.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d8c58bc51cc3b6e469cae835af8d4d49, type: 2}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: 'employees.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7942160465c345c49b2cc889c39234f9, type: 2}
+    - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: 'employees.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d137734edfde9d64e81e88eaf04b202c, type: 2}
     - target: {fileID: 8764477648390149813, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

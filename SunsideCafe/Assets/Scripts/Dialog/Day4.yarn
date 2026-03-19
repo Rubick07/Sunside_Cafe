@@ -38,13 +38,18 @@ Lucas: Tolong aku.
 <<DayUIFadeIn DaySystemUI>>
 <<wait  2>>
 <<DayUIFadeOut DaySystemUI>>
+<<wait  1>>
 
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
 Lucas: !
 
 Lucas: (Uh, aku ketiduran…)
 
+<<SetNoTalk>>
 Narrator: Lucas menatap layar laptopnya
 
+<<SetLeftTalk>>
 Lucas: (Hahh, buntu lagi…)
 
 Lucas: (Sekarang jam 4 sore)
@@ -54,69 +59,97 @@ Lucas: (Hmm, kira-kira gimana situasi di sisi Luna ya?)
 //[Phone ringing SFX plays & Lucas picks up phone]
 ring ring ring bunyi hp
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
+
 Luna: Lucas?
+
+<<SetLeftTalk>>
 Lucas: Halo, ada apa Luna?
 
+<<SetRightTalk>>
 Luna: A-Ah aku cuma mau nanya gimana keadaan di tempat.
 
+<<SetLeftTalk>>
 Lucas: Jujur aku agak buntu dari kemarin…
 
+<<SetRightTalk>>
 Luna: Kamu juga?
 
+<<SetLeftTalk>>
 Lucas: Oh, ternyata kamu juga buntu?
 
+<<SetRightTalk>>
 Luna: Ya, jujur aku ga bisa ketemu ide dari kemarin dan sekarang aku malah bingung sendiri
 
+<<SetLeftTalk>>
 Lucas: Sama, aku juga entah kenapa ga bisa mulai membuat aplikasinya.
 
 Lucas: Padahal seharusnya kita mengejar deadline
 
+<<SetRightTalk>>
 Luna: Hmm… kamu mau keluar sebentar buat ganti suasana ngga?
 
+<<SetLeftTalk>>
 Lucas: Boleh, ga ada gunanya juga aku diam disini tanpa arah
 
 Lucas: Mungkin juga itu yang kita butuhkan sekarang.
 
+<<SetRightTalk>>
 Luna: Oke, kamu mau ke mana kalau gitu?
 
+<<SetLeftTalk>>
 Lucas: Hmm, aku kurang tahu, mungkin kita keliling pusat kota?
 
+<<SetRightTalk>>
 Luna: Boleh, kalau misal kamu ada ide lain di perjalanan nanti tolong kasih tahu aja gapapa
 
+<<SetLeftTalk>>
 Lucas: Oke, sampai ketemu Luna, aku berangkat sebentar lagi.
 
+<<SetRightTalk>>
 Luna: Hati-hati di jalan Lucas.
 
 //[Phone close SFX plays]
 
+<<SetLeftTalk>>
 Lucas: (Sebaiknya aku berangkat sebentar lagi)
 
 //[Cafe background fades in]
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 
 Lucas: Paman, aku mau pergi keluar dulu
 
+<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
 Arthur: Oh, waktu yang pas.
 
 Arthur: Bisakah kamu sekalian mampir ke pasar nanti?
 
 Arthur: Aku butuh bantuan untuk membeli bahan untuk makan malam nanti dan isi ulang stok di kafe
 
+<<SetLeftTalk>>
 Lucas: Oke, butuh apa aja paman?
 
 Lucas: (Instingku merasa bakal ada yang aneh!)
 
+<<SetRightTalk>>
 Arthur: Aku butuh sebungkus kopi, 2 karung gula, dan untuk makan malam aku butuh hewan yang namanya hanya ada 1 huruf.
 
+<<SetLeftTalk>>
 Lucas: ?
 
 Lucas: Ga ada hewan yang namanya cuma 1 huruf paman…
 
+<<SetRightTalk>>
 Arthur: Ada, cari aja, kalau ga tahu coba tanya aja ke penjualnya.
 
+<<SetLeftTalk>>
 Lucas: Hahh, baiklah paman…
 
 Lucas: Kalau begitu aku pergi dulu.
 
+<<SetRightTalk>>
 Arthur: Ya, hati-hati di jalan.
 
 
@@ -129,20 +162,28 @@ Arthur: Ya, hati-hati di jalan.
 
 title:LunaTownSquareDay4
 ---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
 Lucas: Halo, kamu udah nunggu lama?
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Ngga kok, aku baru sampai juga 5 menit yang lalu
 
+<<SetLeftTalk>>
 Lucas: Baguslah kalau begitu.
 
+<<SetRightTalk>>
 Luna: Jadi, ada tempat yang mau kamu kelilingi?
 
+<<SetLeftTalk>>
 Lucas: Ah, sebenarnya paman Arthur minta tolong aku mampir ke pasar untuk membeli bahan untuk cafe & makan malam.
 
+<<SetRightTalk>>
 Luna: Oh, kalau begitu langsung aja kita ke sana.
 
+<<SetLeftTalk>>
 Lucas: Thank you udah mau nemenin, Luna.
-
 
 <<ShowObjectiveUI ObjectiveUI>>
 
@@ -150,16 +191,24 @@ Lucas: Thank you udah mau nemenin, Luna.
 
 title:MarketFirstTime
 ---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+
 Lucas: Ooo, disini ramai banget
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Disini banyak barang diskon juga jadi memang jadi tempat pusat belanja orang-orang di kota ini.
 
+<<SetLeftTalk>>
 Lucas: Oh iya, kamu tau ada hewan yang namanya cuma 1 huruf ngga?
 
+<<SetRightTalk>>
 Luna: Hmm…
 
 Luna: Aku ngga tau, adakah hewan kaya gitu di pulau ini?
 
+<<SetLeftTalk>>
 Lucas: Aku juga ngga tau, paman Arthur emang ada-ada aja.
 
 Lucas: Kalau begitu ayo kita cari bahan-bahannya.
@@ -169,7 +218,6 @@ Lucas: Kalau begitu ayo kita cari bahan-bahannya.
 title: WrongShopKeeper
 ---
 Penjaga toko: Maaf, aku tidak tahu hewan yang seperti itu
-
 ===
 
 title:CorrectShopKeeper
@@ -210,34 +258,47 @@ bye bye
 
 title:AccompanyLuna
 ---
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
+
 Luna: Kalau gitu sampai di sini aja
 
 Luna: Terima kasih banyak Lucas
 
+
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
 Lucas: Ya, terima kasih sudah mengajakku keluar juga
 
+<<SetRightTalk>>
 Luna: Oh iya, aku baru saja kepikiran sesuatu.
 
+<<SetLeftTalk>>
 Lucas: ?
 
+<<SetRightTalk>>
 Luna: Ada 1 lagi hewan yang namanya cuma 1 huruf
 
 Luna: Gajah, G “Ajah”
 
+<<SetLeftTalk>>
 Lucas: (Bener juga, kenapa aku gak kepikiran)
 
 Lucas: (Lebih tepatnya kenapa dia masih mikir candaan itu!)
 
+<<SetRightTalk>>
 Luna: Uh-Uhm…
 
 Luna: I-Itu aja, hati-hati Lucas!
 
+<<SetLeftTalk>>
 Lucas: Ya, hati-hati juga.
 
 ===
 
 title: Day4Reflection
 ---
+
 Lucas: (Akhirnya sampai…)
 
 Lucas: (Hmm, Fiona bilang untuk jangan khawatir tentang itu dan melakukan hal yang lain)
@@ -264,5 +325,6 @@ Lucas: (Semoga saran dari Fiona berhasil)
 
 //[Screen fade to black]
 
+<<NextDay DaySystem>>
 <<jump Day5>>
 ===

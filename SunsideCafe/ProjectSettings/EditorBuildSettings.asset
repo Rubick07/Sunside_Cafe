@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cafe/Scheduling/Cafe_ShiftSystemDay5.unity
     guid: 63466438f9f23754eb0041d995660afe
   - enabled: 1
-    path: Assets/Scenes/Mindfulness_Practice.unity
+    path: Assets/Scenes/Mindfulness/Mindfulness_Practice.unity
     guid: b3ebe3e482d089d46a376b2b562472ab
   - enabled: 1
     path: Assets/Scenes/Cafe/Barista/Cafe_Barista_Day5.unity
@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cafe/Barista/Cafe_Barista_Day6.unity
     guid: af0b96b4b1b22e64cb82b37299442a72
+  - enabled: 1
+    path: Assets/Scenes/Mindfulness/Mindfulness_Practice_Day6.unity
+    guid: 464dcb018c545eb4183e7885d20a64b7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

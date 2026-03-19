@@ -41,7 +41,7 @@ public class TimetableUI : MonoBehaviour
         });
 
         ScheduleManager.instance.OnAssignedEmployeeChanged += ScheduleManager_OnAssignedEmployeeChanged;
-        Debug.Log(ScheduleManager.instance.IsAllEmployeeAssigned());
+
         completeButton.interactable = ScheduleManager.instance.IsAllEmployeeAssigned();
     }
 

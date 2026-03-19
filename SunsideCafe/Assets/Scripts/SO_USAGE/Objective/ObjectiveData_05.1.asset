@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5228458b850a399438916fba2458d28a, type: 3}
-  m_Name: ScheduleShapeData_T(Up)
+  m_Script: {fileID: 11500000, guid: c08c01bf8ca3ec0489b3e4b311caa113, type: 3}
+  m_Name: ObjectiveData_05.1
   m_EditorClassIdentifier: 
-  cells:
-  - {x: 0, y: 0}
-  - {x: 0, y: -1}
-  - {x: -1, y: 0}
-  - {x: 1, y: 0}
+  objectiveID: 05.1
+  title: 'Head to the beach '
+  description: 
+  conditions:
+  - type: 2
+    targetValue: 1
+  onCompletedEventID: 

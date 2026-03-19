@@ -10,6 +10,7 @@
 <<wait 1>>    
 
 
+
 Lucas: (Hari ini cuacanya cerah ya)
 
 Lucas: (Semoga cuacanya bisa tetap cerah sampai nanti malam)
@@ -21,45 +22,62 @@ Lucas: (Tapi perutku udah teriak, jadi waktunya sarapan dulu)
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
 
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Arthur Idle>>
+
+<<SetLeftTalk>>
 Lucas: Pagi paman
 
+<<SetRightTalk>>
 Arthur: Oh Lucas, selamat pagi.
 
 Arthur: …
 
 Arthur: *Sepertinya kamu udah berhasil*
 
+<<SetLeftTalk>>
 Lucas: ?
 
 Lucas: Ada apa?
 
+<<SetRightTalk>>
 Arthur: Tidak ada apa-apa
 
 Arthur: Duduk dulu aja, kita sambil sarapan.
 
+<<SetLeftTalk>>
 Lucas: Oke
 
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
 
+<<SetRightTalk>>
 Arthur: Ga kerasa ya, udah mau seminggu kamu datang ke pulau ini
 
+<<SetLeftTalk>>
 Lucas: Ya, 
 
+<<SetRightTalk>>
 Arthur: Kamu ingat hari pertama kamu datang ke pulau ini?
 
+<<SetLeftTalk>>
 Lucas: Ya, aku inget baru nyampe pulau langsung dikasih tahu kenapa matahari tenggelam.
 
+<<SetRightTalk>>
 Arthur: HAHAHA, lucu dan original kan?
 
+<<SetLeftTalk>>
 Lucas: Ya begitulah
 
+<<SetRightTalk>>
 Arthur: Omong-omong, sejak kamu datang ke pulau ini kamu udah berubah jauh.
 
 Arthur: Aku gatau kamu sadar atau ngga, tapi ekspresi mu sekarang udah beda.
 
+<<SetLeftTalk>>
 Lucas: Aku ga sadar sama sekali…
 
+<<SetRightTalk>>
 Arthur: Harusnya kalau gini kamu udah sembuh atau setidaknya berkembang selangkah lebih maju.
 
 Arthur: Semua kerja kerasmu akhirnya terbayarkan.
@@ -68,8 +86,10 @@ Arthur: Dan aku yakin sekarang kamu udah siap buat mengatasi masalahmu.
 
 Arthur: Dan bebas dari burnout.
 
+<<SetLeftTalk>>
 Lucas: Paman…
 
+<<SetRightTalk>>
 Arthur: Ya itu aja yang mau kusampaikan sebenarnya.
 
 Arthur: Semangat di shiftmu hari ini.
@@ -78,6 +98,7 @@ Arthur: Dan satu lagi,
 
 Arthur: Kamu udah jadi barista yang baik.
 
+<<SetLeftTalk>>
 Lucas: Terima kasih banyak paman!
 
 <<AddScene GameManager Cafe_Barista_Day6>>
@@ -85,22 +106,33 @@ Lucas: Terima kasih banyak paman!
 
 title:Day6AfterBarista
 ---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+
 Lucas: (Akhirnya shiftku selesai…)
 
 Lucas: (Waktunya berberes.)
 
+<<SetNoTalk>>
 ???: Kalau barista membuat minum untuk orang lain, siapa yang membuat minum untuk seorang barista?
 
+<<SetLeftTalk>>
 Lucas: Paman?
+
+<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
 
 Arthur: Jawabannya adalah barista lainnya.
 
 Arthur: Minumlah, kerja bagus hari ini.
 
+<<SetLeftTalk>>
 Lucas: Ini kan…
 
+<<SetRightTalk>>
 Arthur: Hm, kenapa? Kamu udah ngga suka lagi?
 
+<<SetLeftTalk>>
 Lucas: Ngga, justru aku kaget paman masih ingat.
 
 Lucas: Ga ada yang lebih enak dari segelas coklat panas sehabis bekerja keras.
@@ -109,12 +141,16 @@ Lucas: Ga ada yang lebih enak dari segelas coklat panas sehabis bekerja keras.
 
 Lucas: Enak.
 
+
+<<SetRightTalk>>
 Arthur: HAHAHA ternyata seleramu masih aja sama.
 
 Arthur: Tapi sekarang kamu udah berubah jadi orang yang lebih baik.
 
+<<SetLeftTalk>>
 Lucas: Untungnya haha.
 
+<<SetRightTalk>>
 Arthur: …
 
 Arthur: Sebenarnya aku udah tau kalau kamu berencana buat ngehidupin kafe ini lagi.
@@ -123,8 +159,10 @@ Arthur: Selama ini aku juga udah berusaha cari cara supaya kafe ini bisa bertaha
 
 Arthur: Tapi pas aku tinggal sendiri, ternyata ga begitu bakat dalam mengelola bisnis, aku cuma bisa jadi barista aja.
 
+<<SetLeftTalk>>
 Lucas: Tinggal sendiri?
 
+<<SetRightTalk>>
 Arthur: Ah, sebenarnya dulu tempat ini diurus aku dan temanku berdua.
 
 Arthur: Tapi sekarang dia ada urusan dan dia punya pekerjaan tetap di luar negeri.
@@ -133,18 +171,23 @@ Arthur: Akhirnya dia tinggal di sana bersama keluarganya dan kafe ini ditinggali
 
 Arthur: Ujung-ujungnya tetap aku ngga bisa ngelakuin apa- apa…
 
+<<SetLeftTalk>>
 Lucas: Keberatan!
 
+<<SetRightTalk>>
 Arthur: …?
 
+<<SetLeftTalk>>
 Lucas: Uh, aku cuma niru game yang aku sering mainin
 
 Lucas: Tapi selama ini paman udah ngelakuin kerja yang bagus juga.
 
 Lucas: Gara-gara paman, kafe ini masih bisa bertahan sejauh ini.
 
+<<SetRightTalk>>
 Arthur: Lucas…
 
+<<SetLeftTalk>>
 Lucas: Dan 1 lagi,
 
 Lucas: Berkat paman aku masih bisa tinggal di sini dan menemukan hal-hal yang baru di pulau itu.
@@ -163,28 +206,42 @@ Lucas: Dibantu Luna dan Fiona.
 
 Lucas: Sunside cafe bakal bersinar lagi.
 
+<<SetRightTalk>>
 Arthur: Lucas…
 
+<<SetLeftTalk>>
 Lucas: Ada apa paman?
+
+<<SetRightTalk>>
 Arthur: Ah, ngga kayaknya ada air hujan yang kena ke mukaku.
 
+<<SetLeftTalk>>
 Lucas: Ini kan di dalam kafe, mana mungkin ada air hujan masuk.
 
+<<SetRightTalk>>
 Arthur: Hahaha…
 
 Arthur: Oke, kalau begitu kita sama-sama hidupin lagi Sunside cafe
 
+<<SetLeftTalk>>
 Lucas: Ya!
 
+<<SetRightTalk>>
 Arthur: Kalau begitu aku masih harus jaga kafe di depan.
 
 Arthur: Jangan lupa siap-siap untuk acaramu malam ini dan bersenang-senanglah.
 
+<<SetLeftTalk>>
 Lucas: Terima kasih paman!
 
+<<SetNoTalk>>
 Narrator: Hari pun mulai sore dan Lucas bersiap-siap untuk pergi ke pantai.
 
 //[Background change to black screen]
+<<BlackscreenFadeIn BlackscreenUI>>
+<<CafeBackgroundFadeOut CafeBackgroundUI>>
+
+
 Lucas: Aku pergi dulu!
 
 <<CafeBackgroundFadeOut CafeBackgroundUI>>
@@ -259,7 +316,14 @@ Narrator: Fiona menghabiskan ½ isi kantong itu sendirian…
 
 Fiona: Ah, kenyangnya…
 
-[Fade In Transition]
+//[Fade In Transition]
+<<BlackscreenFadeIn BlackscreenUI>>
+<<wait 1>>
+
+<<PlayCutscene Day6_Part3_Fanfare>>
+
+<<BlackscreenFadeOut BlackscreenUI>>
+
 Lucas: (Uh, kayaknya aku ga perlu makan lagi besok)
 Luna: Kamu udah kenyang?
 
@@ -281,7 +345,7 @@ Luna: Aku tadi ngelakuin itu di sini dan…
 
 Luna: Aku bisa ketemu perasaan yang selama ini hilang dariku.
 
-//Add Mindfulgames
+<<AddScene GameManager Mindfulness_Practice_Day6>>
 ===
 
 title: Day6AfterMindfulness
@@ -354,6 +418,7 @@ Lucas: Ya, malam.
 
 Lucas: Waktunya pulang.
 
+<<SetPlayerTriggerActive TriggerDialog_BeforeReflection>>
 ===
 
 title:Day6BeforeReflection
@@ -367,6 +432,8 @@ Lucas: (Tapi aku sangat senang aku datang ke pulau ini)
 Lucas: (Ah, sepertinya mataku udah mulai menutup dikit)
 
 Lucas: (Waktunya refleksi sebelum tidur)
+
+<<jump Day6Reflection>>
 
 ===
 
