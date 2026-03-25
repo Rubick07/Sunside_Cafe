@@ -15,5 +15,6 @@ MonoBehaviour:
   foodName: Sugar
   foodType: 0
   price: 0
+  soundName: SugarSFX
   icon: {fileID: 0}
   prefab: {fileID: 0}

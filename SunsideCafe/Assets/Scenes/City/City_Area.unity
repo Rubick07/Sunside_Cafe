@@ -3250,6 +3250,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2409925755293704614, guid: ca44f9f8fb16c054bba5bf7292a41093, type: 3}
   m_PrefabInstance: {fileID: 684285220}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &277403812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277403813}
+  m_Layer: 0
+  m_Name: ===ACTION===
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &277403813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277403812}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 469779555}
+  - {fileID: 2139986781}
+  m_Father: {fileID: 868921892}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &281923036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5231946914140935868, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
@@ -3843,7 +3876,7 @@ Transform:
   m_GameObject: {fileID: 313857141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 4.3670692, z: -16.489483}
+  m_LocalPosition: {x: 2.67, y: 4.3670692, z: -16.489483}
   m_LocalScale: {x: 0.94065, y: 2.04423, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6387,6 +6420,166 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461929594}
   m_CullTransparentMesh: 1
+--- !u!1 &465552199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 465552200}
+  - component: {fileID: 465552202}
+  - component: {fileID: 465552201}
+  m_Layer: 0
+  m_Name: Day14Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &465552200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465552199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 467240475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &465552201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465552199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: e2fd00e45aa06644aa4b494be45af9ff, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2042327821}
+          m_TargetAssemblyTypeName: TimelineDayDreamController, Assembly-CSharp
+          m_MethodName: PlayCutscene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Day21Timeline
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &465552202
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465552199}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 9e40aefd69d2a4b4587a2031489ed37a, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
+--- !u!1 &467240474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467240475}
+  m_Layer: 0
+  m_Name: Day7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467240475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467240474}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1638907848}
+  - {fileID: 465552200}
+  - {fileID: 959685430}
+  - {fileID: 1870836178}
+  m_Father: {fileID: 2042327820}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &469779553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469779555}
+  - component: {fileID: 469779554}
+  m_Layer: 0
+  m_Name: UIButtonSoundbinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &469779554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469779553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5146df1d427d0344c8769cadcb0316ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: SelectSFX
+--- !u!4 &469779555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469779553}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 277403813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &490435301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 766087645916756329, guid: ad1fb0473d53e0a46bba99d492e8b5ab, type: 3}
@@ -9164,6 +9357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneName: Shop
+  ambienceSound: 
 --- !u!4 &785738247
 Transform:
   m_ObjectHideFlags: 0
@@ -10633,6 +10827,7 @@ Transform:
   - {fileID: 701373761}
   - {fileID: 831499025}
   - {fileID: 232965019}
+  - {fileID: 277403813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &872095847
@@ -11392,6 +11587,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948642971}
   m_CullTransparentMesh: 1
+--- !u!1 &959685429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959685430}
+  - component: {fileID: 959685432}
+  - component: {fileID: 959685431}
+  m_Layer: 0
+  m_Name: Day21Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959685430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959685429}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 467240475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &959685431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959685429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: e2fd00e45aa06644aa4b494be45af9ff, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2042327821}
+          m_TargetAssemblyTypeName: TimelineDayDreamController, Assembly-CSharp
+          m_MethodName: PlayCutscene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Day30Timeline
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &959685432
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959685429}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 5e939d61aec725d43827de305f4d8220, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &960418930
 GameObject:
   m_ObjectHideFlags: 0
@@ -18106,6 +18381,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1638907847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638907848}
+  - component: {fileID: 1638907850}
+  - component: {fileID: 1638907849}
+  m_Layer: 0
+  m_Name: Day7Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1638907848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638907847}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 467240475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1638907849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638907847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: e2fd00e45aa06644aa4b494be45af9ff, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2042327821}
+          m_TargetAssemblyTypeName: TimelineDayDreamController, Assembly-CSharp
+          m_MethodName: PlayCutscene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Day14Timeline
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &1638907850
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638907847}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 6a24a12cea1e39b44a0bbce5d8c60140, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1642570111
 GameObject:
   m_ObjectHideFlags: 0
@@ -20615,6 +20970,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863642228}
   m_CullTransparentMesh: 1
+--- !u!1 &1870836177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870836178}
+  - component: {fileID: 1870836180}
+  - component: {fileID: 1870836179}
+  m_Layer: 0
+  m_Name: Day30Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1870836178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870836177}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 467240475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1870836179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870836177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 4bfc187addea30a498f97eac7ea81597, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 701373760}
+          m_TargetAssemblyTypeName: DialogRunnerSingleton, Assembly-CSharp
+          m_MethodName: StartDialogCutscene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Day7BeforeCafe
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &1870836180
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870836177}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: d67b40d05069385419a0d046b042c966, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1872831866
 GameObject:
   m_ObjectHideFlags: 0
@@ -20736,7 +21171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23b3f2af204a594ba4bf9f656f6c119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDay: 4
+  dayState: 0
+  currentDay: 0
 --- !u!4 &1886574470
 Transform:
   m_ObjectHideFlags: 0
@@ -20891,7 +21327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1909534335
 Transform:
   m_ObjectHideFlags: 0
@@ -23203,6 +23639,7 @@ Transform:
   - {fileID: 1909534335}
   - {fileID: 1946267422}
   - {fileID: 139706490}
+  - {fileID: 467240475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2042327821
@@ -23226,6 +23663,10 @@ MonoBehaviour:
   - {fileID: 2109970607}
   - {fileID: 524038451}
   - {fileID: 2048019465}
+  - {fileID: 1638907850}
+  - {fileID: 465552202}
+  - {fileID: 959685432}
+  - {fileID: 1870836180}
 --- !u!1 &2048019463
 GameObject:
   m_ObjectHideFlags: 0
@@ -24505,6 +24946,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133751319}
   m_CullTransparentMesh: 1
+--- !u!1 &2139986780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139986781}
+  - component: {fileID: 2139986782}
+  m_Layer: 0
+  m_Name: ZoneAmbienceAction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139986781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139986780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 277403813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2139986782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139986780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e190f63486016743849a5b84461f1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2141747184
 GameObject:
   m_ObjectHideFlags: 0
@@ -24667,7 +25152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1527936949422410518, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 1527936949422410518, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_margin.z
@@ -24687,11 +25172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5722731960843703548, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: autoStart
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5722731960843703548, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: startNode
-      value: Day5Reflection
+      value: Day6Reflection
       objectReference: {fileID: 0}
     - target: {fileID: 5975031290259730175, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24735,7 +25220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6014400686844557616, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 6014400686844557616, guid: c88a3a466d98fb24eafac52ad61923d9, type: 3}
       propertyPath: m_fontSizeMax
@@ -24793,6 +25278,10 @@ PrefabInstance:
     - target: {fileID: 6269014476861513739, guid: bc815ceaa2660494fa1bb7943e8d569d, type: 3}
       propertyPath: m_Name
       value: Zone_TownSquare
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968903743831436781, guid: bc815ceaa2660494fa1bb7943e8d569d, type: 3}
+      propertyPath: ambienceSound
+      value: CrowdAmbience
       objectReference: {fileID: 0}
     - target: {fileID: 7673962869229749023, guid: bc815ceaa2660494fa1bb7943e8d569d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24997,6 +25486,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5951070199340892958, guid: c1751fa29067084498e243309aa5e309, type: 3}
+      propertyPath: ambienceSound
+      value: NatureAmbience
+      objectReference: {fileID: 0}
     - target: {fileID: 6576489463829610025, guid: c1751fa29067084498e243309aa5e309, type: 3}
       propertyPath: m_Icon
       value: 
@@ -25026,6 +25519,10 @@ PrefabInstance:
       propertyPath: targetTransform
       value: 
       objectReference: {fileID: 650318861}
+    - target: {fileID: 2173860941297121826, guid: ad1fb0473d53e0a46bba99d492e8b5ab, type: 3}
+      propertyPath: ambienceSound
+      value: BeachAmbience
+      objectReference: {fileID: 0}
     - target: {fileID: 2903358712077909635, guid: ad1fb0473d53e0a46bba99d492e8b5ab, type: 3}
       propertyPath: m_Name
       value: Zone_Beach
@@ -25185,6 +25682,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2103920816}
     m_Modifications:
+    - target: {fileID: 3513054896273291664, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
+      propertyPath: ambienceSound
+      value: NatureAmbience
+      objectReference: {fileID: 0}
     - target: {fileID: 3591159017226092013, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
       propertyPath: targetTransform
       value: 

@@ -17,6 +17,7 @@ public class TimelineDayDreamController : MonoBehaviour
     public void PlayCutscene(string timelineName)
     {
         PlayableDirector playableDirector = GetDirectorByTimelineName(timelineName);
+        Debug.Log(playableDirector);
         playableDirector.Play();
     }
 

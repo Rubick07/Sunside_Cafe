@@ -39,6 +39,9 @@ public class CustomerController
     void CompleteOrder()
     {
         // reward, score, remove customer
+
+        GameEvents.OnPlaySFX.Invoke("CustomerSatisfiedSFX");
+
         customerView.GetCustomerSlotUI().Clear();
     }
 }

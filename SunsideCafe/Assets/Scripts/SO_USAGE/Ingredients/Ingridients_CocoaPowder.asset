@@ -15,5 +15,6 @@ MonoBehaviour:
   foodName: Chocolate
   foodType: 1
   price: 0
+  soundName: PowderSFX
   icon: {fileID: 21300000, guid: e45e27dc203762540a93376f8f364907, type: 3}
   prefab: {fileID: 0}

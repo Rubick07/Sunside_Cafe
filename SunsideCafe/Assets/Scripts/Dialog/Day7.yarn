@@ -1,6 +1,6 @@
 ﻿title: Day7
 ---
-[Mysterious figure fades in]
+//[Mysterious figure fades in]
 ???: Jadi untuk apa kamu ada di sini
 
 ???: Apa yang sudah kamu capai
@@ -45,9 +45,458 @@ Lucas: Ya,
 
 Lucas: Terima kasih banyak.
 
+<<DayUIFadeIn DaySystemUI>>
+<<wait  2>>
+<<DayUIFadeOut DaySystemUI>>
+<<wait 1>>    
+
+<<BlackscreenFadeOut BlackscreenUI>>
+
+<<PlayCutscene Day7Timeline>>
+
+===
+title:Day7BeforeCafe
+---
+Lucas: (Akhirnya selesai…)
+
+Lucas: (Seharusnya semua berjalan dengan lancar)
+
+Lucas: (Haha, siapa sangka akhirnya Sunside cafe bisa hidup lagi)
+
+Lucas: (Aku berhutang budi sama mereka semua)
+
+Lucas: (Hmm…)
+
+Lucas: (Masih ada waktu)
+
+Lucas: (Aku masih bisa membuatkan minuman untuk satu orang lagi)
+
+Lucas: (Siapa yang mau kuajak ya…?)
+
+-> Arthur
+    <<jump Day7BeforeArthurRoute>>
+-> Fiona
+    <<jump Day7BeforeFionaRoute>>
+-> Luna
+    <<jump Day7BeforeLunaRoute>>
+
+
 ===
 
-title:adsfadsf
+title: Day7BeforeArthurRoute
 ---
+Lucas: (Coba aku ajak paman Arthur)
 
+<<AddScene GameManager Cafe_Barista_Day7Arthur>>
+===
+
+title:Day7ArthurRoute
+---
+Arthur: Ada apa Lucas, tiba-tiba manggil?
+
+Lucas: Ah duduk aja dulu di sana bentar paman
+
+Arthur: Oke?
+
+Lucas: (Waktunya membuat minum buat paman Arthur)
+
+Lucas: (Kira-kira paman Arthur mau minum apa ya?)
+
+===
+
+title:Day7ArthurCorrectCafe
+---
+Arthur: Minuman ini…
+Arthur: Sungguh nostalgia
+Lucas: Kalau seorang barista membuat minuman untuk orang lain, maka yang membuat minuman untuk barista adalah.
+Arthur: Barista lainnya.
+Arthur: Heh…
+Arthur: Terima kasih Lucas.
+
+<<RemoveScene GameManager>>
+===
+
+title:Day7ArthurIncorrectCafe
+---
+Arthur: Oh?
+Arthur: Terima kasih Lucas
+Lucas: Maaf kalau belum sesuai keinginan paman
+Arthur: Ah, santai aja, ini juga cukup enak.
+
+<<RemoveScene GameManager>>
+===
+
+title: Day7ArthurAfterCafe
+---
+Arthur: Kamu tahu…
+
+Arthur: Jujur aku ga menyangka kafe ini bisa hidup seperti ini lagi
+
+Arthur: Udah lama sejak terakhir kali aku lihat kafe ini penuh suara orang-orang
+
+Lucas: Ya, tapi akhirnya kita sampai di titik ini.
+
+Arthur: Semua karena kerja keras kalian, terima kasih banyak.
+
+Lucas: Apa maksud paman?
+
+Lucas: Semua ini juga berkat paman yang membantu kami selama ini.
+
+Lucas: Aku tahu sebenarnya paman juga diam-diam membantu tak hanya kami.
+
+Lucas: Tapi juga penduduk pulau ini.
+
+Arthur: Apa maksud-
+
+Lucas: Benarkan, “joker”?
+
+Arthur: !
+
+Arthur: Haha, berarti kamu udah tau ya.
+
+Lucas: Ya, mulai dari tebak-tebakan paman yang sebenarnya mengarahkan orang untuk pergi belanja di sana.
+
+Lucas: Rekomendasi paman ke tempat-tempat di seluruh pulau.
+
+Lucas: Sampai di mana aku bisa sembuh dari burnout dan ketemu lagi dengan Luna.
+
+Lucas: Karena itu juga, penduduk di sini mau buat ngebantu paman dan Sunside cafe tetap bertahan.
+
+Arthur: Kamu terlalu memujiku.
+
+Arthur: Tapi…
+
+Arthur: Sekali-kali ada yang sadar kerja kerasmu rasanya ngga buruk.
+
+Arthur: …
+
+Arthur: Terima kasih banyak udah ada di sini Lucas
+
+Lucas: Terima kasih juga udah menerimaku apa adanya paman.
+
+Arthur: Kalau gitu, kedepannya kita bakal makin sibuk
+
+Arthur: Siap-siaplah.
+
+Lucas: Ya.
+
+Fiona: Hey, kalian berdua kita mau makan malam di luar
+
+Fiona: Ayo ke sini.
+
+Lucas: Oke.
+
+Arthur: Kalau gitu, sebelum kita keluar kafe.
+
+Arthur: Pintu apa yang ga bisa terbuka kalaupun ditarik atau didorong 100 orang?
+
+Lucas: …
+
+Lucas: Pintu Geser
+
+Arthur: Heh, selamat datang ke dunia ini
+
+Lucas: 1 bulan di sini aku belajar 1 atau 2 hal
+
+Arthur: Ayo kita pergi.
+
+Lucas: Ya.
+
+<<RemoveLeft>>
+<<RemoveRight>>
+<<jump Day7AllRouteEnding>>
+===
+
+title: Day7BeforeFionaRoute
+---
+Lucas: (Coba aku ajak Fiona)
+
+<<AddScene GameManager Cafe_Barista_Day7Fiona>>
+===
+
+title: Day7FionaRoute
+---
+Fiona: Aku di sini!
+
+Fiona: Jadi, ada apa?
+
+Lucas: Tunggu dulu sebentar di sana
+
+Lucas: Ada sedikit surprise buatmu.
+
+Fiona: OOO, kalau gitu aku tunggu hehe.
+
+Lucas: (Waktunya membuat minum buat Fiona)
+
+Lucas: (Kira-kira Fiona mau minum apa ya?)
+
+===
+title:Day7FionaCorrectCafe
+---
+Fiona: Bukankah ini!?
+Fiona: Ah, Enak bangett!
+Lucas: Haha, baguslah.
+Fiona: Hehe, jadi nostalgia dikit waktu pertama kali aku ke sini
+Fiona: Ternyata kamu masih ingat
+Lucas: Ya, mana mungkin aku lupa ekspresimu waktu itu.
+Fiona: Haha, aku jadi malu dikit.
+
+
+<<RemoveScene GameManager>>
+===
+
+title:Day7FionaIncorrectCafe
+---
+Fiona: Oh, minuman apa ini?
+Lucas: Coba aja, mungkin kamu suka.
+Fiona: Ooo, rasanya menarik.
+Fiona: Thank you Lucas.
+
+<<RemoveScene GameManager>>
+===
+
+title:Day7FionaAfterCafe
+---
+Fiona: Ga kerasa udah 1 bulan kita ada di pulau ini…
+
+Lucas: Ya, semuanya berasa singkat banget
+
+Fiona: Hah… bentar lagi aku harus balik ke UK
+
+Lucas: Terima kasih udah nyempetin waktumu buat ngebantu kita.
+
+Fiona: Ah santai aja, aku udah bilang kan?
+
+Fiona: Aku ngelakuin ini karena aku pengen.
+Fiona: Lagipula…
+
+Fiona: Ini liburanku yang paling seru sejauh ini!
+
+Fiona: Jadi aku yang harusnya ngomong thank you
+
+Lucas: Tapi aku penasaran, kenapa kamu mau bantu sejauh ini?
+
+Fiona: Hmm…
+
+Fiona: Mungkin karena kelihatannya seru
+
+Fiona: Atau mungkin aku liat kalian kesusahan dan aku pengen bantu.
+
+Fiona: Karena aku pernah ada di posisi yang sama…
+
+Lucas: Kamu pernah burnout?
+
+Fiona: Ya, kurang lebih.
+
+Fiona: Kena burnout itu hal yang wajar, tapi yang susah itu cara menyembuhkannya
+
+Fiona: Dulu aku juga pernah kena burnout, berkali-kali sampai aku putus asa.
+
+Fiona: Sampai ujungnya, aku pernah berhenti selama 6 bulan untuk mengurus diriku sendiri.
+
+Fiona: Tapi, dibantu orang-orang disekitarku, aku bisa berdiri disini sampai sekarang.
+
+Lucas: Fiona…
+
+Fiona: Ah tapi pastinya aku ga akan pernah nyesel ngebantu kalian.
+
+Fiona: Aku ga pernah bakal ngerasain perasaan ini di momen ini lagi dihidupku
+
+Fiona: Makanya aku ga mau ada penyesalan karena ga mencoba.
+
+Lucas: Haha, bener-bener kamu banget.
+
+Fiona: Aku anggap itu pujian.
+
+Arthur: Oi kalian berdua, kita makan malam keluar hari ini.
+
+Arthur: Traktiranku.
+
+Fiona: Asikk!
+
+Lucas: Kalau gitu ayo kita keluar.
+
+Fiona: Ah satu lagi
+
+Fiona: Thanks for the unforgettable summer memories Lucas!
+
+Lucas: You’re welcome Fiona.
+
+<<RemoveLeft>>
+<<RemoveRight>>
+<<jump Day7AllRouteEnding>>
+===
+
+title: Day7BeforeLunaRoute
+---
+Lucas: (Coba aku ajak Luna)
+
+<<AddScene GameManager Cafe_Barista_Day7Luna>>
+===
+
+title:Day7LunaRoute
+---
+Luna: Kamu manggil aku?
+
+Lucas: Ya, ada yang perlu kukasih ke kamu.
+
+Luna: A-apa itu?
+
+Lucas: Tunggu dulu aja bentar, aku ambil dulu.
+
+Luna: O-oke.
+
+Lucas: (Waktunya membuat minum buat Luna)
+
+Lucas: (Kira-kira Luna mau minum apa ya?)
+
+===
+
+title:Day7LunaCorrectCafe
+---
+Luna: Lucas
+
+<<RemoveScene GameManager>>
+===
+
+title:Day7LunaIncorrectCafe
+---
+Luna: Ooo
+Luna: Terima kasih banyak Lucas.
+Lucas: Santai aja, setidaknya ini yang bisa kulakuin karena kamu udah bantu aku berkali-kali.
+
+<<RemoveScene GameManager>>
+===
+
+title:Day7LunaAfterCafe
+---
+Luna: Ga kerasa ya udah 1 bulan kamu di sini
+
+Lucas: Ya…
+
+Lucas: Selama 1 bulan ini ada banyak banget kejadian 
+
+Luna: Setuju, aku juga ga nyangka kalau liburan musim panas ini bakal jadi kaya gini
+
+Lucas: Terima kasih udah nemenin aku selama musim panas ini.
+
+Lucas: Maaf kalau misal aku sering ngerepotin.
+
+Luna: Ah ngga sama sekali, justru aku senang kamu mau bareng aku selama musim panas ini.
+
+Luna: Ga ada satupun momen yang bosan kalau ada dirimu.
+
+Lucas: Oh?
+
+Luna: Eh?
+
+Luna: A-Ah maksudku udah lama kita ga main bareng dan…
+
+Lucas: Haha, oke-oke aku paham kok.
+
+Luna: …
+
+Luna: Hei…
+
+Luna: Kira-kira kedepannya kita bakal gimana ya?
+
+Lucas: Maksudmu?
+
+Luna: Ga kerasa bentar lagi kita bakal lulus dan cari kerja.
+
+Luna: Kira-kira gimana ya rasanya itu…
+
+Lucas: Jujur banget aku gatau bakal jadi apa di masa depan
+
+Lucas: Tapi apapun itu aku bakal jalaninnya selangkah demi selangkah
+
+Lucas: Karena aku punya tujuan yang mau aku capai.
+
+Luna: Hehe, jawabannya kamu banget.
+
+Lucas: Maksudnya gimana tuh.
+
+Luna: Dibandingin kamu, aku…
+
+Lucas: Kamu orang yang hebat.
+
+Luna: Eh?
+
+Lucas: Walaupun waktu itu kamu lagi burnout, kamu masih ngebantu aku dan nemenin aku kemanapun aku pergi
+
+Lucas: Buatku, kamu ga tergantikan.
+
+Luna: …
+
+Lucas: M-maksudku terima kasih buat semua yang udah kamu lakuin dari awal sampai sekarang.
+
+Luna: O-o-oh iya s-sama-sama.
+
+Luna: O-omong-omong, aku udah mutusin buat kerja di ibukota dan mencoba hal yang baru.
+
+Lucas: Ooh, keren banget.
+
+Arthur: Oi kalian berdua, kita makan malam keluar hari ini.
+
+Arthur: Traktiranku.
+
+Luna: Wahh
+
+Lucas: Ayo keluar?
+
+Luna: Ya.
+
+Luna: Dan satu lagi…
+
+Luna: Kemanapun hidup membawa kita…
+
+Luna: Semoga kita bisa
+
+Luna: Terus bersama.
+
+Lucas: (Bersama ya…)
+
+Lucas: Ya…
+
+Lucas: Menuju masa depan yang lebih baik.
+
+Lucas: Bersamamu.
+
+<<RemoveLeft>>
+<<RemoveRight>>
+<<jump Day7AllRouteEnding>>
+===
+
+title: Day7AllRouteEnding
+---
+Narrator: Mereka pun pergi dan menikmati makan malam bersama lalu kembali ke tempat masing-masing.
+
+//[Cafe Background fade in]
+Lucas: (Ah, kenyang banget…)
+
+Lucas: (Badanku mulai sakit semua karena hari ini ramai)
+
+Lucas: (Tapi baguslah, artinya Sunside Cafe berhasil hidup lagi)
+
+Lucas: (Sebentar lagi libur musim panas selesai ya…)
+
+Lucas: (Banyak hal yang terjadi 1 bulan terakhir ini…)
+
+Lucas: (Ah nyaris lupa, waktunya mengisi jurnal hari ini.)
+
+//[Journal zoom in]
+
+Lucas: Takdir mempertemukan aku dengan orang-orang ini
+
+Lucas: Dan semua memori musim panas yang kita buat
+
+Lucas: Akan kukenang selalu kapanpun.
+
+Lucas: Aku bersyukur
+
+Lucas: Menjadi bagian dari…
+
+Lucas: Sunside Cafe
+
+FIN
 ===

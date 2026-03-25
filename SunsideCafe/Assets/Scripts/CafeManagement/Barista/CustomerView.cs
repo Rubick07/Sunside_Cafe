@@ -68,6 +68,9 @@ public class CustomerView : MonoBehaviour, IDropHandler
         if (foodUI == null) return;
 
         bool success = controller.TryServe(foodUI.GetFoodItem());
+
+        GameEvents.OnPlaySFX.Invoke("PlateServingSFX");
+
         if (success)
         {
             OnCustomerGetCorrectFood?.Invoke(this, foodUI.GetFoodItem().data);
@@ -78,6 +81,8 @@ public class CustomerView : MonoBehaviour, IDropHandler
         }
         else
         {
+            GameEvents.OnPlaySFX.Invoke("CustomerSadSFX");
+
             WrongFood();
             //foodUI.ReturnToOrigin();
         }

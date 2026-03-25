@@ -68,17 +68,18 @@ public class DialogRunnerSingleton : MonoBehaviour
 
     public void StartDialog(string title, Sprite spriteImage = null)
     {
-/*        this.spriteImage.sprite = spriteImage;
+        /*        this.spriteImage.sprite = spriteImage;
 
-        if (spriteImage != null)
-        { 
-            this.spriteImage.enabled= true;
-        }
-        else
-        {
-            this.spriteImage.enabled = false;
-        }
-*/
+                if (spriteImage != null)
+                { 
+                    this.spriteImage.enabled= true;
+                }
+                else
+                {
+                    this.spriteImage.enabled = false;
+                }
+        */
+        GameEvents.OnPlaySFX.Invoke("DialogueSFX");
         dialogueRunner.StartDialogue(title);
     }
 
@@ -95,6 +96,7 @@ public class DialogRunnerSingleton : MonoBehaviour
                     this.spriteImage.enabled = false;
                 }
         */
+        GameEvents.OnPlaySFX.Invoke("DialogueSFX");
         dialogueRunner.StartDialogue(title);
     }
     public Sprite GetPortrait(string character, string emotion)

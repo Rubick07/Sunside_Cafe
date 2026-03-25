@@ -449,6 +449,9 @@ Arthur: Selamat datang di Sunside Cafe.
 <<SetLeftSprite Lucas Happy>>
 Lucas: Selamat istirahat paman.
 
+<<RemoveLeft>>
+<<RemoveRight>>
+
 <<jump ReflectionDay1>>
 
 //<<ReflectionStart ReflectionSystem>>

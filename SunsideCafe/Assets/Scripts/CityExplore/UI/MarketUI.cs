@@ -67,6 +67,7 @@ public class MarketUI : MonoBehaviour
 
         buySelectedItemButton.onClick.AddListener(()=> 
         {
+
             currentMarket.BuySelectedItem();
         });
 

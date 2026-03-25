@@ -13,6 +13,7 @@ public class FoodData : ScriptableObject
     public string foodName;
     public foodDataType foodType;
     public int price;
+    public string soundName = "";
 
     [Header("Visual")]
     public Sprite icon;

@@ -82,4 +82,10 @@ public class ZoneUI : MonoBehaviour
         ShowAnimation();
     }
 
+    private void OnDestroy()
+    {
+        Teleport.OnAnyTeleportTrigger -= Teleport_OnAnyTeleportTrigger;
+        TeleportUI.OnAnyTeleportEnd -= TeleportUI_OnAnyTeleportEnd;
+    }
+
 }

@@ -68,7 +68,8 @@ public class MindfulnessManager : MonoBehaviour
 
     public void CalmSuccess()
     {
-        Debug.Log("Berhasil");
+        GameEvents.OnPlaySFX.Invoke("PerfectHitSFX");
+
         success++;
         if(success == 3)
         {
@@ -85,7 +86,8 @@ public class MindfulnessManager : MonoBehaviour
 
     public void CalmFail()
     {
-        Debug.Log("Gagal");
+        GameEvents.OnPlaySFX.Invoke("MissHitSFX");
+
         success = 0;
         timeToSpawn = 3f;
         state = mindfulState.SPAWN;

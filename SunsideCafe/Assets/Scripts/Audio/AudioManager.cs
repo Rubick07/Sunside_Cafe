@@ -51,9 +51,9 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    [Yarn.Unity.YarnCommand("PlaySFX")]
     public void PlaySFX(string name)
     {
-
         Sound s = Array.Find(sfxSound, x => x.soundName == name);
 
         if (s == null)
@@ -78,7 +78,8 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            ambienceSource.PlayOneShot(s.clip);
+            ambienceSource.clip = s.clip;
+            ambienceSource.Play();
         }
 
     }
@@ -121,4 +122,18 @@ public class AudioManager : MonoBehaviour
         SaveSystem.SaveSettings(settings);
     }
 
+    private void OnEnable()
+    {
+        GameEvents.OnPlaySFX += PlaySFX;
+        GameEvents.OnPlayMusic += PlayMusic;
+        GameEvents.OnPlayAmbience += PlayAmbience;
+
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnPlaySFX -= PlaySFX;
+        GameEvents.OnPlayMusic -= PlayMusic;
+        GameEvents.OnPlayAmbience -= PlayAmbience;
+    }
 }

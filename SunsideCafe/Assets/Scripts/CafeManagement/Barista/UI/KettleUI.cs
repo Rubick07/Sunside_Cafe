@@ -49,6 +49,8 @@ public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandl
         if (drag == null) return;
         if (drag.GetFoodData().foodType != FoodData.foodDataType.MINUMAN) return;
 
+        GameEvents.OnPlaySFX("WaterPouringSFX");
+
         kettleController.AddIngredient(drag.GetFoodData());
     }
     public void OnDrag(PointerEventData eventData)

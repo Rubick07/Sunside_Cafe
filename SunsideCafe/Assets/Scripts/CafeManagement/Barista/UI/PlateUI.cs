@@ -32,7 +32,12 @@ public class PlateUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandle
         if (drag == null) return;
         if (drag.GetFoodData().foodType != FoodData.foodDataType.MAKANAN) return;
 
+        GameEvents.OnPlaySFX.Invoke("PlateServingSFX");
+
+
         plate.AddIngredient(drag.GetFoodData());
+
+
 
         foodDoneImage.enabled = true;
         foodDoneImage.sprite = drag.GetFoodData().icon;

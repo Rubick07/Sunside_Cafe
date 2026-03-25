@@ -56,6 +56,8 @@ public class KettleController : MonoBehaviour
 
         foodItem = fd;
 
+        GameEvents.OnPlaySFX("MixCompleteSFX");
+
 
         ingredients.Clear();
         OnIngredientMix?.Invoke(this, EventArgs.Empty);

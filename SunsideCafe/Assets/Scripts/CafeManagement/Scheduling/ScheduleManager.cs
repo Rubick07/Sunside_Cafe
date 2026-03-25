@@ -58,7 +58,9 @@ public class ScheduleManager : MonoBehaviour
             scheduleGrid.grid[target.x, target.y].assignedEmployee = employee;
         }
 
-        assignedEmployee.Add(employee); ;
+        assignedEmployee.Add(employee);
+
+        GameEvents.OnPlaySFX.Invoke("AttachSFX");
 
         OnAssignedEmployeeChanged?.Invoke(this, employee);
     }
@@ -67,6 +69,8 @@ public class ScheduleManager : MonoBehaviour
         scheduleGrid.Remove(emp);
 
         assignedEmployee.Remove(emp);
+
+        GameEvents.OnPlaySFX.Invoke("DetachSFX");
 
         OnAssignedEmployeeChanged?.Invoke(this, emp);
     }

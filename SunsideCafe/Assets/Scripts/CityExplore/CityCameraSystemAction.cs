@@ -18,4 +18,9 @@ public class CityCameraSystemAction : MonoBehaviour
     {
         cityCameraSystem.ChangeCameraConfiner(e.GetZoneConfiner());
     }
+
+    private void OnDestroy()
+    {
+        Teleport.OnAnyTeleportTrigger -= Teleport_OnAnyTeleportTrigger;
+    }
 }

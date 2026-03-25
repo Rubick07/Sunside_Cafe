@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class IngredientDragUI : MonoBehaviour,IDragHandler, IEndDragHandler
+public class IngredientDragUI : MonoBehaviour,IDragHandler, IEndDragHandler,IBeginDragHandler
 {
     [SerializeField] private Image icon;
     [SerializeField] private FoodData data;
@@ -32,6 +32,13 @@ public class IngredientDragUI : MonoBehaviour,IDragHandler, IEndDragHandler
         canvas = GetComponentInParent<Canvas>();
 
         rect.position = startPos;
+    }
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if(data.soundName != "")
+        {
+            GameEvents.OnPlaySFX(data.soundName);
+        }
     }
 
     public void OnDrag(PointerEventData e)

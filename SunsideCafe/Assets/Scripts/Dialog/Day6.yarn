@@ -1,4 +1,4 @@
-﻿title: Day6
+title: Day6
 ---
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
@@ -445,4 +445,6 @@ Lucas: (Semoga hari esok bisa berjalan dengan lancar)
 
 <<BlackscreenFadeIn BlackscreenUI>>
 
+<<NextDay DaySystem>>
+<<jump Day7>>
 ===

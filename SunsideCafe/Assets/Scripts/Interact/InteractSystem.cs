@@ -35,6 +35,8 @@ public class InteractSystem : MonoBehaviour
         Physics.Raycast(pos.position, Vector3.forward, out hit, 10f, interactLayerMask);
         if (hit.collider != null)
         {
+            GameEvents.OnPlaySFX.Invoke("InteractSFX");
+
             //Debug.Log(hit.collider.gameObject);
             IInteractable[] interactable = hit.collider.gameObject.GetComponents<IInteractable>();
 

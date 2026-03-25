@@ -14,6 +14,8 @@ public class TutorialManager : MonoBehaviour
 
     public void TriggerTutorial(TutorialTriggerType tutorialTriggerType)
     {
+        GameEvents.OnPlaySFX.Invoke("PopUpSFX");
+
         OnTutorialTrigger?.Invoke(this, tutorialTriggerType);
     }
 

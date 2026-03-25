@@ -19,6 +19,8 @@ public class Market : MonoBehaviour, IInteractable
     {
         if (EconomyManager.instance.UseMoney(selectedItembase.GetItemPrice()))
         {
+            GameEvents.OnPlaySFX.Invoke("PurchaseSFX");
+
             InventoryManager.instance.AddItem(selectedItembase);
         }
         else

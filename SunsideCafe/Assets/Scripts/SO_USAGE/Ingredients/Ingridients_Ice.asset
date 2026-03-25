@@ -15,5 +15,6 @@ MonoBehaviour:
   foodName: Ice
   foodType: 0
   price: 0
+  soundName: IceSFX
   icon: {fileID: 0}
   prefab: {fileID: 0}
