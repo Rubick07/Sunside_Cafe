@@ -80,7 +80,6 @@ Lucas: (Siapa yang mau kuajak ya…?)
 -> Luna
     <<jump Day7BeforeLunaRoute>>
 
-
 ===
 
 title: Day7BeforeArthurRoute
@@ -128,16 +127,23 @@ Arthur: Ah, santai aja, ini juga cukup enak.
 
 title: Day7ArthurAfterCafe
 ---
+<<SetRightSprite Arthur Idle>>
+<<SetLeftSprite Lucas Idle>>
+
+<<SetRightTalk>>
 Arthur: Kamu tahu…
 
 Arthur: Jujur aku ga menyangka kafe ini bisa hidup seperti ini lagi
 
 Arthur: Udah lama sejak terakhir kali aku lihat kafe ini penuh suara orang-orang
 
+<<SetLeftTalk>>
 Lucas: Ya, tapi akhirnya kita sampai di titik ini.
 
+<<SetRightTalk>>
 Arthur: Semua karena kerja keras kalian, terima kasih banyak.
 
+<<SetLeftTalk>>
 Lucas: Apa maksud paman?
 
 Lucas: Semua ini juga berkat paman yang membantu kami selama ini.
@@ -146,14 +152,18 @@ Lucas: Aku tahu sebenarnya paman juga diam-diam membantu tak hanya kami.
 
 Lucas: Tapi juga penduduk pulau ini.
 
+<<SetRightTalk>>
 Arthur: Apa maksud-
 
+<<SetLeftTalk>>
 Lucas: Benarkan, “joker”?
 
+<<SetRightTalk>>
 Arthur: !
 
 Arthur: Haha, berarti kamu udah tau ya.
 
+<<SetLeftTalk>>
 Lucas: Ya, mulai dari tebak-tebakan paman yang sebenarnya mengarahkan orang untuk pergi belanja di sana.
 
 Lucas: Rekomendasi paman ke tempat-tempat di seluruh pulau.
@@ -162,6 +172,7 @@ Lucas: Sampai di mana aku bisa sembuh dari burnout dan ketemu lagi dengan Luna.
 
 Lucas: Karena itu juga, penduduk di sini mau buat ngebantu paman dan Sunside cafe tetap bertahan.
 
+<<SetRightTalk>>
 Arthur: Kamu terlalu memujiku.
 
 Arthur: Tapi…
@@ -172,34 +183,48 @@ Arthur: …
 
 Arthur: Terima kasih banyak udah ada di sini Lucas
 
+<<SetLeftTalk>>
 Lucas: Terima kasih juga udah menerimaku apa adanya paman.
 
+<<SetRightTalk>>
 Arthur: Kalau gitu, kedepannya kita bakal makin sibuk
 
 Arthur: Siap-siaplah.
 
+<<SetLeftTalk>>
 Lucas: Ya.
 
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
 Fiona: Hey, kalian berdua kita mau makan malam di luar
 
 Fiona: Ayo ke sini.
 
+<<SetLeftTalk>>
 Lucas: Oke.
 
+<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
 Arthur: Kalau gitu, sebelum kita keluar kafe.
 
 Arthur: Pintu apa yang ga bisa terbuka kalaupun ditarik atau didorong 100 orang?
 
+<<SetLeftTalk>>
 Lucas: …
 
 Lucas: Pintu Geser
 
+
+<<SetRightTalk>>
 Arthur: Heh, selamat datang ke dunia ini
 
+<<SetLeftTalk>>
 Lucas: 1 bulan di sini aku belajar 1 atau 2 hal
 
+<<SetRightTalk>>
 Arthur: Ayo kita pergi.
 
+<<SetLeftTalk>>
 Lucas: Ya.
 
 <<RemoveLeft>>
@@ -257,14 +282,23 @@ Fiona: Thank you Lucas.
 
 title:Day7FionaAfterCafe
 ---
+<<SetRightSprite Fiona Idle>>
+<<SetLeftSprite Lucas Idle>>
+
+
+<<SetRightTalk>>
 Fiona: Ga kerasa udah 1 bulan kita ada di pulau ini…
 
+<<SetLeftTalk>>
 Lucas: Ya, semuanya berasa singkat banget
 
+<<SetRightTalk>>
 Fiona: Hah… bentar lagi aku harus balik ke UK
 
+<<SetLeftTalk>>
 Lucas: Terima kasih udah nyempetin waktumu buat ngebantu kita.
 
+<<SetRightTalk>>
 Fiona: Ah santai aja, aku udah bilang kan?
 
 Fiona: Aku ngelakuin ini karena aku pengen.
@@ -274,8 +308,10 @@ Fiona: Ini liburanku yang paling seru sejauh ini!
 
 Fiona: Jadi aku yang harusnya ngomong thank you
 
+<<SetLeftTalk>>
 Lucas: Tapi aku penasaran, kenapa kamu mau bantu sejauh ini?
 
+<<SetRightTalk>>
 Fiona: Hmm…
 
 Fiona: Mungkin karena kelihatannya seru
@@ -284,8 +320,10 @@ Fiona: Atau mungkin aku liat kalian kesusahan dan aku pengen bantu.
 
 Fiona: Karena aku pernah ada di posisi yang sama…
 
+<<SetLeftTalk>>
 Lucas: Kamu pernah burnout?
 
+<<SetRightTalk>>
 Fiona: Ya, kurang lebih.
 
 Fiona: Kena burnout itu hal yang wajar, tapi yang susah itu cara menyembuhkannya
@@ -296,7 +334,10 @@ Fiona: Sampai ujungnya, aku pernah berhenti selama 6 bulan untuk mengurus diriku
 
 Fiona: Tapi, dibantu orang-orang disekitarku, aku bisa berdiri disini sampai sekarang.
 
+<<SetLeftTalk>>
 Lucas: Fiona…
+
+<<SetRightTalk>>
 
 Fiona: Ah tapi pastinya aku ga akan pernah nyesel ngebantu kalian.
 
@@ -304,22 +345,29 @@ Fiona: Aku ga pernah bakal ngerasain perasaan ini di momen ini lagi dihidupku
 
 Fiona: Makanya aku ga mau ada penyesalan karena ga mencoba.
 
+<<SetLeftTalk>>
 Lucas: Haha, bener-bener kamu banget.
 
+<<SetRightTalk>>
 Fiona: Aku anggap itu pujian.
 
+<<SetRightSprite Arthur Idle>>
 Arthur: Oi kalian berdua, kita makan malam keluar hari ini.
 
 Arthur: Traktiranku.
 
+<<SetRightSprite Fiona Idle>>
 Fiona: Asikk!
 
+<<SetLeftTalk>>
 Lucas: Kalau gitu ayo kita keluar.
 
+<<SetRightTalk>>
 Fiona: Ah satu lagi
 
 Fiona: Thanks for the unforgettable summer memories Lucas!
 
+<<SetLeftTalk>>
 Lucas: You’re welcome Fiona.
 
 <<RemoveLeft>>
@@ -370,80 +418,111 @@ Lucas: Santai aja, setidaknya ini yang bisa kulakuin karena kamu udah bantu aku 
 
 title:Day7LunaAfterCafe
 ---
+<<SetRightSprite Luna Idle>>
+<<SetLeftSprite Lucas Idle>>
+
+<<SetRightTalk>>
 Luna: Ga kerasa ya udah 1 bulan kamu di sini
 
+<<SetLeftTalk>>
 Lucas: Ya…
 
 Lucas: Selama 1 bulan ini ada banyak banget kejadian 
 
+<<SetRightTalk>>
 Luna: Setuju, aku juga ga nyangka kalau liburan musim panas ini bakal jadi kaya gini
 
+<<SetLeftTalk>>
 Lucas: Terima kasih udah nemenin aku selama musim panas ini.
 
 Lucas: Maaf kalau misal aku sering ngerepotin.
 
+<<SetRightTalk>>
 Luna: Ah ngga sama sekali, justru aku senang kamu mau bareng aku selama musim panas ini.
 
 Luna: Ga ada satupun momen yang bosan kalau ada dirimu.
 
+<<SetLeftTalk>>
 Lucas: Oh?
 
+<<SetRightTalk>>
 Luna: Eh?
 
 Luna: A-Ah maksudku udah lama kita ga main bareng dan…
 
+<<SetLeftTalk>>
 Lucas: Haha, oke-oke aku paham kok.
 
+<<SetRightTalk>>
 Luna: …
 
 Luna: Hei…
 
 Luna: Kira-kira kedepannya kita bakal gimana ya?
 
+<<SetLeftTalk>>
 Lucas: Maksudmu?
 
+<<SetRightTalk>>
 Luna: Ga kerasa bentar lagi kita bakal lulus dan cari kerja.
 
 Luna: Kira-kira gimana ya rasanya itu…
 
+<<SetLeftTalk>>
 Lucas: Jujur banget aku gatau bakal jadi apa di masa depan
 
 Lucas: Tapi apapun itu aku bakal jalaninnya selangkah demi selangkah
 
 Lucas: Karena aku punya tujuan yang mau aku capai.
 
+<<SetRightTalk>>
 Luna: Hehe, jawabannya kamu banget.
 
+<<SetLeftTalk>>
 Lucas: Maksudnya gimana tuh.
 
+<<SetRightTalk>>
 Luna: Dibandingin kamu, aku…
 
+<<SetLeftTalk>>
 Lucas: Kamu orang yang hebat.
 
+<<SetRightTalk>>
 Luna: Eh?
 
+<<SetLeftTalk>>
 Lucas: Walaupun waktu itu kamu lagi burnout, kamu masih ngebantu aku dan nemenin aku kemanapun aku pergi
 
 Lucas: Buatku, kamu ga tergantikan.
 
+<<SetRightTalk>>
 Luna: …
 
+<<SetLeftTalk>>
 Lucas: M-maksudku terima kasih buat semua yang udah kamu lakuin dari awal sampai sekarang.
 
+<<SetRightTalk>>
 Luna: O-o-oh iya s-sama-sama.
 
 Luna: O-omong-omong, aku udah mutusin buat kerja di ibukota dan mencoba hal yang baru.
 
+<<SetLeftTalk>>
 Lucas: Ooh, keren banget.
+
+<<SetRightSprite Arthur Idle>>
+<<SetRightTalk>>
 
 Arthur: Oi kalian berdua, kita makan malam keluar hari ini.
 
 Arthur: Traktiranku.
 
+<<SetRightSprite Luna Idle>>
 Luna: Wahh
 
+<<SetLeftTalk>>
 Lucas: Ayo keluar?
 
+<<SetRightTalk>>
 Luna: Ya.
 
 Luna: Dan satu lagi…
@@ -454,6 +533,7 @@ Luna: Semoga kita bisa
 
 Luna: Terus bersama.
 
+<<SetLeftTalk>>
 Lucas: (Bersama ya…)
 
 Lucas: Ya…
@@ -472,6 +552,12 @@ title: Day7AllRouteEnding
 Narrator: Mereka pun pergi dan menikmati makan malam bersama lalu kembali ke tempat masing-masing.
 
 //[Cafe Background fade in]
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+<<wait .5>>
+
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+
 Lucas: (Ah, kenyang banget…)
 
 Lucas: (Badanku mulai sakit semua karena hari ini ramai)

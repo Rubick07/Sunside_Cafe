@@ -459,6 +459,8 @@ Lucas: Selamat istirahat paman.
 
 title: ReflectionDay1
 ---
+<<SetBackgroundActive>>
+
 <<once>>
     Lucas: (Aku cape…)
     Lucas: (Hari pertama yang baik)
@@ -492,21 +494,10 @@ Lucas: (Baiklah, mari kita mulai)
     <<NextDay DaySystem>>
     <<BlackscreenFadeIn BlackscreenUI>>
     <<wait  1>>
+    <<SetBackgroundDisable>>
     <<jump Day2Start>>
 -> InCorrect
     Lucas: Hmm, kayaknya bukan ini deh
     <<jump ReflectionDay1>>
-
-===
-
-title: MateriReflectionDay1
----
-Tulisan di buku: Sejauh ini burnout diklasifikasikan jadi 3 tipe, yaitu
-
-Tulisan di buku: Frentic, keterlibatan kerja tinggi dan fokus pada pencapaian sering mengatasi masalah dengan bekerja lebih lama atau melakukan banyak hal sekaligus, yang dapat meningkatkan risiko burnout serta mengabaikan kehidupan pribadi dan kesehatan.
-
-Tulisan di buku: Worn Out, perasaan tidak berdaya dan kurangnya pengakuan atas usaha dapat membuat seseorang merespons kesulitan dengan sikap pasif, sehingga menimbulkan rasa tidak kompeten dan bersalah.
-
-Tulisan di buku: Underchallenged, Pekerjaan yang monoton dan berulang dapat menyebabkan kebosanan, kurangnya perkembangan diri, dan keinginan untuk pindah kerja. Hal ini juga dapat menimbulkan sinisme serta kecenderungan menghindari masalah.
 
 ===

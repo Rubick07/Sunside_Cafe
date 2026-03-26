@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 using UnityEngine.Playables;
 using Yarn.Unity;
 
 public class TimelineDayDreamController : MonoBehaviour
 {
+    public static event EventHandler OnAnyTimelineStart;
+
     [SerializeField] private List<PlayableDirector> timelineList;
 
     private void Start()
@@ -17,8 +20,16 @@ public class TimelineDayDreamController : MonoBehaviour
     public void PlayCutscene(string timelineName)
     {
         PlayableDirector playableDirector = GetDirectorByTimelineName(timelineName);
+
+        playableDirector.played += PlayableDirector_played;
+
         Debug.Log(playableDirector);
         playableDirector.Play();
+    }
+
+    private void PlayableDirector_played(PlayableDirector obj)
+    {
+        OnAnyTimelineStart?.Invoke(this, EventArgs.Empty);
     }
 
     public void RemoveCutscene(string timelineName)

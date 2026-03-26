@@ -9,8 +9,6 @@ title: Day6
 <<DayUIFadeOut DaySystemUI>>
 <<wait 1>>    
 
-
-
 Lucas: (Hari ini cuacanya cerah ya)
 
 Lucas: (Semoga cuacanya bisa tetap cerah sampai nanti malam)
@@ -264,58 +262,84 @@ Lucas: (Langsung ke pantai!)
 
 title:Day6InteractLuna
 ---
+
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Luna Idle>>
+
+<<SetLeftTalk>>
 Lucas: Hai semua
 
+<<SetRightTalk>>
 Luna: Ah Lucas!
+
+<<SetRightSprite Fiona Idle>>
 
 Fiona: Waktu yang pas, bantu aku pasang alat barbekyunya dong
 
+<<SetLeftTalk>>
 Lucas: O-oke
 
 Lucas: Kalian semangat banget…
 
+<<SetRightTalk>>
 Luna: Iya kah?
 
+<<SetLeftTalk>>
 Lucas: (Mukamu jelas kelihatan bersinar sekarang)
 
+<<SetRightTalk>>
 Luna: Ah, aku lupa dagingnya belum dibumbui.
 
+<<SetNoTalk>>
 Narrator: Setengah jam kemudian…
 
+<<SetRightTalk>>
 Fiona: SELESAI!
 
 Fiona: Akhirnya kita bisa mulai memanggang
 
 Fiona: Tolong ambil plastik isi daging itu Lucas.
 
+<<SetLeftTalk>>
 Lucas: Oke, tunggu sebentar.
 
 Lucas: (Sebanyak ini?!)
 
+<<SetRightTalk>>
 Fiona: Waktunya siap-siap asisten kokiku
 
+<<SetRightSprite Luna Idle>>
 Luna: Siap chef!
 
+<<SetLeftTalk>>
 Lucas: (Sejak kapan mereka berdua sedekat itu?)
 
 Lucas: (Tapi baguslah)
 
 Lucas: Ini dagingnya.
 
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
 Fiona: Kalau gitu mari kita masak!
 
+<<SetNoTalk>>
 Narrator: Mereka pun masak dan makan seluruh daging di plastik itu.
 
+<<SetRightTalk>>
 Fiona: Kalau begitu…
 
 Fiona: Untuk masa depan sunside cafe
 
+<<SetNoTalk>>
 Semuanya: Bersulang!
 
 Narrator: Fiona menghabiskan ½ isi kantong itu sendirian…
 
+<<SetRightTalk>>
 Fiona: Ah, kenyangnya…
 
+<<RemoveLeft>>
+<<RemoveRight>>
 //[Fade In Transition]
 <<BlackscreenFadeIn BlackscreenUI>>
 <<wait 1>>
@@ -324,19 +348,28 @@ Fiona: Ah, kenyangnya…
 
 <<BlackscreenFadeOut BlackscreenUI>>
 
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
 Lucas: (Uh, kayaknya aku ga perlu makan lagi besok)
+
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Kamu udah kenyang?
 
+<<SetLeftTalk>>
 Lucas: Ah, aku udah gabisa
 
+<<SetRightTalk>>
 Luna: Haha, baguslah
 
 Luna: Jadi gimana rasanya hampir seminggu disini?
 
+<<SetLeftTalk>>
 Lucas: Jujur aku merasa nostalgia sejak datang ke sini
 
 Lucas: Banyak hal yang
 
+<<SetRightTalk>>
 Luna: Kalau gitu gimana kalau kamu coba rasakan lagi satu per satu secara perlahan
 
 Luna: Ingat cara yang kemarin diajari Fiona?
@@ -350,6 +383,8 @@ Luna: Aku bisa ketemu perasaan yang selama ini hilang dariku.
 
 title: Day6AfterMindfulness
 ---
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
 Lucas: (Ah…)
 
 Lucas: (Inilah perasaan yang selama ini hilang)
@@ -360,28 +395,37 @@ Lucas: (Perasaan yang kuat ini…)
 
 Lucas: Terima kasih Luna. 
 
+<<SetRightSprite Luna Idle>>
+
+<<SetRightTalk>>
 Luna: U-untuk apa?
 
+<<SetLeftTalk>>
 Lucas: Sejak datang ke pulau, kamu selalu nemenin aku kemana-mana
 
 Lucas: Kamu juga mau ngebantu dan ngedengerin semua masalahku
 
+<<SetRightTalk>>
 Luna: A-ah, aku juga kebantu sama kamu selama ini
 
 Luna: Kalo kamu ga ngajak aku, aku juga kayaknya gabakal ngelakuin apa-apa liburan ini.
 
 Luna: Karena kamu juga, aku bisa melangkah buat ngadepin ketakutanku.
 
+<<SetLeftTalk>>
 Lucas: Ketakutanmu?
 
+<<SetRightTalk>>
 Luna: Sebenarnya, udah lama aku ngga gambar lagi.
 
 Luna: Dulu aku sempat kehilangan kesenangan dalam menggambar
 
 Luna: Aku akhirnya berhenti dan memutuskan untuk tidak mengejar itu lagi
 
+<<SetLeftTalk>>
 Lucas: Luna.. aku…
 
+<<SetRightTalk>>
 Luna: Tapi akhir-akhir ini aku baru sadar kembali alasan kenapa aku menggambar
 
 Luna: Dan aku pun menemukan kembali kesenangan yang dulu hilang. 
@@ -390,28 +434,40 @@ Luna: Dan itu semua berkatmu.
 
 Luna: Jadi terima kasih banyak juga.
 
+<<SetLeftTalk>>
 Lucas: Haha, sepertinya kita berdua ada diposisi yang sama ya.
 
+<<SetRightTalk>>
 Luna: Hehe, mungkin itu juga alasannya kenapa kita juga bisa saling mengerti.
+
+<<SetRightSprite Fiona Idle>>
 
 Fiona: Heii, kalian berdua
 
 Fiona: Kayaknya ini udah cukup malam.
 
+<<SetLeftTalk>>
 Lucas: Ah iya, apakah kita mau bubar sekarang?
 
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
 Luna: Ya, besok juga kita harus mulai persiapannya dari pagi.
 
+<<SetLeftTalk>>
 Lucas: Kalau gitu mau kuantar pulang?
 
+<<SetRightTalk>>
 Luna: Ah gapapa.
 
 Luna: Aku bakal pulang bareng Fiona, jadi ga usah khawatir.
 
+<<SetLeftTalk>>
 Lucas: Ah okelah kalau begitu
 
+<<SetNoTalk>>
 Fiona & Luna: Selamat malam!
 
+<<SetLeftTalk>>
 Lucas: Ya, malam.
 
 //[Fiona & Luna fades out]

@@ -234,6 +234,7 @@ Luna: Oke.
 Narrator: Lucas, Luna, dan Fiona mulai membahas terkait rencana mereka untuk menghidupkan kembali Sunside cafe dengan mendengarkan rencana awal Lucas dan Luna.
 
 <<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
 Fiona: Hmm, aku paham sekarang.
 
 Fiona: Simpelnya, ada 2 lubang di rencana kalian yang membuat kalian jadi susah jalaninnya.

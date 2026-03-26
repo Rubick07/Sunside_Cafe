@@ -67,6 +67,12 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    [Yarn.Unity.YarnCommand("StopSFX")]
+    public void StopSFX()
+    {
+        sfxSource.Stop();
+    }
+
     public void PlayAmbience(string name)
     {
 

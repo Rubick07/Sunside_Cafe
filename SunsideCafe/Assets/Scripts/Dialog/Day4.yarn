@@ -8,6 +8,7 @@
 
 Lucas: Waktunya mulai.
 
+<<PlaySFX AudioManager TypingSFX>>
 //[Keyboard SFX]
 
 Lucas: Aku udah mengetik terus menerus…
@@ -32,6 +33,8 @@ Lucas: Tolong aku.
 
 
 <<RemoveCutscene Day3_Part1>>
+<<StopSFX AudioManager>>
+
 
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 
@@ -57,7 +60,9 @@ Lucas: (Sekarang jam 4 sore)
 Lucas: (Hmm, kira-kira gimana situasi di sisi Luna ya?)
 
 //[Phone ringing SFX plays & Lucas picks up phone]
-ring ring ring bunyi hp
+<<PlaySFX AudioManager PhoneRingingSFX>>
+<<StopSFX AudioManager>>
+
 
 <<SetRightSprite Luna Idle>>
 <<SetRightTalk>>
@@ -242,15 +247,192 @@ Penjaga toko: Terima kasih banyak.
 
 title:FionaAppearFirstTime
 ---
-???: ngapain cuy di market
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Luna Idle>>
+
+<<SetLeftTalk>>
+Lucas: Dan seharusnya itu yang terakhir.
+
+<<SetRightTalk>>
+Luna: Baguslah, sekarang kita bisa
+
+<<SetLeftTalk>>
+Lucas: Kalau gitu kamu mau ke mana sekarang?
+
+<<SetRightTalk>>
+Luna: Hmm, karena kita sudah ada di distrik pasar…
+
+Luna: Ah, paman Arthur pernah bilang ada tempat yang enak di sini untuk duduk bersantai.
+
+Luna: Gimana kalau di sana?
+
+<<SetLeftTalk>>
+Lucas: Oh menarik, aku ikut.
+
+<<SetRightTalk>>
+Luna: Oke, kalau gitu langsung aja kita ke sana. 
+
+Luna: Kita sudah sampai!
+
+<<SetLeftTalk>>
+Lucas: Ooo, jadi ini tempatnya.
+
+Lucas: Diluar dugaan tempat ini nyaman.
+
+<<SetRightTalk>>
+Luna: Ya, disini kita bisa santai bentar dan tarik nafas.
+
+<<SetLeftTalk>>
+Lucas: (Santai ya…)
+
+Lucas: (Apa boleh aku bersantai di situasi ini…)
+
+<<SetNoTalk>>
+???: Lucas?
 
 <<PlayCutscene Day3_Part2>>
+<<wait 1>>
 
-saatnya berpisah
+<<SetLeftTalk>>
+Lucas: Fiona?
 
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
+Fiona: OH, kebetulan yang menarik HAHAHA bisa bisanya kita ketemu di sini.
+
+<<SetLeftTalk>>
+Lucas: Ya, apa yang kamu lakukan di sini?
+
+<<SetRightTalk>>
+Fiona: Aku dapat saran dari lokal di sini kalau pasar di sini meriah, jadi aku ke sini.
+
+<<SetLeftTalk>>
+Lucas: .
+
+<<SetRightTalk>>
+Fiona: Omong-omong, apakah dia…
+
+<<SetLeftTalk>>
+Lucas: Ah, ini temanku Luna, dia tinggal di sini.
+
+<<SetRightSprite Luna Idle>>
+<<SetRightTalk>>
+Luna: S-salam kenal, namaku Luna.
+
+<<SetLeftSprite Fiona Idle>>
+<<SetLeftTalk>>
+Fiona: Ooo teman…
+
+Fiona: Aku paham kok
+
+<<SetLeftSprite Lucas Idle>>
+
+Lucas: (Aku 100% yakin dia salah paham)
+
+<<SetLeftSprite Fiona Idle>>
+
+Fiona: Salam kenal juga Luna, aku Fiona!
+
+Fiona: Jadi, ada apa denganmu Lucas?
+
+
+<<SetLeftSprite Lucas Idle>>
+Lucas: ?
+
+<<SetRightSprite Fiona Idle>>
+<<SetRightTalk>>
+Fiona: Kamu tadi bengong melihat langit dan menghela napas terus-terusan.
+
+<<SetLeftTalk>>
+Lucas: Kamu ngeliat itu tadi?
+
+<<SetRightTalk>>
+Fiona: Ya begitulah, dari jauh kelihatannya kamu sedang bingung.
+
+<<SetLeftTalk>>
+Lucas: Sebenarnya…
+
+<<SetNoTalk>>
+Narrator: Lucas menceritakan semua tentang Sunside cafe dan semua upaya serta masalah yang mereka alami ke Fiona.
+
+<<SetRightTalk>>
+Fiona: Hmm… aku lihat.
+
+Fiona: Kalau gitu gimana kalau aku juga ikut bantu kalian?
+
+<<SetLeftTalk>>
+Lucas: Eh?
+
+<<SetLeftSprite Luna Idle>>
+Luna: Eh?
+
+<<SetRightTalk>>
+Fiona: Eh?
+
+<<SetNoTalk>>
+Lucas & Luna: (Kenapa dia juga ikutan bingung…)
+
+<<SetRightTalk>>
+Fiona: Kebetulan aku ga buru-buru, lagipula kedengarannya asik dan seperti di film-film
+
+<<SetLeftSprite Lucas Idle>>
+<<SetLeftTalk>>
+Lucas: Tapi kamu di pulau ini berapa lama?
+
+<<SetRightTalk>>
+Fiona: Hmm, awalnya aku berencana di pulau ini kurang lebih 1 bulan tapi bisa diperpanjang sedikit karena aku bisa kerja dari mana aja.
+
+
+<<SetLeftSprite Luna Idle>>
+<<SetLeftTalk>>
+Luna: Wah, keren
+
+<<SetLeftSprite Lucas Idle>>
+
+Lucas: Baiklah, kalau begitu terima kasih banyak bantuannya Fiona.
+
+<<SetRightTalk>>
+Fiona: Santai aja, by the way karena kalian masih siap-siap hari ini
+
+Fiona: Gausah pikirin dulu dan buru-buru soal rencana ini.
+
+Fiona: Ambil 1 hari ini buat istirahat jadi kalian bisa nenangin pikiran kalian dan ga terlalu stres soal kerjaan.
+
+<<SetLeftTalk>>
+Lucas: Tapi bukannya kita dikejar waktu?
+
+<<SetRightTalk>>
+Fiona: Tenang aja, kalau kita terlalu buru-buru pikiran kita juga belum jernih dan bisa jadi apa yang kita lakuin ga maksimal.
+
+Fiona: Anggap aja sefruit tips dari pengalamanku.
+
+<<SetLeftTalk>>
+Lucas: Oke kalau begitu.
+
+Lucas: Hmm, sepertinya hari mulai gelap aku harus kembali ke kafe dan membawa pulang belanjaan tadi.
+
+<<SetRightTalk>>
+Fiona: Kalau gitu besok kita ketemu lagi?
+
+<<SetLeftTalk>>
+Lucas: Boleh, gimana kalau kita ketemu di kafe?
+
+<<SetLeftSprite Luna Idle>>
+Luna: Aku bisa, besok aku juga masih kosong.
+
+<<SetRightTalk>>
+Fiona: Aku juga bisa!
+
+<<SetLeftTalk>>
+Lucas: Kalau gitu sampai ketemu besok.
+
+<<SetRightTalk>>
+Fiona: Bye!
+
+<<RemoveCutscene Day3_Part2>>
 <<ShowObjectiveUI ObjectiveUI>>
 
-bye bye
+
 
 <<SetPlayerTriggerActive TriggerDialog_Accompany>>
 <<SetPlayerTriggerActive TriggerDialog_ReflectionDay4>>

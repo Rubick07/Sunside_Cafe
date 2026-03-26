@@ -28,7 +28,15 @@ public class ExploreUI : MonoBehaviour
 
         MarketUI.instance.OnShopUIOpen += MarketUI_OnShopUIOpen;
         MarketUI.instance.OnShopUIClose += Market_OnShopUIClose;
-        
+
+        TimelineDayDreamController.OnAnyTimelineStart += TimelineDayDreamController_OnAnyTimelineStart;
+
+        Hide();
+    }
+
+    private void TimelineDayDreamController_OnAnyTimelineStart(object sender, EventArgs e)
+    {
+        Hide();
     }
 
     private void Market_OnShopUIClose(object sender, EventArgs e)

@@ -5,6 +5,8 @@ public class ZoneAmbienceAction : MonoBehaviour
     private void Start()
     {
         Teleport.OnAnyTeleportTrigger += Teleport_OnAnyTeleportTrigger;
+
+
     }
 
     private void Teleport_OnAnyTeleportTrigger(object sender, ZoneData e)

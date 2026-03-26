@@ -79,7 +79,7 @@ public class DialogRunnerSingleton : MonoBehaviour
                     this.spriteImage.enabled = false;
                 }
         */
-        GameEvents.OnPlaySFX.Invoke("DialogueSFX");
+        //GameEvents.OnPlaySFX.Invoke("DialogueSFX");
         dialogueRunner.StartDialogue(title);
     }
 
@@ -96,7 +96,7 @@ public class DialogRunnerSingleton : MonoBehaviour
                     this.spriteImage.enabled = false;
                 }
         */
-        GameEvents.OnPlaySFX.Invoke("DialogueSFX");
+        //GameEvents.OnPlaySFX.Invoke("DialogueSFX");
         dialogueRunner.StartDialogue(title);
     }
     public Sprite GetPortrait(string character, string emotion)
