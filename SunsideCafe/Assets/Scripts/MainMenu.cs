@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,7 @@ public class MainMenu : MonoBehaviour
 
         playButton.onClick.AddListener(()=>
         {
-            Loader.Load(Loader.Scene.Part1_Daydream);
+            BlackscreenUI.instance.FadeIn(()=> Loader.Load(Loader.Scene.City_Area), 1f);
         });
 
         settingButton.onClick.AddListener(() =>

@@ -6,6 +6,8 @@ public class Settings : ScriptableObject
     public float musicVolume;
     public float sfxVolume;
 
+
+
     public void SaveSettings()
     {
         SaveSystem.SaveSettings(this);

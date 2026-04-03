@@ -27,13 +27,12 @@ public class BlackscreenUI : MonoBehaviour
         OnBlackScreenFadeIn?.Invoke(this, EventArgs.Empty);
 
 
-        blackscreenImage.DOFade(0, timeToFadeIn).OnComplete(() =>
+        blackscreenImage.DOFade(1, timeToFadeIn).OnComplete(() =>
         {
             fadeInAction();
 
             FadeOut();
         });
-        blackscreenImage.DOFade(1, 1f);
     }
 
     public void FadeIn(Action fadeInAction, float timeToFadeIn, Action fadeOutAction)
@@ -42,11 +41,11 @@ public class BlackscreenUI : MonoBehaviour
         OnBlackScreenFadeIn?.Invoke(this, EventArgs.Empty);
 
 
-        blackscreenImage.DOFade(0, timeToFadeIn).OnComplete(() =>
+        blackscreenImage.DOFade(1, timeToFadeIn).OnComplete(() =>
         {
             fadeInAction();
 
-            blackscreenImage.DOFade(1, timeToFadeIn).OnComplete(() =>
+            blackscreenImage.DOFade(0, timeToFadeIn).OnComplete(() =>
             {
 
                 FadeOut(fadeOutAction);

@@ -11,7 +11,8 @@ public static class Loader
         LoadingScene,
         CityScene, 
         Part1_Daydream,
-        ExploreScene
+        ExploreScene,
+        City_Area
     }
 
 
