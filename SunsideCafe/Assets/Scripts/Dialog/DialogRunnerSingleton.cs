@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
+using DG.Tweening;
 
 public class DialogRunnerSingleton : MonoBehaviour
 {
@@ -117,6 +118,12 @@ public class DialogRunnerSingleton : MonoBehaviour
         {
             this.leftSpriteImage.sprite = GetPortrait(character, emotion);
             SetLeftSpriteImageActive();
+
+            Color c = leftSpriteImage.color;
+            c.a = 0;
+
+            leftSpriteImage.color = c;
+            leftSpriteImage.DOFade(1, 0.5f);
         }
         else
         {
@@ -130,6 +137,12 @@ public class DialogRunnerSingleton : MonoBehaviour
         {
             this.rightSpriteImage.sprite = GetPortrait(character, emotion);
             SetRightSpriteImageActive();
+
+            Color c = rightSpriteImage.color;
+            c.a = 0;
+
+            rightSpriteImage.color = c;
+            rightSpriteImage.DOFade(1, 0.5f);
         }
         else
         {

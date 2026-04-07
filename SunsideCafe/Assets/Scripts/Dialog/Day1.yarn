@@ -22,9 +22,11 @@ Lucas: Aku…
 Lucas: Tidak bisa menggunakannya lagi.
 
 <<PlayCutscene Part1Sky>>
+<<wait  1>>
 ===
 title: DayDream2
 ---
+
 Lucas: (Mimpi itu lagi…)
 
 Lucas: Aku mempunyai sebuah mimpi.
@@ -42,6 +44,8 @@ title: DayDream3
 <<wait  1.5>>
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
+<<PlayAmbience AudioManager CrowdAmbience>>
+<<PlayMusic AudioManager ExploreDay>>
 
 Lucas: Akhirnya setelah sekian lama aku kembali ke sini…
 
@@ -57,9 +61,12 @@ Lucas: Tapi tetap saja panas di sini
 ???: Itukah kamu Lucas?
 
 <<PlayCutscene Part1ArthurAppear>>
+<<wait  1>>
 ===
 title: DayDream4
 ---
+
+
 <<SetRightSprite Arthur Idle>>
 ???: Sedang apa kamu melamun di sana
 
@@ -279,7 +286,7 @@ title: LunaFirstTimeBarista
 ---
 Lucas: Jadi, kamu mau pesen apa hari ini?
 
-Luna: Hmm, k-kalau gitu aku mau memesan minuman yang dulu selalu kita cari, minuman yang sedikit pahit, dengan rasa manis, dan kalau bisa dingin.
+Luna: Hmm, k-kalau gitu aku mau memesan minuman yang dulu selalu kita cari,[test] minuman yang sedikit pahit, dengan rasa manis, dan kalau bisa dingin [/test].
 
 Lucas: (Kayaknya aku tahu, coba aku cek di menu dulu bagaimana cara membuatnya)
 
@@ -478,16 +485,63 @@ Tulisan di buku: Worn Out, perasaan tidak berdaya dan kurangnya pengakuan atas u
 
 Tulisan di buku: Underchallenged, Pekerjaan yang monoton dan berulang dapat menyebabkan kebosanan, kurangnya perkembangan diri, dan keinginan untuk pindah kerja. Hal ini juga dapat menimbulkan sinisme serta kecenderungan menghindari masalah.
 
-
-
-
 <<once>>
+
 Tulisan di buku: Silahkan mencari dirimu dan semangat -Arthur
 Lucas: (Paman…)
 Lucas: (Baiklah, mari kita mulai)
+<<else>>
+    Lucas: "Kita coba lagi" 
 <<endonce>>
 
--> Correct
+-> Frentic, Underchallenged, Worn-Out
+    <<jump  ReflectionDay1Part2>>
+-> Frentic, Oblivious, Worn-Out
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump ReflectionDay1>>
+-> Frentic, Underchallenged, Overload 
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump ReflectionDay1>>
+
+===
+
+title: ReflectionDay1Part2
+---
+Lucas: (Lalu, subtipe burnout dengan perasaan tidak berdaya dan mengakibatkan sikap pasif, sehingga menimbulkan rasa tidak kompeten adalah…)
+
+-> Underchallenged
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<detour ReflectionTheory>>
+-> Worn-Out
+    <<jump ReflectionDay1Part3>>
+-> Oblivious
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<detour ReflectionTheory>>
+
+<<jump ReflectionDay1Part2>>
+===
+
+title: ReflectionTheory
+---
+Tulisan di buku: Sejauh ini burnout diklasifikasikan jadi 3 tipe, yaitu
+
+Tulisan di buku: Frentic, keterlibatan kerja tinggi dan fokus pada pencapaian sering mengatasi masalah dengan bekerja lebih lama atau melakukan banyak hal sekaligus, yang dapat meningkatkan risiko burnout serta mengabaikan kehidupan pribadi dan kesehatan.
+
+Tulisan di buku: Worn Out, perasaan tidak berdaya dan kurangnya pengakuan atas usaha dapat membuat seseorang merespons kesulitan dengan sikap pasif, sehingga menimbulkan rasa tidak kompeten dan bersalah.
+
+Tulisan di buku: Underchallenged, Pekerjaan yang monoton dan berulang dapat menyebabkan kebosanan, kurangnya perkembangan diri, dan keinginan untuk pindah kerja. Hal ini juga dapat menimbulkan sinisme serta kecenderungan menghindari masalah.
+
+===
+
+title: ReflectionDay1Part3
+---
+Lucas: (Hmm terakhir, subtipe burnout yang punya keterlibatan kerja tinggi dan fokus pada pencapaian yang mengatasi masalah dengan bekerja lebih lama atau melakukan banyak hal sekaligus adalah…)
+
+-> Overload
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<detour ReflectionTheory>>
+-> Underchallenged
+    Lucas: Ya, seharusnya dengan ini aku bisa mulai mencari tahu aku termasuk subtipe yang mana.
     Lucas: Seharusnya ini bener
     Lucas: (Akhirnya selesai!)
     Lucas: (Waktunya tidur.)
@@ -496,8 +550,9 @@ Lucas: (Baiklah, mari kita mulai)
     <<wait  1>>
     <<SetBackgroundDisable>>
     <<jump Day2Start>>
--> InCorrect
+-> Frentic 
     Lucas: Hmm, kayaknya bukan ini deh
-    <<jump ReflectionDay1>>
+    <<detour ReflectionTheory>>
 
+<<jump ReflectionDay1Part3>>
 ===

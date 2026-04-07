@@ -33,6 +33,8 @@ public class AudioManager : MonoBehaviour
         ambienceSource.volume = settings.musicVolume;
         sfxSource.volume = settings.sfxVolume;
     }
+
+    [Yarn.Unity.YarnCommand("PlayMusic")]
     public void PlayMusic(string name)
     {
 
@@ -73,6 +75,7 @@ public class AudioManager : MonoBehaviour
         sfxSource.Stop();
     }
 
+    [Yarn.Unity.YarnCommand("PlayAmbience")]
     public void PlayAmbience(string name)
     {
 

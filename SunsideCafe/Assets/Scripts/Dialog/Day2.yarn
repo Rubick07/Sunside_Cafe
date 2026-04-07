@@ -438,7 +438,7 @@ Lucas: (Whoa rambutnya pirang dan matanya biru, sepertinya dia turis)
 
 Lucas: Tentu, apakah ada rasa tertentu yang ingin kakak cari?
 
-???: Hmm, mungkin aku ingin sesuatu yang segar, trendy, manis tapi juga unik. Karena cuacanya sedang panas aku ingin es yang banyak dan aku juga minta 1 buah roti.
+???: Hmm, mungkin aku ingin [test]sesuatu yang segar, trendy, manis tapi juga unik [/test]. Karena cuacanya sedang panas aku ingin [test]es yang banyak dan aku juga minta 1 buah roti[/test].
 
 ===
 
@@ -496,15 +496,38 @@ Lucas: (Oh iya nyaris lupa, waktunya mengisi jurnal hari ini.)
 
 title: Day2Reflection
 ---
-Lucas: (Apakah aku bisa ngelakuin semua ini)
 
-Lucas: (Aku butuh sembuh secepatnya!)
+Lucas: (Hari ini, aku jadi barista dan manajer kafe buat pertama kalinya…)
 
-Lucas: (Waktunya tidur, kita coba lagi besok)
+Lucas: (Menurut paman Arthur, hal ini bisa membantuku karena ini termasuk…)
 
-<<NextDay DaySystem>>
-<<NextDay DaySystem>>
+-> Melakukan hobi 
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump  Day2Reflection>>
+-> Job Crafting
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day2Reflection>>
+-> Dua-duanya benar 
+    <<jump Day2ReflectionPart2>>
 
-<<jump Day4>>
+===
 
+title: Day2ReflectionPart2
+---
+Lucas: (Hmm, tadi juga pas aku ketemu sama Luna, ternyata menurut dia burnout bisa terjadi gara-gara…)
+
+-> Faktor negatif dari lingkungan kerja dan pribadi 
+    Lucas: (Seharusnya itu aja buat hari ini.)
+    Lucas: (Apakah aku bisa ngelakuin semua ini)
+    Lucas: (Aku butuh sembuh secepatnya!)
+    Lucas: (Waktunya tidur, kita coba lagi besok)
+    <<NextDay DaySystem>>
+    <<NextDay DaySystem>>
+    <<jump Day4>>
+-> Faktor negatif dari lingkungan kerja saja
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day2ReflectionPart2>>
+-> Tiba-tiba aja, tidak ada alasan tertentu 
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day2ReflectionPart2>>
 ===

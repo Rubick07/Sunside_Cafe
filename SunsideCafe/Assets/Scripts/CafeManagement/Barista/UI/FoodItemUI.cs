@@ -55,6 +55,9 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         foodImage.enabled = true;
         foodImage.sprite = foodItem.data.icon;
 
+        GameEvents.OnPlaySFX("WaterPouringSFX");
+
+
         drag.Place();
     }
 
