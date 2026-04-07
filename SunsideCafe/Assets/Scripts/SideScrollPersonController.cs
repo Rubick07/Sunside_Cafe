@@ -100,7 +100,9 @@ public class SideScrollPersonController : MonoBehaviour
 
     }
 
-    private void OnEnable()
+
+
+    private void ActionSetUp()
     {
         InputManager.Instance.GetInputActions().Player.Move.performed += Move_performed;
         InputManager.Instance.GetInputActions().Player.Move.canceled += Move_canceled;
@@ -109,10 +111,8 @@ public class SideScrollPersonController : MonoBehaviour
         InputManager.Instance.GetInputActions().Player.Sprint.canceled += Sprint_canceled;
         InputManager.Instance.GetInputActions().Player.Pause.performed += Pause_performed;
         InputManager.Instance.GetInputActions().Player.Journal.performed += Journal_performed;
-
     }
-
-    private void OnDisable()
+    private void ActionDisable()
     {
         InputManager.Instance.GetInputActions().Player.Move.performed -= Move_performed;
         InputManager.Instance.GetInputActions().Player.Move.canceled -= Move_canceled;
@@ -121,8 +121,17 @@ public class SideScrollPersonController : MonoBehaviour
         InputManager.Instance.GetInputActions().Player.Sprint.canceled -= Sprint_canceled;
         InputManager.Instance.GetInputActions().Player.Pause.performed -= Pause_performed;
         InputManager.Instance.GetInputActions().Player.Journal.performed -= Journal_performed;
+    }
 
+    private void OnEnable()
+    {
+        ActionSetUp();
+    }
+    private void OnDisable()
+    {
+        ActionDisable();
 
     }
+
 
 }

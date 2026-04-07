@@ -489,18 +489,59 @@ Lucas: (Ah, sepertinya mataku udah mulai menutup dikit)
 
 Lucas: (Waktunya refleksi sebelum tidur)
 
-<<jump Day6Reflection>>
+<<jump Day6ReflectionPart1>>
 
 ===
 
-title: Day6Reflection
+title: Day6ReflectionPart1
+---
+Lucas: (Hari ini asik banget! Ga kerasa aku udah mau seminggu di sini.)
+
+Lucas: (Hari ini aku jadi tau juga kalau yang bisa kena burnout adalah…)
+-> Orang muda
+    Lucas: Hmm, kayaknya bukan ini deh  
+    <<jump  Day6ReflectionPart1>>
+-> Orang bekerja
+    Lucas: Hmm, kayaknya bukan ini deh  
+    <<jump Day6ReflectionPart1>>
+-> Semua orang
+    <<jump Day6ReflectionPart2>>
+===
+
+title: Day6ReflectionPart2
+---
+Lucas: (Dan penyembuhan untuk kasus burnout yang sudah parah bisa dilakukan dengan…)
+
+-> Psikoterapi
+    Lucas: Hmm, kayaknya bukan ini deh  
+    <<jump  Day6ReflectionPart2>>
+-> Konsultasi dengan ahli
+    Lucas: Hmm, kayaknya bukan ini deh  
+    <<jump Day6ReflectionPart2>>
+-> Kedua jawaban benar
+    <<jump Day6ReflectionPart3>>
+===
+
+title: Day6ReflectionPart3
+---
+Lucas: (Tapi setelah penyembuhan, apakah seseorang bisa kembali terkena burnout)
+
+-> Ya
+    <<jump Day6ReflectionClear>>
+-> Tidak
+    Lucas: Hmm, kayaknya bukan ini deh  
+    <<jump Day6ReflectionPart3>>
+-> Kemungkinan tidak
+    Lucas: Hmm, kayaknya bukan ini deh  
+    <<jump Day6ReflectionPart3>>
+===
+
+title: Day6ReflectionClear
 ---
 Lucas: (Selesai!)
-
 Lucas: (Semoga hari esok bisa berjalan dengan lancar)
 
 <<BlackscreenFadeIn BlackscreenUI>>
-
 <<NextDay DaySystem>>
 <<jump Day7>>
 ===

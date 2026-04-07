@@ -486,7 +486,7 @@ Lucas: (Akhirnya sampai…)
 Lucas: (Hmm, Fiona bilang untuk jangan khawatir tentang itu dan melakukan hal yang lain)
 
 Lucas: (Mungkin aku akan merapikan kamar dan melakukan sedikit peregangan)
-
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 //[Background fade In]
 
 Lucas: (Fiuh… selesai)
@@ -498,6 +498,57 @@ Lucas: (Baiklah, karena sudah larut)
 Lucas: (Waktunya mengisi jurnal hari ini)
 
 //[Reflection Session Start & End]
+<<jump Day4ReflectionPart1>>
+===
+
+title: Day4ReflectionPart1
+---
+Lucas: (Hari ini hal yang kuingat cuma pergi ke pasar bareng sama Luna dan ketemu Fiona)
+Lucas: (Ah iya, Fiona bilang kalau misal lagi mengalami burnout, kita ga boleh…)
+
+-> Memaksa melanjutkan pekerjaan 
+    <<jump  Day4ReflectionPart2>>
+-> Berolahraga
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day4ReflectionPart1>>
+-> Kedua jawaban benar 
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day4ReflectionPart1>>
+
+===
+
+title: Day4ReflectionPart2
+---
+Lucas: (Bener juga, tadi juga pas sebelum tadi aku ketemu sama Luna, rasanya akhir-akhir ini kondisi fisikku…)
+
+-> Pegal, sulit tidur, dan peningkatan kortisol 
+    <<jump  Day4ReflectionPart3>>
+-> Tidak puas dengan pekerjaanku, sering bengong
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day4ReflectionPart2>>
+-> Semuanya benar 
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day4ReflectionPart2>>
+===
+
+title: Day4ReflectionPart3
+---
+Lucas: (Dan kalau kata Luna, orang yang mengalami burnout biasa akan kelihatan dan merasa… )
+
+-> Mengurangnya kemampuan untuk mengatasi masalah dan kurang percaya diri 
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump  Day4ReflectionPart3>>
+-> Gugup dan mudah kesal
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day4ReflectionPart3>>
+-> Semuanya benar
+
+    <<jump Day4ReflectionClear>>
+===
+
+title: Day4ReflectionClear
+---
+Lucas: (Seharusnya udah semuanya untuk hari ini)
 
 Lucas: (Selesai)
 
@@ -506,7 +557,7 @@ Lucas: (Waktunya tidur)
 Lucas: (Semoga saran dari Fiona berhasil)
 
 //[Screen fade to black]
-
+<<BlackscreenFadeIn BlackscreenUI>>
 <<NextDay DaySystem>>
 <<jump Day5>>
 ===
