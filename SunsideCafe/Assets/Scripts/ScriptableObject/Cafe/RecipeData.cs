@@ -4,6 +4,9 @@ using UnityEngine;
 public class RecipeData : ScriptableObject
 {
     public string recipeName;
+    [TextArea(5, 10)]
+    public string recipeDesc;
+
     public FoodData output;
 
     [Tooltip("Input harus semua terpenuhi")]

@@ -1,12 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class RecipeManagerUI : MonoBehaviour
 {
     public static RecipeManagerUI instance;
 
+    [SerializeField] private Button closeButton;
+
+    [Header("RecipeButton SetUp")]
     [SerializeField] private RecipeUI recipeUIPrefab;
     [SerializeField] private Transform recipeUIContainer;
+    [Header("RecipeDesc SetUp")]
+    [SerializeField] private TextMeshProUGUI recipeNameText;
+    [SerializeField] private TextMeshProUGUI recipeDescText;
+
 
     private List<RecipeUI> recipeUIList = new List<RecipeUI>();
 
@@ -19,8 +28,9 @@ public class RecipeManagerUI : MonoBehaviour
 
     private void Start()
     {
-        CreateRecipeUI();
+        closeButton.onClick.AddListener(Hide);
 
+        CreateRecipeUI();
         Hide();
     }
 
@@ -36,6 +46,21 @@ public class RecipeManagerUI : MonoBehaviour
 
     }
 
+    public void ChangeRecipeUI(RecipeData recipeData)
+    {
+        recipeNameText.text = recipeData.recipeName;
+        recipeDescText.text = recipeData.recipeDesc;
+    }
+
+
     public void Show() => gameObject.SetActive(true);
     public void Hide() => gameObject.SetActive(false);
+
+    public void Toggle()
+    {
+        if (gameObject.activeSelf)
+            Hide();
+        else Show();
+    }
+
 }

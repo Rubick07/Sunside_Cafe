@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RecipeData_KopiPutih
   m_EditorClassIdentifier: 
   recipeName: KopiPutih
+  recipeDesc: Kopi White coffe
   output: {fileID: 11400000, guid: 1326199e3a28f2846811a5217af7b541, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: d6dd8a5f5c9d59540a4def1d7ccb6f5d, type: 2}

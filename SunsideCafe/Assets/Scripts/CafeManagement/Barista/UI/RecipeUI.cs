@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RecipeUI : MonoBehaviour, IBindData<RecipeData>
 {
     [SerializeField] private Image[] ingredientImagetArray;
-    [SerializeField] private Image foodImage;
-
+    //[SerializeField] private Image foodImage;
+    [SerializeField] private TextMeshProUGUI recipeNameText;
+    [SerializeField] private Button selectRecipeButton;
     public void Bind(RecipeData data)
     {
         foreach(Image a in ingredientImagetArray)
@@ -22,7 +24,15 @@ public class RecipeUI : MonoBehaviour, IBindData<RecipeData>
             index++;
         }
 
-        foodImage.sprite = data.output.icon;
+        //foodImage.sprite = data.output.icon;
+
+        recipeNameText.text = data.recipeName;
+
+        selectRecipeButton.onClick.AddListener(()=> 
+        {
+            RecipeManagerUI.instance.ChangeRecipeUI(data);
+        });
+
     }
 
 
