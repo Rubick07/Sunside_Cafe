@@ -774,7 +774,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: -7.42
@@ -2743,7 +2743,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 16
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: -7.42
@@ -3018,9 +3018,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Setelah itu kamu bisa memasukkan tambahan ke minuman yang diberikan ke
-    dalam cangkir atau piring, lalu disajikan kepada para pelanggan ketika minuman
-    sudah dicangkir atau makanan sudah dipiring.
+  m_text: Jika kamu lupa resepnya, tekan tab untuk melihat resep semua makanan dan
+    minuman yang tersedia di kafe. Itu saja arahan dariku, semangat jadi barista.
+    -Arthur
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b531d2bd447796340af9f18484401054, type: 2}
   m_sharedMaterial: {fileID: -3371830469686060010, guid: b531d2bd447796340af9f18484401054, type: 2}
@@ -3054,7 +3054,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: -7.42
@@ -3459,6 +3459,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 64620768949759585, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 269394261537514475, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 419555754952434209, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}

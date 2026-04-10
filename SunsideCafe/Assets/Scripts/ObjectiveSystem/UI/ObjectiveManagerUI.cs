@@ -14,6 +14,9 @@ public class ObjectiveManagerUI : MonoBehaviour
 
     private bool isActive;
 
+    private float f_countdownTimeToShow = 3f;
+    private bool isCountdown;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -37,6 +40,21 @@ public class ObjectiveManagerUI : MonoBehaviour
         objectiveNameText.text = ObjectiveManager.instance.GetCurrentObjectiveTitle();
 
         Hide();
+    }
+
+    private void Update()
+    {
+        if (!isCountdown)
+            return;
+
+        f_countdownTimeToShow -= Time.deltaTime;
+
+        if (f_countdownTimeToShow <= 0f)
+        {
+            ShowAnimation();
+            isCountdown = false;
+        }
+
     }
 
     private void ObjetiveManager_OnObjectiveClear(object sender, ObjectiveRuntime e)
@@ -85,11 +103,19 @@ public class ObjectiveManagerUI : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    public void StartCountdown()
+    {
+        f_countdownTimeToShow = 3f;
+        isCountdown = true;
+    }
+
+
     [Yarn.Unity.YarnCommand("HideObjectiveUI")]
     public void Hide()
     {
         rectTransform.DOMoveX(-295f, 0f);
 
+        isCountdown = false;
         isActive = false;
     }
 

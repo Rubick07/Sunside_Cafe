@@ -4,7 +4,7 @@ public class ZoneData : MonoBehaviour
 {
     [SerializeField] private string zoneName;
     [SerializeField] private string ambienceSound;
-
+    [SerializeField] private string musicName;
     private Collider zoneConfiner;
 
     private void Awake()
@@ -20,6 +20,11 @@ public class ZoneData : MonoBehaviour
     public string GetAmbienceName()
     {
         return ambienceSound;
+    }
+
+    public string GetMusicName()
+    {
+        return musicName;
     }
 
     public Collider GetZoneConfiner()

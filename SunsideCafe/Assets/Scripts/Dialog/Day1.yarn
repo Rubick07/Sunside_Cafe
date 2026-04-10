@@ -45,7 +45,6 @@ title: DayDream3
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
 <<PlayAmbience AudioManager CrowdAmbience>>
-<<PlayMusic AudioManager ExploreDay>>
 
 Lucas: Akhirnya setelah sekian lama aku kembali ke sini…
 
@@ -127,6 +126,7 @@ Lucas: (Memang umur tidak berbohong)
 Arthur: Kalau begitu aku akan menunggumu di kafe, hati-hati di jalan 
 
 <<PlayCutscene Part1ArthurFadeOut>>
+<<PlayMusic AudioManager ExploreDay>>
 ===
 title: DayDream5
 ---

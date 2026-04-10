@@ -59,8 +59,8 @@ public class SideScrollPersonController : MonoBehaviour
     {
         if (state == playerState.NORMAL)
         {
-            ExploreUI.instance.Show();
-            ObjectiveManagerUI.instance.ShowAnimation();
+            ExploreUI.instance.StartCountdown();
+            ObjectiveManagerUI.instance.StartCountdown();
         }
 
     }

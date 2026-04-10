@@ -8,9 +8,16 @@ public class ExploreUI : MonoBehaviour
 
     [SerializeField] private Button journalButton;
 
+    private CanvasGroup canvasGroup;
+
+    private float f_countdownTimeToShow = 3f;
+    private bool isCountdown;
+
     private void Awake()
     {
         instance = this;
+
+        canvasGroup = GetComponent<CanvasGroup>();
 
         journalButton.onClick.AddListener(()=>
         {
@@ -32,6 +39,21 @@ public class ExploreUI : MonoBehaviour
         TimelineDayDreamController.OnAnyTimelineStart += TimelineDayDreamController_OnAnyTimelineStart;
 
         Hide();
+    }
+
+    private void Update()
+    {
+        if (!isCountdown)
+            return;
+
+        f_countdownTimeToShow -= Time.deltaTime;
+
+        if(f_countdownTimeToShow <= 0f)
+        {
+            Show();
+            isCountdown = false;
+        }
+
     }
 
     private void TimelineDayDreamController_OnAnyTimelineStart(object sender, EventArgs e)
@@ -63,13 +85,23 @@ public class ExploreUI : MonoBehaviour
 
     public void Show()
     {
-        gameObject.SetActive(true);
+        canvasGroup.alpha = 1f;
+        //gameObject.SetActive(true);
     }
 
     public void Hide()
     {
-        gameObject.SetActive(false);
+        isCountdown = false;
+        canvasGroup.alpha = 0f;
+        //gameObject.SetActive(false);
     }
+
+    public void StartCountdown()
+    {
+        f_countdownTimeToShow = 3f;
+        isCountdown = true;
+    }
+
 
     private void OnDestroy()
     {
