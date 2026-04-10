@@ -41,7 +41,7 @@ AudioSource:
   m_GameObject: {fileID: 229309493807252544}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3853548396489198171, guid: 7f40e389ca00e5342aecca6a59235fa2, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -170,7 +170,7 @@ AudioSource:
   m_GameObject: {fileID: 834135696356314330}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3458718686013645916, guid: 7f40e389ca00e5342aecca6a59235fa2, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -307,14 +307,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: cc8238681924e4c4699bfe56299e0ab3, type: 2}
   musicSound:
-  - soundName: CafeBGM
+  - soundName: MainMenuBGM
     clip: {fileID: 8300000, guid: 33372bb4ce61c364ea612f1ff50801d8, type: 3}
   - soundName: ExploreDay
     clip: {fileID: 8300000, guid: 6d5df2b7aca8713468deb5878fbdfb99, type: 3}
-  - soundName: MainMenuBGM
-    clip: {fileID: 8300000, guid: ed0efc92b4a4315499e559558eb0873f, type: 3}
   - soundName: ExploreNight
     clip: {fileID: 8300000, guid: 487d07470b60128479f7742ff12fe8b4, type: 3}
+  - soundName: CafeBGM
+    clip: {fileID: 8300000, guid: ed0efc92b4a4315499e559558eb0873f, type: 3}
   sfxSound:
   - soundName: AttachSFX
     clip: {fileID: 8300000, guid: 51c23d771f3678345b7ad8a92860a250, type: 3}
@@ -427,7 +427,7 @@ AudioSource:
   m_GameObject: {fileID: 8223680509366659795}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 151972044377551215, guid: 7f40e389ca00e5342aecca6a59235fa2, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
