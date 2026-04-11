@@ -2000,7 +2000,7 @@ Transform:
   m_GameObject: {fileID: 142216090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.4, y: 3.4299998, z: -5.92}
+  m_LocalPosition: {x: -63.9, y: 3.4299998, z: -5.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d75924d76b05344aa410607bc57db98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoundingVolume: {fileID: 1843488046}
+  BoundingVolume: {fileID: 8086537157399974081}
   SlowingDistance: 0
 --- !u!114 &142216095
 MonoBehaviour:
@@ -4210,7 +4210,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.4, y: 3.4299998, z: -5.92}
+  m_LocalPosition: {x: -3.5699158, y: 3.4299998, z: -5.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7741,9 +7741,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerShowInteract
       objectReference: {fileID: 0}
+    - target: {fileID: 2409925755293704614, guid: ca44f9f8fb16c054bba5bf7292a41093, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5262524453226180109, guid: ca44f9f8fb16c054bba5bf7292a41093, type: 3}
       propertyPath: zoneData
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095377382892957139, guid: ca44f9f8fb16c054bba5bf7292a41093, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6350130957588492860, guid: ca44f9f8fb16c054bba5bf7292a41093, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14882,7 +14890,7 @@ Transform:
   m_GameObject: {fileID: 1391364493}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.4, y: 1.08, z: 0}
+  m_LocalPosition: {x: -63.9, y: 1.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19081,11 +19089,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5231946914140935868, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
   m_PrefabInstance: {fileID: 2131816196}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1843488046 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3259696925539682646, guid: bc815ceaa2660494fa1bb7943e8d569d, type: 3}
-  m_PrefabInstance: {fileID: 2805368566466687600}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1849793136
 GameObject:
   m_ObjectHideFlags: 0
@@ -23025,10 +23028,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zone_Market
       objectReference: {fileID: 0}
-    - target: {fileID: 8194591334622914957, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
-      propertyPath: targetTransform
-      value: 
-      objectReference: {fileID: 882806879}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24046,10 +24045,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2103920816}
     m_Modifications:
-    - target: {fileID: 3591159017226092013, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
-      propertyPath: targetTransform
-      value: 
-      objectReference: {fileID: 490435301}
     - target: {fileID: 5231946914140935868, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -24094,15 +24089,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zone_PortArea
       objectReference: {fileID: 0}
-    - target: {fileID: 8194591334622914957, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
-      propertyPath: targetTransform
-      value: 
-      objectReference: {fileID: 882806879}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
+--- !u!65 &8086537157399974081 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2594293382777986460, guid: 1cd7e52768cb2bb4ca86981671a3dc21, type: 3}
+  m_PrefabInstance: {fileID: 8086537157399974080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
