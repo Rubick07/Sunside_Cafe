@@ -40,7 +40,12 @@ public class AudioManager : MonoBehaviour
 
         Sound s = Array.Find(musicSound, x => x.soundName == name);
 
-        if (s == null)
+        if (musicSource.clip == s.clip)
+            return;
+
+
+
+            if (s == null)
         {
             Debug.Log("Sound Not Found");
         }

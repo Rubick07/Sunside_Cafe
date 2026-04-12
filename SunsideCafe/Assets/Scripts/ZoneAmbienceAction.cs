@@ -23,7 +23,7 @@ public class ZoneAmbienceAction : MonoBehaviour
             }
         }
 
-        if(e.GetAmbienceName() == "Explore")
+        if(e.GetMusicName() == "Explore")
         {
             if (DaySystem.instance.IsDay())
             {
@@ -34,6 +34,11 @@ public class ZoneAmbienceAction : MonoBehaviour
                 GameEvents.OnPlayMusic.Invoke("ExploreNight");
             }
             return;
+        }
+
+        if(e.GetMusicName() == "CafeBGM")
+        {
+            GameEvents.OnPlaySFX.Invoke("DoorOpenSFX");
         }
 
 

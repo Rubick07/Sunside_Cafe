@@ -85,6 +85,9 @@ public class ExploreUI : MonoBehaviour
 
     public void Show()
     {
+        if (MarketUI.instance.IsActive())
+            return;
+
         canvasGroup.alpha = 1f;
         //gameObject.SetActive(true);
     }

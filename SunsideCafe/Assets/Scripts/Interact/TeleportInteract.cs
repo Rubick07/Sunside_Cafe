@@ -14,7 +14,7 @@ public class TeleportInteract : MonoBehaviour, IInteractable
     {
         if (canTeleport)
         {
-            GameEvents.OnPlaySFX.Invoke("DoorOpenSFX");
+            //GameEvents.OnPlaySFX.Invoke("DoorOpenSFX");
 
             GameObject player = Helpers.GetPlayerGameObject();
             teleport.TriggerTeleport(player.transform);

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Recipe_SignatureChocolate
   m_EditorClassIdentifier: 
   recipeName: Signature Chocolate
-  output: {fileID: 11400000, guid: 33535503c4d9be341afa3b4be0ec1158, type: 2}
+  recipeDesc: 
+  output: {fileID: 11400000, guid: 14baec5edf892cc4dbc06b237dfa6b95, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: 66e229120aeb64a4e92d58ce32e71866, type: 2}
   - {fileID: 11400000, guid: 66e229120aeb64a4e92d58ce32e71866, type: 2}

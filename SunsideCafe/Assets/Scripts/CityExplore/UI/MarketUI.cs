@@ -197,4 +197,10 @@ public class MarketUI : MonoBehaviour
     {
         return currentMarket;
     }
+
+    public bool IsActive()
+    {
+        return isOpenMarket;
+    }
+
 }

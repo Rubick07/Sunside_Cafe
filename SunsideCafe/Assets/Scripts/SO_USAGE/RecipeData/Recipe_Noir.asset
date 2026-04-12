@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Recipe_Noir
   m_EditorClassIdentifier: 
   recipeName: Noir
-  output: {fileID: 11400000, guid: 33535503c4d9be341afa3b4be0ec1158, type: 2}
+  recipeDesc: 
+  output: {fileID: 11400000, guid: b8a3e59c027ebce4daead2d184e4340b, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: bda34a4606c6b0347a8479a30d6ce879, type: 2}
   - {fileID: 11400000, guid: bda34a4606c6b0347a8479a30d6ce879, type: 2}

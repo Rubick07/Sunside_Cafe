@@ -308,13 +308,13 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: cc8238681924e4c4699bfe56299e0ab3, type: 2}
   musicSound:
   - soundName: MainMenuBGM
-    clip: {fileID: 8300000, guid: 33372bb4ce61c364ea612f1ff50801d8, type: 3}
+    clip: {fileID: 8300000, guid: ce7507ae38c25784e9212fd6e15713e0, type: 3}
   - soundName: ExploreDay
-    clip: {fileID: 8300000, guid: 6d5df2b7aca8713468deb5878fbdfb99, type: 3}
+    clip: {fileID: 8300000, guid: 20d612ce747b1e74f85a08f3a45b7942, type: 3}
   - soundName: ExploreNight
-    clip: {fileID: 8300000, guid: 487d07470b60128479f7742ff12fe8b4, type: 3}
+    clip: {fileID: 8300000, guid: b272f2e1f7257fb4f986277c6c897d15, type: 3}
   - soundName: CafeBGM
-    clip: {fileID: 8300000, guid: ed0efc92b4a4315499e559558eb0873f, type: 3}
+    clip: {fileID: 8300000, guid: 1e5818340395e534bb1fa8ee59e5cfae, type: 3}
   sfxSound:
   - soundName: AttachSFX
     clip: {fileID: 8300000, guid: 51c23d771f3678345b7ad8a92860a250, type: 3}
@@ -331,9 +331,9 @@ MonoBehaviour:
   - soundName: DetachSFX
     clip: {fileID: 8300000, guid: e20bd968e0ab54d4f9726b7d9d163387, type: 3}
   - soundName: DialogueSFX
-    clip: {fileID: 8300000, guid: 79bd149f24364144397fc8cdbce44a35, type: 3}
+    clip: {fileID: 8300000, guid: a16f9429b2e326f42aa015e11238ce8a, type: 3}
   - soundName: DoorOpenSFX
-    clip: {fileID: 8300000, guid: e21c8a5ee8983ef44a87231c714e6d5a, type: 3}
+    clip: {fileID: 8300000, guid: d043d8570811c0c48b19002fb1edccda, type: 3}
   - soundName: HoverSFX
     clip: {fileID: 8300000, guid: 13f5f4559c0fe0b4b925c33199f8a442, type: 3}
   - soundName: IceSFX
@@ -353,7 +353,7 @@ MonoBehaviour:
   - soundName: PlateServingSFX
     clip: {fileID: 8300000, guid: 4899719757d28084aac6f2276479a385, type: 3}
   - soundName: PopUpSFX
-    clip: {fileID: 8300000, guid: 8cb80a0aba3e2f64fac43368d0ba4673, type: 3}
+    clip: {fileID: 8300000, guid: 4f1fb2bb7006ad949a1090e3ee281f0f, type: 3}
   - soundName: PowderSFX
     clip: {fileID: 8300000, guid: d91d83e2661915d4584144d706ed636b, type: 3}
   - soundName: PurchaseSFX
@@ -374,6 +374,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d457615923d2b74418d38df44c112e50, type: 3}
   - soundName: PerfectHitSFX
     clip: {fileID: 8300000, guid: 7369dc447ec92bb4dad260eba150c13b, type: 3}
+  - soundName: Footsteps_SandSFX
+    clip: {fileID: 8300000, guid: c613cb76a7f878e49abaf978efd09fa1, type: 3}
+  - soundName: Footsteps_AsphaltSFX
+    clip: {fileID: 8300000, guid: 2179feef50d271a47887ac833f00499d, type: 3}
   ambienceSound:
   - soundName: BeachAmbience
     clip: {fileID: 8300000, guid: 2c5368fed6f1e884d976fca9deadac29, type: 3}
