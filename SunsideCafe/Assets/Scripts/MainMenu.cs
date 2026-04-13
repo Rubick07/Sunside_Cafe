@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
         playButton.onClick.AddListener(()=>
         {
             BlackscreenUI.instance.FadeIn(()=> Loader.Load(Loader.Scene.City_Area), 1f);
+            AudioManager.Instance.StopMusic();
         });
 
         settingButton.onClick.AddListener(() =>

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CustomerData_Tanaka
   m_EditorClassIdentifier: 
   customerName: Tanaka
-  portrait: {fileID: 21300000, guid: 6b8c5463d13622141b9c7177eddb0c79, type: 3}
+  portrait: {fileID: 21300000, guid: 3395018e418542241b6a3e61b89f61d2, type: 3}
   patienceTime: 30
   coinReward: 2
   possibleOrders:

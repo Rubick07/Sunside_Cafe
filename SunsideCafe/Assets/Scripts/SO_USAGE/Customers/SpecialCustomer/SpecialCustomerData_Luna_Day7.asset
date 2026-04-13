@@ -17,6 +17,7 @@ MonoBehaviour:
   patienceTime: 30
   coinReward: 0
   possibleOrders:
+  - {fileID: 11400000, guid: d6959a6268a9d0f4ba57154103464805, type: 2}
   - {fileID: 11400000, guid: 85fbab1530bb40943a4af8d1f817ec0e, type: 2}
   startDialogTitle: Day7LunaRoute
   clearDialogTitle: Day7LunaCorrectCafe

@@ -62,11 +62,17 @@ public class ShiftSlotUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IP
         var card = eventData.pointerDrag?.GetComponent<EmployeeCardUI>();
         if (card == null) return;
 
+        card.ResetPos();
+
         if (!ScheduleManager.instance.IsEmployeeCanPlace(card.GetEmployeeData(), shift, day))
         {
             Debug.Log("Tidak bisa Dipasang");
             return;
         }
+
+        card.enabled = false;
+        card.SetBlockerActive();
+
 
         Assign(card.GetEmployeeData());
     }

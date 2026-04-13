@@ -548,6 +548,7 @@ Lucas: (Hmm terakhir, subtipe burnout yang punya keterlibatan kerja tinggi dan f
     Lucas: (Akhirnya selesai!)
     Lucas: (Waktunya tidur.)
     <<NextDay DaySystem>>
+    <<CafeBackgroundFadeOut CafeBackgroundUI>>
     <<BlackscreenFadeIn BlackscreenUI>>
     <<wait  1>>
     <<SetBackgroundDisable>>

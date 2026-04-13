@@ -148,6 +148,9 @@ public class SideScrollPersonController : MonoBehaviour
 
     public float GetPlayerDir() => horizontal;
 
+    [Yarn.Unity.YarnCommand("DisablePlayer")]
+    public void Hide() => gameObject.SetActive(false);
+
     private void OnEnable()
     {
         ActionSetUp();

@@ -45,6 +45,8 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         blocker.enabled = false;
     }
 
+    public void SetBlockerActive() => blocker.enabled = true;
+
     public void SetBlockerDisable()
     {
         blocker.enabled = false;
@@ -102,7 +104,21 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        ResetPos();
 
+
+        /*
+                if (ShiftSlotUI.currentHoverShiftSlotUI != null)
+                {
+                    this.enabled = false;
+                    blocker.enabled = true;
+                }
+
+        */
+    }
+
+    public void ResetPos()
+    {
         currentEmployeeData = null;
         currentEmployeeCard = null;
 
@@ -110,20 +126,13 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
 
         transform.SetParent(startParent);
+
         rectTransform.anchoredPosition = startPosition;
         canvasGroup.blocksRaycasts = true;
 
         canvasGroup.alpha = 1f;
 
         transform.localScale = Vector3.one;
-
-        if (ShiftSlotUI.currentHoverShiftSlotUI != null)
-        {
-            this.enabled = false;
-            blocker.enabled = true;
-        }
-
-
     }
 
     public void OnPointerEnter(PointerEventData eventData)

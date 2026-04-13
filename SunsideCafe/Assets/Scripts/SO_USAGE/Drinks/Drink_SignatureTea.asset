@@ -15,5 +15,6 @@ MonoBehaviour:
   foodName: Signature Tea
   foodType: 1
   price: 0
-  icon: {fileID: 0}
+  soundName: 
+  icon: {fileID: 21300000, guid: bb7954efcded77a4a990c61bf176ad4c, type: 3}
   prefab: {fileID: 0}

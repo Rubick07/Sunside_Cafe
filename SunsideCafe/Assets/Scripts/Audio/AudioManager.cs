@@ -57,6 +57,10 @@ public class AudioManager : MonoBehaviour
 
 
     }
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
 
     [Yarn.Unity.YarnCommand("PlaySFX")]
     public void PlaySFX(string name)

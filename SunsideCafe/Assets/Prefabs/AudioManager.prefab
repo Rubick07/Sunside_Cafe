@@ -345,7 +345,7 @@ MonoBehaviour:
   - soundName: MissHitSFX
     clip: {fileID: 8300000, guid: a4720283d9c96ac4f876d7af49bbabcf, type: 3}
   - soundName: MixCompleteSFX
-    clip: {fileID: 8300000, guid: a06d0efa967530c4f8181d44e1eea763, type: 3}
+    clip: {fileID: 8300000, guid: 51c969b4399387c408687e794793b94e, type: 3}
   - soundName: PageFlipSFX
     clip: {fileID: 8300000, guid: 311a950e260433847b3f9bf23802480c, type: 3}
   - soundName: PhoneRingingSFX

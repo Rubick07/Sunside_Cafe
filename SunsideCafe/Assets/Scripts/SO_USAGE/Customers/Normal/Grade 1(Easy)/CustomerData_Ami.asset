@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CustomerData_Ami
   m_EditorClassIdentifier: 
   customerName: Ami
-  portrait: {fileID: 21300000, guid: 6b8c5463d13622141b9c7177eddb0c79, type: 3}
+  portrait: {fileID: 21300000, guid: ad33f62786bc7364c90d2dbb7120ac13, type: 3}
   patienceTime: 30
   coinReward: 2
   possibleOrders:

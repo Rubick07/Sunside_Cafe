@@ -17,7 +17,8 @@ MonoBehaviour:
   patienceTime: 30
   coinReward: 0
   possibleOrders:
-  - {fileID: 11400000, guid: 85fbab1530bb40943a4af8d1f817ec0e, type: 2}
+  - {fileID: 11400000, guid: 8368f265c2274804ea3c334dbd07df05, type: 2}
+  - {fileID: 11400000, guid: fc26bf6d22068804790229833e1a2ab2, type: 2}
   startDialogTitle: Day7FionaRoute
   clearDialogTitle: Day7FionaCorrectCafe
   wrongFoodDialogTitle: Day7FionaIncorrectCafe
