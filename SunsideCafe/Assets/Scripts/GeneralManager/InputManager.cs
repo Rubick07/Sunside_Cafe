@@ -16,7 +16,6 @@ public class InputManager : MonoBehaviour
 
         playerInputActions = new InputSystem_Actions();
         playerInputActions.Player.Enable();
-
     }
 
     public Vector2 GetMouseScreenPosition()

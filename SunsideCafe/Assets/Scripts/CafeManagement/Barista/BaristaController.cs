@@ -17,4 +17,9 @@ public class BaristaController : MonoBehaviour
     {
         RecipeManagerUI.instance.Toggle();
     }
+
+    private void OnDestroy()
+    {
+        InputManager.Instance.GetInputActions().Player.OpenMenu.performed -= OpenMenu_performed;
+    }
 }

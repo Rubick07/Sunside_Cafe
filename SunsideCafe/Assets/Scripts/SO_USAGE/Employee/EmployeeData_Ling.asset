@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EmployeeData_Ling
   m_EditorClassIdentifier: 
   employeeName: Ling
-  portrait: {fileID: 21300000, guid: 64daaff7e1adcf74ab8a05981e004435, type: 3}
+  portrait: {fileID: 21300000, guid: 8360e0bce136dba4880aeef670c19a99, type: 3}
   scheduleShape: {fileID: 11400000, guid: 731011bd6878aae44b43e60decdfb22a, type: 2}
   traits:
   - {fileID: 11400000, guid: b5dfe716f57992744b87ccdbc9cb0124, type: 2}

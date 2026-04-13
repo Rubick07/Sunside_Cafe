@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class SideScrollPersonController : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class SideScrollPersonController : MonoBehaviour
         TUTORIAL
     }
 
+    public event EventHandler OnPlayerMove;
+    public event EventHandler OnPlayerIdle;
+
     [SerializeField] private float currentSpeed = 6f;
     [SerializeField] private float speed = 6f;
     [SerializeField] private float runningSpeed = 10f;
@@ -19,7 +23,7 @@ public class SideScrollPersonController : MonoBehaviour
     private playerState state;
 
     private CharacterController characterController;
-
+    float horizontal;
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -27,19 +31,21 @@ public class SideScrollPersonController : MonoBehaviour
 
     private void Update()
     {
-        float horizontal = InputManager.Instance.GetMoveInputValue().x;
+        horizontal = InputManager.Instance.GetMoveInputValue().x;
 
         Vector3 direction = new Vector3(horizontal, 0f, 0f);
 
         if (direction.magnitude >= 0.1f)
         {
+
+/*
             if (horizontal > 0)        // ke kanan
                 transform.rotation = Quaternion.Euler(0f, 90f, 0f);
 
             else if (horizontal < 0)   // ke kiri
                 transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-
-
+*/
+            OnPlayerMove?.Invoke(this, EventArgs.Empty);
             characterController.Move(direction * currentSpeed * Time.deltaTime);
         }
 
@@ -63,6 +69,8 @@ public class SideScrollPersonController : MonoBehaviour
             ObjectiveManagerUI.instance.StartCountdown();
         }
 
+        horizontal = 0;
+        OnPlayerIdle?.Invoke(this, EventArgs.Empty);
     }
 
     private void Move_performed(InputAction.CallbackContext obj)
@@ -72,7 +80,18 @@ public class SideScrollPersonController : MonoBehaviour
             ExploreUI.instance.Hide();
             ObjectiveManagerUI.instance.Hide();
         }
-            
+
+        var control = obj.control;
+
+        if (control.name == "a")
+        {
+            horizontal = -1;
+        }
+        else if (control.name == "d")
+        {
+            horizontal = 1;
+        }
+        OnPlayerMove?.Invoke(this, EventArgs.Empty);
     }
 
     private void Interact_performed(InputAction.CallbackContext obj)
@@ -114,6 +133,8 @@ public class SideScrollPersonController : MonoBehaviour
     }
     private void ActionDisable()
     {
+        horizontal = 0;
+
         InputManager.Instance.GetInputActions().Player.Move.performed -= Move_performed;
         InputManager.Instance.GetInputActions().Player.Move.canceled -= Move_canceled;
         InputManager.Instance.GetInputActions().Player.Interact.performed -= Interact_performed;
@@ -121,7 +142,11 @@ public class SideScrollPersonController : MonoBehaviour
         InputManager.Instance.GetInputActions().Player.Sprint.canceled -= Sprint_canceled;
         InputManager.Instance.GetInputActions().Player.Pause.performed -= Pause_performed;
         InputManager.Instance.GetInputActions().Player.Journal.performed -= Journal_performed;
+
+        OnPlayerIdle?.Invoke(this, EventArgs.Empty);
     }
+
+    public float GetPlayerDir() => horizontal;
 
     private void OnEnable()
     {
@@ -130,7 +155,6 @@ public class SideScrollPersonController : MonoBehaviour
     private void OnDisable()
     {
         ActionDisable();
-
     }
 
 

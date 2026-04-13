@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EmployeeData_Mona
   m_EditorClassIdentifier: 
   employeeName: Mona
-  portrait: {fileID: 21300000, guid: 335cb5ddc92f69740a71fb7a885d15a2, type: 3}
+  portrait: {fileID: 21300000, guid: dac6adcef986aa046a13d0b45db4d686, type: 3}
   scheduleShape: {fileID: 11400000, guid: 438804b11da614d4d90810933e927c1f, type: 2}
   traits: []

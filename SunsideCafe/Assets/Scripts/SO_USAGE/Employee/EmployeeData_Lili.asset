@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EmployeeData_Lili
   m_EditorClassIdentifier: 
   employeeName: Lili
-  portrait: {fileID: 21300000, guid: 6b8c5463d13622141b9c7177eddb0c79, type: 3}
+  portrait: {fileID: 21300000, guid: 999b0af1ffc38c443abcbeabc796b56b, type: 3}
   scheduleShape: {fileID: 11400000, guid: a6588281820e6d74089a8818aff0c06d, type: 2}
   traits:
   - {fileID: 11400000, guid: 4c68c5f328b27f04eb12045319d9532d, type: 2}

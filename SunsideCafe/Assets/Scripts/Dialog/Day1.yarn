@@ -181,12 +181,14 @@ title: CafeFirstTime
 ---
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 
 
 Lucas: Permisi…
 
 <<SetRightSprite Arthur Idle>>
 <<SetRightTalk>>
+
 
 Arthur: Anggap saja rumah sendiri dan santai aja kalau mengobrol denganku
 
