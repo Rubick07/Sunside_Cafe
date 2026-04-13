@@ -12,7 +12,8 @@ public static class Loader
         CityScene, 
         Part1_Daydream,
         ExploreScene,
-        City_Area
+        City_Area,
+        CreditScene
     }
 
 

@@ -350,7 +350,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerDataList:
+  - {fileID: 11400000, guid: 412cdc9e0389e014bab938917bd118bc, type: 2}
   - {fileID: 11400000, guid: f7a3ff2006f466644aad95bcfecae99a, type: 2}
+  - {fileID: 11400000, guid: c14abae88478d944981f87f1a952e03e, type: 2}
+  - {fileID: 11400000, guid: 713e04c42a244da4985f9dfd741bc6ef, type: 2}
+  - {fileID: 11400000, guid: 9999320343a82be488473057a0260a75, type: 2}
+  - {fileID: 11400000, guid: ea281bf98034dbd44b7bf2e3e5eda1e8, type: 2}
+  - {fileID: 11400000, guid: 9881f6a29f79b3c4185cca22f438f8d3, type: 2}
+  - {fileID: 11400000, guid: 7177096000e8e174fa4608582a92ae17, type: 2}
+  - {fileID: 11400000, guid: a1eed8057081b9f42b0048c40c4e4252, type: 2}
+  - {fileID: 11400000, guid: e019dade62f717341976c92dd7eb6602, type: 2}
+  - {fileID: 11400000, guid: c9cf41cb3248a2a40a92a4b63771af53, type: 2}
   - {fileID: 11400000, guid: 74f8862874139944f8c24b1a05a0fb4b, type: 2}
   SpecialCustomerDataList:
   - {fileID: 11400000, guid: 77b0b36a6fedb234fab12d67f0e56e34, type: 2}

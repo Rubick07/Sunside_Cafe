@@ -51,12 +51,14 @@ Lucas: Terima kasih banyak.
 <<wait 1>>    
 
 <<BlackscreenFadeOut BlackscreenUI>>
+<<CafeBackgroundFadeOut CafeBackgroundUI>>
 
 <<PlayCutscene Day7Timeline>>
 
 ===
 title:Day7BeforeCafe
 ---
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 Lucas: (Akhirnya selesai…)
 
 Lucas: (Seharusnya semua berjalan dengan lancar)
@@ -584,5 +586,5 @@ Lucas: Menjadi bagian dari…
 
 Lucas: Sunside Cafe
 
-FIN
+<<GoToCreditScene GameManager>>
 ===

@@ -480,13 +480,13 @@ Lucas: Ya, hati-hati juga.
 
 title: Day4Reflection
 ---
-
+<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 Lucas: (Akhirnya sampai…)
 
 Lucas: (Hmm, Fiona bilang untuk jangan khawatir tentang itu dan melakukan hal yang lain)
 
 Lucas: (Mungkin aku akan merapikan kamar dan melakukan sedikit peregangan)
-<<CafeBackgroundFadeIn CafeBackgroundUI .5>>
+
 //[Background fade In]
 
 Lucas: (Fiuh… selesai)

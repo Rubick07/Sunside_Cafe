@@ -1,16 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BubbleOrderUI : MonoBehaviour, IBindData<FoodData>
 {
-    [SerializeField] private Image foodImage;
+    //[SerializeField] private Image foodImage;
+    [SerializeField] private TextMeshProUGUI foodText;
     private FoodData foodData;
 
     CustomerView customerView;
     public void Bind(FoodData data)
     {
         this.foodData = data;
-        foodImage.sprite = data.icon;
+        //foodImage.sprite = data.icon;
+
+        foodText.text = data.foodName;
 
         customerView = GetComponentInParent<CustomerView>();
         customerView.OnCustomerGetCorrectFood += CustomerView_OnCustomerGetCorrectFood;

@@ -77,4 +77,11 @@ public class GameManager : MonoBehaviour
         OnGameSceneUnloadChanged?.Invoke(this, EventArgs.Empty);
     }
 
+    [YarnCommand("GoToCreditScene")]
+
+    public void GoToCreditScene()
+    {
+        Loader.Load(Loader.Scene.CreditScene);
+    }
+
 }
