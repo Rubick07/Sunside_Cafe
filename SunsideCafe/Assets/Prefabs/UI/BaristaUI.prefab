@@ -979,8 +979,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 9e93fd169bd0913459b00eef3cd08414, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1198,8 +1198,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 9e93fd169bd0913459b00eef3cd08414, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 9e93fd169bd0913459b00eef3cd08414, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2299,8 +2299,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 9e93fd169bd0913459b00eef3cd08414, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3289,6 +3289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientImage: {fileID: 5723489966450748966}
   kettleController: {fileID: 0}
+  emptySprite: {fileID: 21300000, guid: 9e93fd169bd0913459b00eef3cd08414, type: 3}
 --- !u!1 &5985634852766884119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,6 +3835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientImage: {fileID: 6914983979826370731}
   kettleController: {fileID: 0}
+  emptySprite: {fileID: 21300000, guid: 9e93fd169bd0913459b00eef3cd08414, type: 3}
 --- !u!1 &8068888031369035927
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,7 +4375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 9e93fd169bd0913459b00eef3cd08414, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4920,6 +4922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientImage: {fileID: 8243939431357632441}
   kettleController: {fileID: 0}
+  emptySprite: {fileID: 21300000, guid: 9e93fd169bd0913459b00eef3cd08414, type: 3}
 --- !u!1 &9150100573842319523
 GameObject:
   m_ObjectHideFlags: 0

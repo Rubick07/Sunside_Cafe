@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Recipe_SunnyDay
   m_EditorClassIdentifier: 
   recipeName: Sunny Day
-  recipeDesc: 
+  recipeDesc: Teman terbaik di hari yang cerah. Dingin, menyegarkan, dan penuh nuansa
+    musim panas di setiap tegukan.
   output: {fileID: 11400000, guid: 8368f265c2274804ea3c334dbd07df05, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: bad4ba2bd9e358542af864b085ab8d25, type: 2}

@@ -11,5 +11,7 @@ public class CreditMenu : MonoBehaviour
         {
             Loader.Load(Loader.Scene.MainMenuScene);
         });
+
+        GameEvents.OnPlayMusic("ExploreNight");
     }
 }

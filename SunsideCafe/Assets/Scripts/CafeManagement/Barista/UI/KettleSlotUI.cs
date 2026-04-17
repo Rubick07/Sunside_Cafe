@@ -5,6 +5,7 @@ public class KettleSlotUI : MonoBehaviour
 {
     [SerializeField] private Image ingredientImage;
     [SerializeField] private KettleController kettleController;
+    [SerializeField] private Sprite emptySprite;
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class KettleSlotUI : MonoBehaviour
 
         if(e == null)
         {
-            ingredientImage.sprite = null;
+            ingredientImage.sprite = emptySprite;
             return;
         }
 

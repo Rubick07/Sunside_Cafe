@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d96d65b7423361a479641841c58afd4e, type: 3}
-  m_Name: NPCData_MrNori
+  m_Name: NPCData_Suzuki
   m_EditorClassIdentifier: 
-  npcName: MrNori
+  npcName: Suzuki
   type: 0
   emotions:
   - emotionName: biasa
-    sprite: {fileID: 21300000, guid: 64daaff7e1adcf74ab8a05981e004435, type: 3}
+    sprite: {fileID: 21300000, guid: 999b0af1ffc38c443abcbeabc796b56b, type: 3}

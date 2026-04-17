@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Recipe_BittersweetYouth
   m_EditorClassIdentifier: 
   recipeName: Bittersweet Youth
-  recipeDesc: 
+  recipeDesc: Minuman kopi favorit anak muda. Perpaduan pahit dan manis yang mencerminkan
+    perjalanan menuju kedewasaan.
   output: {fileID: 11400000, guid: d6959a6268a9d0f4ba57154103464805, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: bda34a4606c6b0347a8479a30d6ce879, type: 2}

@@ -43,7 +43,7 @@ public class RecipeManagerUI : MonoBehaviour
             recipeUIList.Add(recipeUI);
         }
 
-
+        ChangeRecipeUI(RecipeManager.instance.GetRecipeDataList()[0]);
     }
 
     public void ChangeRecipeUI(RecipeData recipeData)

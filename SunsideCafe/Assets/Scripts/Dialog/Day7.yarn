@@ -1,6 +1,10 @@
 ﻿title: Day7
 ---
 <<DisablePlayer 2D_Player>>
+<<StopMusic AudioManager>>
+<<CafeBackgroundFadeOut CafeBackgroundUI>>
+
+
 //[Mysterious figure fades in]
 ???: Jadi untuk apa kamu ada di sini
 
@@ -130,8 +134,9 @@ Arthur: Ah, santai aja, ini juga cukup enak.
 
 title: Day7ArthurAfterCafe
 ---
-<<SetRightSprite Arthur Idle>>
+
 <<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Arthur Idle>>
 
 <<SetRightTalk>>
 Arthur: Kamu tahu…
@@ -285,9 +290,9 @@ Fiona: Thank you Lucas.
 
 title:Day7FionaAfterCafe
 ---
-<<SetRightSprite Fiona Idle>>
-<<SetLeftSprite Lucas Idle>>
 
+<<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Fiona Idle>>
 
 <<SetRightTalk>>
 Fiona: Ga kerasa udah 1 bulan kita ada di pulau ini…
@@ -421,8 +426,9 @@ Lucas: Santai aja, setidaknya ini yang bisa kulakuin karena kamu udah bantu aku 
 
 title:Day7LunaAfterCafe
 ---
-<<SetRightSprite Luna Idle>>
+
 <<SetLeftSprite Lucas Idle>>
+<<SetRightSprite Luna Idle>>
 
 <<SetRightTalk>>
 Luna: Ga kerasa ya udah 1 bulan kamu di sini

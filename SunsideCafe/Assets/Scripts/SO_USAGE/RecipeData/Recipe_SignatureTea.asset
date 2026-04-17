@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Recipe_SignatureTea
   m_EditorClassIdentifier: 
   recipeName: Signature Tea
-  recipeDesc: 
+  recipeDesc: "Teh klasik yang bisa ditemukan di seluruh dunia. Sederhana, hangat,
+    dan selalu jadi pilihan yang tepat\u2014dengan harga yang ramah di kantong."
   output: {fileID: 11400000, guid: 9612f8dad53f8a74a9e4b0e1a51d04ac, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: bad4ba2bd9e358542af864b085ab8d25, type: 2}

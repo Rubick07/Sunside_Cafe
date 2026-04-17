@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Recipe_ChocoTea
   m_EditorClassIdentifier: 
   recipeName: Choco Tea
-  recipeDesc: 
+  recipeDesc: Perpaduan sempurna antara teh dan cokelat. Rasa tenang dan enerjetik
+    berpadu dalam satu minuman yang seimbang.
   output: {fileID: 11400000, guid: 1751e62ff174d564cb01c0adb291cc62, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: bad4ba2bd9e358542af864b085ab8d25, type: 2}

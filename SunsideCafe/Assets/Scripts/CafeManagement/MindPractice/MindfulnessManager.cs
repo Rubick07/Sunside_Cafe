@@ -29,6 +29,11 @@ public class MindfulnessManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        AudioManager.Instance.StopMusic();
+    }
+
     private void Update()
     {
         switch (state)

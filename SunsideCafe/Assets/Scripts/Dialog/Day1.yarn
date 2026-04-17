@@ -288,7 +288,7 @@ title: LunaFirstTimeBarista
 ---
 Lucas: Jadi, kamu mau pesen apa hari ini?
 
-Luna: Hmm, k-kalau gitu aku mau memesan minuman yang dulu selalu kita cari,[test] minuman yang sedikit pahit, dengan rasa manis, dan kalau bisa dingin [/test].
+Luna: Hmm, k-kalau gitu aku mau memesan minuman yang dulu selalu kita cari,[test] minuman yang sedikit pahit, dengan rasa manis, dan kalau bisa dingin [/test]. Lalu juga sepotong roti
 
 Lucas: (Kayaknya aku tahu, coba aku cek di menu dulu bagaimana cara membuatnya)
 
@@ -297,6 +297,8 @@ Lucas: (Kayaknya aku tahu, coba aku cek di menu dulu bagaimana cara membuatnya)
 title: LunaFirstTimeBaristaFail
 ---
 Luna: Kurang tepat, coba kamu tebak lagi
+Luna: aku mau memesan minuman yang dulu selalu kita cari,[test] minuman yang sedikit pahit, dengan rasa manis, dan kalau bisa dingin [/test]. Lalu juga sepotong roti
+
 ===
 
 title: LunaFirstTimeBaristaCorrect

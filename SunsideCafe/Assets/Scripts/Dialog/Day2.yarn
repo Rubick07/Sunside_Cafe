@@ -10,9 +10,10 @@ Arthur: Katanya Mau pergi ngapain kesini
 
 title: Day2Start
 ---
+<<StopMusic AudioManager>>
 Teman Lucas: Kemarin aku memenangkan penghargaan terbaik dari kompetisi programming internasional
 
-Teman Lucas2:Kemarin aku diterima di perusahaan ternama dan akan mulai magang di sana 2 bulan lagi
+Teman Lucas 2:Kemarin aku diterima di perusahaan ternama dan akan mulai magang di sana 2 bulan lagi
 
 Lucas: Tidak cukup…
 
@@ -35,6 +36,7 @@ Kedua teman Lucas: Apa yang sudah kamu capai?
 
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
+<<PlayMusic AudioManager CafeBGM>>
 Lucas: (Ugh, akhir-akhir ini mimpiku ga ada yang bener)
 
 Lucas: (Sekarang masih jam 7 pagi… tapi aku harus mulai siap-siap membantu paman Arthur)
@@ -438,7 +440,7 @@ Lucas: (Whoa rambutnya pirang dan matanya biru, sepertinya dia turis)
 
 Lucas: Tentu, apakah ada rasa tertentu yang ingin kakak cari?
 
-???: Hmm, mungkin aku ingin [test]sesuatu yang segar, trendy, manis tapi juga unik [/test]. Karena cuacanya sedang panas aku ingin [test]es yang banyak dan aku juga minta 1 buah roti[/test].
+???: Hmm, mungkin aku ingin [test]sesuatu yang segar, trendy, manis tapi juga unik [/test]. Karena cuacanya sedang panas aku ingin [test]es yang banyak dan aku juga minta 1 buah Croissant[/test].
 
 ===
 
@@ -469,6 +471,7 @@ Lucas: (Tentunya aku tidak keberatan sama sekali)
 title: Day2FionaIncorrectCafe
 ---
 Fiona: Ada yang lain kah? Yang ini belum terlalu cocok untukku
+aku ingin [test]sesuatu yang segar, trendy, manis tapi juga unik [/test]. Karena cuacanya sedang panas aku ingin [test]es yang banyak dan aku juga minta 1 buah Croissant[/test].
 ===
 
 title: Day2BeforeReflection

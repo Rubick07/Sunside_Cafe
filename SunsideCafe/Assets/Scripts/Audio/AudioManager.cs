@@ -57,6 +57,7 @@ public class AudioManager : MonoBehaviour
 
 
     }
+    [Yarn.Unity.YarnCommand("StopMusic")]
     public void StopMusic()
     {
         musicSource.Stop();

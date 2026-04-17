@@ -1,5 +1,6 @@
 ﻿title: Day4
 ---
+<<StopMusic AudioManager>>
 
 <<PlayCutscene Day3_Part1>>
 <<wait  1>>
@@ -40,8 +41,12 @@ Lucas: Tolong aku.
 
 <<DayUIFadeIn DaySystemUI>>
 <<wait  2>>
+
 <<DayUIFadeOut DaySystemUI>>
 <<wait  1>>
+
+<<PlayMusic AudioManager CafeBGM>>
+
 
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
