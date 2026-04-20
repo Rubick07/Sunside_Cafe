@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Recipe_SignatureChocolate
   m_EditorClassIdentifier: 
   recipeName: Signature Chocolate
-  recipeDesc: Olahan cokelat khas yang terkenal di seluruh pulau. Salah satu spesialitas
-    Tropica dengan sentuhan musim panas yang mampu mengangkat mood harimu.
+  recipeDesc: Olahan cokelat <u>khas</u> yang terkenal di seluruh pulau. Salah satu
+    <u>spesialitas Tropica</u> dengan sentuhan musim panas yang mampu <u>mengangkat
+    mood</u> harimu.
   output: {fileID: 11400000, guid: 14baec5edf892cc4dbc06b237dfa6b95, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: 66e229120aeb64a4e92d58ce32e71866, type: 2}

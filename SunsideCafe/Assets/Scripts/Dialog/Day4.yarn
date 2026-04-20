@@ -12,25 +12,18 @@ Lucas: Waktunya mulai.
 <<PlaySFX AudioManager TypingSFX>>
 //[Keyboard SFX]
 
-Lucas: Aku udah mengetik terus menerus…
+Lucas: Aku udah mengetik [test]terus menerus…[/test]
 
 Lucas: Kenapa ga ada yang muncul di layar.
 
-Lucas: Masih ada banyak yang perlu kulakukan
-
+Lucas: Ayolah, aku harus bisa [test]mengerjakan semuanya sekaligus atau bekerja lebih banyak![/test]
 
 
 <<wait  .5>>
 <<BlackscreenFadeIn BlackscreenUI>>
 
-//kertas jatuh
-Lucas: Ayolah!
-
-Lucas: Kalau begini terus aku ga bakal bisa ngejar tujuanku
-
+Lucas: Kalau begini terus aku ga bakal bisa ngejar tujuanku.
 Lucas: Kalau begini terus aku bakal gagal…
-
-Lucas: Tolong aku.
 
 
 <<RemoveCutscene Day3_Part1>>
@@ -50,9 +43,9 @@ Lucas: Tolong aku.
 
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
-Lucas: !
-
 Lucas: (Uh, aku ketiduran…)
+
+Lucas: (Badanku masih sedikit sakit, sepertinya aku jadi [test]lebih mudah sakit[/test] akhir-akhir ini)
 
 <<SetNoTalk>>
 Narrator: Lucas menatap layar laptopnya
@@ -78,10 +71,11 @@ Luna: Lucas?
 Lucas: Halo, ada apa Luna?
 
 <<SetRightTalk>>
-Luna: A-Ah aku cuma mau nanya gimana keadaan di tempat.
+Luna: A-Ah aku cuma mau nanya gimana keadaanmu, aku dengar kemarin kamu sakit.
 
 <<SetLeftTalk>>
-Lucas: Jujur aku agak buntu dari kemarin…
+Lucas: Kalau sekarang aku udah nggak apa-apa kok.
+Lucas: Tapi jujur aku agak buntu dari kemarin…
 
 <<SetRightTalk>>
 Luna: Kamu juga?
@@ -144,24 +138,19 @@ Lucas: Oke, butuh apa aja paman?
 Lucas: (Instingku merasa bakal ada yang aneh!)
 
 <<SetRightTalk>>
-Arthur: Aku butuh sebungkus kopi, 2 karung gula, dan untuk makan malam aku butuh hewan yang namanya hanya ada 1 huruf.
+Arthur: Aku butuh stok [test]roti toast 2 lembar[/test] dan untuk makan malam aku butuh [test]hewan yang namanya hanya ada 1 huruf[/test].
 
 <<SetLeftTalk>>
-Lucas: ?
-
 Lucas: Ga ada hewan yang namanya cuma 1 huruf paman…
 
 <<SetRightTalk>>
-Arthur: Ada, cari aja, kalau ga tahu coba tanya aja ke penjualnya.
+Arthur: Ada kok, coba cari aja, kalau ga tahu coba tanya aja ke penjualnya.
 
 <<SetLeftTalk>>
-Lucas: Hahh, baiklah paman…
-
-Lucas: Kalau begitu aku pergi dulu.
+Lucas: Baiklah paman…
 
 <<SetRightTalk>>
-Arthur: Ya, hati-hati di jalan.
-
+Arthur: Hati-hati di jalan.
 
 <<CafeBackgroundFadeOut CafeBackgroundUI>>
 <<Teleport ZoneCafe_TriggerKiri>>
@@ -179,6 +168,9 @@ Lucas: Halo, kamu udah nunggu lama?
 <<SetRightSprite Luna Idle>>
 <<SetRightTalk>>
 Luna: Ngga kok, aku baru sampai juga 5 menit yang lalu
+
+Luna: Jadi, ada tempat yang mau kamu kelilingi?
+
 
 <<SetLeftTalk>>
 Lucas: Baguslah kalau begitu.
@@ -211,16 +203,6 @@ Lucas: Ooo, disini ramai banget
 Luna: Disini banyak barang diskon juga jadi memang jadi tempat pusat belanja orang-orang di kota ini.
 
 <<SetLeftTalk>>
-Lucas: Oh iya, kamu tau ada hewan yang namanya cuma 1 huruf ngga?
-
-<<SetRightTalk>>
-Luna: Hmm…
-
-Luna: Aku ngga tau, adakah hewan kaya gitu di pulau ini?
-
-<<SetLeftTalk>>
-Lucas: Aku juga ngga tau, paman Arthur emang ada-ada aja.
-
 Lucas: Kalau begitu ayo kita cari bahan-bahannya.
 
 ===
@@ -258,16 +240,11 @@ title:FionaAppearFirstTime
 <<SetLeftTalk>>
 Lucas: Dan seharusnya itu yang terakhir.
 
-<<SetRightTalk>>
-Luna: Baguslah, sekarang kita bisa
-
 <<SetLeftTalk>>
 Lucas: Kalau gitu kamu mau ke mana sekarang?
 
 <<SetRightTalk>>
-Luna: Hmm, karena kita sudah ada di distrik pasar…
-
-Luna: Ah, paman Arthur pernah bilang ada tempat yang enak di sini untuk duduk bersantai.
+Luna: Hmm, paman Arthur pernah bilang ada tempat yang enak di sini untuk duduk bersantai.
 
 Luna: Gimana kalau di sana?
 
@@ -275,21 +252,15 @@ Luna: Gimana kalau di sana?
 Lucas: Oh menarik, aku ikut.
 
 <<SetRightTalk>>
-Luna: Oke, kalau gitu langsung aja kita ke sana. 
-
 Luna: Kita sudah sampai!
 
 <<SetLeftTalk>>
-Lucas: Ooo, jadi ini tempatnya.
-
 Lucas: Diluar dugaan tempat ini nyaman.
 
 <<SetRightTalk>>
 Luna: Ya, disini kita bisa santai bentar dan tarik nafas.
 
 <<SetLeftTalk>>
-Lucas: (Santai ya…)
-
 Lucas: (Apa boleh aku bersantai di situasi ini…)
 
 <<SetNoTalk>>
@@ -309,10 +280,7 @@ Fiona: OH, kebetulan yang menarik HAHAHA bisa bisanya kita ketemu di sini.
 Lucas: Ya, apa yang kamu lakukan di sini?
 
 <<SetRightTalk>>
-Fiona: Aku dapat saran dari lokal di sini kalau pasar di sini meriah, jadi aku ke sini.
-
-<<SetLeftTalk>>
-Lucas: .
+Fiona: Aku dapat [test]saran dari lokal[/test] di sini kalau pasar di sini meriah, jadi aku ke sini.
 
 <<SetRightTalk>>
 Fiona: Omong-omong, apakah dia…
@@ -342,7 +310,6 @@ Fiona: Jadi, ada apa denganmu Lucas?
 
 
 <<SetLeftSprite Lucas Idle>>
-Lucas: ?
 
 <<SetRightSprite Fiona Idle>>
 <<SetRightTalk>>
@@ -361,23 +328,15 @@ Lucas: Sebenarnya…
 Narrator: Lucas menceritakan semua tentang Sunside cafe dan semua upaya serta masalah yang mereka alami ke Fiona.
 
 <<SetRightTalk>>
-Fiona: Hmm… aku lihat.
+Fiona: Hmm… aku lihat pantas kamu kelihatan [test]kurang tidur[/test] juga.
 
-Fiona: Kalau gitu gimana kalau aku juga ikut bantu kalian?
+Fiona: Hati-hati, kurang tidur juga bisa [test]jadi depresi[/test] kalau dibiarkan lho.
 
 <<SetLeftTalk>>
-Lucas: Eh?
-
-<<SetLeftSprite Luna Idle>>
-Luna: Eh?
+Lucas: Ya, tapi kalau begini terus jujur aku ga tau apa yang harus kulakukan…
 
 <<SetRightTalk>>
-Fiona: Eh?
-
-<<SetNoTalk>>
-Lucas & Luna: (Kenapa dia juga ikutan bingung…)
-
-<<SetRightTalk>>
+Fiona: Kalau gitu gimana kalau aku juga ikut bantu kalian?
 Fiona: Kebetulan aku ga buru-buru, lagipula kedengarannya asik dan seperti di film-film
 
 <<SetLeftSprite Lucas Idle>>
@@ -401,13 +360,13 @@ Fiona: Santai aja, by the way karena kalian masih siap-siap hari ini
 
 Fiona: Gausah pikirin dulu dan buru-buru soal rencana ini.
 
-Fiona: Ambil 1 hari ini buat istirahat jadi kalian bisa nenangin pikiran kalian dan ga terlalu stres soal kerjaan.
+Fiona: Ambil 1 hari ini buat [test]istirahat[/test] jadi kalian bisa [test]nenangin pikiran[/test] kalian dan ga terlalu stres soal kerjaan.
 
 <<SetLeftTalk>>
 Lucas: Tapi bukannya kita dikejar waktu?
 
 <<SetRightTalk>>
-Fiona: Tenang aja, kalau kita terlalu buru-buru pikiran kita juga belum jernih dan bisa jadi apa yang kita lakuin ga maksimal.
+Fiona: Tenang aja, kalau kita [test]terlalu buru-buru[/test] pikiran kita juga [test]belum jernih[/test] dan bisa jadi apa yang kita lakuin [test]ga maksimal.[/test]
 
 Fiona: Anggap aja sefruit tips dari pengalamanku.
 
@@ -450,20 +409,8 @@ title:AccompanyLuna
 
 Luna: Kalau gitu sampai di sini aja
 
-Luna: Terima kasih banyak Lucas
-
-
-<<SetLeftSprite Lucas Idle>>
-<<SetLeftTalk>>
-Lucas: Ya, terima kasih sudah mengajakku keluar juga
-
-<<SetRightTalk>>
 Luna: Oh iya, aku baru saja kepikiran sesuatu.
 
-<<SetLeftTalk>>
-Lucas: ?
-
-<<SetRightTalk>>
 Luna: Ada 1 lagi hewan yang namanya cuma 1 huruf
 
 Luna: Gajah, G “Ajah”
@@ -471,11 +418,7 @@ Luna: Gajah, G “Ajah”
 <<SetLeftTalk>>
 Lucas: (Bener juga, kenapa aku gak kepikiran)
 
-Lucas: (Lebih tepatnya kenapa dia masih mikir candaan itu!)
-
 <<SetRightTalk>>
-Luna: Uh-Uhm…
-
 Luna: I-Itu aja, hati-hati Lucas!
 
 <<SetLeftTalk>>
@@ -486,11 +429,11 @@ Lucas: Ya, hati-hati juga.
 title: Day4Reflection
 ---
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
-Lucas: (Akhirnya sampai…)
-
 Lucas: (Hmm, Fiona bilang untuk jangan khawatir tentang itu dan melakukan hal yang lain)
 
-Lucas: (Mungkin aku akan merapikan kamar dan melakukan sedikit peregangan)
+Lucas: (Sebaiknya aku akan [test]merapikan kamar[/test] dan melakukan [test]sedikit peregangan[/test])
+
+Lucas: (Mungkin itu juga bisa membantu [test]meningkatkan motivasiku[/test] kembali)
 
 //[Background fade In]
 
@@ -498,9 +441,7 @@ Lucas: (Fiuh… selesai)
 
 Lucas: (Dipikir-pikir aku belum pernah merapikan kamarku sejak aku tiba di pulau…)
 
-Lucas: (Baiklah, karena sudah larut)
-
-Lucas: (Waktunya mengisi jurnal hari ini)
+Lucas: (Baiklah, waktunya mengisi jurnal hari ini)
 
 //[Reflection Session Start & End]
 <<jump Day4ReflectionPart1>>
@@ -524,18 +465,20 @@ Lucas: (Ah iya, Fiona bilang kalau misal lagi mengalami burnout, kita ga boleh�
 
 title: Day4ReflectionPart2
 ---
-Lucas: (Bener juga, tadi juga pas sebelum tadi aku ketemu sama Luna, rasanya akhir-akhir ini kondisi fisikku…)
+Lucas: (Dan juga orang yang mengalami burnout biasa akan kelihatan dan merasa… )
 
--> Pegal, sulit tidur, dan peningkatan kortisol 
-    <<jump  Day4ReflectionPart3>>
--> Tidak puas dengan pekerjaanku, sering bengong
+-> Mengurangnya kemampuan untuk mengatasi masalah dan kurang percaya diri 
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump  Day4ReflectionPart2>>
+-> Gugup dan mudah kesal
     Lucas: Hmm, kayaknya bukan ini deh
     <<jump Day4ReflectionPart2>>
 -> Semuanya benar 
-    Lucas: Hmm, kayaknya bukan ini deh
-    <<jump Day4ReflectionPart2>>
+    <<jump Day4ReflectionClear>>
 ===
 
+
+//SKIP
 title: Day4ReflectionPart3
 ---
 Lucas: (Dan kalau kata Luna, orang yang mengalami burnout biasa akan kelihatan dan merasa… )
@@ -547,19 +490,15 @@ Lucas: (Dan kalau kata Luna, orang yang mengalami burnout biasa akan kelihatan d
     Lucas: Hmm, kayaknya bukan ini deh
     <<jump Day4ReflectionPart3>>
 -> Semuanya benar
-
     <<jump Day4ReflectionClear>>
 ===
 
 title: Day4ReflectionClear
 ---
-Lucas: (Seharusnya udah semuanya untuk hari ini)
-
 Lucas: (Selesai)
 
-Lucas: (Waktunya tidur)
-
 Lucas: (Semoga saran dari Fiona berhasil)
+
 
 //[Screen fade to black]
 <<BlackscreenFadeIn BlackscreenUI>>

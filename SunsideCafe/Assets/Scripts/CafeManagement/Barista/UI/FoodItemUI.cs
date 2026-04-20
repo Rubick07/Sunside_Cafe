@@ -20,7 +20,13 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
 
 
         startPos = rect.transform.position;
-        foodImage.enabled = false;
+
+        Color a = foodImage.color;
+        a.a = 0;
+
+        foodImage.color = a;
+
+        //foodImage.enabled = false;
     }
 
     public void OnDrag(PointerEventData e)
@@ -52,7 +58,11 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         FoodItem foodItem = drag.GetFoodItem();
         this.foodItem = foodItem;
 
-        foodImage.enabled = true;
+        Color a = foodImage.color;
+        a.a = 1;
+
+        foodImage.color = a;
+
         foodImage.sprite = foodItem.data.icon;
 
         GameEvents.OnPlaySFX("WaterPouringSFX");
@@ -70,7 +80,15 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
     public void RemoveFood()
     {
         foodItem = null;
-        foodImage.enabled = false;
+
+
+        Color a = foodImage.color;
+        a.a = 0;
+
+        foodImage.color = a;
+
+        //foodImage.enabled = false;
+
         foodImage.sprite = null;
     }
 

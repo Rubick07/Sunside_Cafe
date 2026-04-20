@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Recipe_Noir
   m_EditorClassIdentifier: 
   recipeName: Noir
-  recipeDesc: Kopi berkelas dengan sentuhan misterius. 100% kopi murni dengan rasa
-    pahit yang mengajakmu menikmati dan merenungkan hari.
+  recipeDesc: Kopi berkelas dengan sentuhan <u>misterius</u>. 100% kopi murni dengan
+    rasa <u>pahit</u> yang mengajakmu menikmati dan <u>merenungkan</u> hari.
   output: {fileID: 11400000, guid: b8a3e59c027ebce4daead2d184e4340b, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: bda34a4606c6b0347a8479a30d6ce879, type: 2}

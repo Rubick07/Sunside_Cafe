@@ -35,7 +35,8 @@ Lucas: Sebuah hari dimana aku bisa mencapai sesuatu dan membantu orang atas inov
 
 Lucas: Namun aku mempunyai sebuah masalah
 
-Lucas: Aku, terkena burnout syndrome
+Lucas: Apapun yang kulakukan, aku [test]selalu merasa lelah secara fisik dan emosi…[/test]
+Lucas: Aku, terkena [test]burnout.[/test]
 
 <<PlayCutscene Part1CameraDown>>
 ===
@@ -86,7 +87,7 @@ Lucas: Terima kasih sudah membiarkanku menginap libur musim panas ini paman.
 <<SetRightTalk>>
 Arthur: Ah, santai saja. Ayahmu juga bilang bahwa kamu ingin membantu menjaga Cafe jadi aku pun juga sangat terbantu.
 
-Arthur: Lagipula ini kesempatan yang bagus untuk mengganti pemandangan dari hiruk pikuknya kota.
+Arthur: Lagipula ini kesempatan yang bagus untuk [test]mengganti pemandangan dari hiruk pikuknya kota[/test].
 
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
@@ -123,7 +124,7 @@ Lucas: (Belum ada 1 jam aku sampai di pulau…)
 Lucas: (Memang umur tidak berbohong)
 
 <<SetRightTalk>>
-Arthur: Kalau begitu aku akan menunggumu di kafe, hati-hati di jalan 
+Arthur: Kalau begitu aku akan menunggumu di [test]kafe[/test], hati-hati di jalan 
 
 <<PlayCutscene Part1ArthurFadeOut>>
 <<PlayMusic AudioManager ExploreDay>>
@@ -143,9 +144,8 @@ title:Day1TutorialTownSquare
 ---
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
-Lucas:  Oh, pusat kota masih saja ramai.
-
-Lucas: Seharusnya kafe terletak di distrik utama di kanan pusat kota.
+Lucas: Oh, [test]pusat kota[/test] masih saja ramai.
+Lucas: Seharusnya kafe terletak di distrik utama di [test]kanan pusat kota.[/test]
 
 ===
 
@@ -153,9 +153,9 @@ title:Day1TutorialMainDistrict
 ---
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
-Lucas: Akhirnya sampai di distrik utama.
+Lucas: Akhirnya sampai di [test]distrik utama.[/test]
 
-Lucas: Seharusnya paman Arthur sedang menunggu di depan kafe.
+Lucas: Seharusnya paman Arthur sedang menunggu [test]di depan kafe.[/test]
 
 ===
 
@@ -206,11 +206,7 @@ Lucas: Jujur aku tidak terlalu capek, aku penasaran dengan cara membuat kopi dis
 <<SetRightTalk>>
 Arthur: HAHAHA, ternyata hobimu masih ga berubah ya
 
-<<SetLeftTalk>>
-Lucas: Mungkin aku kena efek dari orang yang dulu ngajarin aku cara bikin minuman yang enak
-
-<<SetRightTalk>>
-Arthur: Aku pun juga tak menyangka kamu bakal suka ngelakuin itu
+<<SetNoTalk>>
 
 ???: Permisi…
 
@@ -249,7 +245,7 @@ Luna: Ah a-apakah iya? Mungkin hanya perasaanmu saja.
 <<SetRightSprite Arthur Idle>>
 Arthur: Lucas, kamu tadi penasaran kan cara membuat minuman di sini?
 
-Arthur: Kalo gitu langsung aja kamu lakuin sekarang, tolong buatin minuman untuk Luna
+Arthur: Kalo gitu langsung aja kamu lakuin sekarang, [test]tolong buatin minuman untuk Luna.[/test]
 
 <<SetRightSprite Luna Idle>>
 Luna: A-Ah, gausah repot-repot paman
@@ -290,8 +286,7 @@ Lucas: Jadi, kamu mau pesen apa hari ini?
 
 Luna: Hmm, k-kalau gitu aku mau memesan minuman yang dulu selalu kita cari,[test] minuman yang sedikit pahit, dengan rasa manis, dan kalau bisa dingin [/test]. Lalu juga sepotong roti
 
-Lucas: (Kayaknya aku tahu, coba aku cek di menu dulu bagaimana cara membuatnya)
-
+Lucas: (Kayaknya aku tahu, coba aku [test]cek di daftar menu[/test] dulu bagaimana cara membuatnya)
 ===
 
 title: LunaFirstTimeBaristaFail
@@ -345,7 +340,7 @@ Luna: Wah itu bukannya hebat.
 <<SetLeftTalk>>
 Lucas: Ya seharusnya…, tapi sekarang aku sedikit bingung dan tidak tahu harus bagaimana
 
-Lucas: Sepertinya aku terkena sindrom burnout.
+Lucas: Sepertinya aku terkena [test]burnout.[/test]
 
 <<SetRightTalk>>
 Luna: !
@@ -357,6 +352,7 @@ Lucas: Kamu juga?
 
 <<SetRightTalk>>
 Luna: Kurang lebih… dan ternyata burnout cukup rawan dialami oleh orang seusia kita.
+Luna: Tapi ga cuma kita, [test]semua orang di usia apapun juga bisa kena burnout.[/test]
 
 <<SetLeftTalk>>
 Lucas: Hahh… Semoga saja kita bisa cepat sembuh.
@@ -417,7 +413,7 @@ Arthur: Sejujurnya mungkin di akhir musim panas ini kafe ini bakal ditutup
 Lucas: Kenapa?!
 
 <<SetRightTalk>>
-Arthur: Hmm, gampangnya 
+Arthur: Hmm, gampangnya aku tidak bisa menjalankan kafe ini sendiri dan sekarang kondisinya sedang sedikit gawat.
 
 Arthur: Tidak usah khawatir, aku sudah siap akan hal ini dan menyiapkan rencana lain untuk tetap bertahan hidup.
 
@@ -441,7 +437,7 @@ Arthur: HAHAHA, kalau begitu aku minta tolong bantuannya besok
 
 Arthur: Oh iya sebelum itu, ambillah ini
 
-Arthur: Ini adalah jurnal kosong, isilah jurnal ini setiap malam dengan pengalamanmu tiap hari dan refleksi perasaanmu pada hari itu.
+Arthur: Ini adalah [test]jurnal kosong[/test], isilah jurnal ini setiap malam dengan pengalamanmu tiap hari sambil [test]merefleksikan[/test] perasaanmu pada hari itu.
 
 Arthur: Mungkin ini bisa membantumu mengidentifikasi apa yang kamu alami dan melihat perkembanganmu tiap harinya.
 
@@ -474,21 +470,16 @@ title: ReflectionDay1
 
 <<once>>
     Lucas: (Aku cape…)
-    Lucas: (Hari pertama yang baik)
     Lucas: (Sebaiknya aku mengisi jurnal itu dulu sebelum tidur)
     Lucas: (Apa ini?)
 <<else>> 
     Lucas: (Sepertinya ada yang salah coba ku ulang baca)
 <<endonce>>
 
-Tulisan di buku: Sejauh ini burnout diklasifikasikan jadi 3 tipe, yaitu
-
-Tulisan di buku: Frentic, keterlibatan kerja tinggi dan fokus pada pencapaian sering mengatasi masalah dengan bekerja lebih lama atau melakukan banyak hal sekaligus, yang dapat meningkatkan risiko burnout serta mengabaikan kehidupan pribadi dan kesehatan.
-
-Tulisan di buku: Worn Out, perasaan tidak berdaya dan kurangnya pengakuan atas usaha dapat membuat seseorang merespons kesulitan dengan sikap pasif, sehingga menimbulkan rasa tidak kompeten dan bersalah.
-
-Tulisan di buku: Underchallenged, Pekerjaan yang monoton dan berulang dapat menyebabkan kebosanan, kurangnya perkembangan diri, dan keinginan untuk pindah kerja. Hal ini juga dapat menimbulkan sinisme serta kecenderungan menghindari masalah.
-
+Tulisan di buku: Sejauh ini burnout diklasifikasikan jadi [test]3[/test] tipe, yaitu
+Tulisan di buku: [test]Frentic[/test], terlalu fokus pada pencapaian dengan cara bekerja lebih lama atau melakukan banyak hal sekaligus, dan berakhir mengabaikan kehidupan pribadi dan kesehatan.
+Tulisan di buku: [test]Worn Out[/test], kurangnya pengakuan atas usaha dapat membuat seseorang merespons kesulitan dengan sikap pasif, sehingga menimbulkan rasa tidak kompeten dan bersalah.
+Tulisan di buku: [test]Underchallenged[/test], pekerjaan yang repetitif dapat menyebabkan kebosanan dan kurangnya perkembangan diri. Hal ini juga dapat menimbulkan sinisme serta kecenderungan menghindari masalah.
 <<once>>
 
 Tulisan di buku: Silahkan mencari dirimu dan semangat -Arthur
@@ -498,27 +489,30 @@ Lucas: (Baiklah, mari kita mulai)
     Lucas: "Kita coba lagi" 
 <<endonce>>
 
--> Frentic, Underchallenged, Worn-Out
-    <<jump  ReflectionDay1Part2>>
--> Frentic, Oblivious, Worn-Out
+Lucas: (Kita mulai dari awal, burnout sering dibilang sebagai.)
+
+-> Kelelahan mental akibat stress yang tertangani dengan tidak baik.
     Lucas: Hmm, kayaknya bukan ini deh
     <<jump ReflectionDay1>>
--> Frentic, Underchallenged, Overload 
+-> Situasi ketika tubuh terlalu memaksakan diri ketika berolahraga
     Lucas: Hmm, kayaknya bukan ini deh
     <<jump ReflectionDay1>>
+-> Kelelahan fisik dan emosi akibat stres pekerjaan yang tidak tertangani dengan baik.
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump ReflectionDay1Part2>>
 
 ===
 
 title: ReflectionDay1Part2
 ---
-Lucas: (Lalu, subtipe burnout dengan perasaan tidak berdaya dan mengakibatkan sikap pasif, sehingga menimbulkan rasa tidak kompeten adalah…)
+Lucas: (Lalu, menurut info dari paman Arthur, ada 3 subtipe burnout yaitu…)
 
--> Underchallenged
+-> Frentic, Underchallenged, Worn-Out
+    <<jump ReflectionDay1Part3>>
+-> Frentic, Oblivious, Worn-Out
     Lucas: Hmm, kayaknya bukan ini deh
     <<detour ReflectionTheory>>
--> Worn-Out
-    <<jump ReflectionDay1Part3>>
--> Oblivious
+-> Frentic, Underchallenged, Overload 
     Lucas: Hmm, kayaknya bukan ini deh
     <<detour ReflectionTheory>>
 
@@ -539,12 +533,11 @@ Tulisan di buku: Underchallenged, Pekerjaan yang monoton dan berulang dapat meny
 
 title: ReflectionDay1Part3
 ---
-Lucas: (Hmm terakhir, subtipe burnout yang punya keterlibatan kerja tinggi dan fokus pada pencapaian yang mengatasi masalah dengan bekerja lebih lama atau melakukan banyak hal sekaligus adalah…)
-
--> Overload
+Lucas: (Dan Luna bilang kalau orang-orang yang bisa terkena burnout adalah)
+-> Anak muda
     Lucas: Hmm, kayaknya bukan ini deh
     <<detour ReflectionTheory>>
--> Underchallenged
+-> Semua orang
     Lucas: Ya, seharusnya dengan ini aku bisa mulai mencari tahu aku termasuk subtipe yang mana.
     Lucas: Seharusnya ini bener
     Lucas: (Akhirnya selesai!)
@@ -555,7 +548,7 @@ Lucas: (Hmm terakhir, subtipe burnout yang punya keterlibatan kerja tinggi dan f
     <<wait  1>>
     <<SetBackgroundDisable>>
     <<jump Day2Start>>
--> Frentic 
+-> Orang bekerja  
     Lucas: Hmm, kayaknya bukan ini deh
     <<detour ReflectionTheory>>
 

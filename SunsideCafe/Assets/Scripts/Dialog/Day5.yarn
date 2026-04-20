@@ -19,7 +19,7 @@ Lucas: (Tumben mimpi itu ga muncul lagi)
 
 Lucas: (Apa ini efek dari tips yang dari Fiona?)
 
-Lucas: (Apapun itu, aku merasa baik hari ini)
+Lucas: (Apapun itu, aku [test]merasa baik[/test] hari ini)
 
 Lucas: (Waktunya turun dan bersiap untuk shift hari ini)
 
@@ -30,8 +30,6 @@ Lucas: Pagi, paman
 
 <<SetRightSprite Arthur Idle>>
 <<SetRightTalk>>
-
-Arthur: Pagi
 
 Arthur: Oho, sepertinya suasana hatimu lagi baik.
 
@@ -49,7 +47,7 @@ Arthur: Duduklah dulu, sarapannya sudah mau siap
 Lucas: Oke paman
 
 <<SetRightTalk>>
-Arthur: Oh iya, sebelum shiftmu hari ini aku minta tolong untuk bantu penjadwalan kafe lagi apakah bisa?
+Arthur: Oh iya, sebelum shiftmu hari ini aku minta tolong untuk bantu [test]penjadwalan[/test] kafe lagi apakah bisa?
 
 <<SetLeftTalk>>
 Lucas: Bisa paman, aman aja.
@@ -61,9 +59,6 @@ Arthur: Kalau misal kamu masih bingung, jangan lupa lihat catatan yang kemarin k
 
 <<SetLeftTalk>>
 Lucas: Aman, terima kasih paman
-
-<<SetNoTalk>>
-Narrator: Lucas dan Arthur menikmati sarapan mereka
 
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
@@ -79,6 +74,10 @@ Lucas: Hati-hati di jalan.
 <<SetLeftTalk>>
 Lucas: (Hmm, sepertinya jadwal kali ini lebih rumit dari sebelumnya)
 
+Secarik Kertas: (Coba kamu bayangin jadwal ini kaya main [test]tetris[/test], pasti bakal kerasa [test]lebih seru dan ringan[/test]) 
+
+Lucas: (Paman…)
+
 Lucas: (Baiklah, kalau gitu kita mulai susun jadwalnya satu per satu)
 
 
@@ -91,8 +90,8 @@ title: Day5SchedulingClear
 <<SetLeftTalk>>
 Lucas: (Selesai!)
 
-Lucas: (Ternyata kerjaan apapun itu seru kalau kita bisa bikin itu jadi seru)
-
+Lucas: (Ternyata [test]kerjaan apapun itu seru[/test] kalau kita bisa bikin itu jadi [test]seru[/test])
+]
 Lucas: (Mungkin ini bisa membantuku buat sembuh dari burnout)
 
 <<RemoveScene GameManager>>
@@ -199,31 +198,9 @@ Fiona: Gausah malu-malu, panggil aja aku Fiona
 <<SetRightSprite Luna Idle>>
 Luna: Ah o-oke Fiona
 
-<<SetRightSprite Fiona Idle>>
-Fiona: Hehe, itu lebih baik.
-
-<<SetLeftTalk>>
-Lucas: Karena kita semua udah kumpul aku mau bersihin meja sebentar terus kita mulai.
-
-<<SetRightTalk>>
-Fiona: Oke, aman aja.
-
-<<SetRightSprite Luna Idle>>
-Luna: Mau kubantu, Lucas?
-
-<<SetLeftTalk>>
-Lucas: Ga usah gapapa, harusnya cuma bentar doang.
-
-<<SetRightTalk>>
-Luna: Oh oke, kalau gitu semangat.
-
-<<SetLeftTalk>>
-Lucas: Ya, terima kasih Luna.
-
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
 
-Lucas: Aku udah selesai.
 
 <<SetRightSprite Fiona Idle>>
 <<SetRightTalk>>
@@ -239,35 +216,26 @@ Narrator: Lucas, Luna, dan Fiona mulai membahas terkait rencana mereka untuk men
 <<SetRightTalk>>
 Fiona: Hmm, aku paham sekarang.
 
-Fiona: Simpelnya, ada 2 lubang di rencana kalian yang membuat kalian jadi susah jalaninnya.
+Fiona: Simpelnya, ada 2 lubang di rencana kalian yang membuat kalian jadi susah, kita coba pecahin ini pelan-pelan.
 
-Fiona: Santai aja, kita coba pecahin ini pelan-pelan.
+Fiona: Pertama, rencana kalian terlalu luas, kalian tau goal akhir kalian tapi kalian [test]gatau mau mulai darimana.[/test]
 
-Fiona: Pertama, rencana kalian terlalu luas, kalian tau goal akhir kalian tapi kalian
-
-Fiona: Solusinya? Kalian buat goal yang lebih kecil dari goal akhir itu sampai kalian rasa kalian bisa ngelakuin itu.
+Fiona: Solusinya? Kalian [test]buat goal yang lebih kecil[/test] dari goal akhir itu sampai kalian rasa kalian bisa ngelakuin itu.
 
 Fiona: Ini juga bisa ngebantu kalau kalian ga susah buat mulai. Karena dari melakukan hal yang bener-bener simpel, kalian akan merasakan momentum untuk lanjut dengan fokus.
 
-Fiona: Kedua, rencana ini sebenarnya bisa untuk mencapai deadline kalian, tapi perlu diingat kalian juga butuh istirahat yang cukup.
+Fiona: Kedua, rencana ini sebenarnya bisa untuk mencapai deadline kalian, tapi perlu diingat kalian juga butuh [test]istirahat yang cukup.[/test]
 
 Fiona: Dengan istirahat yang cukup, kalian bakal merasa lebih siap dan pikiran kalian lebih jernih. Lagipula, akan lebih seru juga kalau kalian punya waktu untuk bersantai bersama-sama.
 
-Fiona: Satu hal yang perlu kalian catat juga adalah pembagian tugas. Di sini pembagian tugas kalian udah sesuai dengan keahlian kalian masing-masing.
+Fiona: Di sini pembagian tugas kalian [test]udah sesuai dengan keahlian kalian[/test] masing-masing. Jadi itu hal yang bagus, karena semakin cocok maka semakin bagus juga [test]hasil dan effortnya.[/test]
 
-Fiona: Jadi itu hal yang bagus, karena semakin cocok keahlian dan minat orang ketika ngerjain tugasnya, maka semakin bagus juga hasil dan effortnya.
 
 <<SetRightSprite Luna Idle>>
 Luna: (Hebat, dia bisa tahu semua kelemahan rencana kita dengan baik)
 
 <<SetLeftTalk>>
 Lucas: (Sepertinya ini bisa berhubungan dengan burnoutku)
-
-<<SetRightTalk>>
-Luna: (Dia seperti orang yang berbeda.)
-
-<<SetLeftTalk>>
-Lucas: (Perasaan 5 menit yang lalu dia ga kaya begini…)
 
 <<SetRightSprite Fiona Idle>>
 Fiona: Jadi kurang lebih itulah yang akan kita perbaiki dulu, terus baru kita mulai.
@@ -282,17 +250,7 @@ Narrator: 1 jam kemudian…
 <<wait .5>>
 
 <<SetLeftTalk>>
-Lucas: Hahh…
-
-<<SetRightSprite Luna Idle>>
-<<SetRightTalk>>
-Luna: Hmm…
-
-<<SetRightSprite Fiona Idle>>
-Fiona: Ada apa?
-
-<<SetLeftTalk>>
-Lucas: Aku gabisa fokus sama sekali, aku cuma bisa selesai sedikit aja…
+Lucas: Hahh… Aku gabisa fokus sama sekali, aku cuma bisa selesai sedikit aja…
 
 <<SetRightSprite Luna Idle>>
 <<SetRightTalk>>
@@ -303,21 +261,20 @@ Fiona: Ooo, hmm coba aku pikir bentar.
 
 Fiona: Ah, coba kalian stop apa yang kalian lakuin sebentar.
 
-Fiona: Kalian udah pernah coba latihan pernapasan belum?
+Fiona: Kalian udah pernah coba [test]mindfulness practice[/test] belum?
 
 <<SetNoTalk>>
 Lucas & Luna: Apa itu?
 
 <<SetRightTalk>>
-Fiona: Simpelnya, kalian coba bernafas pelan-pelan dengan ritme yang teratur sambil mencoba merasakan sensasi yang ada di sekeliling kalian sekarang atau melihat segala barang di sekitar kalian.
+Fiona: Simpelnya, kalian coba [test]bernafas pelan-pelan dengan ritme yang teratur[/test] sambil mencoba [test]merasakan sensasi yang ada di sekeliling[/test] kalian sekarang atau melihat segala barang di sekitar kalian.
 
-Fiona: Biasanya kegiatan itu disebut mindfulness practice atau kesadaran penuh.
-
-Fiona: Kalian bisa mengurangi stres dan menambah fokus dengan melakukan meditasi, pernapasan teratur, melakukan kegiatan dengan sadar, dan merasa.
+Fiona: Kalian bisa [test]mengurangi stres[/test] dan [test]menambah fokus[/test] dengan melakukan meditasi, pernapasan teratur, dan melakukan kegiatan dengan lebih sadar.
 
 Fiona: Daripada bingung, gimana kalau kalian langsung coba aja?
 
-Fiona: Coba dari Lucas dulu
+Fiona: Kita coba dari Lucas dulu
+
 
 
 <<AddScene GameManager Mindfulness_Practice>>
@@ -349,9 +306,7 @@ Fiona: Kalau begitu, sekarang giliranmu Luna.
 Luna: O-Oke
 
 <<SetNoTalk>>
-Narrator: Luna pun merasa lebih
-
-Narrator: Tak lama kemudian, tak terasa sore hari akan segera tiba
+Narrator: Luna pun merasa lebih baik dan tak lama kemudian, tak terasa sore hari akan segera tiba
 
 <<SetRightSprite Fiona Idle>>
 <<SetRightTalk>>
@@ -365,21 +320,18 @@ Lucas: Kalau gitu kita sudahi hari ini?
 <<SetRightSprite Luna Idle>>
 <<SetRightTalk>>
 Luna: Aku setuju.
-Luna: A-anu Fiona apakah kamu mau jalan pulang sama-sama?
 
 <<SetRightSprite Fiona Idle>>
-Fiona: Boleh bangett!
 
 Fiona: Oh iya, karena di rencana kita besok hari libur, gimana kalau kita pergi bertiga?
 
 <<SetLeftTalk>>
 Lucas: Aku ga masalah
 
+<<SetRightSprite Luna Idle>>
 Luna: Kalau gitu gimana kalau kita ke pantai dan mengadakan barbekyu di sana?
 
 <<SetRightTalk>>
-Fiona: Itu…
-
 Fiona: Ide yang…
 
 Fiona: SPEKTAKULER!
@@ -442,7 +394,9 @@ title: Day5ReflectionClear
 <<SetLeftTalk>>
 Lucas: (Dan selesailah refleksi di hari ke-5)
 
-Lucas: (Hari ini aku belajar banyak juga ya.)
+Lucas: (Rasanya aku udah mulai bisa menghadapi masalahku.)
+
+Lucas: (Apa mungkin bentar lagi aku bisa sembuh…)
 
 <<BlackscreenFadeIn BlackscreenUI>>
 
@@ -471,6 +425,7 @@ Lucas: (Akhirnya ada perubahan yang terlihat, kali ini aku bisa ngelakuin sesuat
 
 Lucas: (Tadi Fiona ngajarin aku cara buat nenangin diri dengan ngelakuin…)
 
+
 -> Mindfulness practice 
     <<jump  Day5ReflectionPart2>>
 -> Task dumping
@@ -483,16 +438,16 @@ Lucas: (Tadi Fiona ngajarin aku cara buat nenangin diri dengan ngelakuin…)
 
 title: Day5ReflectionPart2
 ---
-Lucas: (Dan juga kalau aku ngerasa susah mau mulai ngelakuin sesuatu, aku bisa…)
+Lucas: (Dan tadi kata paman Arthur, kalau aku ngerasa susah mau ngelakuin sesuatu, aku bisa…)
 
--> Menyerahkan pekerjaan itu ke orang lain 
+-> Tetap melanjutkannya hingga bisa memulai
     Lucas: Hmm, kayaknya bukan ini deh  
     <<jump  Day5ReflectionPart2>>
--> Membagi pekerjaan menjadi lebih kecil
+-> Mengalihkan pikiran dari pekerjaan itu
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day5ReflectionPart2>>
+-> Melakukan job crafting
     Lucas: (Oke, refleksi hari ini selesai)
     <<jump Day5ReflectionClear>>
--> Tetap memaksakan diri untuk mulai
-    Lucas: Hmm, kayaknya bukan ini deh  
-    <<jump Day5ReflectionPart2>>
 
 ===

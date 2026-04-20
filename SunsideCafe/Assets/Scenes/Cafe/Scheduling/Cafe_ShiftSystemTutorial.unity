@@ -1546,9 +1546,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Setiap pekerja memiliki jadwalnya masing-masing dan bisa disesuaikan dengan
-    keinginanmu. Kamu bisa melakukan rotasi 1 kali ke kiri atau 1 kali ke kanan dari
-    jadwal di awal menggunakan Q (Rotasi Kiri) dan E (Rotasi kanan). Semoga menyenangkan!
-    -Arthur
+    keinginanmu. Kamu bisa melakukan <color="green">rotasi 1 kali ke kiri atau 1
+    kali ke kanan</color> dari jadwal di awal menggunakan <color="green">Q (Rotasi
+    Kiri) dan E (Rotasi kanan).</color> Semoga menyenangkan! -Arthur
 
 '
   m_isRightToLeft: 0
@@ -2331,9 +2331,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gunakan Klik kiri lalu tarik jadwal yang tersedia ke dalam tempat yang
-    masih kosong di kalender. Ingat, jadwal tiap pekerja tidak boleh saling bertumpuk
-    satu sama lain.
+  m_text: Gunakan <color="green">Klik kiri</color> lalu tarik jadwal yang tersedia
+    ke dalam tempat yang masih kosong di kalender. Ingat, jadwal tiap pekerja <color="green">tidak
+    boleh saling bertumpuk</color> satu sama lain.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b531d2bd447796340af9f18484401054, type: 2}
   m_sharedMaterial: {fileID: -3371830469686060010, guid: b531d2bd447796340af9f18484401054, type: 2}
@@ -2932,9 +2932,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hi Lucas, kali ini tugasmu mudah saja. Tolong aturkan jadwal yang ada di
-    sini dengan cara memasukkan orang-orang pada daftar di kiri ke dalam jadwal di
-    kanan.
+  m_text: Hi Lucas, kali ini tugasmu mudah saja. Tolong <color="green">aturkan jadwal
+    </color>yang ada di sini dengan cara memasukkan orang-orang pada daftar di kiri
+    ke dalam jadwal di kanan.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b531d2bd447796340af9f18484401054, type: 2}
   m_sharedMaterial: {fileID: -3371830469686060010, guid: b531d2bd447796340af9f18484401054, type: 2}

@@ -10,9 +10,7 @@
 
 ???: Apa yang sudah kamu capai
 
-???: Apa yang bisa kamu lakukan
-
-Lucas: Aku…
+???: Apa yang bisa kamu lakukan?
 
 Lucas: Selama ini aku ragu.
 
@@ -32,11 +30,14 @@ Lucas: Dan kali ini, aku maju bersama dengan teman-temanku
 
 Lucas: Ya.
 
-???: Bahkan jika kamu gagal mengatasi ini dan kembali ke sini lagi?
+???: Bahkan jika kamu gagal mengatasi ini dan [test]kembali ke sini[/test] lagi?
 
 Lucas: Tidak masalah.
 
+Lucas: Aku cukup yakin akan [test]kembali ke sini[/test] berkali-kali, tapi aku percaya aku bisa [test]terus maju[/test] dan perlahan mencapai mimpiku. 
+
 Lucas: Inilah hal yang aku mau lakukan.
+
 
 ???: Baiklah…
 
@@ -46,9 +47,8 @@ Bayangan Lucas: Aku akan berjalan bersamamu.
 
 Bayangan Lucas: Semangat, diriku!
 
-Lucas: Ya,
-
 Lucas: Terima kasih banyak.
+
 
 <<DayUIFadeIn DaySystemUI>>
 <<wait  2>>

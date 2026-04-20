@@ -738,9 +738,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Setelah itu kamu bisa memasukkan tambahan ke minuman yang diberikan ke
-    dalam cangkir atau piring, lalu disajikan kepada para pelanggan ketika minuman
-    sudah dicangkir atau makanan sudah dipiring.
+  m_text: Setelah itu kamu bisa memasukkan <color="green">tambahan</color> ke minuman
+    yang diberikan ke dalam <color="green">cangkir atau piring</color>, lalu <color="green">disajikan</color>
+    kepada para <color="green">pelanggan</color> ketika minuman sudah dicangkir atau
+    makanan sudah dipiring.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b531d2bd447796340af9f18484401054, type: 2}
   m_sharedMaterial: {fileID: -3371830469686060010, guid: b531d2bd447796340af9f18484401054, type: 2}
@@ -2713,10 +2714,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Hi Lucas, selamat akhirnya jadi barista di sini. Karena ini hari pertamamu,
-    ini sedikit arahan dariku. Klik kiri untuk memilih bahan-bahan yang mau kamu
-    gunakan dan arahkan mereka ke tempat yang ingin dituju. Kamu juga bisa mencampur
-    bahan-bahan minuman di ketel dengan menaruh bahan-bahan tersebut ke dalam ketel,
-    lalu tekan tombol untuk mencampurnya.
+    ini sedikit arahan dariku. <color="green">Klik kiri </color>untuk memilih bahan-bahan
+    yang mau kamu gunakan dan arahkan mereka ke tempat yang ingin dituju. Kamu juga
+    bisa <color="green"> mencampur bahan-bahan minuman di ketel </color>dengan <color="green">menaruh
+    bahan-bahan tersebut ke dalam ketel</color>, lalu tekan <color="green">mix</color>
+    untuk mencampurnya.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b531d2bd447796340af9f18484401054, type: 2}
   m_sharedMaterial: {fileID: -3371830469686060010, guid: b531d2bd447796340af9f18484401054, type: 2}
@@ -3025,9 +3027,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jika kamu lupa resepnya, tekan tab untuk melihat resep semua makanan dan
-    minuman yang tersedia di kafe. Itu saja arahan dariku, semangat jadi barista.
-    -Arthur
+  m_text: "Jika kamu lupa resepnya, tekan <color=\"green\">tab </color>untuk <color=\"green\">\tmelihat
+    resep</color> semua makanan dan minuman yang tersedia di kafe. Itu saja arahan
+    dariku, semangat jadi barista. -Arthur"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b531d2bd447796340af9f18484401054, type: 2}
   m_sharedMaterial: {fileID: -3371830469686060010, guid: b531d2bd447796340af9f18484401054, type: 2}
@@ -3428,6 +3430,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 269394261537514475, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0008008854
+      objectReference: {fileID: 0}
     - target: {fileID: 419555754952434209, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
       propertyPath: kettleController
       value: 
@@ -3442,6 +3448,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1434345061205486942, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434345061205486942, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1963111537318438575, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
@@ -3552,10 +3562,6 @@ PrefabInstance:
       propertyPath: kettleController
       value: 
       objectReference: {fileID: 219319455}
-    - target: {fileID: 8972309093648067615, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bacc76d17de8ac5449469ac4bcb5fdb2, type: 3}
     m_RemovedComponents:
     - {fileID: 8047734152552180219, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
     m_RemovedGameObjects:

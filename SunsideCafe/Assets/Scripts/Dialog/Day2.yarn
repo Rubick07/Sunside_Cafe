@@ -36,10 +36,12 @@ Kedua teman Lucas: Apa yang sudah kamu capai?
 
 <<SetLeftSprite Lucas Idle>>
 <<SetLeftTalk>>
-<<PlayMusic AudioManager CafeBGM>>
-Lucas: (Ugh, akhir-akhir ini mimpiku ga ada yang bener)
 
-Lucas: (Sekarang masih jam 7 pagi… tapi aku harus mulai siap-siap membantu paman Arthur)
+<<PlayMusic AudioManager CafeBGM>>
+
+Lucas: (Ugh, akhir-akhir ini aku [test]susah tidur[/test])
+
+Lucas: (Aku harus mulai siap-siap membantu paman Arthur)
 
 Lucas: (Waktunya turun)
 
@@ -62,7 +64,7 @@ Lucas: Oke…
 Arthur: Bagaimana tidurmu?
 
 <<SetLeftTalk>>
-Lucas: Lumayan, ga baik tapi ga buruk
+Lucas: Aku agak [test]kesulitan tidur[/test] sedikit tapi seharusnya aman
 
 <<SetRightTalk>>
 Arthur: Masuk akal, kamu masih baru penyesuaian dengan jadwal di sini jadi santai aja
@@ -135,10 +137,7 @@ Arthur: Jadi bagaimana pengalaman pertamamu?
 Lucas: Cukup baik, semuanya berjalan dengan lancar.
 
 <<SetRightTalk>>
-Arthur: Oh tentu baik, apalagi jika semua pelanggannya seperti yang terakhir tadi ya
-
-<<SetLeftTalk>>
-Lucas: (Sepertinya dia mencoba membaca pikiranku…) 
+Arthur: Baguslah, sepertinya kamu juga kedatangan pelanggan yang menarik
 
 <<SetRightTalk>>
 Arthur: Ngomong-ngomong, kamu masih ingat permintaan tolongku tadi pagi?
@@ -189,11 +188,6 @@ Luna: Ah Lucas, m-maaf apakah kamu udah nunggu lama?
 
 <<SetLeftTalk>>
 Lucas: Santai aja, aku baru selesai juga kok
-
-<<SetRightTalk>>
-Luna: Ah syukurlah
-
-<<SetLeftTalk>>
 Lucas: Kalau gitu, kita berangkat sekarang?
 
 <<SetRightTalk>>
@@ -234,21 +228,6 @@ Lucas: Wah, kemarin aku sempat mampir tapi dilihat-lihat tempat ini cukup beruba
 
 <<SetRightTalk>>
 Luna: Ya, sejak 7 tahun lalu pembangunan di sini terus terjadi.
-
-Luna: Karena peningkatan jumlah turis, banyak toko baru yang buka dan bahkan beberapa diantaranya berasal dari ibukota.
-
-<<SetLeftTalk>>
-Lucas: Ooo, ternyata disini lumayan juga,
-
-<<SetRightTalk>>
-Luna: A-Ah tapi kamu tinggal di ibukota kan, ini pasti udah biasa buatmu
-
-<<SetLeftTalk>>
-Lucas: Tapi jujur aku tidak terlalu sering juga membeli dari toko toko itu
-
-<<SetRightTalk>>
-Luna: Oh, menarik aku kira orang di kota besar semuanya akan sering ke sana
-
 
 <<SetLeftTalk>>
 Lucas: Oh iya, kalau aku ga salah ingat rumahmu juga di dekat sini kan?
@@ -370,9 +349,9 @@ Lucas: Ya, karena itu aku juga butuh bantuanmu.
 Lucas: Apakah kamu mau?
 
 <<SetRightTalk>>
-Luna: Dengan senang hati!
-Luna: Kafe itu juga tempat yang berharga buatku, kalau ada kesempatan kafe ini bisa hidup aku bakal bantu sebisa mungkin.
+Luna: Dengan senang hati! Kafe itu juga tempat yang berharga buatku, kalau ada kesempatan kafe ini bisa hidup aku bakal bantu sebisa mungkin.
 Luna: Lagipula, aku ga ada rencana di liburan kali ini dan kelihatannya ini akan seru seperti di film-film.
+
 
 <<SetLeftTalk>>
 Lucas: Haha bisa jadi
@@ -381,8 +360,19 @@ Lucas:  Kalau aku ga salah ingat, kamu dulu bisa design kan?
 Lucas: Paling aku minta tolong kamu buat bikin design yang baru untuk cafenya dan aplikasinya
 
 <<SetRightTalk>>
-Luna: A-aku…
+Luna: A-aku… gayakin kalo aku bisa
 
+Luna: Sejujurnya udah lama aku ngga ngedesign dan akupun ngerasa kalo aku masih [test]kurang banget[/test], apapun yang kulakukan serasa [test]ga ada hasilnya.[/test]
+
+Luna: Dan mungkin juga itu alasannya kenapa aku bisa kena [test]burnout[/test] juga…
+
+<<SetLeftTalk>>
+Lucas: Kalau gitu kita hadapin ini sama-sama. Aku juga lagi cari cara untuk sembuh dari ini. 
+
+Lucas: Dan kalau kita bersama, entah kenapa aku merasa kita bisa benar-benar sembuh.
+
+<<SetRightTalk>>
+Luna: Lucas…
 Luna: Oke, akan ku coba!
 
 <<SetLeftTalk>>
@@ -394,12 +384,7 @@ Luna: Ya!
 <<SetNoTalk>>
 Narrator: Lucas dan Luna lanjut berbicara hingga matahari pun terbenam
 
-<<SetLeftTalk>>
-Lucas: Ah, sudah jam segini, cepat banget waktu berlalu…
-
 <<SetRightTalk>>
-Luna: Ya, aku pun juga ga sadar
-
 Luna: Mari kita kembali?
 
 <<SetLeftTalk>>
@@ -416,15 +401,10 @@ title:Day2AfterBeachTownSquare
 <<SetRightSprite Luna Idle>>
 
 <<SetRightTalk>>
-Luna: Rumahku udah dekat jadi sampai di sini aja gapapa
-
-<<SetLeftTalk>>
 Lucas: Oke, kalau gitu sampai kita ketemu lagi.
 
-<<SetRightTalk>>
-Luna: Ya, terima kasih sudah mengantarkan, dan
-
 Luna: Sampai jumpa Lucas.
+
 
 ===
 
@@ -490,9 +470,12 @@ Lucas: (Ah, ga ada gunanya!)
 
 Lucas: (Aku cuma menatap layar kosong dari tadi!)
 
-Lucas: (Udah jam segini, bentar lagi waktunya tidur.)
+Lucas: (Padahal aku udah ngelakuin ini [test]berulang kali sampai bosan[/test])
 
-Lucas: (Oh iya nyaris lupa, waktunya mengisi jurnal hari ini.)
+Lucas: (Apakah mungkin ini salah satu hal yang [test]membuatku burnout?[/test])
+
+Lucas: (Udah jam segini, waktunya mengisi jurnal hari ini.)
+
 
 <<jump Day2Reflection>>
 ===
@@ -502,24 +485,38 @@ title: Day2Reflection
 
 Lucas: (Hari ini, aku jadi barista dan manajer kafe buat pertama kalinya…)
 
-Lucas: (Menurut paman Arthur, hal ini bisa membantuku karena ini termasuk…)
+Lucas: (Menurut paman Arthur, hal menjadi barista dan manajer kafe bisa membantuku karena ini termasuk…)
 
--> Melakukan hobi 
+-> Job crafting dan bersosialisasi dengan orang lain
     Lucas: Hmm, kayaknya bukan ini deh
     <<jump  Day2Reflection>>
--> Job Crafting
+-> Melakukan hobiku dan mengatur tugas dengan lebih baik
+    <<jump Day2ReflectionPart2>>
+-> Merasakan pengalaman kerja yang sesungguhnya
     Lucas: Hmm, kayaknya bukan ini deh
     <<jump Day2Reflection>>
--> Dua-duanya benar 
-    <<jump Day2ReflectionPart2>>
 
 ===
 
 title: Day2ReflectionPart2
 ---
-Lucas: (Hmm, tadi juga pas aku ketemu sama Luna, ternyata menurut dia burnout bisa terjadi gara-gara…)
+Lucas: (Hmm, tadi juga pas aku ketemu sama Luna, ternyata burnout bisa terjadi gara-gara…)
 
--> Faktor negatif dari lingkungan kerja dan pribadi 
+-> Kurangnya rasa kontrol atas hasil pekerjaan
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day2ReflectionPart2>>
+-> Melakukan suatu hal secara berulang-ulang
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day2ReflectionPart2>>
+-> Semuanya benar 
+    <<jump Day2ReflectionPart3>>
+===
+
+title: Day2ReflectionPart3
+---
+Lucas: (Dan hasilnya, burnout bisa menyebabkan)
+
+-> Penurunan dalam produktivitas
     Lucas: (Seharusnya itu aja buat hari ini.)
     Lucas: (Apakah aku bisa ngelakuin semua ini)
     Lucas: (Aku butuh sembuh secepatnya!)
@@ -527,10 +524,10 @@ Lucas: (Hmm, tadi juga pas aku ketemu sama Luna, ternyata menurut dia burnout bi
     <<NextDay DaySystem>>
     <<NextDay DaySystem>>
     <<jump Day4>>
--> Faktor negatif dari lingkungan kerja saja
+-> Peningkatan dalam produktivitas
     Lucas: Hmm, kayaknya bukan ini deh
-    <<jump Day2ReflectionPart2>>
--> Tiba-tiba aja, tidak ada alasan tertentu 
+    <<jump Day2ReflectionPart3>>
+->Pikiran untuk lebih tenang secara sesaat
     Lucas: Hmm, kayaknya bukan ini deh
-    <<jump Day2ReflectionPart2>>
+    <<jump Day2ReflectionPart3>>
 ===

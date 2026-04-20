@@ -37,18 +37,17 @@ public class AudioManager : MonoBehaviour
     [Yarn.Unity.YarnCommand("PlayMusic")]
     public void PlayMusic(string name)
     {
+        musicSource.UnPause();
 
         Sound s = Array.Find(musicSound, x => x.soundName == name);
 
         if (musicSource.clip == s.clip)
             return;
 
-
-
             if (s == null)
-        {
-            Debug.Log("Sound Not Found");
-        }
+            {
+                Debug.Log("Sound Not Found");
+            }
         else
         {
             musicSource.clip = s.clip;
@@ -61,6 +60,7 @@ public class AudioManager : MonoBehaviour
     public void StopMusic()
     {
         musicSource.Stop();
+        musicSource.clip = null;
     }
 
     [Yarn.Unity.YarnCommand("PlaySFX")]
@@ -83,6 +83,7 @@ public class AudioManager : MonoBehaviour
     public void StopSFX()
     {
         sfxSource.Stop();
+        sfxSource.clip = null;
     }
 
     [Yarn.Unity.YarnCommand("PlayAmbience")]

@@ -17,7 +17,7 @@ MonoBehaviour:
   patienceTime: 30
   coinReward: 0
   possibleOrders:
-  - {fileID: 11400000, guid: 8368f265c2274804ea3c334dbd07df05, type: 2}
+  - {fileID: 11400000, guid: 3655213668f74294eaa8d8217fe12db9, type: 2}
   - {fileID: 11400000, guid: fc26bf6d22068804790229833e1a2ab2, type: 2}
   startDialogTitle: Day5FionaAppearCafe
   clearDialogTitle: Day5FionaCorrectCafe

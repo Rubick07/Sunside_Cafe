@@ -1491,8 +1491,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Akan ada lingkaran yang mengecil ke tengah layar. Tekan spasi di waktu
-    yang tepat untuk menenangkan pikiran dan fokus.
+  m_text: Akan ada <color="green">lingkaran yang mengecil </color>ke tengah layar.
+    Tekan <color="green">spasi</color> di <color="green">waktu yang tepat </color>untuk
+    menenangkan pikiran dan fokus.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b531d2bd447796340af9f18484401054, type: 2}
   m_sharedMaterial: {fileID: -3371830469686060010, guid: b531d2bd447796340af9f18484401054, type: 2}

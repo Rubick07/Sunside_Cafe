@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipeName: Sunside Special
   recipeDesc: "Signature terbaik dari Tropica. Minuman eksklusif yang hanya bisa
-    kamu temukan di sini\u2014ringan dan mudah untuk dikonsumsi tapi cukup untuk
-    menghilangkan rasa kantuk"
+    kamu temukan di sini\u2014<u>ringan </u>dan <u>mudah untuk dikonsumsi </u>tapi
+    cukup untuk <u>menghilangkan rasa kantuk</u>."
   output: {fileID: 11400000, guid: 3655213668f74294eaa8d8217fe12db9, type: 2}
   requiredIngredients:
   - {fileID: 11400000, guid: bda34a4606c6b0347a8479a30d6ce879, type: 2}

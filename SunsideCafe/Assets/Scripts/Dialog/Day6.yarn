@@ -9,13 +9,9 @@ title: Day6
 <<DayUIFadeOut DaySystemUI>>
 <<wait 1>>    
 
-Lucas: (Hari ini cuacanya cerah ya)
+Lucas: (Hari ini cuacanya cerah)
 
 Lucas: (Semoga cuacanya bisa tetap cerah sampai nanti malam)
-
-Lucas: (Kayanya tadi malam aku tidur nyenyak, kepalaku rasanya jernih)
-
-Lucas: (Tapi perutku udah teriak, jadi waktunya sarapan dulu)
 
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 <<wait .5>>
@@ -34,8 +30,6 @@ Arthur: …
 Arthur: *Sepertinya kamu udah berhasil*
 
 <<SetLeftTalk>>
-Lucas: ?
-
 Lucas: Ada apa?
 
 <<SetRightTalk>>
@@ -84,8 +78,12 @@ Arthur: Dan aku yakin sekarang kamu udah siap buat mengatasi masalahmu.
 
 Arthur: Dan bebas dari burnout.
 
-<<SetLeftTalk>>
-Lucas: Paman…
+Arthur: Apakah kamu tahu kalau burnout dan stres 2 hal yang berbeda?
+
+Arthur: [test]Stres adalah salah satu efek burnout[/test] dan bukanlah hal yang sama.
+
+Arthur: Awalnya aku ga yakin saran apa yang harus kukasih, tapi kelihatannya kamu udah menemukan jawabannya sendiri.
+
 
 <<SetRightTalk>>
 Arthur: Ya itu aja yang mau kusampaikan sebenarnya.
@@ -170,15 +168,8 @@ Arthur: Akhirnya dia tinggal di sana bersama keluarganya dan kafe ini ditinggali
 Arthur: Ujung-ujungnya tetap aku ngga bisa ngelakuin apa- apa…
 
 <<SetLeftTalk>>
-Lucas: Keberatan!
-
-<<SetRightTalk>>
-Arthur: …?
-
-<<SetLeftTalk>>
-Lucas: Uh, aku cuma niru game yang aku sering mainin
-
-Lucas: Tapi selama ini paman udah ngelakuin kerja yang bagus juga.
+Lucas: Objection!
+Lucas: Selama ini paman udah ngelakuin kerja yang bagus juga.
 
 Lucas: Gara-gara paman, kafe ini masih bisa bertahan sejauh ini.
 
@@ -196,9 +187,7 @@ Lucas: Aku juga tau kalau selama ini paman yang paling tau dan paham kalau aku l
 
 Lucas: Diantara semua situasi itu, paman yang nyaranin aku buat keluar atau ngajarin aku hal-hal yang baru.
 
-Lucas: Tenang aja, kali ini giliranku buat ngebantu paman.
-
-Lucas: Dan aku ngga sendiri
+Lucas: Kali ini giliranku buat ngebantu paman.
 
 Lucas: Dibantu Luna dan Fiona.
 
@@ -418,12 +407,12 @@ Lucas: Ketakutanmu?
 <<SetRightTalk>>
 Luna: Sebenarnya, udah lama aku ngga gambar lagi.
 
-Luna: Dulu aku sempat kehilangan kesenangan dalam menggambar
+Luna: Dan aku juga sempat [test]kehilangan kesenangan[/test] dalam menggambar
 
 Luna: Aku akhirnya berhenti dan memutuskan untuk tidak mengejar itu lagi
 
 <<SetLeftTalk>>
-Lucas: Luna.. aku…
+Lucas: Luna… 
 
 <<SetRightTalk>>
 Luna: Tapi akhir-akhir ini aku baru sadar kembali alasan kenapa aku menggambar
@@ -439,6 +428,7 @@ Lucas: Haha, sepertinya kita berdua ada diposisi yang sama ya.
 
 <<SetRightTalk>>
 Luna: Hehe, mungkin itu juga alasannya kenapa kita juga bisa saling mengerti.
+Luna: Dan dengan [test]pengetahuan[/test] yang kita punya, kita juga bisa [test]membantu orang yang mengalami burnout.[/test]
 
 <<SetRightSprite Fiona Idle>>
 
@@ -453,26 +443,14 @@ Lucas: Ah iya, apakah kita mau bubar sekarang?
 <<SetRightTalk>>
 Luna: Ya, besok juga kita harus mulai persiapannya dari pagi.
 
-<<SetLeftTalk>>
-Lucas: Kalau gitu mau kuantar pulang?
-
-<<SetRightTalk>>
-Luna: Ah gapapa.
-
-Luna: Aku bakal pulang bareng Fiona, jadi ga usah khawatir.
-
-<<SetLeftTalk>>
-Lucas: Ah okelah kalau begitu
+<<SetRightSprite Fiona Idle>>
+Fiona: Oke, kalau begitu
 
 <<SetNoTalk>>
 Fiona & Luna: Selamat malam!
 
 <<SetLeftTalk>>
-Lucas: Ya, malam.
-
-//[Fiona & Luna fades out]
-
-Lucas: Waktunya pulang.
+Lucas: Ya, selamat malam.
 
 <<SetPlayerTriggerActive TriggerDialog_BeforeReflection>>
 ===
@@ -482,13 +460,10 @@ title:Day6BeforeReflection
 <<CafeBackgroundFadeIn CafeBackgroundUI .5>>
 Lucas: (Ga kerasa udah mau 1 minggu aku ada di pulau ini.)
 
-Lucas: (Banyak hal yang terjadi minggu ini…)
-
-Lucas: (Tapi aku sangat senang aku datang ke pulau ini)
+Lucas: (Banyak hal yang terjadi sejak aku datang ke pulau ini)
 
 Lucas: (Ah, sepertinya mataku udah mulai menutup dikit)
 
-Lucas: (Waktunya refleksi sebelum tidur)
 
 <<jump Day6ReflectionPart1>>
 
@@ -498,15 +473,16 @@ title: Day6ReflectionPart1
 ---
 Lucas: (Hari ini asik banget! Ga kerasa aku udah mau seminggu di sini.)
 
-Lucas: (Hari ini aku jadi tau juga kalau yang bisa kena burnout adalah…)
--> Orang muda
+Lucas: (Hari ini aku jadi tau juga kalau burnout dan stres adalah)
+
+-> Sama saja
     Lucas: Hmm, kayaknya bukan ini deh  
     <<jump  Day6ReflectionPart1>>
--> Orang bekerja
-    Lucas: Hmm, kayaknya bukan ini deh  
-    <<jump Day6ReflectionPart1>>
--> Semua orang
+-> Dua hal yang berbeda
     <<jump Day6ReflectionPart2>>
+-> Tidak ada hubungannya
+    Lucas: Hmm, kayaknya bukan ini deh
+    <<jump Day6ReflectionPart1>>
 ===
 
 title: Day6ReflectionPart2
