@@ -19,7 +19,7 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         canvasGroup = GetComponent<CanvasGroup>();
 
 
-        startPos = rect.transform.position;
+        startPos = rect.transform.localPosition;
 
         Color a = foodImage.color;
         a.a = 0;
@@ -34,7 +34,7 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         if (foodItem == null)
             return;
 
-        rect.position += (Vector3)(e.delta / canvas.scaleFactor);
+        rect.anchoredPosition += (Vector2)(e.delta / canvas.scaleFactor);
         canvasGroup.blocksRaycasts = false;
     }
 
@@ -45,7 +45,7 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
 
     public void ReturnToOrigin()
     {
-        rect.transform.position = startPos;
+        rect.transform.localPosition = startPos;
         canvasGroup.blocksRaycasts = true;
     }
 
@@ -56,6 +56,11 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         if (drag == null) return;
 
         FoodItem foodItem = drag.GetFoodItem();
+
+        if (foodItem == null)
+            return;
+
+
         this.foodItem = foodItem;
 
         Color a = foodImage.color;

@@ -3449,6 +3449,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7677419535507296875, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8752108732748080831, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
       propertyPath: employees.Array.size
       value: 3

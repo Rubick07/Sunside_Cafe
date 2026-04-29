@@ -21,7 +21,8 @@ public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandl
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
 
-        startPos = rect.transform.position;
+        startPos = rect.transform.localPosition;
+
     }
 
     private void Start()
@@ -57,14 +58,14 @@ public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandl
         if (kettleController.GetKettleState() != KettleController.KettleState.Ready)
             return;
 
-        rect.position += (Vector3)(eventData.delta / canvas.scaleFactor);
+        rect.anchoredPosition += (Vector2)(eventData.delta / canvas.scaleFactor);
         canvasGroup.blocksRaycasts = false;
 
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        rect.transform.position = startPos;
+        rect.transform.localPosition = startPos;
         canvasGroup.blocksRaycasts = true;
     }
 

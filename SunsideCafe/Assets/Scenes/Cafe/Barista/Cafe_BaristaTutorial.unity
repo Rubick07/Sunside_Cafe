@@ -3438,6 +3438,18 @@ PrefabInstance:
       propertyPath: kettleController
       value: 
       objectReference: {fileID: 219319455}
+    - target: {fileID: 877175497982093055, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877175497982093055, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877175497982093055, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1148148724561809119, guid: f2bd7e5912e77bc478e0436f5021841f, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -20,7 +20,7 @@ public class PlateUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandle
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
 
-        startPos = rect.transform.position;
+        startPos = rect.transform.localPosition;
 
         foodDoneImage.enabled = false;
     }
@@ -45,17 +45,16 @@ public class PlateUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandle
     public void OnDrag(PointerEventData eventData)
     {
 
-/*        if (plate.GetKettleState() != KettleController.KettleState.Ready)
-            return;*/
+        /*        if (plate.GetKettleState() != KettleController.KettleState.Ready)
+                    return;*/
 
-        rect.position += (Vector3)(eventData.delta / canvas.scaleFactor);
+        rect.anchoredPosition += (Vector2)(eventData.delta / canvas.scaleFactor);
         canvasGroup.blocksRaycasts = false;
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        rect.transform.position = startPos;
+        rect.transform.localPosition = startPos;
         canvasGroup.blocksRaycasts = true;
     }
 

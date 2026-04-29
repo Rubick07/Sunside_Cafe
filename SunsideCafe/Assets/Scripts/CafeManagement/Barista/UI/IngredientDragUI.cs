@@ -20,7 +20,8 @@ public class IngredientDragUI : MonoBehaviour,IDragHandler, IEndDragHandler,IBeg
         canvasGroup = GetComponent<CanvasGroup>();
 
 
-        startPos = rect.transform.position;
+        startPos = rect.transform.localPosition;
+
     }
 
     public void Init(FoodData ingredient, Vector2 startPos)
@@ -43,13 +44,13 @@ public class IngredientDragUI : MonoBehaviour,IDragHandler, IEndDragHandler,IBeg
 
     public void OnDrag(PointerEventData e)
     {
-        rect.position += (Vector3)(e.delta / canvas.scaleFactor);
+        rect.anchoredPosition += (Vector2)(e.delta / canvas.scaleFactor);
         canvasGroup.blocksRaycasts = false;
     }
 
     public void OnEndDrag(PointerEventData e)
     {
-        rect.transform.position = startPos;
+        rect.transform.localPosition = startPos;
         canvasGroup.blocksRaycasts = true;
         //Destroy(gameObject);
     }

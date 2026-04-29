@@ -34,7 +34,7 @@ public class KettleController : MonoBehaviour
 
         ingredients.Add(newFoodItem);
 
-        Debug.Log("Masuk: " + data.foodName);
+        //Debug.Log("Masuk: " + data.foodName);
         // cek resep, update UI, dll
 
 
