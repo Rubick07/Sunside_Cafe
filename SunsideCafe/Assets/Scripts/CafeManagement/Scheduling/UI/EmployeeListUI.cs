@@ -42,6 +42,19 @@ public class EmployeeListUI : MonoBehaviour
         return null;
     }
 
+    public void RemoveEmployeeCard(EmployeeData employeeData)
+    {
+        foreach (EmployeeCardUI employeeCardUI in employeeCardUIList)
+        {
+            if (employeeCardUI.GetEmployeeData() == employeeData)
+            {
+                employeeCardUI.gameObject.SetActive(false);
+                employeeCardUIList.Remove(employeeCardUI);
+                return;
+            }
+        }
+    }
+
     public void Remove()
     {
         containerTransform.RemoveAllChild();

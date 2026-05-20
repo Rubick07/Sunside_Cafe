@@ -18,8 +18,8 @@ public class CalmNote : MonoBehaviour
 
         float progress = timer / duration;
 
-        // Shrink dari x size ke 1x size
-        float scale = Mathf.Lerp(10f, 1f, progress);
+        // Shrink dari x size ke 3.5x size
+        float scale = Mathf.Lerp(10f, 3.5f, progress);
         approachCircle.localScale = Vector3.one * scale;
 
         if (Input.GetKeyDown(KeyCode.Space))

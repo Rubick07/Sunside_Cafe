@@ -103,5 +103,22 @@ public class SideScrollPersonControllerAction : MonoBehaviour
         personController.SetControllerActive(false);
     }
 
+    private void OnDestroy()
+    {
+        MarketUI.instance.OnShopUIOpen -= MarketUI_OnShopUIOpen;
+        MarketUI.instance.OnShopUIClose -= MarketUI_OnShopUIClose;
+
+        TeleportUI.OnAnyTeleportStart -= TeleportUI_OnAnyTeleportStart;
+        TeleportUI.OnAnyTeleportEnd -= TeleportUI_OnAnyTeleportEnd;
+
+        JournalUI.instance.OnJournalUIOpen -= JournalUI_OnJournalUIOpen;
+        JournalUI.instance.OnJournalUIClose -= JournalUI_OnJournalUIClose;
+
+        TutorialManager.instance.OnTutorialTrigger -= TutorialManager_OnTutorialTrigger;
+        TutorialManager.instance.OnTutorialComplete -= TutorialManager_OnTutorialComplete;
+
+        GameManager.instance.OnGameStateChanged -= GameManager_OnGameStateChanged;
+
+    }
 
 }

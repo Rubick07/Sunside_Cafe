@@ -5,6 +5,9 @@ using TMPro;
 public class MindfulnessManager : MonoBehaviour
 {
     public static MindfulnessManager instance;
+
+    public event EventHandler OnSuccessHit;
+
     public enum mindfulState
     {
         WAIT,
@@ -76,6 +79,9 @@ public class MindfulnessManager : MonoBehaviour
         GameEvents.OnPlaySFX.Invoke("PerfectHitSFX");
 
         success++;
+
+        OnSuccessHit?.Invoke(this, EventArgs.Empty);
+
         if(success == 3)
         {
             //MinigamesClear

@@ -152,6 +152,8 @@ Lucas: Baiklah paman…
 <<SetRightTalk>>
 Arthur: Hati-hati di jalan.
 
+<<SetTeleportDisable ZoneMainDistrict_PintuCafe>>
+
 <<CafeBackgroundFadeOut CafeBackgroundUI>>
 <<Teleport ZoneCafe_TriggerKiri>>
 
@@ -424,6 +426,7 @@ Luna: I-Itu aja, hati-hati Lucas!
 <<SetLeftTalk>>
 Lucas: Ya, hati-hati juga.
 
+<<SetTeleportActive ZoneMainDistrict_PintuCafe>>
 ===
 
 title: Day4Reflection

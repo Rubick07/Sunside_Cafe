@@ -2,11 +2,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public static EmployeeData currentEmployeeData;
     public static EmployeeCardUI currentEmployeeCard;
+
+    public static event EventHandler OnAnyCardBeginDrag;
 
     [SerializeField] private TextMeshProUGUI employeeNameText;
     [SerializeField] private Image icon;
@@ -93,6 +96,8 @@ public class EmployeeCardUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         transform.position = eventData.position;
 
         canvasGroup.alpha = 0.7f;
+
+        OnAnyCardBeginDrag?.Invoke(this, EventArgs.Empty);
     }
 
     public void OnDrag(PointerEventData eventData)

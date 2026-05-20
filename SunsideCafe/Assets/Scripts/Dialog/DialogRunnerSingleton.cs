@@ -215,4 +215,10 @@ public class DialogRunnerSingleton : MonoBehaviour
         rightSpriteImage.enabled = false;
     }
 
+    private void OnDestroy()
+    {
+        dialogueRunner.onDialogueStart.RemoveAllListeners();
+        dialogueRunner.onDialogueComplete.RemoveAllListeners();
+    }
+
 }

@@ -236,6 +236,7 @@ Lucas: Aku pergi dulu!
 
 <<BlackscreenFadeOut BlackscreenUI>>
 
+<<SetTeleportDisable ZoneMainDistrict_PintuCafe>>
 ===
 
 title: Day6MainDistrict
@@ -452,6 +453,7 @@ Fiona & Luna: Selamat malam!
 <<SetLeftTalk>>
 Lucas: Ya, selamat malam.
 
+<<SetTeleportActive ZoneMainDistrict_PintuCafe>>
 <<SetPlayerTriggerActive TriggerDialog_BeforeReflection>>
 ===
 
