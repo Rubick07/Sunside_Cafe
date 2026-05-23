@@ -16,7 +16,7 @@ public class CreditMenu : MonoBehaviour
 
     private void Start()
     {
-        GameEvents.OnPlayMusic("ExploreNight");
+        GameEvents.OnPlayMusic("ExploreDay");
 
         pageGameobjectArray[0].GetComponent<CanvasGroup>().alpha = 0;
 
@@ -107,7 +107,7 @@ public class CreditMenu : MonoBehaviour
         
         if (index == pageGameobjectArray.Length - 1)
         {
-            Loader.Load(Loader.Scene.MainMenuScene);
+            BlackscreenUI.instance.FadeIn(() => Loader.Load(Loader.Scene.MainMenuScene), 1f);
             return;
         }
         
