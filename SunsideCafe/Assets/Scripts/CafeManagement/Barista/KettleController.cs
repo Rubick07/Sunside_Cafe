@@ -4,6 +4,9 @@ using System;
 
 public class KettleController : MonoBehaviour
 {
+    public static event EventHandler OnAnyIngredientListChanged;
+    public static event EventHandler OnAnyIngredientMix;
+
     public event EventHandler<FoodItem> OnIngredientListChanged;
     public event EventHandler OnIngredientMix;
     public event EventHandler OnIngredientFailMix;
@@ -40,6 +43,8 @@ public class KettleController : MonoBehaviour
 
         OnIngredientListChanged?.Invoke(this, newFoodItem);
 
+        OnAnyIngredientListChanged?.Invoke(this, EventArgs.Empty);
+
         return true;
     }
 
@@ -61,6 +66,8 @@ public class KettleController : MonoBehaviour
 
         ingredients.Clear();
         OnIngredientMix?.Invoke(this, EventArgs.Empty);
+
+        OnAnyIngredientMix?.Invoke(this, EventArgs.Empty);
 
         SetState(KettleState.Ready);
     }

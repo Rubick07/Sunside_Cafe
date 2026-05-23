@@ -2,9 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System;
 
-public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandler, IRemoveable
+public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandler, IRemoveable, IBeginDragHandler
 {
+    public static event EventHandler OnAnyKettleUIStartDrag;
+
     [SerializeField] private KettleController kettleController;
     [SerializeField] private Image foodDoneImage;
 
@@ -84,5 +87,10 @@ public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandl
     {
         kettleController.RemoveFood();
         foodDoneImage.enabled = false;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        OnAnyKettleUIStartDrag?.Invoke(this, EventArgs.Empty);
     }
 }

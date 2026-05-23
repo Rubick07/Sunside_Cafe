@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 public class CustomerView : MonoBehaviour, IDropHandler
 {
+    public static event EventHandler OnAnyCustomerGetFood;
+
     public event EventHandler<FoodData> OnCustomerGetCorrectFood;
 
     [SerializeField] protected Image customerImage;
@@ -67,7 +69,15 @@ public class CustomerView : MonoBehaviour, IDropHandler
 
         if (foodUI == null) return;
 
-        bool success = controller.TryServe(foodUI.GetFoodItem());
+        OnAnyCustomerGetFood?.Invoke(this, EventArgs.Empty);
+
+        bool success = true;
+
+        if (controller != null)
+        {
+            success = controller.TryServe(foodUI.GetFoodItem());
+
+        }
 
         GameEvents.OnPlaySFX.Invoke("PlateServingSFX");
 

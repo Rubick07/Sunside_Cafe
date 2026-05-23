@@ -10,13 +10,16 @@ public class TutorialManagerUI : MonoBehaviour
     {
         foreach (TutorialData tutorialData in tutorialDataArray)
         {
+/*
             tutorialData.exitButton.onClick.AddListener(()=> 
             {
                 TutorialManager.instance.TutorialComplete();
             });
-
+*/
             tutorialData.canvasGroup = tutorialData.tutorialGroupUIGameobject.GetComponent<CanvasGroup>();
             tutorialData.canvasGroup.alpha = 0;
+
+            tutorialData.highlight.fillAmount = 0;
         }
         HideAllChild();
         Hide();
@@ -40,6 +43,8 @@ public class TutorialManagerUI : MonoBehaviour
             {
                 data.tutorialGroupUIGameobject.SetActive(true);
                 data.canvasGroup.DOFade(1f, 1f);
+                data.highlight.DOFillAmount(1f, 1f);
+
                 return;
             }
 
@@ -81,8 +86,9 @@ public class TutorialData
 {
     public TutorialTriggerType triggerType;
     public GameObject tutorialGroupUIGameobject;
-    [HideInInspector] 
+   [HideInInspector] 
     public CanvasGroup canvasGroup;
-    public Button exitButton;
+    public Image highlight;
+    //public Button exitButton;
     
 }

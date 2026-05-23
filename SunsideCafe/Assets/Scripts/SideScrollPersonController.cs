@@ -61,6 +61,9 @@ public class SideScrollPersonController : MonoBehaviour
     {
         state = playerstate;
     }
+
+    public playerState GetControllerState() => state;
+
     private void Move_canceled(InputAction.CallbackContext obj)
     {
         if (state == playerState.NORMAL)

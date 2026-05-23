@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System;
 
-public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHandler, IRemoveable, IServe
+
+public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHandler, IRemoveable, IServe, IBeginDragHandler
 {
+    public static event EventHandler OnAnyFoodItemUIBeginDrag;
+
     [SerializeField] private Image foodImage;
     private FoodItem foodItem;
 
@@ -108,4 +112,8 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         return foodItem;
     }
 
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        OnAnyFoodItemUIBeginDrag?.Invoke(this, EventArgs.Empty);
+    }
 }

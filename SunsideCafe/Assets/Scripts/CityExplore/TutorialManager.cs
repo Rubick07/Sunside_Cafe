@@ -16,6 +16,8 @@ public class TutorialManager : MonoBehaviour
     {
         GameEvents.OnPlaySFX.Invoke("PopUpSFX");
 
+        AddActionTutorial(tutorialTriggerType);
+
         OnTutorialTrigger?.Invoke(this, tutorialTriggerType);
     }
 
@@ -24,7 +26,34 @@ public class TutorialManager : MonoBehaviour
         OnTutorialComplete?.Invoke(this, EventArgs.Empty);
     }
 
+    public void AddActionTutorial(TutorialTriggerType tutorialTriggerType)
+    {
 
+        switch (tutorialTriggerType)
+        {
+            case TutorialTriggerType.PressMoveKey:
+                InputManager.Instance.GetInputActions().Player.Move.performed += Move_performed;
+                break;
+
+            case TutorialTriggerType.Interact:
+                InputManager.Instance.GetInputActions().Player.Interact.performed += Interact_performed; ;
+                break;
+        }
+
+    }
+
+    private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        InputManager.Instance.GetInputActions().Player.Interact.performed -= Interact_performed; ;
+
+        TutorialComplete();
+    }
+
+    private void Move_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        InputManager.Instance.GetInputActions().Player.Move.performed -= Move_performed;
+        TutorialComplete();
+    }
 
 }
 

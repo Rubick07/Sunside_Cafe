@@ -33,6 +33,10 @@ public class SideScrollPersonControllerAction : MonoBehaviour
 
         DialogRunnerSingleton.instance.GetDialogueRunner().onDialogueComplete.AddListener(() =>
         {
+            if (personController.GetControllerState() == SideScrollPersonController.playerState.OPENSHOP)
+                return;
+
+
             personController.SetControllerState(SideScrollPersonController.playerState.NORMAL);
 
 
