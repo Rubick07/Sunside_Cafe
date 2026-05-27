@@ -81,4 +81,10 @@ public class ObjectiveManager : MonoBehaviour
     {
         return activeObjectives[currentObjective].data.title;
     }
+
+    public ObjectiveData GetCurrentObjectiveData()
+    {
+        return activeObjectives[currentObjective].data;
+    }
+
 }

@@ -14,11 +14,13 @@ public class JournalUI : MonoBehaviour
     [SerializeField] private Button profileButton;
     [SerializeField] private Button inventoryButton;
     [SerializeField] private Button diaryButton;
+    [SerializeField] private Button objectiveButton;
 
     [Header("PAGE REFERENCE")]
     [SerializeField] private GameObject profileGroupGameobject;
     [SerializeField] private GameObject inventoryGroupGameobject;
     [SerializeField] private GameObject diaryGroupGameobject;
+    [SerializeField] private GameObject objectiveGroupGameobject;
 
 
     private float normalButtonHeight = 126f;
@@ -34,6 +36,7 @@ public class JournalUI : MonoBehaviour
         RectTransform profRectTransform = profileButton.GetComponent<RectTransform>();
         RectTransform invRectTransform = inventoryButton.GetComponent<RectTransform>();
         RectTransform diaryRectTransform = diaryButton.GetComponent<RectTransform>();
+        RectTransform objectiveRectTransform = objectiveButton.GetComponent<RectTransform>();
 
 
         exitButton.onClick.AddListener(()=> 
@@ -46,6 +49,7 @@ public class JournalUI : MonoBehaviour
             profileGroupGameobject.SetActive(true);
             inventoryGroupGameobject.SetActive(false);
             diaryGroupGameobject.SetActive(false);
+            objectiveGroupGameobject.SetActive(false);
 
             profRectTransform.anchoredPosition = new Vector2(profRectTransform.anchoredPosition.x, normalButtonPosY);
             profRectTransform.sizeDelta = new Vector2(profRectTransform.sizeDelta.x, normalButtonHeight);
@@ -56,6 +60,8 @@ public class JournalUI : MonoBehaviour
             diaryRectTransform.anchoredPosition = new Vector2(diaryRectTransform.anchoredPosition.x, buttonInActivePosY);
             diaryRectTransform.sizeDelta = new Vector2(diaryRectTransform.sizeDelta.x, buttonInActiveHeight);
 
+            objectiveRectTransform.anchoredPosition = new Vector2(objectiveRectTransform.anchoredPosition.x, buttonInActivePosY);
+            objectiveRectTransform.sizeDelta = new Vector2(objectiveRectTransform.sizeDelta.x, buttonInActiveHeight);
 
         });
 
@@ -64,6 +70,7 @@ public class JournalUI : MonoBehaviour
             profileGroupGameobject.SetActive(false);
             inventoryGroupGameobject.SetActive(true);
             diaryGroupGameobject.SetActive(false);
+            objectiveGroupGameobject.SetActive(false);
 
             profRectTransform.anchoredPosition = new Vector2(profRectTransform.anchoredPosition.x, buttonInActivePosY);
             profRectTransform.sizeDelta = new Vector2(profRectTransform.sizeDelta.x, buttonInActiveHeight);
@@ -74,6 +81,9 @@ public class JournalUI : MonoBehaviour
             diaryRectTransform.anchoredPosition = new Vector2(diaryRectTransform.anchoredPosition.x, buttonInActivePosY);
             diaryRectTransform.sizeDelta = new Vector2(diaryRectTransform.sizeDelta.x, buttonInActiveHeight);
 
+            objectiveRectTransform.anchoredPosition = new Vector2(objectiveRectTransform.anchoredPosition.x, buttonInActivePosY);
+            objectiveRectTransform.sizeDelta = new Vector2(objectiveRectTransform.sizeDelta.x, buttonInActiveHeight);
+
         });
 
         diaryButton.onClick.AddListener(() => 
@@ -81,6 +91,7 @@ public class JournalUI : MonoBehaviour
             profileGroupGameobject.SetActive(false);
             inventoryGroupGameobject.SetActive(false);
             diaryGroupGameobject.SetActive(true);
+            objectiveGroupGameobject.SetActive(false);
 
             profRectTransform.anchoredPosition = new Vector2(profRectTransform.anchoredPosition.x, buttonInActivePosY);
             profRectTransform.sizeDelta = new Vector2(profRectTransform.sizeDelta.x, buttonInActiveHeight);
@@ -91,12 +102,37 @@ public class JournalUI : MonoBehaviour
             diaryRectTransform.anchoredPosition = new Vector2(diaryRectTransform.anchoredPosition.x, normalButtonPosY);
             diaryRectTransform.sizeDelta = new Vector2(diaryRectTransform.sizeDelta.x, normalButtonHeight);
 
+            objectiveRectTransform.anchoredPosition = new Vector2(objectiveRectTransform.anchoredPosition.x, buttonInActivePosY);
+            objectiveRectTransform.sizeDelta = new Vector2(objectiveRectTransform.sizeDelta.x, buttonInActiveHeight);
+
+        });
+
+        objectiveButton.onClick.AddListener(() =>
+        {
+            profileGroupGameobject.SetActive(false);
+            inventoryGroupGameobject.SetActive(false);
+            diaryGroupGameobject.SetActive(false);
+            objectiveGroupGameobject.SetActive(true);
+
+            profRectTransform.anchoredPosition = new Vector2(profRectTransform.anchoredPosition.x, buttonInActivePosY);
+            profRectTransform.sizeDelta = new Vector2(profRectTransform.sizeDelta.x, buttonInActiveHeight);
+
+            invRectTransform.anchoredPosition = new Vector2(invRectTransform.anchoredPosition.x, buttonInActivePosY);
+            invRectTransform.sizeDelta = new Vector2(invRectTransform.sizeDelta.x, buttonInActiveHeight);
+
+            diaryRectTransform.anchoredPosition = new Vector2(diaryRectTransform.anchoredPosition.x, buttonInActivePosY);
+            diaryRectTransform.sizeDelta = new Vector2(diaryRectTransform.sizeDelta.x, buttonInActiveHeight);
+
+            objectiveRectTransform.anchoredPosition = new Vector2(objectiveRectTransform.anchoredPosition.x, normalButtonPosY);
+            objectiveRectTransform.sizeDelta = new Vector2(objectiveRectTransform.sizeDelta.x, normalButtonHeight);
+
         });
 
 
         profileGroupGameobject.SetActive(true);
         inventoryGroupGameobject.SetActive(false);
         diaryGroupGameobject.SetActive(false);
+        objectiveGroupGameobject.SetActive(false);
 
         profRectTransform.anchoredPosition = new Vector2(profRectTransform.anchoredPosition.x, normalButtonPosY);
         profRectTransform.sizeDelta = new Vector2(profRectTransform.sizeDelta.x, normalButtonHeight);
@@ -107,6 +143,8 @@ public class JournalUI : MonoBehaviour
         diaryRectTransform.anchoredPosition = new Vector2(diaryRectTransform.anchoredPosition.x, buttonInActivePosY);
         diaryRectTransform.sizeDelta = new Vector2(diaryRectTransform.sizeDelta.x, buttonInActiveHeight);
 
+        objectiveRectTransform.anchoredPosition = new Vector2(objectiveRectTransform.anchoredPosition.x, buttonInActivePosY);
+        objectiveRectTransform.sizeDelta = new Vector2(objectiveRectTransform.sizeDelta.x, buttonInActiveHeight);
 
     }
 
