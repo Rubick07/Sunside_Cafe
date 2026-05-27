@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &517201699
+--- !u!1 &302903013
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,38 +127,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 517201701}
-  - component: {fileID: 517201700}
+  - component: {fileID: 302903015}
+  - component: {fileID: 302903014}
   m_Layer: 0
-  m_Name: ScheduleClearAction
+  m_Name: GameManagerChangeSceneAction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &517201700
+--- !u!114 &302903014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517201699}
+  m_GameObject: {fileID: 302903013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a78ceb8cd8267548b9f064228d807c1, type: 3}
+  m_Script: {fileID: 11500000, guid: e4458cbda8af35a40b6d8767f8fc0a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogTitle: Day5SchedulingClear
---- !u!4 &517201701
+  sceneName: Cafe_ShiftSystemDay5-2
+--- !u!4 &302903015
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517201699}
+  m_GameObject: {fileID: 302903013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 237.38501, y: 538.2505, z: 0}
+  m_LocalPosition: {x: 838.69183, y: 527.9847, z: 4.9350386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,18 +822,18 @@ PrefabInstance:
     - target: {fileID: 6570615369626057105, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 517201700}
+      objectReference: {fileID: 302903014}
     - target: {fileID: 6570615369626057105, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6570615369626057105, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerDialog
+      value: TriggerChangeScene
       objectReference: {fileID: 0}
     - target: {fileID: 6570615369626057105, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SchedulingClearAction, Assembly-CSharp
+      value: GameManagerChangeSceneAction, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6570615369626057105, guid: 90716ea2aaddbd54f9e8292d7a6ad390, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -931,4 +931,4 @@ SceneRoots:
   - {fileID: 1233701736}
   - {fileID: 4673829055410039144}
   - {fileID: 1187863246}
-  - {fileID: 517201701}
+  - {fileID: 302903015}

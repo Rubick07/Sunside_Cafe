@@ -59,6 +59,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditSceneNotUsed.unity
     guid: 6bbf148bd28e3504a844a16e7807a6e8
+  - enabled: 1
+    path: Assets/Scenes/Cafe/Scheduling/Cafe_ShiftSystemDay2-1.unity
+    guid: dcc07b50468696f47ad00f1c5a84b014
+  - enabled: 1
+    path: Assets/Scenes/Cafe/Scheduling/Cafe_ShiftSystemDay2-2.unity
+    guid: 7b0871a700c09554cb5bb891e873190b
+  - enabled: 1
+    path: Assets/Scenes/Cafe/Scheduling/Cafe_ShiftSystemDay5-2.unity
+    guid: 046b5deb2b8219744ae65406a12adcf6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

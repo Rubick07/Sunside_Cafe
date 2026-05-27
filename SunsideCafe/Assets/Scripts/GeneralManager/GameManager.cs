@@ -77,6 +77,11 @@ public class GameManager : MonoBehaviour
         OnGameSceneUnloadChanged?.Invoke(this, EventArgs.Empty);
     }
 
+    public string GetCurrentActiveScene()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
+
     [YarnCommand("GoToCreditScene")]
 
     public void GoToCreditScene()

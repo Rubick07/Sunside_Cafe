@@ -11199,7 +11199,6 @@ RectTransform:
   m_Children:
   - {fileID: 944408850}
   - {fileID: 413065785}
-  - {fileID: 1654408708}
   - {fileID: 844704356}
   - {fileID: 2003764084}
   - {fileID: 736708653}
@@ -11209,6 +11208,7 @@ RectTransform:
   - {fileID: 1952145440}
   - {fileID: 1547321877}
   - {fileID: 775468131}
+  - {fileID: 1654408708}
   m_Father: {fileID: 1900062074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -30961,6 +30961,10 @@ PrefabInstance:
     - target: {fileID: 3014470649487453978, guid: bc815ceaa2660494fa1bb7943e8d569d, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851886179739280700, guid: bc815ceaa2660494fa1bb7943e8d569d, type: 3}
+      propertyPath: m_Name
+      value: ZoneMainDistrict_Market
       objectReference: {fileID: 0}
     - target: {fileID: 6269014476861513739, guid: bc815ceaa2660494fa1bb7943e8d569d, type: 3}
       propertyPath: m_Name
