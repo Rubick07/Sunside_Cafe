@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ingridients_CoffeeBeans
   m_EditorClassIdentifier: 
   foodName: Coffee Beans
-  foodType: 1
+  foodType: 3
   price: 0
   soundName: 
   icon: {fileID: 21300000, guid: 8741feee5d10a5c4ca3069e96031eabc, type: 3}

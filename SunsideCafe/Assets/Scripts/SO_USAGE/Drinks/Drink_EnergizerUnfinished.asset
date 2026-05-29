@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f892ecb93adb554591d3ed377747a14, type: 3}
-  m_Name: Ingridients_TeaLeaves
+  m_Name: Drink_EnergizerUnfinished
   m_EditorClassIdentifier: 
-  foodName: Tea Leaves
-  foodType: 3
+  foodName: Energizer Unfinished
+  foodType: 1
   price: 0
   soundName: 
-  icon: {fileID: 21300000, guid: f34fe2a3075d1af42842b17d940b7102, type: 3}
+  icon: {fileID: 21300000, guid: bb7954efcded77a4a990c61bf176ad4c, type: 3}
   prefab: {fileID: 0}

@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandler, IRemoveable, IBeginDragHandler
+public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandler, IRemoveable, IBeginDragHandler, IFoodItemAble
 {
     public static event EventHandler OnAnyKettleUIStartDrag;
 
@@ -51,7 +51,7 @@ public class KettleUI : MonoBehaviour, IDropHandler, IDragHandler, IEndDragHandl
         var drag = eventData.pointerDrag?.GetComponent<IngredientDragUI>();
 
         if (drag == null) return;
-        if (drag.GetFoodData().foodType != FoodData.foodDataType.MINUMAN) return;
+        if (drag.GetFoodData().foodType != FoodData.foodDataType.Bahan) return;
 
         kettleController.AddIngredient(drag.GetFoodData());
     }

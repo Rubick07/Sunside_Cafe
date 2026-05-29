@@ -2,11 +2,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
+using System.Collections.Generic;
 
 
 public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHandler, IRemoveable, IServe, IBeginDragHandler
 {
     public static event EventHandler OnAnyFoodItemUIBeginDrag;
+    public static event EventHandler OnAnyFoodItemUIDrop;
 
     [SerializeField] private Image foodImage;
     private FoodItem foodItem;
@@ -56,7 +58,7 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
     public void OnDrop(PointerEventData eventData)
     {
 
-        var drag = eventData.pointerDrag?.GetComponent<KettleUI>();
+        var drag = eventData.pointerDrag?.GetComponent<IFoodItemAble>();
         if (drag == null) return;
 
         FoodItem foodItem = drag.GetFoodItem();
@@ -64,6 +66,19 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         if (foodItem == null)
             return;
 
+        if(foodItem.data.foodType == FoodData.foodDataType.AddOn && this.foodItem != null)
+        {
+            List<FoodItem> ingredients = new();
+            ingredients.Add(foodItem);
+            ingredients.Add(this.foodItem);
+
+            foodItem = RecipeManager.instance.TryCombine(ingredients);
+        }
+
+        if (foodItem == null)
+        {
+            return;
+        }
 
         this.foodItem = foodItem;
 
@@ -74,10 +89,16 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
 
         foodImage.sprite = foodItem.data.icon;
 
-        GameEvents.OnPlaySFX("WaterPouringSFX");
+        var drag2 = eventData.pointerDrag?.GetComponent<KettleUI>();
+
+        if (drag2 != null)
+        {
+            GameEvents.OnPlaySFX("WaterPouringSFX");
+            drag2.Place();
+        }
 
 
-        drag.Place();
+        OnAnyFoodItemUIDrop?.Invoke(this, EventArgs.Empty);
     }
 
     public void Consume()

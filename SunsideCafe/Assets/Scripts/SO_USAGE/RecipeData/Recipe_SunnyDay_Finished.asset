@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 094eef0ef3d056b4693278dc930f2795, type: 3}
-  m_Name: Recipe_SunnyDay
+  m_Name: Recipe_SunnyDay_Finished
   m_EditorClassIdentifier: 
   recipeName: Sunny Day
   recipeDesc: Teman terbaik di hari yang cerah. <u>Dingin, menyegarkan</u>, dan <u>penuh
     nuansa</u> musim panas di setiap tegukan.
   output: {fileID: 11400000, guid: 8368f265c2274804ea3c334dbd07df05, type: 2}
   requiredIngredients:
-  - {fileID: 11400000, guid: bad4ba2bd9e358542af864b085ab8d25, type: 2}
-  - {fileID: 11400000, guid: bad4ba2bd9e358542af864b085ab8d25, type: 2}
-  - {fileID: 11400000, guid: 66e229120aeb64a4e92d58ce32e71866, type: 2}
+  - {fileID: 11400000, guid: c4026898fa1355f419d59f1c30c4adce, type: 2}
   - {fileID: 11400000, guid: e6ca4a77efffec244b27ce552fdea736, type: 2}
   bonusLevel: 1

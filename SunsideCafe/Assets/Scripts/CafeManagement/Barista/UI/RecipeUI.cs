@@ -18,6 +18,8 @@ public class RecipeUI : MonoBehaviour, IBindData<RecipeData>
         int index = 0;
         foreach(FoodData foodData in data.requiredIngredients)
         {
+            if (index == 3)
+                break;
             ingredientImagetArray[index].sprite = foodData.icon;
             ingredientImagetArray[index].enabled = true;
 

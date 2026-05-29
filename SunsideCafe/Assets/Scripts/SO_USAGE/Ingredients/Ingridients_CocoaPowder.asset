@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ingridients_CocoaPowder
   m_EditorClassIdentifier: 
   foodName: Chocolate
-  foodType: 1
+  foodType: 3
   price: 0
   soundName: PowderSFX
   icon: {fileID: 21300000, guid: e45e27dc203762540a93376f8f364907, type: 3}

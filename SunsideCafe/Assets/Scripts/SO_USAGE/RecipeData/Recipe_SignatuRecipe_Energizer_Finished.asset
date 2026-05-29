@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 094eef0ef3d056b4693278dc930f2795, type: 3}
-  m_Name: Recipe_SignatuRecipe_Energizer
+  m_Name: Recipe_SignatuRecipe_Energizer_Finished
   m_EditorClassIdentifier: 
-  recipeName: Energizer
+  recipeName: Energizer Finished
   recipeDesc: Segarkan kembali energimu. Perpaduan cokelat murni dan <u>sensasi dingin
     es</u> menghadirkan <u>energi maksimal</u> tanpa minuman energi.
   output: {fileID: 11400000, guid: 903100c48ae7fd647b6cb4ce17438f7d, type: 2}
   requiredIngredients:
-  - {fileID: 11400000, guid: 66e229120aeb64a4e92d58ce32e71866, type: 2}
-  - {fileID: 11400000, guid: 66e229120aeb64a4e92d58ce32e71866, type: 2}
-  - {fileID: 11400000, guid: bda34a4606c6b0347a8479a30d6ce879, type: 2}
+  - {fileID: 11400000, guid: 1fe607c85597d0743973906168fce943, type: 2}
   - {fileID: 11400000, guid: e6ca4a77efffec244b27ce552fdea736, type: 2}
   bonusLevel: 1

@@ -11,11 +11,15 @@ public class BaristaTutorial : MonoBehaviour
     [SerializeField] private GameObject kopiHighlightGameobject;
     [SerializeField] private GameObject customerHighlightGameobject;
     [SerializeField] private GameObject customerPertama;
+    [SerializeField] private GameObject AddOnHighlightGameObject;
     [Header("GROUP REFERENCE")]
     [SerializeField] private GameObject basicBrewUITitleGameObject;
     [SerializeField] private GameObject basicBrewUIFirstGameobject;
     [SerializeField] private GameObject basicBrewUISecondGameobject;
     [SerializeField] private GameObject basicBrewUIThirdGameobject;
+    [SerializeField] private GameObject basicBrewUIFourthGameobject;
+    [SerializeField] private GameObject AddOnsTitleGameobject;
+    [SerializeField] private GameObject AddOnsTutorialGameobject;
 
 
     private void Start()
@@ -27,11 +31,16 @@ public class BaristaTutorial : MonoBehaviour
         tekoHighlightGameobject.SetActive(false);
         kopiHighlightGameobject.SetActive(false);
         customerHighlightGameobject.SetActive(false);
+        AddOnHighlightGameObject.SetActive(false);
 
         basicBrewUITitleGameObject.SetActive(true);
+        AddOnsTitleGameobject.SetActive(false);
+
         basicBrewUIFirstGameobject.SetActive(true);
         basicBrewUISecondGameobject.SetActive(false);
         basicBrewUIThirdGameobject.SetActive(false);
+        basicBrewUIFourthGameobject.SetActive(false);
+        AddOnsTutorialGameobject.SetActive(false);
 
         IngredientDragUI.OnAnyIngredientBeginDrag += IngredientDragUI_OnAnyIngredientBeginDrag;
 
@@ -71,6 +80,8 @@ public class BaristaTutorial : MonoBehaviour
 
     }
 
+    //Tutorial Fase 2
+
     private void IngredientDragUI_OnAnyIngredientBeginDragSecondTutorial(object sender, System.EventArgs e)
     {
         IngredientDragUI.OnAnyIngredientBeginDrag -= IngredientDragUI_OnAnyIngredientBeginDragSecondTutorial;
@@ -100,6 +111,7 @@ public class BaristaTutorial : MonoBehaviour
 
     }
 
+    //Tutorial Mix
     private void KettleController_OnAnyIngredientMix(object sender, System.EventArgs e)
     {
         KettleController.OnAnyIngredientMix -= KettleController_OnAnyIngredientMix;
@@ -122,6 +134,7 @@ public class BaristaTutorial : MonoBehaviour
 
     }
 
+    //Tutorial Drag kettle
     private void KettleUI_OnAnyKettleUIStartDrag(object sender, System.EventArgs e)
     {
         KettleUI.OnAnyKettleUIStartDrag -= KettleUI_OnAnyKettleUIStartDrag;
@@ -129,9 +142,63 @@ public class BaristaTutorial : MonoBehaviour
         tekoHighlightGameobject.SetActive(false);
         kopiHighlightGameobject.SetActive(true);
 
+        FoodItemUI.OnAnyFoodItemUIDrop += FoodItemUI_OnAnyFoodItemUIDropDrink;
+        
+        //IngredientDragUI.OnAnyIngredientBeginDrag += IngredientDragUI_OnAnyIngredientBeginDragAddOn;
+        //FoodItemUI.OnAnyFoodItemUIBeginDrag += FoodItemUI_OnAnyFoodItemUIBeginDrag;
+    }
+
+    private void FoodItemUI_OnAnyFoodItemUIDropDrink(object sender, System.EventArgs e)
+    {
+        FoodItemUI.OnAnyFoodItemUIDrop -= FoodItemUI_OnAnyFoodItemUIDropDrink;
+
+        kopiHighlightGameobject.SetActive(false);
+        AddOnHighlightGameObject.SetActive(true);
+
+        basicBrewUITitleGameObject.SetActive(false);
+        basicBrewUIThirdGameobject.SetActive(false);
+
+        AddOnsTitleGameobject.SetActive(true);
+        AddOnsTutorialGameobject.SetActive(true);
+
+        IngredientDragUI.OnAnyIngredientBeginDrag += IngredientDragUI_OnAnyIngredientBeginDragAddOn;
+    }
+
+    //Tutorial Add-Ons
+    private void IngredientDragUI_OnAnyIngredientBeginDragAddOn(object sender, System.EventArgs e)
+    {
+        IngredientDragUI ingredientUI = sender as IngredientDragUI;
+
+        if (ingredientUI != null)
+        {
+            if(ingredientUI.GetFoodData().foodType == FoodData.foodDataType.AddOn)
+            {
+                IngredientDragUI.OnAnyIngredientBeginDrag -= IngredientDragUI_OnAnyIngredientBeginDragAddOn;
+
+                AddOnHighlightGameObject.SetActive(false);
+                kopiHighlightGameobject.SetActive(true);
+
+                FoodItemUI.OnAnyFoodItemUIDrop += FoodItemUI_OnAnyFoodItemUIDrop;
+
+            }
+        }
+    }
+
+    private void FoodItemUI_OnAnyFoodItemUIDrop(object sender, System.EventArgs e)
+    {
+        FoodItemUI.OnAnyFoodItemUIDrop -= FoodItemUI_OnAnyFoodItemUIDrop;
+
+        basicBrewUITitleGameObject.SetActive(true);
+        basicBrewUIFourthGameobject.SetActive(true);
+
+        AddOnsTitleGameobject.SetActive(false);
+        AddOnsTutorialGameobject.SetActive(false);
+
         FoodItemUI.OnAnyFoodItemUIBeginDrag += FoodItemUI_OnAnyFoodItemUIBeginDrag;
     }
 
+
+    //Tutorial drag makanan
     private void FoodItemUI_OnAnyFoodItemUIBeginDrag(object sender, System.EventArgs e)
     {
         FoodItemUI.OnAnyFoodItemUIBeginDrag -= FoodItemUI_OnAnyFoodItemUIBeginDrag;
@@ -142,6 +209,7 @@ public class BaristaTutorial : MonoBehaviour
         CustomerView.OnAnyCustomerGetFood += CustomerView_OnAnyCustomerGetFood;
     }
 
+    //Tutorial Kasi makanan ke Customer
     private void CustomerView_OnAnyCustomerGetFood(object sender, System.EventArgs e)
     {
         CustomerView.OnAnyCustomerGetFood -= CustomerView_OnAnyCustomerGetFood;

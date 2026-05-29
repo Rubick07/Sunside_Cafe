@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 094eef0ef3d056b4693278dc930f2795, type: 3}
-  m_Name: Recipe_BittersweetYouth
+  m_Name: Recipe_BittersweetYouth_Unfinished
   m_EditorClassIdentifier: 
-  recipeName: Bittersweet Youth
+  recipeName: Bittersweet Youth Unfinished
   recipeDesc: Minuman kopi favorit anak muda. Perpaduan <u>pahit</u> dan <u>manis
     </u>yang mencerminkan perjalanan menuju kedewasaan.
   output: {fileID: 11400000, guid: d6959a6268a9d0f4ba57154103464805, type: 2}
@@ -20,5 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bda34a4606c6b0347a8479a30d6ce879, type: 2}
   - {fileID: 11400000, guid: bda34a4606c6b0347a8479a30d6ce879, type: 2}
   - {fileID: 11400000, guid: 66e229120aeb64a4e92d58ce32e71866, type: 2}
-  - {fileID: 11400000, guid: 99bd50fa6be7947439e1467ba332d294, type: 2}
   bonusLevel: 1

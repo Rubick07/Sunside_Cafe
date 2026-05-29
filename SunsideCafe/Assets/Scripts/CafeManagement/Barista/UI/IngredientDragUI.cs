@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public class IngredientDragUI : MonoBehaviour,IDragHandler, IEndDragHandler,IBeginDragHandler
+public class IngredientDragUI : MonoBehaviour,IDragHandler, IEndDragHandler,IBeginDragHandler, IFoodItemAble
 {
     public static event EventHandler OnAnyIngredientBeginDrag;
 
@@ -62,4 +62,8 @@ public class IngredientDragUI : MonoBehaviour,IDragHandler, IEndDragHandler,IBeg
 
     public FoodData GetFoodData() => data;
 
+    public FoodItem GetFoodItem()
+    {
+        return new FoodItem(data);
+    }
 }

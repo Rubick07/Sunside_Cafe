@@ -7,7 +7,9 @@ public class FoodData : ScriptableObject
     public enum foodDataType
     {
         MAKANAN,
-        MINUMAN
+        MINUMAN,
+        AddOn,
+        Bahan
     }
 
     public string foodName;
