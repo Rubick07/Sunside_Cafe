@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 
 public class MindfulnessManager : MonoBehaviour
@@ -7,6 +9,17 @@ public class MindfulnessManager : MonoBehaviour
     public static MindfulnessManager instance;
 
     public event EventHandler OnSuccessHit;
+
+    [SerializeField] private mindfulState state;
+    [SerializeField] private TextMeshProUGUI countdownText;
+
+    [Header("Sequence Setup")]
+    [SerializeField] private List<BreathingNote> notes;
+
+    private int currentIndex;
+
+    private float timeToCountdown = 3f;
+
 
     public enum mindfulState
     {
@@ -17,117 +30,105 @@ public class MindfulnessManager : MonoBehaviour
         CLEAR
     }
 
-    [SerializeField] private mindfulState state;
-    [SerializeField] private TextMeshProUGUI countdownText;
-    [SerializeField] private Transform calmNoteTransfomPrefab;
-    [SerializeField] private Transform calmNoteTransformContainer;
-
-    private float timeToCountdown = 3f;
-    private float timeToSpawn = 2f;
-
-    private int success;
-
     private void Awake()
     {
         instance = this;
     }
 
-    private void Start()
+    void Start()
     {
         AudioManager.Instance.StopMusic();
+        //StartNote();
     }
 
     private void Update()
     {
-        switch (state)
+        switch (state) 
         {
             case mindfulState.WAIT:
-
                 break;
 
             case mindfulState.COUNTDOWN:
                 timeToCountdown -= Time.deltaTime;
                 countdownText.text = timeToCountdown.ToString("0");
-                if(timeToCountdown <= 0f)
+                if (timeToCountdown <= 0f)
                 {
                     state = mindfulState.SPAWN;
+                    StartNote();
                     countdownText.gameObject.SetActive(false);
                 }
                 break;
 
-            case mindfulState.SPAWN:
-                timeToSpawn -= Time.deltaTime;
-                if(timeToSpawn <= 0)
-                {
-                    SpawnNote();
-                    state = mindfulState.WAITNOTE;
-                }
-                break;
-
-            case mindfulState.WAITNOTE:
-
-                break;
-
-            case mindfulState.CLEAR:
-
-                break;
+        
         }
     }
 
-    public void CalmSuccess()
-    {
-        GameEvents.OnPlaySFX.Invoke("PerfectHitSFX");
-
-        success++;
-
-        OnSuccessHit?.Invoke(this, EventArgs.Empty);
-
-        if(success == 3)
-        {
-            //MinigamesClear
-            state = mindfulState.CLEAR;
-            GameManager.instance.RemoveScene();
-        }
-        else
-        {
-            timeToSpawn = 3f;
-            state = mindfulState.SPAWN;
-        }
-    }
-
-    public void CalmFail()
-    {
-        GameEvents.OnPlaySFX.Invoke("MissHitSFX");
-
-        success = 0;
-        timeToSpawn = 3f;
-        state = mindfulState.SPAWN;
-    }
-    public void SpawnNote()
-    {
-        Transform calmNoteTransform = Instantiate(calmNoteTransfomPrefab, calmNoteTransformContainer.position, Quaternion.identity, calmNoteTransformContainer);
-
-        calmNoteTransform.SetAsFirstSibling();
-
-        CalmNote calmNote = calmNoteTransform.GetComponent<CalmNote>();
-        if(success == 0)
-        {
-            calmNote.SetDuration(1f);
-        }
-        else if(success == 1)
-        {
-            calmNote.SetDuration(2f);
-        }
-        else if(success == 2)
-        {
-            calmNote.SetDuration(3f);
-        }
-    }
-
-    public void StartGame()
+    public void StartCountdown()
     {
         state = mindfulState.COUNTDOWN;
-        
+    }
+
+    void StartNote()
+    {
+        if (currentIndex >= notes.Count)
+        {
+            Debug.Log("Sequence Complete");
+            GameManager.instance.RemoveScene();
+            return;
+        }
+
+        BreathingNote note = notes[currentIndex];
+
+        note.gameObject.SetActive(true);
+
+        note.OnSuccess += HandleSuccess;
+        note.OnFail += HandleFail;
+
+        note.Initialize();
+    }
+
+    void HandleSuccess(BreathingNote note)
+    {
+        Debug.Log("Success");
+
+        GameEvents.OnPlaySFX.Invoke("PerfectHitSFX");
+        OnSuccessHit?.Invoke(this, EventArgs.Empty);
+
+        StartCoroutine(MoveNext(note));
+    }
+
+    void HandleFail(BreathingNote note)
+    {
+        Debug.Log("Fail");
+        GameEvents.OnPlaySFX.Invoke("MissHitSFX");
+
+        StartCoroutine(Restart(note));
+    }
+
+    IEnumerator MoveNext(BreathingNote note)
+    {
+        note.OnSuccess -= HandleSuccess;
+        note.OnFail -= HandleFail;
+
+        note.gameObject.SetActive(false);
+
+        currentIndex++;
+
+        yield return new WaitForSeconds(.5f);
+
+        StartNote();
+    }
+
+    IEnumerator Restart(BreathingNote note)
+    {
+        note.OnSuccess -= HandleSuccess;
+        note.OnFail -= HandleFail;
+
+        note.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(.5f);
+
+        StartNote();
     }
 
 }
