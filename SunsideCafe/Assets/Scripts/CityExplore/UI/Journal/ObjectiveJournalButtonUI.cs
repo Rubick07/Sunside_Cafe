@@ -10,7 +10,10 @@ public class ObjectiveJournalButtonUI : MonoBehaviour
     private ObjectiveData objectiveData;
     private void Start()
     {
-        ObjectiveJournalManagerUI.instance.ChangeObjectivePage(objectiveData);
+        button.onClick.AddListener(() => 
+        {
+            ObjectiveJournalManagerUI.instance.ChangeObjectivePage(objectiveData);
+        });
     }
 
     public void Setup(ObjectiveData objectiveData)

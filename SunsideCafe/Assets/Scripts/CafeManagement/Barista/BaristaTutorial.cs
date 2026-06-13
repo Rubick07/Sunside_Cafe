@@ -178,15 +178,14 @@ public class BaristaTutorial : MonoBehaviour
                 AddOnHighlightGameObject.SetActive(false);
                 kopiHighlightGameobject.SetActive(true);
 
-                FoodItemUI.OnAnyFoodItemUIDrop += FoodItemUI_OnAnyFoodItemUIDrop;
-
+                FoodItemUI.OnAnyAddOnAdded += FoodItemUI_OnAnyAddOnAdded;
             }
         }
     }
 
-    private void FoodItemUI_OnAnyFoodItemUIDrop(object sender, System.EventArgs e)
+    private void FoodItemUI_OnAnyAddOnAdded(object sender, System.EventArgs e)
     {
-        FoodItemUI.OnAnyFoodItemUIDrop -= FoodItemUI_OnAnyFoodItemUIDrop;
+        FoodItemUI.OnAnyAddOnAdded -= FoodItemUI_OnAnyAddOnAdded;
 
         basicBrewUITitleGameObject.SetActive(true);
         basicBrewUIFourthGameobject.SetActive(true);
@@ -196,7 +195,6 @@ public class BaristaTutorial : MonoBehaviour
 
         FoodItemUI.OnAnyFoodItemUIBeginDrag += FoodItemUI_OnAnyFoodItemUIBeginDrag;
     }
-
 
     //Tutorial drag makanan
     private void FoodItemUI_OnAnyFoodItemUIBeginDrag(object sender, System.EventArgs e)
@@ -221,6 +219,8 @@ public class BaristaTutorial : MonoBehaviour
             basicBrewUIThirdGameobject.SetActive(false);
 
             ingredientHighlightGameobject.SetActive(false);
+            basicBrewUIFourthGameobject.SetActive(false);
+            basicBrewUITitleGameObject.SetActive(false);
             //tekoHighlightGameobject.SetActive(true);
 
 

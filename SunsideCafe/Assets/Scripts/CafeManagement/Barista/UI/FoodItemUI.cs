@@ -9,6 +9,7 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
 {
     public static event EventHandler OnAnyFoodItemUIBeginDrag;
     public static event EventHandler OnAnyFoodItemUIDrop;
+    public static event EventHandler OnAnyAddOnAdded;
 
     [SerializeField] private Image foodImage;
     private FoodItem foodItem;
@@ -66,6 +67,12 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
         if (foodItem == null)
             return;
 
+        if (foodItem.data.foodType == FoodData.foodDataType.MAKANAN || foodItem.data.foodType == FoodData.foodDataType.Bahan)
+            return;
+
+        if (foodItem.data.foodType == FoodData.foodDataType.AddOn && this.foodItem == null)
+            return;
+
         if(foodItem.data.foodType == FoodData.foodDataType.AddOn && this.foodItem != null)
         {
             List<FoodItem> ingredients = new();
@@ -73,6 +80,8 @@ public class FoodItemUI : MonoBehaviour,IDragHandler, IEndDragHandler, IDropHand
             ingredients.Add(this.foodItem);
 
             foodItem = RecipeManager.instance.TryCombine(ingredients);
+
+            OnAnyAddOnAdded?.Invoke(this, EventArgs.Empty);
         }
 
         if (foodItem == null)

@@ -52,4 +52,10 @@ public class ObjectiveJournalManagerUI : MonoBehaviour
         objectiveDescText.text = objectiveData.description;
     }
 
+    private void OnDestroy()
+    {
+        ObjectiveManager.instance.OnObjectiveClear -= ObjectiveManager_OnObjectiveClear;
+
+    }
+
 }

@@ -40,4 +40,9 @@ public class DiaryDayButton : MonoBehaviour
         this.index = index;
     }
 
+    private void OnDestroy()
+    {
+        DaySystem.instance.OnDayChanged -= DaySystem_OnDayChanged;
+
+    }
 }

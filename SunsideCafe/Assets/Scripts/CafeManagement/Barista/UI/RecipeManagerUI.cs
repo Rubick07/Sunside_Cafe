@@ -38,8 +38,8 @@ public class RecipeManagerUI : MonoBehaviour
     {
         foreach(RecipeData recipeData in RecipeManager.instance.GetRecipeDataList())
         {
-            if (recipeData.name.EndsWith("_Unfinished"))
-                continue;
+/*            if (recipeData.name.EndsWith("_Unfinished"))
+                continue;*/
 
 
             RecipeUI recipeUI = Helpers.CreateUI<RecipeUI, RecipeData>(recipeUIPrefab, recipeUIContainer, recipeData);

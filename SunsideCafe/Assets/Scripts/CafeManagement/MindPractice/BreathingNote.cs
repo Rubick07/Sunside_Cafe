@@ -9,7 +9,7 @@ public abstract class BreathingNote : MonoBehaviour
     [SerializeField] protected float startScale = 2f;
     [SerializeField] protected float targetScale = 1f;
     [SerializeField] protected float duration = 2f;
-
+    [SerializeField] private AnimationCurve shrinkCurve;
     protected float timer;
 
     public bool IsFinished { get; protected set; }
@@ -46,8 +46,11 @@ public abstract class BreathingNote : MonoBehaviour
     {
         float t = timer / duration;
 
+        float curvedT = shrinkCurve.Evaluate(t);
+
+
         float scale =
-            Mathf.Lerp(startScale, targetScale, t);
+            Mathf.Lerp(startScale, targetScale, curvedT);
 
         ring.localScale = Vector3.one * scale;
     }

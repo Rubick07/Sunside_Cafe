@@ -514,21 +514,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeDataList:
-  - {fileID: 11400000, guid: 03b8aeb619a720149ad7fc826ce99e31, type: 2}
   - {fileID: 11400000, guid: 5f4d82344270dd64abee2043bdf9a24b, type: 2}
   - {fileID: 11400000, guid: ed6a04bed0dbb6240ba43b3f22b58ce3, type: 2}
   - {fileID: 11400000, guid: 3b58e29b913d5e04a962a419a7beba27, type: 2}
   - {fileID: 11400000, guid: 0b019705cb3190e4799861f04e7f5a3b, type: 2}
   - {fileID: 11400000, guid: 3c3776e9d907fab4198e28b65da0738a, type: 2}
   - {fileID: 11400000, guid: 0322aabf0954133428a89678a44a4d3e, type: 2}
-  - {fileID: 11400000, guid: 3ec4c2142e7e7aa42a17a888f3b14ba0, type: 2}
   - {fileID: 11400000, guid: 7e808cc4b2ad3204398731140c9d69f1, type: 2}
   - {fileID: 11400000, guid: b73c19356641f2d42bbd23f85d3bb2c8, type: 2}
   - {fileID: 11400000, guid: 917869e3c910550459602b496027d77a, type: 2}
-  - {fileID: 11400000, guid: b3b2e2e990e14074ab2518e483beeabe, type: 2}
   - {fileID: 11400000, guid: eaa8df302ef06b2408f13cb73a1e66cf, type: 2}
   - {fileID: 11400000, guid: efc38d1b0ccbc28419166c3021041711, type: 2}
-  - {fileID: 11400000, guid: 483321a5106e587429a127180057c3f1, type: 2}
   - {fileID: 11400000, guid: c3ae76a2fbf991e44a441b33d70454e7, type: 2}
   - {fileID: 11400000, guid: ebd03ae2a8833954a9d66c0f39590b17, type: 2}
   - {fileID: 11400000, guid: 152ebab6ce2c9ba409a3e8e3acb00d8c, type: 2}
