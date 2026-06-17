@@ -23,9 +23,9 @@ This project using Unity 6000.0.63f1
 
 | **Role** | **Name** | **Development Time** 
 |:-|:-|:-|
-| Game Programmer | Evan Jonathan | 3 month |
-| Game Artist | Radovieo Anugraha Daffacetta | 3 month |
-| Game Designer & Sound | Vincent Pho Wijaya | 3 month |
+| Game Programmer | Evan Jonathan | 3 months |
+| Game Artist | Radovieo Anugraha Daffacetta | 3 months |
+| Game Designer & Sound | Vincent Pho Wijaya | 3 months |
 
 
 <br>
@@ -42,16 +42,16 @@ This project using Unity 6000.0.63f1
 
 |  Script       | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| `SideScrollPersonController.cs` |Manages Side Scroll Player Input|
-|  `InputManager.cs` | Manages player input from input system |
-| `BaristaManager.cs`  | Manages Barista Minigames flow |
-| `RecipeManager.cs`  | Manages Recipe for ingredients mix |
-| `KettleManager.cs`  | Manages for ingredients add and mix |
-| `GameManager.cs`  | Manages game state and add minigames to scene |
-| `ScheduleManager.cs`  | Manages for Scheduling minigames flow |
-| `MindfulnessManager.cs`  | Manages for Mindfulness minigames flow |
-| `DialogueRunnerSingleton.cs`  | Manages for dialogue system Event |
-| `TimelineDayDreamController.cs`  | Manages for timeline event and trigger |
+| `SideScrollPersonController.cs` |Handles player movement and controls in side-scrolling sections|
+|  `InputManager.cs` |Handles player input through the Input System |
+| `BaristaManager.cs`  | Manages the flow of the Barista minigame |
+| `RecipeManager.cs`  | Manages recipes and ingredient combinations |
+| `KettleManager.cs`  | Handles ingredient mixing and brewing processes|
+| `GameManager.cs`  | Manages game states and minigame initialization|
+| `ScheduleManager.cs`  | Manages the scheduling minigame flow|
+| `MindfulnessManager.cs`  | Manages the mindfulness minigame flow |
+| `DialogueRunnerSingleton.cs`  | Handles dialogue events and progression |
+| `TimelineDayDreamController.cs`  | Manages Timeline events and triggers |
 | `etc`  | |
 
 
@@ -62,23 +62,23 @@ This project using Unity 6000.0.63f1
 
 ```
 ├── SunsideCafe                     # In this folder, containing all the Unity project files, to be opened by a Unity Editor
-   ├── Assets                       # In this folder, it contains all our code, assets, scenes, etc was not automatically created by Unity
-      ├── 2D_Assets                 # In this folder, it contaions all sprites, background, UI image, etc
-      ├── Animation_Asset           # In this folder, it contaions all animation clip and animation Controller
-      ├── Audio                     # In this folder, it contaions all SFX and BGM
-      ├── Fonts                     # In this folder, it contaions all font import
-      ├── Plugin                    # In this folder, it contaions plugin for development
-      ├── Prefabs                   # In this folder, it contaions all prefabs for the games
-      ├── Resources                 # In this folder, it contaions plugin settings
-      ├── Scenes                    # In this folder, there are scenes. You can open these scenes to play the game via Unity
-      ├── Scripts                   # In this folder, it contaions all script for the games
-      ├── Settings                  # In this folder, it contaions base settings from unity
-      ├── SignalEmitter             # In this folder, it contaions Signal emitter for timeline
-      ├── TextMeshPro               # In this folder, it contaions plugin for TextMeshPro
-      ├── Timeline                  # In this folder, it contaions Timeline for cutscene
-      ├── Tumbal                    # In this folder, it contaions image for placeholder when development
-      ├── TutorialInfo              # In this folder, it contaions URP packages
-      ├── UIREF                     # In this folder, it contaions UI reference from figma for applying to games
+   ├── Assets                       # Project assets and resources
+      ├── 2D_Assets                 # 2D sprites, backgrounds, and UI images
+      ├── Animation_Asset           # Animation clips and Animator Controllers
+      ├── Audio                     # Sound effects and background music
+      ├── Fonts                     # Font assets
+      ├── Plugin                    # Third-party plugins and development tools
+      ├── Prefabs                   # Reusable game object prefabs
+      ├── Resources                 # Resources loaded at runtime
+      ├── Scenes                    # Game scenes
+      ├── Scripts                   # Gameplay and system scripts
+      ├── Settings                  # Unity project settings and configurations
+      ├── SignalEmitter             # Timeline Signal Emitters
+      ├── TextMeshPro               # TextMeshPro assets and resources
+      ├── Timeline                  # Timeline assets for cutscenes and events
+      ├── Tumbal                    # Temporary placeholder assets used during development
+      ├── TutorialInfo              # Unity-generated tutorial and URP resources
+      ├── UIREF                     # UI references imported from Figma
    ├── ...
       
 ```
@@ -101,7 +101,7 @@ The following controls are bound in-game, for gameplay and testing.
 | Key Binding       | Function          |
 | ----------------- | ----------------- |
 | Tab          | Open/Close Recipe |
-| Left Mouse Button | Pick up ingredients, drag kettle, drag food to customer|
+| Left Mouse Button | Pick up ingredients, drag kettle, serve food to customers|
 
 ## Scheduling Minigames
 | Key Binding       | Function          |
