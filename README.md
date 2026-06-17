@@ -31,14 +31,12 @@ This project using Unity 6000.0.63f1
 <br>
 
 ##  📜Scripts and Features
-• Customer Order Management
-• Cafe Upgrade System
-• Daily Schedule Progression
-• Rhythm-Based Mindfulness Minigames
-• Relationship & Affection System
-• Interactive Dialogue Choices
-• Multiple Story Endings
-• For each minigame, it is in a different scene
+• Customer Order Management <br>
+• Cafe Upgrade System<br>
+• Daily Schedule Progression<br>
+• Rhythm-Based Mindfulness Minigames<br>
+• Multiple Story Endings<br>
+• For each minigame, it is in a different scene<br>
 
 
 
