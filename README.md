@@ -31,10 +31,14 @@ This project using Unity 6000.0.63f1
 <br>
 
 ##  📜Scripts and Features
-
-- In this game, player explore the map and play various minigames to advance the story
-- There are special customer that player need to fulfill for continue the game
-- For each minigame, it is in a different scene
+• Customer Order Management
+• Cafe Upgrade System
+• Daily Schedule Progression
+• Rhythm-Based Mindfulness Minigames
+• Relationship & Affection System
+• Interactive Dialogue Choices
+• Multiple Story Endings
+• For each minigame, it is in a different scene
 
 
 
