@@ -92,7 +92,7 @@ The following controls are bound in-game, for gameplay and testing.
 | Key Binding       | Function          |
 | ----------------- | ----------------- |
 | W,A,S,D           | Standard movement |
-| E             | Interact with Object/Environment/NPC              |
+| E             | Interact with Objects/Environments/NPCs            |
 | Esc              | Pause |
 | Tab            | Open/Close Journal |
 | Shift           | Sprint/Run            |
