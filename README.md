@@ -30,8 +30,13 @@ While helping run his uncle's cafe, Lucas gradually uncovers the problems of the
 <tr>
 <td align="center" width="50%">
 <strong>Explore the island</strong><br>
-<img width="100%" alt="Tactical" src="https://github.com/user-attachments/assets/4194228d-5b9c-4dd2-a70f-52a3106782b5">
+<img width="100%" alt="Explore" src="https://github.com/user-attachments/assets/6ec0e809-48a9-43f1-96f9-cf8e136172e7">
 </td>
+  <td align="center" width="50%">
+<strong>Play Minigames</strong><br>
+<img width="100%" alt="Minigames" src="https://github.com/user-attachments/assets/d76412f3-e9be-42f9-a03a-910766f8579b">
+</td>
+  
 </tr>
 </table>
 
@@ -64,72 +69,74 @@ config:
 ---
 graph TD
     subgraph "Core Systems"
-        IM[InputManager]
-        Ts[Turn System]
-        
+        IM[Input Manager]
+        TimelineDayDreamController[Timeline Day Dream Controller]
+        DialogRunnerSingleton[Dialog Runner Singleton]
+        PauseSystem[Pause System]
+        GameManager[Game Manager]
     end
     
     subgraph "Player Systems"
-        UAS[Unit Action System]
-        CC[Camera Controller]
-    end
-    
-    subgraph "Unit System"
-        U[Unit]
-        UM[Unit Manager]
-        HS[Health System]
-        BA[Base Action]
-    end
-    
-    subgraph "Tile-based Systems"
-        GS[Grid System]
-        LG[LevelGrid]
-        GSV[Grid System Visual]
+        SideScrollPersonController[Side Scroll Person Controller]
+        SideScrollAnimator[Side Scroll Animator]
+        ScheduleController[Schedule Controller]
+        BaristaController[Barista Controller]
     end
 
-    subgraph "Enemy Systems"
-        EA[Enemy AI]
+    subgraph "Barista Systems"
+        BaristaManager[Barista Manager]
+        KettleController[Kettle Controller]
+        RecipeManager[Recipe Manager]
+        CustomerManager[Customer Manager]
+    end
+
+    subgraph "Scheduling Systems"
+        ScheduleManager[Schedule Manager]
+        ScheduleGrid[Schedule Grid]
+    end
+
+    subgraph "Mindfulness Systems"
+        MindfulnessManager[Mindfulness Manager]
+        BreathingNote[Breathing Note]
     end
 
     subgraph "UI Systems"
-        UnitActionSystemUI[Unit Action SystemUI]
-        TurnSystemUI[Turn System UI]
-        ActionBusyUI[Action Busy UI]
-        HealthSystemUI[HealthSystemUI]
+        PauseSystemUI[Pause System UI]
+        TimetableUI[Timetable UI]
+        BaristaManagerUI[Barista Manager UI]
+        DialogRunner[Dialog Runner]
     end
 
-    IM --> UAS
-    IM --> CC
+    IM -->SideScrollPersonController
+    IM -->ScheduleController
+    IM -->BaristaController
 
-    Ts --> TurnSystemUI
-    UAS --> UnitActionSystemUI
-    UAS --> U
-    U --> UM
-    U --> HS
-    U --> BA
-    U --> UnitActionSystemUI
+    TimelineDayDreamController -->DialogRunnerSingleton
 
-    BA --> ActionBusyUI
-    HS --> HealthSystemUI
+    SideScrollPersonController --> SideScrollAnimator
 
-    GS --> LG
-    LG --> GSV
+    KettleController -->RecipeManager
+    RecipeManager --> KettleController
 
-    EA --> U
-    
-    
+    PauseSystem --> PauseSystemUI
+    ScheduleManager --> TimetableUI
+    BaristaManager -->BaristaManagerUI
+
+    DialogRunnerSingleton --> DialogRunner
     
     classDef coreStyle fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     classDef playerStyle fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    classDef enemyStyle fill:#ffebee,stroke:#b71c1c,stroke-width:2px
-    classDef unitStyle fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef baristaStyle fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    classDef SchedulingStyle fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef MindStyle fill:#fff3e0,stroke:#e65100,stroke-width:2px
     classDef uiStyle fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
     
-    class IM,Ts coreStyle
-    class UAS,CC playerStyle
-    class EAI enemyStyle
-    class U,UM,HS unitStyle
-    class UnitActionSystemUI,TurnSystemUI,ActionBusyUI uiStyle
+    class IM,TimelineDayDreamController,PauseSystem,GameManager,DialogRunnerSingleton coreStyle
+    class SideScrollPersonController,SideScrollAnimator,ScheduleController,BaristaController playerStyle
+    class BaristaManager,KettleController,RecipeManager,CustomerManager baristaStyle
+    class ScheduleManager,ScheduleGrid SchedulingStyle
+    class MindfulnessManager,BreathingNote MindStyle
+    class PauseSystemUI,TimetableUI,BaristaManagerUI,DialogRunner uiStyle
 
 ```
 
@@ -161,70 +168,38 @@ config:
   look: neo
 ---
 flowchart TD
-  start([Battle Start])
-  start --> TurnSystemCheck{Check Is Player Turn}
+  start([Game Start])
+  start --> MainMenu{MainMenu}
 
-  TurnSystemCheck -->|Yes| move{Player Input}
-  TurnSystemCheck -->|No| EnemyAI[EnemyAI]
+  MainMenu -->|New Game| NewGame[New Game]
+  MainMenu -->|Options| Options[Open Options]
+  MainMenu -->|Exit| ExitGame[Exit Game]
 
+  Options --> MainMenu
+
+  NewGame --> StartGame[Game Start]
+
+  StartGame --> OpeningCutscene[Opening Cutscene]
+  OpeningCutscene --> MoveTutorial[Move Tutorial]
+  MoveTutorial --> ExploreIsland[Explore Island]
+
+  ExploreIsland --> ClearObjective[ClearObjective]
+  ExploreIsland --> TriggerMinigames[Trigger Minigames]
+
+  ClearObjective --> StoryProgression[Story Progression]
+  ClearObjective --> ExploreIsland
+
+
+  TriggerMinigames --> MinigamesComplete[MinigamesComplete]
+
+  MinigamesComplete --> ClearObjective
+
+  StoryProgression --> ExploreIsland
+  StoryProgression --> StoryEnd[Ending]
+
+  StoryEnd --> Credit[Credit]
+  Credit --> MainMenu
   
-  move -->|Left Mouse Button| SU[Select Unit]
-  move -->|Click End Turn Button| EndTurn[EndTurn]
-
-  EndTurn --> ChangeTurnSystemEnemy[Change To Enemy Turn]
-
-  ChangeTurnSystemEnemy --> TurnSystemCheck
-
-  SU --> CheckAction{does it have action points?}
-
-  CheckAction -->|Yes| SelectAction[SelectAction]
-  CheckAction -->|No| ded[Cant perform Action]
-
-  ded --> move
-
-  SelectAction --> SelectActionTargetGrid[SelectActionTargetGrid]
-  
-  SelectActionTargetGrid --> PlayerUnitActionPerform[Player Unit Action Perform]
-
-  PlayerUnitActionPerform --> CheckEnemyHealth{Is There Enemy Unit Health <= 0?}
-
-    CheckEnemyHealth -->|Yes| EnemyUnitDead[Enemy Unit Dead]
-    CheckEnemyHealth -->|No| PlayerUnitActionComplete[Player Unit Action Complete]
-
-    EnemyUnitDead --> CheckEnemyUnitList{Check Unit Manager Are there still Enemy unit on the battlefield?}
-
-    CheckEnemyUnitList -->|Yes| move
-    CheckEnemyUnitList -->|No| Victory[Victory!]
-    
-    PlayerUnitActionComplete --> move
-  
-    EnemyAI --> ChooseEnemyUnit[Choose Enemy Unit]
-
-    ChooseEnemyUnit --> CheckEnemyUnitActionPoin[Check if Enemy Unit has Action Points]
-
-    CheckEnemyUnitActionPoin -->|Yes| chooseBestEnemyAction[Choose Best Enemy Action]
-    CheckEnemyUnitActionPoin -->|No| CheckOtherEnemyUnit[Check Other Enemy Unit]
-
-    CheckOtherEnemyUnit --> EnemyEnd{Check if All Enemy Unit dont have ActionValue}
-
-    EnemyEnd -->|Yes| EnemyUnitEndTurn[Enemy Unit End Turn]
-    EnemyEnd -->|No| ChooseEnemyUnit[Check Other Enemy Unit]
-
-    ChooseBestEnemyAction --> EnemyActionPerform[EnemyActionPerform]
-
-    EnemyActionPerform --> CheckPlayerHealth{Is There Player Unit Health <= 0?}
-
-    CheckPlayerHealth -->|Yes| PlayerUnitDead[Player Unit Dead]
-    CheckPlayerHealth -->|No| EnemyAI
-
-    PlayerUnitDead --> CheckPlayerUnitList{Check Unit Manager Are there still Player unit on the battlefield?}
-
-    CheckPlayerUnitList -->|Yes| EnemyAI
-    CheckPlayerUnitList -->|No| Defeat[DEFEAT!]
-
-    EnemyUnitEndTurn --> ChangeToPlayerTurn[Change To Player Turn]
-    ChangeToPlayerTurn --> TurnSystemCheck
-    
 ```
 
 <br>
@@ -232,46 +207,112 @@ flowchart TD
 ## Event Signal Diagram
 ```mermaid
 classDiagram
-    %% --- Unit Systems ---
-    class Unit {
-        +OnAnyActionPointsChanged()
-        +OnAnyUnitSpawned()
-        +OnAnyUnitDead()
+    %% --- Explore Systems ---
+    class SideScrollPersonController {
+        +OnPlayerMove()
+        +OnPlayerIdle()
+    }
+    class SideScrollAnimator {
+    }
+    class SideScrollPersonControllerAction {
     }
 
-    class UnitActionSystem {
-        +OnSelectedUnitChanged()
-        +OnSelectedActionChanged()
-        +OnBusyChanged(bool)
-        +OnActionStarted()
+    class TimelineDayDreamController {
+        +OnAnyTimelineStart()
+    }
+    class ExploreUI {
     }
 
-    class HealthSystem {
-        +OnDead()
-        +OnDamaged()
+    class DialogRunnerSingleton {
+        +OnDialogueStart()
+        +OnDialogueEnd()
     }
 
-    class BaseAction{
-        OnAnyActionStart()
-        OnAnyActionComplete()  
+    class PauseSystem {
+        +OnGamePause()
+        +OnGameUnPause()
+    }
+
+    class PauseSystemUI {
+    }
+
+    class GameManager {
+        +OnGameStateChanged(GameState)
+        +OnGameSceneUnloadChanged()
     }
 
 
-    class LevelGrid{
-      OnAnyUnitMovedGridPosition()
+    %% --- Scheduling Systems ---
+    class BaristaManager {
+        +OnGameStateChanged(baristaGameState)
+    }
+
+    class KettleController {
+        +OnAnyIngredientListChanged()
+        +OnAnyIngredientMix()
+        +OnIngredientListChanged(FoodItem)
+        +OnIngredientMix()
+        +OnKettleStateChanged(KettleState)
+    }
+    class CustomerSpawner {
+    }
+    class BaristaTutorial {
+    }
+    class KettleControllerUI {
+    }
+    
+
+    %% --- Barista Systems ---
+    class ScheduleManager {
+        +OnAssignedEmployeeChanged()
+    }
+
+    class ScheduleGrid {
+
+    }
+
+    class TimetableUI {
+
+    }
+    class ShiftSlotUI {
+
+    }
+
+
+    %% --- Mindfulness Systems ---
+    class MindfulnessManager{
+        +OnSuccessHit()
+    }
+
+    class BreathingNote{
+        +OnSuccess()
+        +OnFail()
+    }
+    class MindfullnessTutorial{
     }
 
     %% --- Relations ---
-    UnitManager --> Unit : Update List
 
-    Unit --> HealthSystem : Take Damage
+    BreathingNote --> MindfulnessManager : GiveSignal
+    MindfulnessManager --> MindfullnessTutorial : GiveSuccessSignal
 
-    HealthSystem --> Unit : Dead
+    ScheduleManager --> ScheduleGrid : CreateGridArray
+    ScheduleManager --> TimetableUI : Check if all employee assigned
+    ScheduleManager --> ShiftSlotUI : Refresh UI
 
-    UnitActionSystem --> BaseAction : PerformAction
+    BaristaManager --> CustomerSpawner : Give Signal if close/open
+    KettleController --> BaristaTutorial : Give Signal if tutorial complete
+    KettleController --> KettleControllerUI : Give Signal if ready to mix
 
-    MoveAction --> LevelGrid : UpdatePosition
+    SideScrollPersonController --> SideScrollAnimator : Signal to play animation
+    TimelineDayDreamController --> ExploreUI : Signal to Show/Hide ExploreUI
 
+    DialogRunnerSingleton --> ExploreUI : Signal to Show/Hide ExploreUI
+    DialogRunnerSingleton --> SideScrollPersonControllerAction : Signal if player can move
+
+    PauseSystem --> PauseSystemUI : Signal to Show/Hide PauseSystemUI
+
+    GameManager --> SideScrollPersonControllerAction : Signal to check current state
 ```
 
 <br>
@@ -289,7 +330,7 @@ Using Google Drive
 Using Github
 1. Clone this repository
 2. Open the project in Unity (6 or later recommended)
-3. Open the main gameplay scene
+3. Open the MainMenu scene
 4. Press Play to start testing
 
 ## Controls
