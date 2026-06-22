@@ -37,4 +37,9 @@ public class CloseUI : MonoBehaviour
             });
         }
     }
+
+    private void OnDestroy()
+    {
+        BaristaManager.instance.OnGameStateChanged -= BaristaManager_OnGameStateChanged;
+    }
 }

@@ -28,4 +28,11 @@ public class SideScrollAnimator : MonoBehaviour
         animator.SetBool("IsWalk", true);
         animator.SetFloat("Dir", personController.GetPlayerDir());
     }
+
+    private void OnDestroy()
+    {
+        personController.OnPlayerMove -= PersonController_OnPlayerMove;
+        personController.OnPlayerIdle -= PersonController_OnPlayerIdle;
+    }
+
 }

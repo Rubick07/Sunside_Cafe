@@ -47,4 +47,9 @@ public class BaristaManagerUITutorial : MonoBehaviour
         BaristaManager.instance.ChangeBaristaManagerState(BaristaManager.baristaGameState.FriendSession);
         spawner.SpawnSpecialCustomer();
     }
+
+    private void OnDestroy()
+    {
+        BaristaManager.instance.OnGameStateChanged -= BaristaManager_OnGameStateChanged;
+    }
 }

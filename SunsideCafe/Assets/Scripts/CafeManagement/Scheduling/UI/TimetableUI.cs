@@ -84,4 +84,9 @@ public class TimetableUI : MonoBehaviour
         containerTransform.RemoveAllChild();
     }
 
+    private void OnDestroy()
+    {
+        ScheduleManager.instance.OnAssignedEmployeeChanged -= ScheduleManager_OnAssignedEmployeeChanged;
+    }
+
 }

@@ -40,4 +40,9 @@ public class BaristaManagerUI : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    private void OnDestroy()
+    {
+        BaristaManager.instance.OnGameStateChanged -= BaristaManager_OnGameStateChanged;
+    }
+
 }
